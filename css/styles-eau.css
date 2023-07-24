@@ -1,0 +1,766 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+}
+
+a, img {
+  display: block;
+}
+
+:root {
+  --poppins:"Poppins",sans-serif;
+  --neucha:"Neucha", cursive;
+  --bleu-clair:#bac7d6;
+  --bleu:#567BB4;
+  --bleu-fonce:#1f5180;
+}
+
+main {
+  background-color: var(--bleu-clair);
+  font-family: var(--poppins);
+}
+
+.bubble {
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  background-color: var(--bleu-fonce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1em #091e33;
+}
+.bubble p {
+  padding: 20% 20%;
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+  font-family: "Neucha", cursive;
+  font-size: 1.1em;
+}
+
+/* NAVBAR WIP */
+#navigation {
+  display: none;
+}
+
+.navBar {
+  width: 100%;
+  background-color: var(--bleu);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+.navBar .logo img {
+  width: 100%;
+}
+.navBar nav {
+  width: 50%;
+}
+.navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navBar nav ul li {
+  list-style: none;
+}
+.navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+.navBar nav ul li a:hover {
+  transform: scale(1.4);
+}
+.navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+.navBar nav ul li:hover .sous {
+  display: block;
+}
+.navBar nav ul li:hover .sous li {
+  background-color: var(--bleu);
+  opacity: 0.8;
+  border-bottom: solid var(--bleu-clair) 1px;
+  padding: 2%;
+  background-color: var(--bleu-fonce);
+}
+.navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+.navBar nav ul li:hover .sous li a:hover {
+  color: #091e33;
+  transform: scale(1);
+}
+.navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+.navBar .monCompte {
+  width: 15%;
+  background-color: var(--bleu-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+.navBar .monCompte a {
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+}
+.navBar .monCompte a:hover {
+  transform: scale(1.2);
+}
+
+.actcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  margin-bottom: 5%;
+}
+.actcontainer .acttxtimg {
+  width: 60%;
+  display: flex;
+}
+.actcontainer .acttxtimg .acttxt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bleu-fonce);
+  text-align: center;
+  padding: 0 2%;
+  color: white;
+}
+.actcontainer .acttxtimg .acttxt h2 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+.actcontainer .acttxtimg .acttxt .line {
+  width: 8em;
+  height: 0.1em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+.actcontainer .acttxtimg .acttxt p {
+  font-size: 1.3em;
+}
+.actcontainer .acttxtimg .actimg {
+  width: 50%;
+  position: relative;
+}
+.actcontainer .acttxtimg .actimg img {
+  width: 100%;
+  height: 100%;
+}
+.actcontainer .acttxtimg .actimg .bubble {
+  position: absolute;
+  top: 25%;
+  left: -12%;
+}
+.actcontainer .acttxtimg .actimg .bubble p {
+  text-align: center;
+  padding: 15%;
+  font-size: 1.4em;
+}
+.actcontainer .acttxtimg .actimg .bubbleReverse {
+  position: absolute;
+  top: 25%;
+  right: -12%;
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  background-color: var(--bleu-fonce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1em #091e33;
+}
+.actcontainer .acttxtimg .actimg .bubbleReverse p {
+  padding: 20% 20%;
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+  font-family: "Neucha", cursive;
+  font-size: 1.4em;
+}
+.actcontainer .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+main .banner {
+  width: 100%;
+  background-image: url(https://i.goopics.net/4018ca.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10%;
+}
+main .banner h1 {
+  text-align: center;
+  padding: 7% 0;
+  font-family: var(--neucha);
+  font-size: 7em;
+  font-weight: 400;
+}
+main .banner2 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/v51jzu.jpg);
+  background-position: center;
+  background-size: cover;
+}
+main .banner2 h1 {
+  padding: 7% 0% 7% 7%;
+  font-family: var(--neucha);
+  font-size: 7em;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+main .family {
+  display: flex;
+  width: 70%;
+  margin: 10% 25%;
+  position: relative;
+}
+main .family .bubble {
+  position: absolute;
+  top: 30%;
+  left: -5.5%;
+}
+main .family .bubble p {
+  text-align: center;
+  padding: 5%;
+  font-size: 1.4em;
+}
+main .family .photo {
+  width: 50%;
+}
+main .family .photo img {
+  width: 100%;
+}
+main .family .txt {
+  background-color: var(--bleu-fonce);
+  width: 40%;
+  padding: 5%;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  margin-bottom: 2%;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .family .txt h2 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+}
+main .family .txt .line {
+  width: 8em;
+  height: 0.1em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+main .family .txt p {
+  font-size: 1.5em;
+  text-align: center;
+}
+main .banner3 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/iy1nv7.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 5% 0;
+}
+main .banner3 h1 {
+  padding: 7% 0%;
+  font-family: var(--neucha);
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+main .night {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  margin: 0 0 15% 15%;
+}
+main .night img {
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+}
+main .night .txt {
+  background-color: var(--bleu-fonce);
+  width: 50%;
+  padding: 5%;
+  z-index: 2;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .night .txt h2 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+}
+main .night .txt .line {
+  width: 8em;
+  height: 0.1em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+main .night .txt p {
+  font-size: 1.5em;
+  text-align: center;
+}
+main .night .txt .btn {
+  display: flex;
+  background-color: var(--bleu);
+  padding: 1% 2%;
+  border-radius: 3vh;
+  justify-content: center;
+  width: 75%;
+  transition: 0.5s all;
+  margin: 10% auto 0 auto;
+}
+main .night .txt .btn:hover {
+  transform: scale(1.2);
+}
+main .night .txt .btn a {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.4em;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--bleu);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.2);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo a {
+  padding-right: 0 15%;
+}
+footer .mentions {
+  width: 100%;
+  background-color: var(--bleu-fonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .bubble {
+    width: 7em;
+    height: 7em;
+  }
+  /* NAVBAR */
+  .navBar nav ul li a {
+    font-size: 1.3em;
+  }
+  .navBar nav ul li a:hover {
+    transform: scale(1.4);
+  }
+  .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+  /* BANNER */
+  main .banner h1 {
+    font-size: 5em;
+  }
+  /* ACTIVITIES */
+  main .actcontainer .acttxtimg {
+    width: 80%;
+  }
+  main .banner2 h1 {
+    font-size: 5em;
+  }
+  main .banner3 h1 {
+    font-size: 4em;
+  }
+  main .night {
+    width: 100%;
+    margin-left: 10.5%;
+  }
+  main .night .txt h2 {
+    font-size: 1.5em;
+  }
+  main .night .photo {
+    width: 100%;
+  }
+  main .night .photo img {
+    width: 20%;
+  }
+  footer {
+    margin-top: 15%;
+    font-size: 0.7em;
+  }
+  footer .flex .container img {
+    margin-left: 20px;
+  }
+  footer .flex .container ul li a {
+    font-size: 15px;
+  }
+  footer .flex .container .logo a {
+    margin: 0 15%;
+  }
+  footer .flex .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1021px) {
+  main .family {
+    display: flex;
+    width: 70%;
+    margin: 5% auto;
+    background-color: var(--bleu-fonce);
+  }
+  main .family .photo {
+    width: 50%;
+  }
+  main .family .photo img {
+    width: 100%;
+  }
+  main .family .txt {
+    width: 50%;
+    position: static;
+    padding: 2%;
+    margin-bottom: 0;
+  }
+  main .family .txt p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px 20px 80px 20px;
+    background-color: var(--bleu-clair);
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--bleu-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  main .banner h1 {
+    font-size: 4em;
+  }
+  main .actcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+    margin-bottom: 5%;
+  }
+  main .actcontainer .acttxtimg {
+    width: 90%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 1.2em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse {
+    top: 25%;
+    right: 0;
+  }
+  main .banner2 h1 {
+    font-size: 3.5em;
+  }
+  main .family {
+    width: 80%;
+    margin: 10%;
+  }
+  main .family .photo {
+    width: 60%;
+  }
+  main .banner3 h1 {
+    font-size: 3em;
+  }
+  /* FOOTER */
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .banner h1 {
+    font-size: 3em;
+  }
+  main .actcontainer {
+    filter: none;
+  }
+  main .actcontainer .acttxtimg {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0;
+  }
+  main .actcontainer .acttxtimg .acttxt {
+    width: 100%;
+  }
+  main .actcontainer .acttxtimg .actimg {
+    width: 100%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble {
+    position: absolute;
+    left: 1%;
+  }
+  main .banner2 h1 {
+    font-size: 2.5em;
+  }
+  main .family {
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  main .family .photo {
+    width: 100%;
+  }
+  main .family .txt {
+    width: 100%;
+    filter: none;
+  }
+  main .banner3 h1 {
+    font-size: 2em;
+  }
+  main .night {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main .night .txt {
+    width: 100%;
+  }
+  main .night .img img {
+    position: static;
+    width: 100%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}/*# sourceMappingURL=styles-eau.css.map */
