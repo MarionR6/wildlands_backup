@@ -51,7 +51,7 @@ main {
   justify-content: space-around;
 }
 .navBar nav ul li {
-  list-style: none;
+  list-style-type: none;
 }
 .navBar nav ul li a {
   font-family: var(--neucha);
@@ -60,12 +60,12 @@ main {
   transition: 0.5s all;
 }
 .navBar nav ul li a:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 .navBar nav ul li .sous {
   display: none;
   position: absolute;
-  transition: 1 all;
+  transition: 1s all;
 }
 .navBar nav ul li:hover .sous {
   display: block;
@@ -105,7 +105,7 @@ main {
   transition: 0.5s all;
 }
 .navBar .monCompte a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .bannerTitle {
@@ -155,6 +155,7 @@ main .presentation {
   width: 70%;
   margin: 0 auto 5% auto;
   background-color: var(--bleu-fonce);
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
 }
 main .presentation .actimg {
   width: 50%;
@@ -220,7 +221,7 @@ main .attractions .line {
 main .attractions .flexContainer {
   display: flex;
   justify-content: center;
-  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
 }
 main .attractions .flexContainer img {
   width: 35%;
@@ -288,7 +289,7 @@ main .nature .actcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
   padding-bottom: 5%;
 }
 main .nature .actcontainer .acttxtimg {
@@ -432,19 +433,56 @@ footer .mentions .mentionsdroits {
   justify-content: center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
+  main .presentation .acttxt p {
+    font-size: 1.5em;
+  }
+  main .attractions .flexContainer .container {
+    font-size: 1em;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.2em;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt a {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1200px) {
   header .navBar nav ul li a {
     font-size: 1.3em;
   }
-  header .navBar nav ul li a:hover {
-    transform: scale(1.4);
+  header .navBar .monCompte a {
+    font-size: 1.3em;
   }
-  header .navBar nav ul li a .monCompte {
+  main .presentation .acttxt p {
+    font-size: 1.2em;
+  }
+  main .attractions .flexContainer .container {
+    font-size: 0.8em;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 1.2em;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt p {
+    font-size: 1em;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt a {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .navBar nav ul li a {
+    font-size: 1.2em;
+  }
+  header .navBar nav ul li a:hover {
+    transform: scale(1.2);
+  }
+  header .navBar .monCompte {
     width: 15%;
     margin: 1% 0;
   }
-  header .navBar nav ul li a .monCompte a {
-    font-size: 1.3em;
+  header .navBar .monCompte a {
+    font-size: 1em;
   }
   .bannerTitle h1 {
     font-size: 6em;
@@ -588,16 +626,19 @@ footer .mentions .mentionsdroits {
     margin-bottom: 1.5em;
   }
   main .presentation .acttxt p {
-    font-size: 15px;
+    font-size: 18px;
   }
   main .banner h1 {
-    font-size: 3em;
+    font-size: 2.5em;
   }
   main .attractions .flexContainer {
     filter: none;
   }
+  main .attractions .flexContainer .container p {
+    font-size: 1em;
+  }
   main .attractions .underTitle {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   main .banner2 h1 {
     font-size: 3em;
@@ -659,19 +700,31 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 480px) {
-  main .bannerTitle h1 {
-    font-size: 1.5em;
+  .bannerTitle h1 {
+    font-size: 4em;
   }
-  main .bannerTitle h2 {
+  .bannerTitle h2 {
     font-size: 2em;
   }
   main .presentation {
     width: 95%;
   }
+  main .presentation .actimg {
+    display: none;
+  }
+  main .presentation .actimg img {
+    display: none;
+  }
+  main .presentation .acttxt {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
   main .presentation .acttxt h2 {
     padding-top: 2%;
     font-size: 0.9em;
     margin-bottom: 1em;
+    width: 100%;
   }
   main .presentation .acttxt p {
     font-size: 0.8em;
@@ -684,12 +737,17 @@ footer .mentions .mentionsdroits {
   }
   main .attractions .flexContainer {
     flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
   }
   main .attractions .flexContainer img {
     width: 100%;
   }
   main .attractions .flexContainer .container {
     width: 100%;
+  }
+  main .attractions .flexContainer .container img {
+    width: 95%;
   }
   main .attractions .reverse {
     flex-wrap: wrap-reverse;
@@ -701,8 +759,14 @@ footer .mentions .mentionsdroits {
     font-size: 1em;
     padding: 0 2%;
   }
+  main .nature .actcontainer {
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
   main .nature .actcontainer .acttxtimg {
     width: 100%;
+    flex-wrap: wrap;
   }
   main .nature .actcontainer .acttxtimg .acttxt h2 {
     font-size: 1em;
@@ -710,5 +774,60 @@ footer .mentions .mentionsdroits {
   }
   main .nature .actcontainer .acttxtimg .acttxt p {
     font-size: 0.8em;
+    padding: 0;
+    margin: 1%;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt a {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 424px) {
+  main .presentation .acttxt {
+    margin: 0;
+  }
+  main .presentation .acttxt h2 {
+    padding: 1%;
+  }
+  main .presentation .acttxt p {
+    padding: 0;
+  }
+  main .attractions .underTitle {
+    font-size: 0.9em;
+  }
+  main .attractions .flexContainer .container a {
+    font-size: 1.2em;
+    margin-top: 2%;
+  }
+  main .nature .underTitle {
+    font-size: 0.9em;
+  }
+  main .nature .actcontainer {
+    flex-wrap: wrap;
+  }
+  main .nature .actcontainer .acttxtimg .actimg {
+    width: 100%;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt {
+    width: 100%;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt a {
+    margin: 5% auto;
+  }
+  footer .flex {
+    padding: 2%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .bannerTitle h1 {
+    font-size: 3em;
+  }
+  .bannerTitle h2 {
+    font-size: 1.5em;
+  }
+  main .attractions .underTitle {
+    font-size: 0.78m;
+  }
+  footer .logo i {
+    font-size: 0.7em;
   }
 }/*# sourceMappingURL=styles.css.map */

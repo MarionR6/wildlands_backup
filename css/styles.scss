@@ -53,20 +53,20 @@ main{
             display: flex;
             justify-content: space-around;
             li{
-                list-style: none;
+                list-style-type: none;
                 a{
                     font-family: var(--neucha);
                     font-size: 1.8em;
                     text-decoration: none;
                     transition:0.5s all;
                     &:hover{
-                        transform: scale(1.4);
+                        transform: scale(1.1);
                     }
                 }
                 .sous{
                     display: none;
                     position: absolute;
-                    transition: 1 all;
+                    transition: 1s all;
                 }
                 &:hover{
                     .sous{
@@ -113,7 +113,7 @@ main{
         font-size: 1.5em;
         transition: 0.5s all;
         &:hover{
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         }
     }
@@ -164,6 +164,7 @@ main{
             width: 70%;
             margin: 0 auto 5% auto;
             background-color: var(--bleu-fonce);
+            filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.50));
             .actimg{
                 width: 50%;
                 img{
@@ -236,7 +237,7 @@ main{
         .flexContainer{
             display: flex;
             justify-content: center;
-            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+            filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.50));
             img{
                 width: 35%;
             }
@@ -310,7 +311,7 @@ main{
             display: flex;
             flex-direction: column;
             align-items: center;
-            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+            filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.50));
             padding-bottom: 5%;
             .acttxtimg{
                 width: 60%;
@@ -465,22 +466,112 @@ footer{
 }
 
 // responsive
+@media screen and (max-width:1440px){
+    main{
+        .presentation{
+            .acttxt{
+                p{
+                    font-size:1.5em
+                }
+            }
+        }
+        .attractions{
+            .flexContainer{
+                .container{
+                    font-size: 1em;
+                }
+            }
+        }
+        .nature{
+            .actcontainer{
+                .acttxtimg{
+                    .acttxt{
+                        p{
+                        font-size: 1.2em;
+                        }
+                        a{
+                            font-size: 1.2em;
+                        }
+                    }
+                }   
+            } 
+        }
+    }
+    
+}
+@media screen and (max-width: 1200px){
+    header{
+        .navBar{
+            nav{
+                ul{
+                    li{
+                        a{
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+            .monCompte{
+                a{
+                    font-size:1.3em;
+                }
+            }
+        }
+    }
+    main{
+        .presentation{
+            .acttxt{
+                p{
+                    font-size:1.2em
+                }
+            }
+        }
+        .attractions{
+            .flexContainer{
+                .container{
+                    font-size: 0.8em;
+                }
+            }
+        }
+        .nature{
+            .actcontainer{
+                .acttxtimg{
+                    .acttxt{
+                        h2{
+                            font-size: 1.2em;
+                        }
+                        p{
+                        font-size: 1em;
+                        }
+                        a{
+                            font-size: 1em;
+                        }
+                    }
+                }   
+            } 
+        }
+    }
+    
+}
+
 @media screen and (max-width: 1024px){
     header{
         .navBar nav ul li a {
-        font-size: 1.3em;
+        font-size: 1.2em;
         &:hover{
-            transform:scale(1.4)
+            transform:scale(1.2)
         }
-    
+        }
+    .navBar{
         .monCompte{
             width: 15%;
             margin: 1% 0;
             a{
-                font-size: 1.3em;
+                font-size: 1em;
             }
         }
-        } 
+    }
+        
     }
     .bannerTitle{
         h1{
@@ -669,21 +760,26 @@ footer{
                 margin-bottom:1.5em;
             }
                 p{
-                    font-size: 15px;
+                    font-size: 18px;
                 }
             }
         }
         .banner{
             h1{
-                font-size: 3em;
+                font-size: 2.5em;
             }
         }
         .attractions{
             .flexContainer{
                 filter:none;
+                .container{
+                    p{
+                        font-size:1em;
+                    }
+                }
             }
             .underTitle{
-                font-size: 1.3em;
+                font-size: 1.2em;
             }
         }
         .banner2{
@@ -775,23 +871,30 @@ footer{
 }
 // mediaquery 480px
 @media screen and (max-width: 480px){
-    main{
-        .bannerTitle{
-            h1{
-                font-size: 1.5em;
-            }
-            h2{
-                font-size:2em;
-            }
+    .bannerTitle{
+        h1{
+            font-size: 4em;
         }
-    
+        h2{
+            font-size:2em;
+        }
+     }
+    main{
         .presentation{
             width: 95%;
+            .actimg{
+                display: none;
+                img  {display: none;}
+            }
             .acttxt{
+                width: 100%;
+                padding:0;
+                margin: 0;
                 h2{
                     padding-top:2%;
                     font-size: 0.9em;
                     margin-bottom:1em;
+                    width: 100%;
                 }
                     p{
                         font-size: 0.8em;
@@ -811,11 +914,16 @@ footer{
             
             .flexContainer{
                 flex-wrap: wrap;
+                width: 90%;
+                margin: 0 auto;
                 img{
                     width: 100% ;
                 }
                 .container{
                     width: 100%;
+                    img{
+                        width: 95%;
+                    }
                 }
                         }
             .reverse{
@@ -833,23 +941,110 @@ footer{
                 padding: 0 2%;
             }
             .actcontainer{
+                flex-wrap:wrap;
+                width: 90%;
+                margin: 0 auto;
                 .acttxtimg{
                     width: 100%;
+                    flex-wrap:wrap;
                     .acttxt{
                         h2{
                             font-size: 1em;
                             margin-top:3%
                         }
                         p{
-                            font-size: 0.8em;;
+                            font-size: 0.8em;
+                            padding: 0;
+                            margin: 1%;
+                        }
+                        a{
+                            font-size: 0.7em;
                         }
                     }
                 }
             }
         }
     }
-    }
+} 
 
+@media screen and (max-width: 424px){
+    main{
+        .presentation{
+            .acttxt{
+                margin:0;
+                h2{
+                    padding: 1%;
+                }
+                p{
+                    padding: 0;
+                }
+            }
+        }
+        .attractions {
+            .underTitle{
+                font-size:0.9em;
+            }
+            .flexContainer{
+                .container{
+                    a{
+                        font-size: 1.2em;
+                        margin-top: 2%;
+                    }
+                }
+            }
+        }
+        .nature{
+            .underTitle{
+                font-size: 0.9em;
+            }
+            .actcontainer{
+                flex-wrap:wrap;
+                .acttxtimg{
+                    .actimg{
+                        width: 100%;
+                    }
+                    .acttxt{
+                        width: 100%;
+                        a{
+                            margin: 5% auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .flex{
+            padding: 2%;
+        }
+    }
+}  
+@media screen and (max-width: 320px){
+    .bannerTitle{
+        h1{
+            font-size: 3em;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+    }
+    main{
+       .attractions{
+            .underTitle{
+                font-size: 0.78m;
+        } 
+    }
+    
+
+    }
+    footer{
+        .logo{
+            i{
+                font-size: 0.7em;
+            }
+        }
+    }
+}  
     
 
 
