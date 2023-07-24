@@ -1,0 +1,1368 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a, img {
+  display: block;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  background-color: #c7e3cb;
+}
+
+:root {
+  --poppins:"Poppins",sans-serif;
+  --neucha:"Neucha", cursive;
+  --vert:#56B462;
+  --vert-fonce:#3A8043;
+}
+
+.bubble{
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  background-color: #3A8043;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1em #204725;
+}
+
+.bubble p{
+  padding: 20% 20%;
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+  font-family: "Neucha", cursive;
+  font-size: 1.1em;
+}
+
+/* NAVBAR */
+
+#navigation{
+  display: none;
+}
+
+.navBar {
+  width: 100%;
+  background-color: var(--vert);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar .logo {
+  padding: 0.5% 0;
+  width: 8%;
+}
+.navBar .logo img {
+  width: 100%;
+}
+.navBar nav {
+  width: 50%;
+}
+.navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navBar nav ul li {
+  list-style: none;
+}
+.navBar nav ul li a,
+.navBar nav ul .deroulant {
+  font-family: var(--neucha);
+  color: white;
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+
+.navBar nav ul li a:hover{
+  transform: scale(1.4);
+}
+
+.navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+}
+.navBar nav ul li:hover .sous {
+  display: block;
+}
+.navBar nav ul li:hover .sous li {
+  background-color: var(--vert);
+  opacity: 0.8;
+  border-bottom: solid var(--vert-fonce) 1px;
+  padding: 2%;
+}
+.navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  color: white;
+  padding: 2%;
+  transition: 0.5s all;
+}
+
+.navBar nav ul li:hover .sous li a:hover{
+  color: #204725;
+  transform: scale(1);
+}
+
+
+.navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+.navBar .monCompte {
+  width: 15%;
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+.navBar .monCompte a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: white;
+  transition: 0.5s all;
+}
+
+.navBar .monCompte a:hover{
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* BANNER 1 */
+main .banner {
+  width: 100%;
+  background-image: url(https://i.goopics.net/wyej46.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+main .banner h1 {
+  text-align: center;
+  padding: 7% 0% 7% 0%;
+  font-family: "Neucha", cursive;
+  font-size: 7em;
+  color: white;
+  font-weight: 400;
+}
+
+/* ACTIVITIES */
+.activities {
+  width: 100%;
+  padding: 2% 0 5% 0;
+}
+
+.activities h2 {
+  font-family: "Neucha", cursive;
+  background-color: #3A8043;
+  font-weight: 400;
+  font-size: 2em;
+  color: white;
+  padding: 0.2%;
+  width: 12em;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.activities .actcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+.activities .actcontainer .acttxtimg .bubble{
+  position: absolute;
+  right: -5%;
+  top: -15%;
+}
+
+.activities .actcontainer .acttxtimg {
+  width: 60%;
+  display: flex;
+  position: relative;
+}
+
+.activities .actcontainer .acttxtimg .acttxt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #3A8043;
+  text-align: center;
+  padding: 0 2%;
+  line-height: 250%;
+  color: white;
+}
+
+.activities .actcontainer .acttxtimg .acttxt h3 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 1.8em;
+}
+
+.activities .actcontainer .acttxtimg .acttxt .line {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt p {
+  font-size: 1em;
+}
+
+.activities .actcontainer .acttxtimg .actimg {
+  width: 50%;
+}
+
+.activities .actcontainer .acttxtimg .actimg img {
+  width: 100%;
+}
+
+/* .activities .actcontainer .bubble{
+    width: 20%;
+} */
+.activities .actcontainer .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* BANNER FAMILLE */
+.banner2 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/femwjl.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5%;
+}
+
+.banner2 h1 {
+  padding: 7% 0% 7% 15%;
+  font-family: "Neucha", cursive;
+  font-size: 5em;
+  color: white;
+  font-weight: 400;
+}
+
+/* ACTIVITES EN FAMILLE */
+.famcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.famcontainer .famact {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+.famcontainer .famact .famimg {
+  width: 70%;
+  position: relative;
+}
+
+.famcontainer .famact .famimg .bubble{
+  position: absolute;
+  right: -12%;
+  top: -18%;
+}
+
+.famcontainer .famact .famimg img {
+  width: 100%;
+}
+
+.famcontainer .famact .famtxt {
+  text-align: center;
+  width: 70%;
+  background-color: #3A8043;
+  color: white;
+  padding: 0 8% 6% 8%;
+  line-height: 200%;
+  font-size: 1.5em;
+}
+
+.famcontainer .famact .famtxt h3 {
+  padding-top: 4%;
+  font-weight: 400;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.famcontainer .famact .famtxt .line {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+/* BANNER NUIT BOIS */
+.banner3 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/fjsp92.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 5% 0 2% 0;
+}
+
+.banner3 h1 {
+  padding: 7% 0% 7% 50%;
+  font-family: "Neucha", cursive;
+  font-size: 5em;
+  color: white;
+  font-weight: 400;
+}
+
+/* CAMPING CHALETS */
+.campchacontainer {
+  width: 100%;
+}
+
+.campchacontainer a{
+  transition: 0.5s all;
+}
+
+.campchacontainer a:hover{
+  transform: scale(1.2);
+}
+
+.campchacontainer h2 {
+  font-family: "Neucha", cursive;
+  background-color: #3A8043;
+  font-weight: 400;
+  font-size: 2em;
+  color: white;
+  padding: 0.2%;
+  width: 12em;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.campchacontainer .twoparts {
+  display: flex;
+  position: relative;
+}
+
+.campchacontainer .twoparts .leftpart,
+.campchacontainer .twoparts .rightpart {
+  width: 50%;
+}
+
+.campchacontainer .twoparts .leftpart img,
+.campchacontainer .twoparts .rightpart img {
+  width: 40%;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+/* LEFT PART */
+
+.campchacontainer .twoparts .leftpart {
+  position: relative;
+  z-index: 0;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(1) {
+  position: absolute;
+  z-index: 1;
+  right: 22%;
+  top: 10%;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(2) {
+  position: absolute;
+  z-index: 2;
+  bottom: 20%;
+  left: 15%;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(3) {
+  position: absolute;
+  z-index: 3;
+  bottom: 0%;
+  right: 10%;
+}
+
+.campchacontainer .twoparts .bubble{
+  position: absolute;
+  top: 0%;
+  left: 36%;
+  z-index: 4;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+.campchacontainer .twoparts .bubble2{
+  position: absolute;
+  top: 8%;
+  left: 77%;
+  z-index: 4;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+/* RIGHT PART */
+
+.campchacontainer .twoparts .rightpart .bubble{
+  position: relative;
+  top: -70%;
+  right: -53%;
+  z-index: 4;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(1){
+  position: relative;
+  z-index: 1;
+  left: 20%;
+  top: 20%;
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(2){
+  position: relative;
+  z-index: 2;
+  left: 45%;
+  bottom: -10%;
+}
+
+/* BTN CAMP CHA */
+
+.campchacontainer .btncamp{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 4%;
+}
+
+.campchacontainer .btncamp a{
+  background-color: #3A8043;
+  color: white;
+  padding: 1%;
+  border-radius: 3vh;
+  font-family: "Neucha", cursive;
+  font-size: 1.5em;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 5%;
+  width: 100%;
+  background-color: var(--vert);
+  font-family: var(--neucha);
+}
+
+footer a{
+  transition: 0.5s all;
+}
+
+footer a:hover{
+  transform: scale(1.2);
+}
+
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  margin-top: 0;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+  color: white;
+}
+
+footer .flex .container .coordonnees a{
+  color: white;
+}
+
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+  color: white;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo i {
+  padding: 15%;
+  color: white;
+}
+footer .mentions {
+  text-align: center;
+  width: 100%;
+  background-color: var(--vert-fonce);
+  padding: 2%;
+  color: white;
+}
+
+footer .mentions .mentionsdroits{
+  display: flex;
+  justify-content: center;
+}
+
+footer .mentions .mentionsdroits a{
+  color: white;
+}
+
+/* RESPONSIVE */
+
+/* 1920px */
+
+@media screen and (max-width: 1920px){
+
+  .navBar .logo{
+    padding: 1.2% 0;
+  }
+
+  .navBar nav ul li a,
+  .navBar nav ul .deroulant{
+    font-size: 2.2em;
+  }
+
+  .navBar .monCompte a{
+    font-size: 2.2em;
+  }
+
+  .activities h2{
+    font-size: 2.8em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 2.1em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1.5em;
+  }
+
+  .campchacontainer h2{
+    font-size: 2.8em;
+  }
+}
+
+/* 1540px */
+
+@media screen and (max-width: 1540px){
+  .navBar nav ul li a,
+  .navBar nav ul .deroulant{
+    font-size: 2em;
+  }
+
+  .navBar .monCompte a{
+    font-size: 2em;
+  }
+
+  .activities h2{
+    font-size: 2.5em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.8em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1em;
+  }
+
+  .campchacontainer h2{
+    font-size: 2.5em;
+  }
+
+  .famcontainer .famact .famtxt{
+    font-size: 1.2em;
+  }
+}
+
+/* 1440px */
+
+@media screen and (max-width: 1440px){
+  
+  .navBar .monCompte {
+    margin: 1% 0;
+  }
+  }
+
+/* 1200px */
+
+@media screen and (max-width: 1200px){
+.bubble{
+  width: 8em;
+  height: 7.5em;
+  font-size: 1em;
+}
+
+/* NAVBAR */
+
+.navBar nav ul li a {
+  font-size: 1.5em;
+}
+
+.navBar nav ul li .deroulant {
+  font-size: 1.5em;
+}
+
+.navBar .monCompte {
+  width: 15%;
+  margin: 1% 0;
+}
+
+.navBar .monCompte a {
+  font-size: 1.5em;
+}
+
+main .banner h1{
+  font-size: 6em;
+}
+
+/* ACTIVITIES */
+
+.activities h2{
+  font-size: 1.8em;
+}
+
+.activities .actcontainer .acttxtimg{
+  width: 80%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt{
+  line-height: 200%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt h3{
+  font-size: 1.4em;
+}
+
+.activities .actcontainer .acttxtimg .acttxt p{
+  font-size: 1.2em;
+}
+
+ /* BUBBLE */
+
+ .activities .actcontainer .acttxtimg .bubble{
+  position: absolute;
+  right: -6%;
+  top: -15%;
+}
+
+/* FAMILLE */
+
+.banner2 h1{
+  font-size: 4.5em;
+}
+
+.famcontainer .famact .famtxt{
+  line-height: 200%;
+  font-size: 1.1em;
+}
+
+.famcontainer .famact{
+  width: 80%;
+}
+
+.famcontainer .famact .famimg,
+.famcontainer .famact .famtxt{
+  width: 80%;
+}
+
+.famcontainer .famact .famtxt h3{
+  font-size: 1.5em;
+}
+
+.famcontainer .famact .famimg .bubble{
+  right: -17%;
+}
+
+/* NUIT BOIS */
+
+.banner3 h1{
+  font-size: 4.5em;
+}
+
+.campchacontainer h2{
+  font-size: 1.8em;
+}
+
+.campchacontainer .twoparts .leftpart img,
+.campchacontainer .twoparts .rightpart img{
+  width: 50%;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(1) {
+  right: 18%;
+  top: 16%;
+}
+
+.campchacontainer .twoparts .bubble{
+  top: 11%;
+  left: 2%;
+}
+
+.campchacontainer .twoparts .bubble2{
+  top: 10%;
+  left: 75%;
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(1){
+  left: 10%;
+  top: 25%;
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(2){
+  left: 40%;
+  bottom: -10%;
+}
+
+/* FOOTER */
+
+footer .flex .container img{
+  margin-left: 20%;
+}
+
+footer .center p{
+  padding: 7% 15%;
+  text-align: center;
+}
+
+footer .container .logo a{
+  margin: 0 15%;
+}
+}
+
+/* 1024px */
+
+@media screen and (max-width: 1024px){
+  .bubble{
+    width: 7em;
+    height: 7em;
+  }
+  /* NAVBAR */
+  .navBar nav ul li a {
+    font-size: 1.3em;
+  }
+
+  .navBar nav ul li .deroulant {
+    font-size: 1.3em;
+  }
+    
+  .navBar nav ul li a:hover{
+    transform: scale(1.4);
+  }
+
+  .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+
+  /* BANNER */
+
+  main .banner h1{
+    font-size: 5em;
+  }
+
+  /* ACTIVITIES */
+
+  .activities h2{
+    font-size: 1.8em;
+  }
+
+  .activities .actcontainer .acttxtimg{
+    width: 80%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt{
+    line-height: 200%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.4em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1.2em;
+  }
+
+  /* BUBBLE */
+
+  .activities .actcontainer .acttxtimg .bubble{
+    position: absolute;
+    right: -7%;
+    top: -15%;
+  }
+
+  /* FAMILLE */
+
+  .banner2 h1{
+    font-size: 3.9em;
+  }
+
+  .famcontainer .famact .famtxt{
+    line-height: 200%;
+    font-size: 0.9em;
+  }
+
+  .famcontainer .famact{
+    width: 80%;
+  }
+
+  .famcontainer .famact .famimg,
+  .famcontainer .famact .famtxt{
+    width: 80%;
+  }
+  
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble{
+    right: -17%;
+  }
+
+  /* NUIT BOIS */
+
+  .banner3 h1{
+    font-size: 3.9em;
+  }
+
+  .campchacontainer h2{
+    font-size: 1.8em;
+  }
+
+  .campchacontainer .twoparts .leftpart img,
+  .campchacontainer .twoparts .rightpart img{
+    width: 47%;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(1) {
+    right: 18%;
+    top: 16%;
+  }
+
+  .campchacontainer .twoparts .leftpart .bubble{
+    bottom: 47%;
+    left: 2%;
+  }
+
+  .campchacontainer .twoparts .bubble2{
+    top: 6%;
+    left: 73%;
+  }
+
+  .campchacontainer .twoparts .bubble2 p{
+    padding: 0 1.5%;
+  }
+
+  /* FOOTER */
+
+  footer .flex .container img{
+    margin-left: 20%;
+  }
+
+  footer .center p{
+    padding: 7% 15%;
+    text-align: center;
+  }
+
+  footer .container .logo a{
+    margin: 0 15%;
+  }
+}
+
+/* RESPONSIVE 768PX */
+
+@media screen and (max-width: 768px){
+
+  /* MENU BURGER */
+  header {
+    padding: 10px 20px 80px 20px;
+    background-color: #8AE395;
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--vert-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  
+  /* BANNER */
+
+  main .banner h1{
+    font-size: 4em;
+  }
+
+  /* ACTIVITIES */
+
+  .activities h2{
+    font-size: 1.8em;
+  }
+
+  .activities .actcontainer .acttxtimg{
+    width: 80%;
+  }
+
+  .activities .actcontainer .acttxtimg img{
+    height: 100%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt{
+    line-height: 200%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.4em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1em;
+  }
+
+  /* BUBBLE */
+
+  .activities .actcontainer .acttxtimg .bubble{
+    position: absolute;
+    right: -7%;
+    top: -15%;
+  }
+
+  /* FAMILLE */
+
+  .banner2 h1{
+    font-size: 3.9em;
+  }
+
+  .famcontainer .famact .famtxt{
+    line-height: 200%;
+    font-size: 0.9em;
+  }
+
+  .famcontainer .famact{
+    width: 80%;
+  }
+
+  .famcontainer .famact .famimg,
+  .famcontainer .famact .famtxt{
+    width: 90%;
+  }
+
+  .famcontainer .famact .famtxt{
+    padding: 2%;
+  }
+  
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble{
+    width: 10em;
+    height: 3em;
+    border-radius: 0em;
+    right: 0%;
+    top: 0;
+  }
+
+  .famcontainer .famact .famimg .bubble p{
+    width: 100%;
+    padding: 0;
+  }
+
+  /* NUIT BOIS */
+
+  .banner3 h1{
+    font-size: 3.9em;
+    padding: 7% 0% 7% 28%;
+  }
+
+  .campchacontainer h2{
+    font-size: 1.8em;
+  }
+
+  .campchacontainer .twoparts{
+    flex-direction: column;
+  }
+
+  .campchacontainer .twoparts .leftpart{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+  }
+
+  .campchacontainer .twoparts .leftpart img{
+    width: 50%;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(1){
+    position: static;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(2){
+    position: static;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(3){
+    position: static;
+    display: none;
+  }
+
+  .campchacontainer .twoparts .bubble{
+    position: static;
+    width: 50%;
+    height: 3em;
+    border-radius: 0em;
+    right: 0%;
+    top: 0;
+    filter: none;
+  }
+
+  .campchacontainer .twoparts .bubble p{
+    width: 100%;
+    padding: 0;
+    font-size: 1.5em;
+  }
+
+  .campchacontainer .twoparts .rightpart{
+    width: 100%;
+    display: flex;
+  }
+
+.campchacontainer .twoparts .leftpart img,
+.campchacontainer .twoparts .rightpart img {
+  filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+
+  .campchacontainer .twoparts .rightpart img:nth-of-type(1){
+    position: static;
+  }
+  .campchacontainer .twoparts .rightpart img:nth-of-type(2){
+    position: static;
+  }
+
+  .campchacontainer .twoparts .rightpart img{
+    width: 50%;
+  }
+
+  .campchacontainer .twoparts .bubble{
+    align-self: center;
+  }
+
+  /* FOOTER */
+
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex {
+    margin: 0 10%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+
+/* RESPONSIVE 480PX */
+
+@media screen and (max-width: 480px){
+
+  /* MENU BURGER WIP */
+  
+  /* BANNER */
+
+  main .banner h1{
+    font-size: 3.5em;
+  }
+
+  /* ACTIVITIES */
+
+  .activities h2{
+    font-size: 2em;
+  }
+
+  .activities .actcontainer{
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+
+  .activities .actcontainer .acttxtimg{
+    width: 100%;
+    flex-wrap: wrap-reverse;
+  }
+
+  .activities .actcontainer .acttxtimg img{
+    height: 100%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt{
+    line-height: 200%;
+    width: 100%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.8em;
+    padding-top: 5%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1.3em;
+    padding-bottom: 4%;
+  }
+
+  .activities .actcontainer .acttxtimg .actimg{
+    width: 100vw;
+  }
+
+  .activities .actcontainer .acttxtimg .actimg img{
+    width: 100vw;
+  }
+
+  /* BUBBLE */
+
+  .activities .actcontainer .acttxtimg .bubble{
+    display: none;
+  }
+
+  /* FAMILLE */
+
+  .banner2{
+    margin-top: 1%;
+  }
+
+  .banner2 h1{
+    font-size: 3em;
+  }
+
+  .famcontainer{
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .famcontainer .famact{
+    width: 100%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+    padding: 1% 0;
+  }
+
+  .famcontainer .famact .famtxt{
+    line-height: 200%;
+    font-size: 1.3em;
+  }
+
+
+  .famcontainer .famact .famimg,
+  .famcontainer .famact .famtxt{
+    width: 100%;
+  }
+  
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble{
+    width: 13em;
+    height: 4em;
+    border-radius: 0em;
+    right: 0%;
+    top: 0;
+  }
+
+  .famcontainer .famact .famimg .bubble p{
+    width: 100%;
+    padding: 0;
+    font-size: 1.5em;
+  }
+
+  /* NUIT BOIS */
+
+  .banner3 h1{
+    font-size: 3em;
+    padding: 7% 0% 7% 15%;
+  }
+
+  .campchacontainer .twoparts .bubble{
+    width: 100%;
+    height: 3em;
+    border-radius: 0em;
+    filter: none;
+  }
+
+  .campchacontainer .twoparts .bubble p{
+    font-size: 1.5em;
+  }
+
+  /* FOOTER */
+ footer .flex{
+  margin: 0;
+  font-size: 1em;
+ }
+}
