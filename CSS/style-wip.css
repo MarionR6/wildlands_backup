@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  a, img {
+    display: block;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #8AE395;
+  }
+  
+  main {
+    background-color: #8AE395;
+  }
+  
+  :root {
+    --poppins:"Poppins",sans-serif;
+    --neucha:"Neucha", cursive;
+    --vert:#56B462;
+    --vert-fonce:#3A8043;
+  }
+  
+  /* NAVBAR */
+  
+  #navigation{
+    display: none;
+  }
+  
+  .navBar {
+    width: 100%;
+    background-color: var(--vert);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navBar .logo {
+    padding: 0.5% 0;
+    width: 8%;
+  }
+  .navBar .logo img {
+    width: 100%;
+  }
+  .navBar nav {
+    width: 50%;
+  }
+  .navBar nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .navBar nav ul li {
+    list-style: none;
+  }
+  .navBar nav ul li a,
+  .navBar nav ul .deroulant {
+    font-family: var(--neucha);
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+    transition: 0.5s all;
+  }
+  
+  .navBar nav ul li a:hover{
+    transform: scale(1.4);
+  }
+  
+  .navBar nav ul li .sous {
+    display: none;
+    position: absolute;
+  }
+  .navBar nav ul li:hover .sous {
+    display: block;
+  }
+  .navBar nav ul li:hover .sous li {
+    background-color: var(--vert);
+    opacity: 0.8;
+    border-bottom: solid var(--vert-fonce) 1px;
+    padding: 2%;
+  }
+  .navBar nav ul li:hover .sous li a {
+    font-size: 25px;
+    color: white;
+    padding: 2%;
+    transition: 0.5s all;
+  }
+  
+  .navBar nav ul li:hover .sous li a:hover{
+    color: #204725;
+    transform: scale(1);
+  }
+  
+  
+  .navBar nav ul .deroulant:after {
+    content: " ⏷";
+    font-size: 0.7em;
+  }
+  .navBar .monCompte {
+    width: 15%;
+    background-color: var(--vert-fonce);
+    font-family: var(--neucha);
+    display: flex;
+    justify-content: center;
+    padding: 1% 2%;
+    border-radius: 0.8em;
+  }
+  .navBar .monCompte a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    transition: 0.5s all;
+  }
+  
+  .navBar .monCompte a:hover{
+    color: #ffffff;
+    transform: scale(1.2);
+  }
+
+  /* WIP */
+
+  .containerw{
+    background-color: #8AE395;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerw .logo{
+    width: 30%;
+    padding: 5% 0 10% 0;
+  }
+
+  .containerw .txt{
+    animation: wip-animate 7s infinite linear;
+  }
+
+  .containerw .txt h1{
+    font-family: "Neucha", cursive;
+    font-size: 10em;
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 90%;
+  }
+
+  @keyframes wip-animate{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+  .containerw .txt h1:nth-of-type(2){
+    padding-bottom: 15%;
+  }
+
+  /* FOOTER */
+
+footer {
+    margin-top: 5%;
+    width: 100%;
+    background-color: var(--vert);
+    font-family: var(--neucha);
+  }
+  
+  footer a{
+    transition: 0.5s all;
+  }
+  
+  footer a:hover{
+    transform: scale(1.2);
+  }
+  
+  footer .flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    margin-top: 0;
+    padding: 8% 0;
+  }
+  footer .flex .container .coordonnees {
+    display: flex;
+    padding: 0 5% 5% 5%;
+    margin-right: 2%;
+    color: white;
+  }
+  
+  footer .flex .container .coordonnees a{
+    color: white;
+  }
+  
+  footer .flex .container .coordonnees i {
+    text-align: center;
+    color: white;
+    margin-right: 5.5%;
+  }
+  footer .flex .container ul {
+    font-size: 0;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .flex .container ul li {
+    padding-bottom: 4%;
+  }
+  footer .flex .container ul li a {
+    color: white;
+    font-size: 25px;
+  }
+  footer .flex i {
+    text-align: center;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+    color: white;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo i {
+    padding: 15%;
+    color: white;
+  }
+  footer .mentions {
+    text-align: center;
+    width: 100%;
+    background-color: var(--vert-fonce);
+    padding: 2%;
+    color: white;
+  }
+  
+  footer .mentions .mentionsdroits{
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer .mentions .mentionsdroits a{
+    color: white;
+  }
+
+  /* RESPONSIVE */
+
+  /* 1200px */
+
+  @media screen and (max-width: 1200px){
+    /* NAVBAR */
+
+.navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  
+  .navBar nav ul li .deroulant {
+    font-size: 1.5em;
+  }
+  
+  .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  
+  .navBar .monCompte a {
+    font-size: 1.5em;
+  }
+  
+  main .banner h1{
+    font-size: 6em;
+  }
+
+  /* FOOTER */
+
+footer .flex .container img{
+    margin-left: 20%;
+  }
+  
+  footer .center p{
+    padding: 7% 15%;
+    text-align: center;
+  }
+  
+  footer .container .logo a{
+    margin: 0 15%;
+  }
+  }
+
+  /* 1024px */
+
+  @media screen and (max-width: 1024px){
+    /* NAVBAR */
+  .navBar nav ul li a {
+    font-size: 1.3em;
+  }
+
+  .navBar nav ul li .deroulant {
+    font-size: 1.3em;
+  }
+    
+  .navBar nav ul li a:hover{
+    transform: scale(1.4);
+  }
+
+  .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+  }
+
+  /* RESPONSIVE 768PX */
+
+@media screen and (max-width: 768px){
+/* MENU BURGER */
+header {
+    padding: 10px 20px 80px 20px;
+    background-color: #8AE395;
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--vert-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+
+  .containerw .logo{
+    width: 50%;
+  }
+
+  /* FOOTER */
+
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex {
+    margin: 0 10%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+
+/* RESPONSIVE 480PX */
+
+@media screen and (max-width: 480px){
+
+    /* LOGO */
+.containerw .logo{
+    padding: 13% 0 30% 0;
+    width: 60%;
+}
+
+    /* WIP txt */
+.containerw .txt{
+    padding-bottom: 20%;
+}
+
+.containerw .txt h1{
+    font-size: 6em;
+}
+
+    /* FOOTER */
+
+    footer .flex{
+        margin: 0;
+    }
+footer .flex .center p {
+    display: none;
+}
+footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+}
+footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+}
+
+footer .flex .container{
+    width: 100%;
+}
+}
