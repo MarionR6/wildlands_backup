@@ -1,0 +1,714 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+}
+
+a, img {
+  display: block;
+}
+
+:root {
+  --poppins:"Poppins",sans-serif;
+  --neucha:"Neucha", cursive;
+  --bleu-clair:#c7e3cb;
+  --bleu:#56B462;
+  --bleu-fonce:#3A8043;
+}
+
+#navigation {
+  display: none;
+}
+
+main {
+  background-color: var(--bleu-clair);
+  font-family: var(--poppins);
+}
+
+.navBar {
+  width: 100%;
+  background-color: var(--bleu);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+.navBar .logo img {
+  width: 100%;
+}
+.navBar nav {
+  width: 50%;
+}
+.navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navBar nav ul li {
+  list-style: none;
+}
+.navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+.navBar nav ul li a:hover {
+  transform: scale(1.4);
+}
+.navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+.navBar nav ul li:hover .sous {
+  display: block;
+}
+.navBar nav ul li:hover .sous li {
+  background-color: var(--bleu);
+  opacity: 0.8;
+  border-bottom: solid var(--bleu-clair) 1px;
+  padding: 2%;
+  background-color: var(--bleu-fonce);
+}
+.navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+.navBar nav ul li:hover .sous li a:hover {
+  color: #204725;
+  transform: scale(1);
+}
+.navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+.navBar .monCompte {
+  width: 15%;
+  background-color: var(--bleu-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+.navBar .monCompte a {
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+}
+.navBar .monCompte a:hover {
+  transform: scale(1.2);
+}
+
+.bannerTitle {
+  width: 100%;
+  background-image: url(https://i.goopics.net/k2ntuw.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 15%;
+}
+.bannerTitle h1 {
+  text-align: center;
+  padding: 7% 0% 2% 0%;
+  font-family: "Neucha", cursive;
+  font-size: 10em;
+  color: white;
+  font-weight: 400;
+}
+.bannerTitle .line {
+  width: 20%;
+  height: 0.2em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+.bannerTitle h2 {
+  text-align: center;
+  font-family: "Neucha", cursive;
+  font-size: 4em;
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.bannerTitle h2 .plus {
+  animation: plus 4s infinite linear;
+}
+.bannerTitle .moins {
+  animation: moins 4s infinite;
+}
+
+main {
+  padding-top: 5%;
+}
+main .presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto 5% auto;
+  background-color: var(--bleu-fonce);
+}
+main .presentation .actimg {
+  width: 50%;
+}
+main .presentation .actimg img {
+  width: 100%;
+}
+main .presentation .acttxt {
+  background-color: var(--bleu-fonce);
+  width: 50%;
+}
+main .presentation .acttxt h2 {
+  text-align: center;
+  font-size: 2.2em;
+  padding: 7%;
+  text-transform: uppercase;
+}
+main .presentation .acttxt .line {
+  width: 40%;
+  height: 0.2em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 10%;
+}
+main .presentation .acttxt p {
+  text-align: center;
+  font-size: 1.9em;
+  margin-bottom: 6%;
+  padding: 5%;
+}
+main .banner {
+  width: 100%;
+  background-image: url(https://i.goopics.net/fqhoc7.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-left: 15%;
+  margin-bottom: 5%;
+}
+main .banner h1 {
+  padding: 7% 0%;
+  font-family: var(--neucha);
+  font-size: 6em;
+  color: white;
+  font-weight: 400;
+}
+main .attractions {
+  width: 100%;
+}
+main .attractions .underTitle {
+  text-align: center;
+  margin: 3% 0;
+  color: var(--bleu-fonce);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+main .attractions .line {
+  width: 20%;
+  height: 0.2em;
+  background-color: var(--bleu-fonce);
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+main .attractions .flexContainer {
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .attractions .flexContainer img {
+  width: 35%;
+}
+main .attractions .flexContainer .container {
+  width: 35%;
+  background-color: var(--bleu-fonce);
+  padding: 4% 2% 2% 2%;
+}
+main .attractions .flexContainer .container p {
+  padding: 2%;
+  color: white;
+  font-weight: light;
+  text-align: center;
+  font-size: 1.5em;
+}
+main .attractions .flexContainer .container a {
+  background-color: var(--bleu-clair);
+  color: var(--bleu-fonce);
+  text-align: center;
+  border-radius: 3vh;
+  font-weight: bold;
+  margin-top: 7%;
+  padding: 2% 0;
+  transition: 0.5s all;
+  width: 75%;
+  margin: 7% auto 0 auto;
+  font-size: 1.4em;
+}
+main .attractions .flexContainer .container a:hover {
+  transform: scale(1.1);
+}
+main .banner2 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/7x4d98.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-left: 15%;
+  margin: 5% 0;
+}
+main .banner2 h1 {
+  padding: 7% 20% 7% 0;
+  font-family: var(--neucha);
+  font-size: 6em;
+  color: white;
+  font-weight: 400;
+  text-align: right;
+}
+main .nature .underTitle {
+  text-align: center;
+  margin: 3% 0;
+  color: var(--bleu-fonce);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+main .nature .line {
+  width: 20%;
+  height: 0.2em;
+  background-color: var(--bleu-fonce);
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+main .nature .actcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  padding-bottom: 5%;
+}
+main .nature .actcontainer .acttxtimg {
+  width: 60%;
+  display: flex;
+}
+main .nature .actcontainer .acttxtimg .acttxt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bleu-fonce);
+  text-align: center;
+  padding: 0 5%;
+  color: white;
+}
+main .nature .actcontainer .acttxtimg .acttxt h2 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+main .nature .actcontainer .acttxtimg .acttxt .line {
+  width: 8em;
+  height: 0.1em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+main .nature .actcontainer .acttxtimg .acttxt p {
+  font-size: 1.5em;
+  margin-bottom: 10%;
+}
+main .nature .actcontainer .acttxtimg .acttxt a {
+  background-color: var(--bleu-clair);
+  color: var(--bleu-fonce);
+  text-align: center;
+  border-radius: 3vh;
+  font-weight: bold;
+  padding: 2% 0;
+  transition: 0.5s all;
+  font-size: 1.4em;
+  width: 75%;
+  margin: 0 auto;
+}
+main .nature .actcontainer .acttxtimg .acttxt a:hover {
+  transform: scale(1.2);
+}
+main .nature .actcontainer .acttxtimg .actimg {
+  width: 50%;
+  position: relative;
+}
+main .nature .actcontainer .acttxtimg .actimg img {
+  width: 100%;
+}
+main .nature .actcontainer .reverse {
+  flex-direction: row-reverse;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--bleu);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.2);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo i {
+  padding: 15%;
+}
+footer .mentions {
+  width: 100%;
+  background-color: var(--bleu-fonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  header .navBar nav ul li a {
+    font-size: 1.3em;
+  }
+  header .navBar nav ul li a:hover {
+    transform: scale(1.4);
+  }
+  header .navBar nav ul li a .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  header .navBar nav ul li a .monCompte a {
+    font-size: 1.3em;
+  }
+  .bannerTitle h1 {
+    font-size: 6em;
+  }
+  .bannerTitle h2 {
+    font-size: 3em;
+  }
+  main .presentation {
+    width: 80%;
+  }
+  main .presentation .acttxt h2 {
+    padding-top: 6%;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  main .attractions .underTitle {
+    padding: 1% 3%;
+  }
+  main .attractions .flexContainer img {
+    width: 40%;
+  }
+  main .attractions .flexContainer .container {
+    width: 40%;
+  }
+  main .nature .actcontainer .acttxtimg {
+    width: 75%;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .container img {
+    margin-left: 20px;
+  }
+  footer .flex .container ul li a {
+    font-size: 15px;
+  }
+  footer .flex .container .logo a {
+    margin: 0 15%;
+  }
+  footer .flex .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px 20px 80px 20px;
+    background-color: var(--bleu-clair);
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--bleu-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  main .bannerTitle h1 {
+    font-size: 2.5em;
+  }
+  main .bannerTitle h2 {
+    font-size: 2em;
+  }
+  main .presentation {
+    width: 95%;
+  }
+  main .presentation .acttxt h2 {
+    padding-top: 2%;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  main .presentation .acttxt p {
+    font-size: 15px;
+  }
+  main .banner h1 {
+    font-size: 3em;
+  }
+  main .attractions .flexContainer {
+    filter: none;
+  }
+  main .attractions .underTitle {
+    font-size: 1.3em;
+  }
+  main .banner2 h1 {
+    font-size: 3em;
+  }
+  main .nature .underTitle {
+    font-size: 1.3em;
+    padding: 0 2%;
+  }
+  main .nature .actcontainer {
+    filter: none;
+  }
+  main .nature .actcontainer .acttxtimg {
+    width: 85%;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .bannerTitle h1 {
+    font-size: 1.5em;
+  }
+  main .bannerTitle h2 {
+    font-size: 2em;
+  }
+  main .presentation {
+    width: 95%;
+  }
+  main .presentation .acttxt h2 {
+    padding-top: 2%;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+  main .presentation .acttxt p {
+    font-size: 0.8em;
+  }
+  main .banner h1 {
+    font-size: 2em;
+  }
+  main .attractions .underTitle {
+    font-size: 1em;
+  }
+  main .attractions .flexContainer {
+    flex-wrap: wrap;
+  }
+  main .attractions .flexContainer img {
+    width: 100%;
+  }
+  main .attractions .flexContainer .container {
+    width: 100%;
+  }
+  main .attractions .reverse {
+    flex-wrap: wrap-reverse;
+  }
+  main .banner2 h1 {
+    font-size: 2em;
+  }
+  main .nature .underTitle {
+    font-size: 1em;
+    padding: 0 2%;
+  }
+  main .nature .actcontainer .acttxtimg {
+    width: 100%;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 1em;
+    margin-top: 3%;
+  }
+  main .nature .actcontainer .acttxtimg .acttxt p {
+    font-size: 0.8em;
+  }
+}/*# sourceMappingURL=styles.css.map */
