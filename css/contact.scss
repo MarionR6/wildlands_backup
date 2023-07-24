@@ -15,7 +15,7 @@ a{
 :root{
     --poppins: 'Poppins', sans-serif;
     --neucha: 'Neucha', cursive;
-    --vertClair: #8AE395;
+    --vertClair: #c7e3cb;
     --vert:#56B462;
     --vertFonce:#3A8043;
 }
@@ -480,5 +480,19 @@ footer{
         .flex{
             margin: 0;
         }
+    }
+}
+
+@media screen and (max-width:320px){
+    footer{
+        .flex{
+            padding-left: 3%;
+            .container{
+            width: 100%;
+            .coordonnees{
+            }
+            }
+        }
+        
     }
 }
