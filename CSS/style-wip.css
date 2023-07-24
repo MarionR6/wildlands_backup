@@ -13,11 +13,11 @@
   
   body {
     font-family: "Poppins", sans-serif;
-    background-color: #8AE395;
+    background-color: #c7e3cb;
   }
   
   main {
-    background-color: #8AE395;
+    background-color: #c7e3cb;
   }
   
   :root {
@@ -124,7 +124,6 @@
   /* WIP */
 
   .containerw{
-    background-color: #8AE395;
     display: flex;
     flex-direction: column;
     justify-content: center;
