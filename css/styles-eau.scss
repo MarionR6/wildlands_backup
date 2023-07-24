@@ -140,95 +140,96 @@ main{
 }
 
 // ------------------------------------------------------------------------------- ACTIVITIES
-.actcontainer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
-    margin-bottom: 5%;
-    .acttxtimg{
-        width: 60%;
-        display: flex;
-        .acttxt{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: var(--bleu-fonce);
-            text-align: center;
-            padding: 0 2%;
-            color: white;
-            h2{
-                font-weight: 400;
-                margin-bottom: 4%;
-                text-transform: uppercase;
-                font-size: 2.5em;
-            }
-            .line{
-                width: 8em;
-                height: 0.1em;
-                background-color: white;
-                margin: 0 auto;
-                margin-bottom: 4%;
-            }
-            p{
-                font-size: 1.3em;
-            }
-        }
-        .actimg{
-            width: 50%;
-            position:relative;
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        
-            .bubble{
-                position:absolute;
-                top: 25%;
-                left: -12%;
-                p{
-                    text-align: center;
-                    padding: 15%;
-                    font-size: 1.4em;
-                }
-                
-            }
-            .bubbleReverse{
-                position:absolute;
-                top: 25%;
-                right: -12%;
-                width: 9em;
-                height: 9em;
-                border-radius: 50%;
-                background-color: var(--bleu-fonce);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: solid 0.1em #091e33;
-                p{
-                    padding: 20% 20%;
-                    font-size: 0.8em;
-                    text-align: center;
-                    color: white;
-                    font-family: "Neucha", cursive;
-                    font-size: 1.4em;
-  }
-
-                            
-            }
-        }
-    }
-
-.reverse{
-    display: flex;
-    flex-direction: row-reverse;
-}
-}
+// 
 // BANNER 1
 
 main{
+    .actcontainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+        margin-bottom: 5%;
+        .acttxtimg{
+            width: 60%;
+            display: flex;
+            .acttxt{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: var(--bleu-fonce);
+                text-align: center;
+                padding: 0 2%;
+                color: white;
+                h2{
+                    font-weight: 400;
+                    margin-bottom: 4%;
+                    text-transform: uppercase;
+                    font-size: 2.5em;
+                }
+                .line{
+                    width: 8em;
+                    height: 0.1em;
+                    background-color: white;
+                    margin: 0 auto;
+                    margin-bottom: 4%;
+                }
+                p{
+                    font-size: 1.3em;
+                }
+            }
+            .actimg{
+                width: 50%;
+                position:relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            
+                .bubble{
+                    position:absolute;
+                    top: 25%;
+                    left: -12%;
+                    p{
+                        text-align: center;
+                        padding: 15%;
+                        font-size: 1.4em;
+                    }
+                    
+                }
+                .bubbleReverse{
+                    position:absolute;
+                    top: 25%;
+                    right: -12%;
+                    width: 9em;
+                    height: 9em;
+                    border-radius: 50%;
+                    background-color: var(--bleu-fonce);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: solid 0.1em #091e33;
+                    p{
+                        padding: 20% 20%;
+                        font-size: 0.8em;
+                        text-align: center;
+                        color: white;
+                        font-family: "Neucha", cursive;
+                        font-size: 1.4em;
+      }
+    
+                                
+                }
+            }
+        }
+    
+    .reverse{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    }
     .banner{
        width: 100%;
        background-image: url(https://i.goopics.net/4018ca.jpg);
@@ -263,23 +264,26 @@ main{
     // zone photo txt
     .family{
         display:flex;
-        width: 70%;
-        margin: 10% 25%;
+        width: 80%;
+        justify-content: center;
         position: relative;
         .bubble{
-            position:absolute;
-                top: 30%;
-                left: -5.5%;
-                p{
-                    text-align: center;
-                    padding: 5%;
-                    font-size: 1.4em;
+            position :absolute;
+            top: 50%;
+            left: 20.5%; 
+                
+            p{
+                text-align: center;
+                padding: 5%;
+                font-size: 1.4em;
                 }
         }
         .photo{
             width: 50%;
+            margin-top: 10%;
             img{
                 width: 100%;
+                
             }
         }
         
@@ -287,10 +291,10 @@ main{
         .txt{
             background-color: var(--bleu-fonce);
             width: 40%;
-            padding: 5%;
+            padding:5%;
             position: absolute;
-            top: 30%;
-            left: 40%;
+            top: 50%;
+            left: 60%;
             margin-bottom: 2%;
             filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
             h2{
@@ -332,9 +336,9 @@ main{
     .night {
         display:flex;
         width: 80%;
-        margin: 0 auto;
+        padding-bottom:25%;
         position: relative;
-        margin: 0 0 15% 15%;
+        margin: 0 auto;
         
         img{
             width: 50%;
@@ -487,12 +491,137 @@ footer{
 
 
 // ----------------------------RESPONSIVE
+@media screen and (max-width: 1440px){
+    main{
+        .actcontainer{
+            .reverse{
+                .actimg{
+                    .bubbleReverse{
+                        right: -17%;
+                    }
+                }
+            }
+            .acttxtimg{
+                .actimg{
+                    .bubble{
+                        left:-17%
+                    }
+            }
+                .acttxt{
+                    p{
+                        font-size: 1.2em;
+                        margin-bottom: 4%;
+                    }
+                }
+            }
+        }
+        .family{
+            width: 90%;
+            padding-bottom:15%;
+            .bubble{
+                left: 19%;
+                top: 35%;
+            }
+        }
+        .night{
+            padding-bottom: 15%;
+        }
+    }
 
+}
+// mediaquery 1200px
+@media screen and (max-width: 1200px){
+    header{
+        .navBar{
+            nav{
+                ul{
+                    li{
+                        a{
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+            .monCompte{
+                font-size: 0.8em;
+            }
+        }
+    }
+    main{
+    .actcontainer{
+        width: 100%;
+        .acttxtimg{
+            width: 80%;
+            .acttxt{
+                font-size: 0.9em;
+            }
+            .actimg{
+                .bubble{
+                    left:-15%
+                }
+                .bubbleReverse{
+                    right: -15%;
+                }
+            }
+        }
+       }
+       .family{
+        width:95%;
+        padding: 0;
+        margin: 0;
+        justify-content:flex-start;
+        padding-left: 15%;
+        .photo{
+            padding-bottom: 10%;
+        }
+        .txt{
+            width: 48%;
+            padding: 3%;
+            left: 42%;
+            font-size: 0.9em;
+            
+        }
+
+        .bubble{
+            left: 9.5%;
+            top: 38%;
+        }
+       }
+       .night{
+        width: 90%;
+        display:flex;
+        padding-left: 15%;
+        .txt{
+            width: 60%;
+            p{
+                font-size: 1.3em;
+            }
+        }
+        .img{
+            img{
+                top: 25%;
+                left: 40%;
+            }
+               
+            
+        }
+       }
+    }
+    footer{
+        .container{
+            .logo{
+                padding: 2%;
+                width: 35%;
+                
+            }
+        }
+    }
+}
 // mediaquery 1024px
 @media screen and (max-width: 1024px){
     .bubble{
-      width: 7em;
-      height: 7em;
+      width: 9em;
+      height: 9em;
     }
     /* NAVBAR */
     .navBar nav ul li a {
@@ -521,7 +650,7 @@ footer{
  main{ 
     .actcontainer{
     .acttxtimg{
-        width: 80%;
+        width: 82%;
     }
   }
   
@@ -537,16 +666,29 @@ footer{
             font-size: 4em;
         }
     }
+    .family{
+        .bubble{
+            left:8%;
+        }
+        .txt{
+            font-size: 0.8em;
+        }
+    }
     .night{
         width: 100%;
-        margin-left: 10.5%;
+        
+        padding-left: 15%;
         .txt{
             h2{
                 font-size: 1.5em;
             }
+            p{
+                font-size: 1.3em;
+            }
         }
         .photo{
             width: 100%;
+            
             img{
                 width: 20%;
             }
@@ -554,7 +696,6 @@ footer{
     }
 }
     footer{
-        margin-top: 15%;
         font-size: 0.7em;
         .flex{
             .container{
@@ -584,34 +725,9 @@ footer{
         }
     }
 }
-@media screen and (max-width: 1021px){  
-main{
-    .family{
-        display: flex;
-        width: 70%;
-        margin:5% auto;
-        background-color: var(--bleu-fonce);
-        .photo{
-            width: 50%;
-            img{
-                width: 100%;
-            }
-        }
-        .txt{
-            width: 50%;
-            position:static;
-            padding:2%;
-            margin-bottom:0;
-            p{
-                font-size: 1em;
-            }
-        }
 
 
-    }
-}
 
-}
 
 @media screen and (max-width: 768px){
     header {
@@ -628,7 +744,7 @@ main{
             top: 50px;
             right: 50px;
             cursor: pointer;
-            background-color:white;
+            background-color:var(--bleu-fonce);
             // transform: translate(-50%, -50%);
             transition: all .3s ease-in-out; // on peut préciser le type de transition que l'on veut (de base linéaire) ; ease-in-out = la transition commence lentement, s'accélère puis ralentit à nouveau avant la fin
             // D'autres transition : ease-in (augmente progressivement) ; ease-out (ralentit progressivement) ; ...
@@ -640,7 +756,7 @@ main{
                 display: block;
                 width: 30px;
                 height: 2px;
-                background-color:white;
+                background-color:var(--bleu-fonce);
                 transition: all .3s ease-in-out; 
             }
             &:before {
@@ -712,15 +828,30 @@ main{
             font-size:4em;
             }
         }
+        .bubble{
+            width: 8.5em;
+            height: 8.5em;
+            font-size: 0.8em;
+        }
+    
+        
         .actcontainer{
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+            
+            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.0));
             margin-bottom: 5%;
             .acttxtimg{
                 width: 90%;
+                .acttxt{
+                    p{
+                        font-size: 1em;
+                        padding: 2%;
+                    }
+                }
+        
                 
                 .actimg{
                     .bubble{
@@ -734,11 +865,16 @@ main{
                         .bubbleReverse{
                             top:25%;
                             right:0;
+                            width: 7em;
+                            height: 7em;
+                            p{
+                                font-size: 1em;
+                            }
                         }
                     
                     }
                 }
-            }
+        }
     
         .banner2{
             h1{
@@ -747,10 +883,38 @@ main{
         }
     
     .family{
-        width: 80%;
-        margin: 10%;
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        padding: 0;
+        flex-wrap:wrap;
+        align-items:center;
+        filter: drop-shadow(1em 2em 1.5em rgba(0, 0, 0, 0.0));
         .photo{
-            width:60%;
+            width:50%;
+            img{
+                width: 100%;
+                height: 30vh;
+                
+            }
+        }
+        .bubble{
+            top: 10%;
+            left: 0;
+        }   
+            
+
+        
+        .txt{
+            position: static;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            font-size: 0.7em;
+            height: 30vh;
+            padding: 4%;
+            filter: drop-shadow(1em 2em 1.5em rgba(0, 0, 0, 0.0));
+
         }
     }
     .banner3{
@@ -758,9 +922,45 @@ main{
             font-size: 3em;
         }
         
-    
     }
-}
+    .night{
+        width: 90%;
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        padding-bottom: 5%;
+        .txt{
+            width: 50%;
+            padding: 2%;
+            filter: drop-shadow(1em 2em 1.5em rgba(0, 0, 0, 0.0));
+            height: 30vh;
+            p{
+                font-size: 0.9em;
+            }
+            h2{
+                font-size: 1em;
+                margin-bottom: 5%;
+            }
+            .btn{
+                margin: 8% auto 0 auto;
+
+                a{
+                    font-size: 1em;
+                    
+                }
+            }
+        }
+        .img{
+            width: 50%;
+            img{
+                position: static;
+                width: 100%;
+                height: 30vh;
+            }
+        }
+    }
+    }
+
     
   /* FOOTER */
 
@@ -827,8 +1027,8 @@ main{
     
         }
     }
-
 }
+
 
 // mediaquery 480px
 @media screen and (max-width: 480px){
@@ -840,6 +1040,8 @@ main{
     }
     .actcontainer{
         filter: none;
+        width: 90%;
+        margin: 5% auto;
         .acttxtimg{
             flex-wrap:wrap;
             width: 100%;
@@ -867,10 +1069,13 @@ main{
         
         .photo{
             width: 100%;
+            margin: 0 auto;
+            padding: 0;
         }
         .txt{
             width: 100%;
             filter: none;
+            margin: 0 auto;
         }
     }
     .banner3{
@@ -880,12 +1085,16 @@ main{
     }
     .night{
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         .txt{
             width: 100%;
+            h2{
+                padding-top: 5%;
+            }
         }
         .img{
+            width: 100%;
             img{
                 position: static;
                 width: 100%;
@@ -918,5 +1127,73 @@ footer{
     }
 
 }
+@media screen and (max-width: 424px){
+    footer{
+        .flex{
+            padding: 2%;
+        }
+    }
+}
 
+@media screen and (max-width: 320px){
+    main{
+        .banner{
+            h1{
+                font-size: 2em;
+            }
+        }
+        .actcontainer{
+            .acttxtimg{
+                .acttxt{
+                    h2{
+                        font-size: 1.7em;
+                        margin-top: 2%;
+                    }
+                }
+                .actimg{
+                    .bubble{
+                        width: 5em;
+                        height: 5em;
+                        p{
+                            font-size: 0.8em;
+                        }
+                    }
+                    .bubbleReverse{
+                        width: 5em;
+                        height: 5em;
+                        p{
+                            font-size: 0.8em;
+                        }
+                    }
+                }
+                }
+            }
+            
+        .banner2{
+            h1{
+                font-size: 2em;;
+            }
+        }
+        .family{
+            .txt{
+                font-size: 0.7em;
+            }
+            .bubble{
+               display:none;
+            }
+        }     
+    }
+    footer{
+        .flex{
+            padding: 0%
+        }
+    }
+    .center{
+        .logo{
+            i{
+                font-size: 0.8em;
+            }
+        }
+    }
+}
 
