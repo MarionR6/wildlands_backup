@@ -937,7 +937,7 @@ footer .container .logo a{
   /* MENU BURGER */
   header {
     padding: 10px 20px 80px 20px;
-    background-color: #8AE395;
+    background-color: #c7e3cb;
   }
   header .navBar {
     display: none;
@@ -1255,12 +1255,14 @@ footer .container .logo a{
   }
 
   .activities .actcontainer .acttxtimg{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     flex-wrap: wrap-reverse;
   }
 
   .activities .actcontainer .acttxtimg img{
     height: 100%;
+    width: 100%;
   }
 
   .activities .actcontainer .acttxtimg .acttxt{
@@ -1279,10 +1281,6 @@ footer .container .logo a{
   }
 
   .activities .actcontainer .acttxtimg .actimg{
-    width: 100vw;
-  }
-
-  .activities .actcontainer .acttxtimg .actimg img{
     width: 100vw;
   }
 
@@ -1308,9 +1306,9 @@ footer .container .logo a{
   }
 
   .famcontainer .famact{
-    width: 100%;
+    width: 90%;
     filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
-    padding: 1% 0;
+    padding: 1% 0 4% 0;
   }
 
   .famcontainer .famact .famtxt{
@@ -1344,9 +1342,22 @@ footer .container .logo a{
 
   /* NUIT BOIS */
 
+  .banner3{
+    margin: 0 0 4% 0;
+  }
+
   .banner3 h1{
     font-size: 3em;
     padding: 7% 0% 7% 15%;
+  }
+
+  .campchacontainer h2 {
+    margin-bottom: 4%;
+  }
+
+  .campchacontainer .twoparts{
+    width: 90%;
+    margin: 0 auto;
   }
 
   .campchacontainer .twoparts .bubble{
@@ -1360,9 +1371,101 @@ footer .container .logo a{
     font-size: 1.5em;
   }
 
+  .campchacontainer .btncamp a{
+    padding: 1% 3%;
+  }
+
   /* FOOTER */
  footer .flex{
   margin: 0;
   font-size: 1em;
  }
+}
+
+/* 424px */
+
+@media screen and (max-width:424px){
+
+  .banner3 h1{
+    font-size: 2.5em;
+  }
+
+  .campchacontainer .btncamp a{
+    font-size: 1.2em;
+  }
+
+  footer .flex{
+    padding: 2%;
+  }
+
+}
+
+
+/* 320px */
+
+@media screen and (max-width: 320px){
+  main .banner h1{
+    font-size: 2.5em;
+  }
+  .activities h2{
+    font-size: 1.5em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.5em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    line-height: 150%;
+    font-size: 1em;
+  }
+
+  .famcontainer .famact .famtxt{
+    font-size: 1em;
+    line-height: 150%;
+  }
+
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble p{
+    font-size: 1.2em;
+  }
+
+  .banner3 h1{
+    font-size: 2em;
+  }
+  .campchacontainer h2{
+    font-size: 1.5em;
+  }
+
+  .campchacontainer .twoparts .bubble p{
+    font-size: 1.2em;
+  }
+
+  .campchacontainer .btncamp a{
+    font-size: 1em;
+  }
+
+  footer .flex{
+    margin: 0;
+    font-size: 1em;
+  }
+
+  footer .footcontact{
+    width: 100%;
+  }
+
+  footer .flex .container{
+    width: 100%;
+  }
+
+  footer .flex .container .coordonnees{
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    font-size: 1.5em;
+
+  }
 }
