@@ -19,7 +19,7 @@ a {
 :root {
   --poppins: "Poppins", sans-serif;
   --neucha: "Neucha", cursive;
-  --bleuClair: #A1BEE1;
+  --bleuClair: #bac7d6;
   --bleu:#567BB4;
   --bleuFonce:#1F5180;
 }
@@ -59,7 +59,7 @@ a {
   transition: 0.5s all;
 }
 .navBar nav ul li a:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 .navBar nav ul li .sous {
   display: none;
@@ -104,7 +104,7 @@ a {
   transition: 0.5s all;
 }
 .navBar .monCompte a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .nuages {
@@ -116,8 +116,9 @@ a {
 }
 .nuages h1 {
   font-family: var(--neucha);
-  font-size: 4.8em;
+  font-size: 7em;
   text-align: center;
+  font-weight: 400;
 }
 
 .couleurs {
@@ -129,8 +130,9 @@ a {
 }
 .couleurs h1 {
   font-family: var(--neucha);
-  font-size: 4.3em;
+  font-size: 6em;
   text-align: right;
+  font-weight: 400;
 }
 
 .etoiles {
@@ -142,7 +144,8 @@ a {
 }
 .etoiles h1 {
   font-family: var(--neucha);
-  font-size: 4.3em;
+  font-size: 6em;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -176,7 +179,7 @@ a {
   align-items: center;
 }
 .bleuClair .flex .bleuFonce .txt h4 {
-  font-size: 1.3em;
+  font-size: 2.4em;
   font-weight: 400;
   text-transform: uppercase;
   padding-top: 7%;
@@ -189,10 +192,12 @@ a {
 }
 .bleuClair .flex .bleuFonce .txt p {
   text-align: center;
-  font-size: 1em;
+  font-size: 1.6em;
+  font-weight: 200;
 }
 .bleuClair .flex .bleuFonce .txt .reserver {
   width: 40%;
+  font-weight: 400;
   background-color: var(--bleuClair);
   border-radius: 2vh;
   padding: 2% 3%;
@@ -204,7 +209,7 @@ a {
 .bleuClair .flex .bleuFonce .txt .reserver a {
   color: black;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 /* ACTIVITIES */
@@ -222,52 +227,64 @@ a {
 }
 
 .activities .actcontainer .bubble1 {
-  width: 10%;
+  width: 12vh;
+  height: 12vh;
   border-radius: 50%;
   padding: 3% 1%;
   background-color: var(--bleuFonce);
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  left: 10%;
-  top: -5%;
+  left: 9%;
+  top: 20%;
 }
 .activities .actcontainer .bubble1 p {
   font-family: var(--neucha);
-  font-size: 1em;
+  font-size: 1.4em;
 }
 
 .activities .actcontainer .bubble2 {
-  width: 10%;
+  width: 12vh;
+  height: 12vh;
   border-radius: 50%;
   padding: 2% 1%;
   background-color: var(--bleuFonce);
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  right: 8%;
-  top: 47%;
+  right: 6%;
+  top: 49%;
 }
 .activities .actcontainer .bubble2 p {
   font-family: var(--neucha);
-  font-size: 1em;
+  font-size: 1.4em;
 }
 
 .activities .actcontainer .bubble3 {
-  width: 10%;
+  width: 12vh;
+  height: 12vh;
   border-radius: 50%;
   padding: 2% 1%;
   background-color: var(--bleuFonce);
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  left: 8%;
-  bottom: 3.5%;
+  left: 6%;
+  bottom: 4%;
 }
 .activities .actcontainer .bubble3 p {
   font-family: var(--neucha);
-  font-size: 1em;
+  font-size: 1.4em;
 }
 
 .activities .actcontainer .acttxtimg {
-  width: 70%;
+  width: 75%;
   display: flex;
 }
 
@@ -279,15 +296,14 @@ a {
   background-color: var(--bleuFonce);
   text-align: center;
   padding: 3% 2%;
-  line-height: 1.8em;
   color: white;
 }
 
 .activities .actcontainer .acttxtimg .acttxt h3 {
   font-weight: 400;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
   text-transform: uppercase;
-  font-size: 1.8em;
+  font-size: 2.4em;
 }
 
 .activities .actcontainer .acttxtimg .acttxt .line {
@@ -299,7 +315,9 @@ a {
 }
 
 .activities .actcontainer .acttxtimg .acttxt p {
-  font-size: 1em;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 200;
 }
 
 .activities .actcontainer .acttxtimg .actimg {
@@ -324,7 +342,7 @@ footer a {
   transition: 0.5s all;
 }
 footer a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 footer .flex {
   width: 100%;
@@ -402,9 +420,161 @@ footer .mentions .mentionsdroits {
   justify-content: center;
 }
 
+@media screen and (max-width: 1820px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 2.3em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1.3em;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 2.3em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+@media screen and (max-width: 1720px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 2em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    font-size: 1.3em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1.1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 2em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+}
+@media screen and (max-width: 1520px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.8em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    font-size: 1.2em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1.1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.8em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    font-size: 1.1em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.5em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    font-weight: 100;
+  }
+}
 @media screen and (max-width: 1200px) {
-  .activities .actcontainer .bubble1 {
-    padding: 2% 1%;
+  .navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  .navBar nav ul li .sous {
+    display: none;
+    position: absolute;
+    transition: 1 all;
+  }
+  .navBar nav ul li:hover .sous li a {
+    font-size: 20px;
+  }
+  .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+  .nuages h1 {
+    font-family: var(--neucha);
+    font-size: 5.5em;
+    text-align: center;
+    font-weight: 400;
+  }
+  .couleurs h1 {
+    font-size: 4.5em;
+  }
+  .etoiles h1 {
+    font-size: 4.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1.1em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-family: var(--neucha);
+    font-size: 1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.5em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.05em;
+    line-height: 1.5em;
+  }
+  footer {
+    width: 100%;
+    background-color: var(--bleu);
+    font-family: var(--neucha);
+  }
+  footer a {
+    transition: 0.5s all;
+  }
+  footer a:hover {
+    transform: scale(1.1);
+  }
+  footer .flex {
+    font-size: 1.3em;
+  }
+  footer .flex ul li a {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -421,6 +591,31 @@ footer .mentions .mentionsdroits {
   .navBar .monCompte a {
     font-size: 1.4em;
   }
+  .nuages h1 {
+    font-size: 4em;
+  }
+  .couleurs h1 {
+    font-size: 3em;
+  }
+  .etoiles h1 {
+    font-size: 3em;
+  }
+  .bleuClair .flex {
+    justify-content: space-between;
+  }
+  .bleuClair .flex .bleuFonce {
+    width: 47%;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.4em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1.05em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1em;
+  }
   .activities {
     width: 100%;
   }
@@ -433,24 +628,21 @@ footer .mentions .mentionsdroits {
     position: relative;
   }
   .activities .actcontainer .bubble1 {
-    width: 12%;
     border-radius: 50%;
     padding: 3.5% 1%;
     position: absolute;
     left: 7%;
-    top: -7%;
+    top: -5%;
   }
   .activities .actcontainer .bubble2 {
-    width: 12%;
     padding: 2.5% 1%;
     right: 3%;
     top: 50%;
   }
   .activities .actcontainer .bubble3 {
-    width: 12%;
     padding: 2.5% 1%;
-    left: 1%;
-    bottom: 3.5%;
+    left: 3.5%;
+    bottom: 4.5%;
   }
   .activities .actcontainer .acttxtimg {
     width: 80%;
@@ -585,7 +777,7 @@ footer .mentions .mentionsdroits {
     align-items: center;
   }
   .bleuClair .flex .bleuFonce .txt h4 {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .bleuClair .flex .bleuFonce .txt p {
     text-align: center;
@@ -607,31 +799,28 @@ footer .mentions .mentionsdroits {
     font-size: 1em;
   }
   .activities .actcontainer .bubble1 {
-    width: 30%;
-    border-radius: 0%;
-    padding: 1% 0;
-    left: 5%;
-    top: 25%;
+    width: 10vh;
+    height: 10vh;
+    left: 7%;
+    top: 20%;
   }
   .activities .actcontainer .bubble2 {
-    width: 30%;
-    border-radius: 0%;
-    padding: 1% 0;
-    right: 5%;
-    top: 60%;
+    width: 10vh;
+    height: 10vh;
+    right: 35%;
+    top: 53%;
   }
   .activities .actcontainer .bubble3 {
-    width: 30%;
-    border-radius: 0%;
-    padding: 1% 0;
-    left: 5%;
-    bottom: 25%;
+    width: 10vh;
+    height: 10vh;
+    left: 8%;
+    bottom: 20%;
   }
   .activities .actcontainer .acttxtimg {
     width: 90%;
   }
   .activities .actcontainer .acttxtimg .acttxt h3 {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
   footer {
     font-size: 0.7em;
@@ -701,25 +890,21 @@ footer .mentions .mentionsdroits {
     margin: 2.5% 0;
     filter: none;
   }
+  .bleuClair .flex .bleuFonce .txt .reserver {
+    filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.5));
+    font-size: 0.9em;
+  }
   .activities .actcontainer .bubble1 {
-    width: 50%;
-    border-radius: 0%;
-    padding: 3% 0;
-    position: static;
+    top: 12%;
+    left: 10%;
   }
   .activities .actcontainer .bubble2 {
-    width: 50%;
-    border-radius: 0;
-    padding: 3% 0;
-    position: static;
-    margin-top: 5%;
+    top: 43%;
+    left: 10%;
   }
   .activities .actcontainer .bubble3 {
-    width: 50%;
-    border-radius: 0;
-    padding: 3% 0;
-    position: static;
-    margin-top: 5%;
+    bottom: 25%;
+    left: 10%;
   }
   .activities .actcontainer {
     filter: none;
@@ -732,9 +917,129 @@ footer .mentions .mentionsdroits {
     width: 100%;
   }
   .activities .actcontainer .acttxtimg .acttxt h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1em;
   }
   .activities .actcontainer .acttxtimg .actimg {
     width: 100%;
+  }
+  .espace {
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .nuages h1 {
+    font-size: 2em;
+  }
+  .couleurs h1 {
+    font-size: 1.7em;
+  }
+  .etoiles h1 {
+    font-size: 1.7em;
+  }
+  .activities .actcontainer .bubble1 {
+    left: 10%;
+    top: 11%;
+  }
+  .activities .actcontainer .bubble2 {
+    right: 35%;
+    top: 45%;
+  }
+  .activities .actcontainer .bubble3 {
+    left: 8%;
+    bottom: 25%;
+  }
+  footer .flex {
+    font-size: 1em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    padding: 8% 0;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .nuages h1 {
+    font-size: 1.8em;
+  }
+  .couleurs h1 {
+    font-size: 1.5em;
+  }
+  .etoiles h1 {
+    font-size: 1.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.1em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .bubble1 {
+    left: 10%;
+    top: 10%;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .bubble2 {
+    left: 10%;
+    top: 44%;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .bubble3 {
+    left: 10%;
+    bottom: 23%;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 0.9em;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.7em;
   }
 }/*# sourceMappingURL=airs.css.map */

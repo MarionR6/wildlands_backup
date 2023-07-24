@@ -15,7 +15,7 @@ a{
 :root{
     --poppins: 'Poppins', sans-serif;
     --neucha: 'Neucha', cursive;
-    --bleuClair: #A1BEE1;
+    --bleuClair: #bac7d6;
     --bleu:#567BB4;
     --bleuFonce:#1F5180;
 }
@@ -53,7 +53,7 @@ a{
                     text-decoration: none;
                     transition:0.5s all;
                     &:hover{
-                        transform: scale(1.4);
+                        transform: scale(1.1);
                     }
                 }
                 .sous{
@@ -106,7 +106,7 @@ a{
         font-size: 1.5em;
         transition: 0.5s all;
         &:hover{
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         }
     }
@@ -121,8 +121,9 @@ a{
     background-size: cover;
     h1{
         font-family: var(--neucha);
-        font-size: 4.8em;
+        font-size: 7em;
         text-align: center;
+        font-weight:400;
     }
 }
 .couleurs{
@@ -133,8 +134,9 @@ a{
     background-size:cover;
     h1{
         font-family: var(--neucha);
-        font-size: 4.3em;
+        font-size: 6em;
         text-align: right;
+        font-weight:400;
     }
 }
 .etoiles{
@@ -145,7 +147,8 @@ a{
     background-size:cover;
     h1{
         font-family: var(--neucha);
-        font-size: 4.3em;
+        font-size: 6em;
+        font-weight:400;
         text-align: left;
     }
 }
@@ -176,7 +179,7 @@ a{
                 flex-direction: column;
                 align-items: center;
                 h4{
-                    font-size: 1.3em;
+                    font-size: 2.4em;
                     font-weight: 400;
                     text-transform: uppercase;
                     padding-top: 7%;
@@ -190,10 +193,12 @@ a{
                 }
                 p{
                     text-align: center;
-                    font-size: 1em;
+                    font-size: 1.6em;
+                    font-weight:200;
                 }
                 .reserver{
                     width: 40%;
+                    font-weight:400;
                     background-color: var(--bleuClair);
                     border-radius: 2vh;
                     padding: 2% 3%;
@@ -204,7 +209,7 @@ a{
                     a{
                         color: black;
                         font-weight: 600;
-                        font-size: 1em;
+                        font-size: 1.5em;
                     }
                 }
             }
@@ -227,49 +232,61 @@ a{
 }
 // -----------------------------------> BULLES
 .activities .actcontainer .bubble1{
-    width:10%;
+    width:12vh;
+    height: 12vh;
     border-radius: 50%;
     padding: 3% 1%;
     background-color: var(--bleuFonce);
     position: absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align: center;
-    left:10%;
-    top:-5%;
+    left:9%;
+    top:20%;
     p{
         font-family: var(--neucha);
-        font-size: 1em;
+        font-size: 1.4em;
     }
 }
 .activities .actcontainer .bubble2{
-    width:10%;
+    width:12vh;
+    height: 12vh;
     border-radius: 50%;
     padding: 2% 1%;
     background-color: var(--bleuFonce);
     position: absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align: center;
-    right:8%;
-    top:47%;
+    right:6%;
+    top:49%;
     p{
         font-family: var(--neucha);
-        font-size: 1em;
+        font-size: 1.4em;
     }
 }
 .activities .actcontainer .bubble3{
-    width:10%;
+    width:12vh;
+    height: 12vh;
     border-radius: 50%;
     padding: 2% 1%;
     background-color: var(--bleuFonce);
     position: absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align: center;
-    left:8%;
-    bottom:3.5%;
+    left:6%;
+    bottom:4%;
     p{
         font-family: var(--neucha);
-        font-size: 1em;
+        font-size: 1.4em;
     }
 }
 .activities .actcontainer .acttxtimg{
-    width: 70%;
+    width: 75%;
     display: flex;
 }
 .activities .actcontainer .acttxtimg .acttxt{
@@ -280,14 +297,14 @@ a{
     background-color: var(--bleuFonce);
     text-align: center;
     padding: 3% 2%;
-    line-height: 1.8em;
+    // line-height: 3em;
     color: white;
 }
 .activities .actcontainer .acttxtimg .acttxt h3{
     font-weight: 400;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
     text-transform: uppercase;
-    font-size: 1.8em;
+    font-size: 2.4em;
 }
 .activities .actcontainer .acttxtimg .acttxt .line{
     width: 8em;
@@ -297,7 +314,9 @@ a{
     margin-bottom: 4%;
 }
 .activities .actcontainer .acttxtimg .acttxt p{
-    font-size: 1em;
+    font-size: 1.6em;
+    line-height: 1.6em;
+    font-weight:200;
 }
 .activities .actcontainer .acttxtimg .actimg{
     width: 50%;
@@ -318,7 +337,7 @@ footer{
     a{
         transition: 0.5s all;
         &:hover{
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
     }
     .flex{
@@ -398,13 +417,283 @@ footer{
     }    
 }
 
-// ----------------------------RESPONSIVE
+// ---------------------------- R E S P O N S I V E --------------------------------------------------//
+
+// media query 1820px
+@media screen and (max-width: 1820px) {
+
+    
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 2.3em;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 1.5em;
+                        font-weight:100;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // -----------------------------------> BULLES
+    .activities .actcontainer .bubble1{
+        p{
+            font-size: 1.2em;
+        }
+    }
+    .activities .actcontainer .bubble2{
+        p{
+            font-size: 1.2em;
+        }
+    }
+    .activities .actcontainer .bubble3{
+        p{
+            font-size: 1.2em;
+        }
+    }
+
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 2.3em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.5em;
+        line-height:1.5em;
+    }   
+}
+
+// media query 1720px
+@media screen and (max-width: 1720px) {
+
+    
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 2em;
+                    }
+                    p{
+                        font-size: 1.3em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1.1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 2em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.3em;
+        line-height:1.3em;
+    }   
+}
+
+// media query 1520px
+@media screen and (max-width: 1520px) {
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 1.8em;
+                    }
+                    p{
+                        font-size: 1.2em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1.1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.8em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.2em;
+        line-height:1.5em;
+        font-weight:100;
+    }   
+}
+
+// media query 1400px
+@media screen and (max-width: 1400px) {
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 1.5em;
+                    }
+                    p{
+                        font-size: 1.1em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+        
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.5em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.1em;
+        line-height:1.4em;
+        font-weight:100;
+    } 
+}
 
 // media query 1200px
 @media screen and (max-width: 1200px) {
-    .activities .actcontainer .bubble1{
-        padding: 2% 1%;
+
+    .navBar{
+        nav{
+            ul{
+                li{
+                    a{
+                        font-size: 1.5em;
+                    }
+                    .sous{
+                        display: none;
+                        position: absolute;
+                        transition: 1 all;
+                    }
+                    &:hover{
+                        .sous{
+                            li{
+                                a{
+                                    font-size:20px;
+                                }
+                            }
+                    
+                        }
+                    }              
+                }
+            }
+        }
+        .monCompte{
+            a{
+            font-size: 1.3em;
+            }
+        }
     }
+    
+    // banner la tete dans les nuages
+    .nuages{
+        h1{
+            font-family: var(--neucha);
+            font-size: 5.5em;
+            text-align: center;
+            font-weight:400;
+        }
+    }
+    .couleurs{
+
+        h1{
+            font-size: 4.5em;
+
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 4.5em;
+        }
+    }
+    
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 1.5em;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 1.1em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // -----------------------------------> BULLES
+    .activities .actcontainer .bubble1{
+        p{
+            font-size: 1em;
+        }
+    }
+    .activities .actcontainer .bubble2{
+        p{
+            font-size: 1em;
+        }
+    }
+    .activities .actcontainer .bubble3{
+        p{
+            font-family: var(--neucha);
+            font-size: 1em;
+        }
+    }
+
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.5em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.05em;
+        line-height:1.5em;
+    }
+
+    // --- --- --- footer
+    footer{
+        width: 100%;
+        background-color:var(--bleu);
+        font-family:var(--neucha);
+        a{
+            transition: 0.5s all;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .flex{
+            font-size: 1.3em;
+            ul{
+                li{
+                    a{
+                        font-size: 20px;  
+                    }
+                }
+            }
+        }
+    }    
 }
 
 // media query 1024px
@@ -439,6 +728,47 @@ footer{
             }
         }
     }
+    .nuages{
+        h1{
+            font-size: 4em;
+        }
+    }
+    .couleurs{
+
+        h1{
+            font-size: 3em;
+
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 3em;
+        }
+    }
+    // ---------------------------> les cartes 
+    .bleuClair{
+        .flex{
+            justify-content:space-between;
+            .bleuFonce{
+                width:47%;
+                .txt{
+                    h4{
+                        font-size: 1.4em;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 1.05em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     // ---------------------------> activités 
     .activities{
         width: 100%;
@@ -453,24 +783,21 @@ footer{
     }
     // -----------------------------------> BULLES
     .activities .actcontainer .bubble1{
-        width:12%;
         border-radius: 50%;
         padding: 3.5% 1%;
         position: absolute;
         left:7%;
-        top:-7%;
+        top:-5%;
     }
     .activities .actcontainer .bubble2{
-        width:12%;
         padding: 2.5% 1%;
         right:3%;
         top:50%;
     }
     .activities .actcontainer .bubble3{
-        width:12%;
         padding: 2.5% 1%;
-        left:1%;
-        bottom:3.5%;
+        left:3.5%;
+        bottom:4.5%;
     }
     .activities .actcontainer .acttxtimg{
         width: 80%;
@@ -625,7 +952,7 @@ footer{
                 flex-direction: column;
                 align-items: center;
                 h4{
-                    font-size: 1.2em;
+                    font-size: 1.3em;
                 }
                 p{
                     text-align: center;
@@ -652,25 +979,22 @@ footer{
 }
     // -----------------------------------> BULLES
     .activities .actcontainer .bubble1{
-        width:30%;
-        border-radius: 0%;
-        padding: 1% 0;
-        left:5%;
-        top:25%;
+        width:10vh;
+        height:10vh;
+        left:7%;
+        top:20%;
     }
     .activities .actcontainer .bubble2{
-        width:30%;
-        border-radius: 0%;
-        padding: 1% 0;
-        right:5%;
-        top:60%;
+        width:10vh;
+        height:10vh;
+        right:35%;
+        top:53%;
     }
     .activities .actcontainer .bubble3{
-        width:30%;
-        border-radius: 0%;
-        padding: 1% 0;
-        left:5%;
-        bottom:25%;
+        width:10vh;
+        height:10vh;
+        left:8%;
+        bottom:20%;
     }
     
     // ----------------------------------> ACTIVITES
@@ -678,7 +1002,7 @@ footer{
         width: 90%;
     }
     .activities .actcontainer .acttxtimg .acttxt h3{
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
     footer{
         font-size: 0.7em;
@@ -772,30 +1096,29 @@ footer{
             width: 90%;
             margin: 2.5% 0;
             filter: none;
+            .txt{
+                .reserver{
+                     filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.50));
+                    font-size:0.9em;
+                }
             }
+            }
+
         }
     }
 
     // -----------------------------------> BULLES
     .activities .actcontainer .bubble1{
-        width:50%;
-        border-radius: 0%;
-        padding: 3% 0;
-        position: static;
+        top:12%;
+        left:10%;
     }
     .activities .actcontainer .bubble2{
-        width:50%;
-        border-radius: 0;
-        padding: 3% 0;
-        position: static;
-        margin-top: 5%;
+        top : 43%;
+        left: 10%;
     }
     .activities .actcontainer .bubble3{
-        width:50%;
-        border-radius: 0;
-        padding: 3% 0;
-        position: static;
-        margin-top: 5%;
+        bottom:25%;
+        left: 10%;
     }
     
     // ----------------------------------> ACTIVITES
@@ -810,9 +1133,161 @@ footer{
         width: 100%;
     }
     .activities .actcontainer .acttxtimg .acttxt h3{
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1em;
     }
     .activities .actcontainer .acttxtimg .actimg{
         width: 100%;
+    }
+    .espace{
+        margin-top:5%;
+    }
+}
+
+// media query 375px
+@media screen and (max-width: 375px) {
+    .nuages{
+        h1{
+            font-size:2em;
+        }
+    }
+    .couleurs{
+        h1{
+            font-size: 1.7em;
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 1.7em;
+        }
+    }
+    .activities .actcontainer .bubble1{
+        left:10%;
+        top:11%;
+    }
+    .activities .actcontainer .bubble2{
+        right:35%;
+        top:45%;
+    }
+    .activities .actcontainer .bubble3{
+        left:8%;
+        bottom:25%;
+    }
+    footer{
+        .flex{
+
+            font-size: 1em;
+            padding-bottom:2%;
+            .container{
+                img{
+                    width: 50%;
+                    padding: 8% 0;
+                }
+            }
+
+        }
+        .center{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding: 2%;
+                }
+            .logo{
+                display:flex;
+                width: 20%;
+                justify-content: space-around;
+                a{
+                    padding: 0 15%;
+                }
+                i{
+                    font-size:0.9em;
+                }  
+            }
+        }   
+    }
+}
+
+// media query 320px
+@media screen and (max-width: 320px) {
+    .nuages{
+        h1{
+            font-size:1.8em;
+        }
+    }
+    .couleurs{
+        h1{
+            font-size: 1.5em;
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 1.5em;
+        }
+    }
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+            .txt{
+                h4{
+                    font-size: 1.1em;
+                }
+                p{
+                    text-align: center;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
+    .activities .actcontainer .bubble1{
+        left:10%;
+        top:10%;
+        p{
+            font-size:0.9em;
+        }
+    }
+    .activities .actcontainer .bubble2{
+        left:10%;
+        top:44%;
+        p{
+            font-size:0.9em;
+        }
+    }
+    .activities .actcontainer .bubble3{
+        left:10%;
+        bottom:23%;
+        p{
+            font-size:0.9em;
+        }
+    }
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.1em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 0.9em;
+    }
+    footer{
+        .center{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding: 2%;
+                }
+            .logo{
+                display:flex;
+                width: 20%;
+                justify-content: space-around;
+                a{
+                    padding: 0 15%;
+                }
+                i{
+                    font-size:0.7em;
+                }  
+            }
+        }   
     }
 }
