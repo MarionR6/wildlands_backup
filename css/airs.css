@@ -1,0 +1,740 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --neucha: "Neucha", cursive;
+  --bleuClair: #A1BEE1;
+  --bleu:#567BB4;
+  --bleuFonce:#1F5180;
+}
+
+#navigation {
+  display: none;
+}
+
+.navBar {
+  width: 100%;
+  background-color: var(--bleu);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+.navBar .logo img {
+  width: 100%;
+}
+.navBar nav {
+  width: 50%;
+}
+.navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navBar nav ul li {
+  list-style: none;
+}
+.navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+.navBar nav ul li a:hover {
+  transform: scale(1.4);
+}
+.navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+.navBar nav ul li:hover .sous {
+  display: block;
+}
+.navBar nav ul li:hover .sous li {
+  background-color: var(--bleu);
+  opacity: 0.8;
+  border-bottom: solid var(--bleu-clair) 1px;
+  padding: 2%;
+  background-color: var(--bleuFonce);
+}
+.navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+.navBar nav ul li:hover .sous li a:hover {
+  color: #091e33;
+  transform: scale(1);
+}
+.navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+.navBar .monCompte {
+  width: 15%;
+  background-color: var(--bleuFonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+.navBar .monCompte a {
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+}
+.navBar .monCompte a:hover {
+  transform: scale(1.2);
+}
+
+.nuages {
+  width: 100%;
+  padding: 7%;
+  background-image: url(../img/nuage.jpg);
+  background-position: right;
+  background-size: cover;
+}
+.nuages h1 {
+  font-family: var(--neucha);
+  font-size: 4.8em;
+  text-align: center;
+}
+
+.couleurs {
+  width: 100%;
+  padding: 7%;
+  background-image: url(../img/ciel2.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+.couleurs h1 {
+  font-family: var(--neucha);
+  font-size: 4.3em;
+  text-align: right;
+}
+
+.etoiles {
+  width: 100%;
+  padding: 7%;
+  background-image: url(../img/étoiles.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.etoiles h1 {
+  font-family: var(--neucha);
+  font-size: 4.3em;
+  text-align: left;
+}
+
+.bleuClair {
+  width: 100%;
+  background-color: var(--bleuClair);
+  font-family: var(--poppins);
+  padding: 10%;
+}
+.bleuClair .flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.bleuClair .flex .bleuFonce {
+  background-color: var(--bleuFonce);
+  width: 40%;
+  padding: 3%;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+.bleuClair .flex .bleuFonce .image {
+  width: 100%;
+}
+.bleuClair .flex .bleuFonce .image img {
+  width: 100%;
+}
+.bleuClair .flex .bleuFonce .txt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bleuClair .flex .bleuFonce .txt h4 {
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 7%;
+}
+.bleuClair .flex .bleuFonce .txt .ligne {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 2% 0 5%;
+}
+.bleuClair .flex .bleuFonce .txt p {
+  text-align: center;
+  font-size: 1em;
+}
+.bleuClair .flex .bleuFonce .txt .reserver {
+  width: 40%;
+  background-color: var(--bleuClair);
+  border-radius: 2vh;
+  padding: 2% 3%;
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+  filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5));
+}
+.bleuClair .flex .bleuFonce .txt .reserver a {
+  color: black;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+/* ACTIVITIES */
+.activities {
+  width: 100%;
+}
+
+.activities .actcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  position: relative;
+}
+
+.activities .actcontainer .bubble1 {
+  width: 10%;
+  border-radius: 50%;
+  padding: 3% 1%;
+  background-color: var(--bleuFonce);
+  position: absolute;
+  text-align: center;
+  left: 10%;
+  top: -5%;
+}
+.activities .actcontainer .bubble1 p {
+  font-family: var(--neucha);
+  font-size: 1em;
+}
+
+.activities .actcontainer .bubble2 {
+  width: 10%;
+  border-radius: 50%;
+  padding: 2% 1%;
+  background-color: var(--bleuFonce);
+  position: absolute;
+  text-align: center;
+  right: 8%;
+  top: 47%;
+}
+.activities .actcontainer .bubble2 p {
+  font-family: var(--neucha);
+  font-size: 1em;
+}
+
+.activities .actcontainer .bubble3 {
+  width: 10%;
+  border-radius: 50%;
+  padding: 2% 1%;
+  background-color: var(--bleuFonce);
+  position: absolute;
+  text-align: center;
+  left: 8%;
+  bottom: 3.5%;
+}
+.activities .actcontainer .bubble3 p {
+  font-family: var(--neucha);
+  font-size: 1em;
+}
+
+.activities .actcontainer .acttxtimg {
+  width: 70%;
+  display: flex;
+}
+
+.activities .actcontainer .acttxtimg .acttxt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bleuFonce);
+  text-align: center;
+  padding: 3% 2%;
+  line-height: 1.8em;
+  color: white;
+}
+
+.activities .actcontainer .acttxtimg .acttxt h3 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 1.8em;
+}
+
+.activities .actcontainer .acttxtimg .acttxt .line {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt p {
+  font-size: 1em;
+}
+
+.activities .actcontainer .acttxtimg .actimg {
+  width: 50%;
+}
+
+.activities .actcontainer .acttxtimg .actimg img {
+  width: 100%;
+}
+
+.activities .actcontainer .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--bleu);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.2);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo a {
+  padding: 0 15%;
+}
+footer .center .logo i {
+  padding: 15%;
+}
+footer .mentions {
+  width: 100%;
+  background-color: var(--bleuFonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .activities .actcontainer .bubble1 {
+    padding: 2% 1%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navBar .logo {
+    width: 10%;
+    padding: 0.5% 0;
+  }
+  .navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  .navBar nav ul li:hover .sous li a {
+    font-size: 20px;
+  }
+  .navBar .monCompte a {
+    font-size: 1.4em;
+  }
+  .activities {
+    width: 100%;
+  }
+  .activities .actcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+    position: relative;
+  }
+  .activities .actcontainer .bubble1 {
+    width: 12%;
+    border-radius: 50%;
+    padding: 3.5% 1%;
+    position: absolute;
+    left: 7%;
+    top: -7%;
+  }
+  .activities .actcontainer .bubble2 {
+    width: 12%;
+    padding: 2.5% 1%;
+    right: 3%;
+    top: 50%;
+  }
+  .activities .actcontainer .bubble3 {
+    width: 12%;
+    padding: 2.5% 1%;
+    left: 1%;
+    bottom: 3.5%;
+  }
+  .activities .actcontainer .acttxtimg {
+    width: 80%;
+  }
+  .activities .actcontainer .acttxtimg .acttxt {
+    line-height: 1.7em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.5em;
+  }
+  footer .flex {
+    font-size: 1.2em;
+  }
+  footer .flex .container ul li a {
+    color: white;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px 20px 80px 20px;
+    background-color: var(--bleuClair);
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--bleuFonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  .nuages h1 {
+    font-size: 3.5em;
+  }
+  .couleurs h1, .etoiles h1 {
+    font-size: 3em;
+  }
+  .bleuClair {
+    padding: 5% 1%;
+  }
+  .bleuClair .flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .bleuClair .flex .bleuFonce {
+    width: 45%;
+    padding: 3%;
+    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  }
+  .bleuClair .flex .bleuFonce .image {
+    width: 100%;
+  }
+  .bleuClair .flex .bleuFonce .image img {
+    width: 100%;
+  }
+  .bleuClair .flex .bleuFonce .txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.2em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver {
+    width: 40%;
+    background-color: var(--bleuClair);
+    border-radius: 2vh;
+    padding: 2% 3%;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5));
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    color: black;
+    font-weight: 600;
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble1 {
+    width: 30%;
+    border-radius: 0%;
+    padding: 1% 0;
+    left: 5%;
+    top: 25%;
+  }
+  .activities .actcontainer .bubble2 {
+    width: 30%;
+    border-radius: 0%;
+    padding: 1% 0;
+    right: 5%;
+    top: 60%;
+  }
+  .activities .actcontainer .bubble3 {
+    width: 30%;
+    border-radius: 0%;
+    padding: 1% 0;
+    left: 5%;
+    bottom: 25%;
+  }
+  .activities .actcontainer .acttxtimg {
+    width: 90%;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.6em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex {
+    padding-left: 20%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer .flex {
+    margin: 0;
+  }
+  .nuages h1 {
+    font-size: 2.5em;
+  }
+  .couleurs h1, .etoiles h1 {
+    font-size: 2em;
+  }
+  .bleuClair .flex {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .bleuClair .flex .bleuFonce {
+    width: 90%;
+    margin: 2.5% 0;
+    filter: none;
+  }
+  .activities .actcontainer .bubble1 {
+    width: 50%;
+    border-radius: 0%;
+    padding: 3% 0;
+    position: static;
+  }
+  .activities .actcontainer .bubble2 {
+    width: 50%;
+    border-radius: 0;
+    padding: 3% 0;
+    position: static;
+    margin-top: 5%;
+  }
+  .activities .actcontainer .bubble3 {
+    width: 50%;
+    border-radius: 0;
+    padding: 3% 0;
+    position: static;
+    margin-top: 5%;
+  }
+  .activities .actcontainer {
+    filter: none;
+  }
+  .activities .actcontainer .acttxtimg {
+    width: 90%;
+    flex-wrap: wrap-reverse;
+  }
+  .activities .actcontainer .acttxtimg .acttxt {
+    width: 100%;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.5em;
+  }
+  .activities .actcontainer .acttxtimg .actimg {
+    width: 100%;
+  }
+}/*# sourceMappingURL=airs.css.map */
