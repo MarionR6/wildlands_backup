@@ -884,7 +884,7 @@ footer{
     
     .family{
         display: flex;
-        margin: 0 auto;
+        margin: 2% auto;
         width: 90%;
         padding: 0;
         flex-wrap:wrap;
@@ -1059,6 +1059,7 @@ main{
         }
     }
     .banner2{
+        
         h1{
             font-size:2.5em;
         }
@@ -1066,12 +1067,13 @@ main{
     .family{
         flex-wrap: wrap;
         width: 80%;
-        
+        margin: 2% auto ;
         .photo{
             width: 100%;
-            margin: 0 auto;
-            padding: 0;
+            margin: 2% auto;         
+            
         }
+        
         .txt{
             width: 100%;
             filter: none;
