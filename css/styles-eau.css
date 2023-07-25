@@ -731,7 +731,7 @@ footer .mentions .mentionsdroits {
   }
   main .family {
     display: flex;
-    margin: 0 auto;
+    margin: 2% auto;
     width: 90%;
     padding: 0;
     flex-wrap: wrap;
@@ -873,11 +873,11 @@ footer .mentions .mentionsdroits {
   main .family {
     flex-wrap: wrap;
     width: 80%;
+    margin: 2% auto;
   }
   main .family .photo {
     width: 100%;
-    margin: 0 auto;
-    padding: 0;
+    margin: 2% auto 0 auto;
   }
   main .family .txt {
     width: 100%;
@@ -921,9 +921,44 @@ footer .mentions .mentionsdroits {
     padding: 2%;
   }
 }
+@media screen and (max-width: 380px) {
+  main .banner h1 {
+    font-size: 2.2em;
+  }
+  main .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 1.5em;
+    margin-top: 2%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble {
+    width: 6em;
+    height: 6em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 0.9em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse {
+    width: 6em;
+    height: 6em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    font-size: 0.9em;
+  }
+  main .banner2 h1 {
+    font-size: 1.8em;
+  }
+  main .family .txt {
+    font-size: 0.7em;
+  }
+  main .family .bubble {
+    display: none;
+  }
+  main .banner3 h1 {
+    font-size: 1.7em;
+  }
+}
 @media screen and (max-width: 320px) {
   main .banner h1 {
-    font-size: 2em;
+    font-size: 1em;
   }
   main .actcontainer .acttxtimg .acttxt h2 {
     font-size: 1.7em;
