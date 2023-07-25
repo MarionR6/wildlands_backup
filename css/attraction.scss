@@ -24,7 +24,7 @@ p{
 :root{
     --poppins:'Poppins',sans-serif;
     --neucha:"Neucha", cursive;
-    --bleu-clair: #8AE395 ;
+    --bleu-clair: #c7e3cb ;
     --bleu : #56B462 ;
     --bleu-fonce :#3A8043;
 
@@ -60,7 +60,7 @@ header div#navigation{
                 list-style: none;
                 a{
                     font-family: var(--neucha);
-                    font-size: 1.8em;
+                    font-size: 1.7em;
                     text-decoration: none;
                     transition: 0.5s all;
                     // &:hover{
@@ -113,7 +113,7 @@ header div#navigation{
         font-family: var(--neucha);
         display: flex;
         justify-content: center;
-        padding: 0.5% 2%;
+        padding: 1% 0.5%;
         border-radius: 3vh;
         a{
         text-decoration: none;
@@ -136,7 +136,7 @@ header div#navigation{
     h1{
         color: white;
         padding-top: 10%;
-        padding-bottom: 15%;
+        padding-bottom: 12%;
         padding-left: 15%;
         font-size: 4em;
     }
@@ -232,8 +232,8 @@ section.typeAttraction{
     display: block;
     background-position: center;
     h1{
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding-top: 7%;
+        padding-bottom: 7%;
         padding-left: 15%;
         font-size: 5vw;
     }
@@ -321,7 +321,7 @@ section.typeAttraction{
     background-size: cover;
     background-position: center;
     h1{
-        padding: 5% 0% 10% 10%;
+        padding: 5% 0% 7% 10%;
         font-size: 5em;
     }
 }
@@ -520,7 +520,7 @@ footer{
 }
 
 //----------------------------------------------------------------------------- RESPONSIVE
-// Responsive en 1024px
+// Responsive en 1200px
 
 @media screen and (max-width: 1200px){
     //partie restaurant
@@ -562,6 +562,7 @@ footer{
     }
 }
 
+// Responsive en 1024px
 @media screen and (max-width: 1024px){
     // navbar
     .navBar nav ul li a {
@@ -670,9 +671,12 @@ footer{
         }
         .detente2{
             .txtDetente{
-                width: 100%;
+                width: 80%;
                 p{
-                    font-size: 90%;
+                    font-size: 89%;
+                }
+                .reserve{
+                    padding-top: 10%;
                 }
             }
         }
@@ -703,7 +707,10 @@ footer{
                     text-align: center;  
                 }
                 
-            }   
+            }
+            .center{
+                font-size: 90%;
+            }
         }
         .mentions{
             width: 96%;
@@ -774,6 +781,7 @@ footer{
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
             right: -100%;
             width: 100%;
             height: 100vh;
