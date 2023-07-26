@@ -46,6 +46,31 @@ main {
   font-size: 1.1em;
 }
 
+/* POP UP CONNEXION */
+.popup{
+  position: fixed;
+  top: 38vh;
+  left: 40vw;
+  z-index: 80;
+  background-color: #c7e3cb;
+  padding: 2%;
+  font-size: 1.5em;
+  border-radius: 1em;
+  /* display: none; */
+}
+
+.emailflex, .passwordflex{
+  display: flex;
+  flex-direction: column;
+}
+.emaildisable{
+  pointer-events: none;
+}
+
+.passworddisable{
+  pointer-events: none;
+}
+
 /* NAVBAR */
 
 #navigation{
