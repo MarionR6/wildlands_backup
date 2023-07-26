@@ -1,0 +1,193 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+}
+
+a, img {
+  display: block;
+}
+
+:root {
+  --poppins:"Poppins",sans-serif;
+  --neucha:"Neucha", cursive;
+  --vert-clair:#c7e3cb;
+  --vert:#56B462;
+  --vert-fonce:#3A8043;
+}
+
+main {
+  background-color: var(--vert-clair);
+  font-family: var(--poppins);
+}
+
+#navigation {
+  display: none;
+}
+
+header .navBar {
+  width: 100%;
+  background-color: var(--vert);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+header .navBar .logo img {
+  width: 100%;
+}
+header .navBar nav {
+  width: 50%;
+}
+header .navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header .navBar nav ul li {
+  list-style: none;
+}
+header .navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+header .navBar nav ul li a:hover {
+  transform: scale(1.4);
+}
+header .navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar nav ul li:hover .sous {
+  display: block;
+}
+header .navBar nav ul li:hover .sous li {
+  background-color: var(--vert);
+  opacity: 0.8;
+  border-bottom: solid var(--vert-clair) 1px;
+  padding: 2%;
+  background-color: var(--vert-fonce);
+}
+header .navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+header .navBar nav ul li:hover .sous li a:hover {
+  color: #204725;
+  transform: scale(1);
+}
+header .navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+header .navBar .monCompte {
+  width: 15%;
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+header .navBar .monCompte a {
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+}
+header .navBar .monCompte a:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--vert);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.2);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo i {
+  padding: 15%;
+}
+footer .mentions {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=styles-billetterie.css.map */

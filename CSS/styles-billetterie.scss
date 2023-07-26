@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+}
+
+a, img{
+    display: block;
+}
+
+:root{
+    --poppins:'Poppins',sans-serif;
+    --neucha:"Neucha", cursive;
+    --vert-clair:#c7e3cb;
+    --vert :#56B462;
+    --vert-fonce :#3A8043;
+
+}
+
+main{
+    background-color: var(--vert-clair);
+    font-family: var(--poppins);
+}
+#navigation{
+    display: none
+}
+
+//----------------------------------------------barre de navigation
+//barre de navigation
+header{
+    .navBar{
+    width: 100%;
+    background-color: var(--vert);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo{
+        width: 8%;
+        padding : 0.5% 0;
+        img{
+            width: 100%;
+        }
+    }
+    nav{
+        width: 50%;
+        ul{
+            // font-size: 0;
+            display: flex;
+            justify-content: space-around;
+            li{
+                list-style: none;
+                a{
+                    font-family: var(--neucha);
+                    font-size: 1.8em;
+                    text-decoration: none;
+                    transition:0.5s all;
+                    &:hover{
+                        transform: scale(1.4);
+                    }
+                }
+                .sous{
+                    display: none;
+                    position: absolute;
+                    transition: 1 all;
+                }
+                &:hover{
+                    .sous{
+                        display: block;
+                        li{
+                            background-color: var(--vert);
+                            opacity: 0.8;
+                            border-bottom: solid var(--vert-clair)1px;
+                            padding: 2%;
+                            background-color: var(--vert-fonce);
+                            a{
+                                font-size:25px;
+                                padding: 2%;
+                                transition:0.5s all;
+                                &:hover{
+                                    color: #204725;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                
+                    }
+                }
+            }
+            .deroulant{
+                    &:after{
+                    content: "⏷";
+                    font-size: 0.7em;
+                    }
+                
+            }
+        }
+    }
+    .monCompte{
+        width: 15%;
+        background-color: var(--vert-fonce);
+        font-family: var(--neucha);
+        display: flex;
+        justify-content: center;
+        padding: 1% 2%;
+        border-radius: 3vh;
+        a{
+        text-decoration: none;
+        font-size: 1.5em;
+        transition: 0.5s all;
+        &:hover{
+            transform: scale(1.2);
+        }
+        }
+    }
+}
+
+}
+
+footer{
+    width: 100%;
+    background-color:var(--vert);
+    font-family:var(--neucha);
+    a{
+        transition: 0.5s all;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    .flex{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        padding-bottom:2%;
+        .container{
+            width: 50%;
+            display:flex;
+            flex-direction: column;
+            margin: 0 4%;
+            img{
+                width: 50%;
+                padding: 8% 0;
+            }
+            .coordonnees{
+                display: flex;
+                padding : 0 5% 5% 5%;
+                margin-right:2%;
+
+                i{
+                    text-align: center;
+                    color:white;
+                    margin-right: 5.5%;
+                }
+            }
+            ul{
+                font-size: 0;
+                margin-top: 10%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                li{
+                    padding-bottom:4%;
+                    a{
+                        color: white;
+                        font-size: 25px;
+                        
+                    }
+                }
+            }
+        }
+        i{
+            text-align: center;
+        }
+    }
+    .center{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            padding: 2%;
+            }
+        .logo{
+            display:flex;
+            width: 20%;
+            justify-content: space-around;
+
+            i{
+                padding:15%;
+            }
+            
+        }
+        
+        
+    }
+    .mentions{
+        width: 100%;
+        background-color: var(--vert-fonce);
+        text-align: center;
+        padding: 2%;
+        .mentionsdroits{
+            display: flex;
+            justify-content: center;
+        }
+    }  
+}
