@@ -21,7 +21,7 @@ const password = document.getElementById ('password');
 const btnMonCompte = document.getElementById ('moncompte');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
-const closePopup = document.getElementById('closepopup')
+const closePopup = document.getElementById('closepopup');
 
 btnMonCompte.addEventListener("click", () =>{
     if(popup.classList.contains("popupdisplay")){
@@ -39,6 +39,7 @@ btnMonCompte.addEventListener("click", () =>{
             header.style.transition = ".5s all";
             header.style.pointerEvents = "initial";
         })
+        
     }
 })
 
