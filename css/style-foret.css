@@ -109,6 +109,11 @@ main {
   border-radius: 1em;
   background-color: #204725;
   padding: 2% 0;
+  transition: .5s all;
+}
+
+.popup form fieldset .connectremember a:hover{
+  transform: scale(1.1);
 }
 
 .popup form fieldset .connectremember label{
@@ -131,6 +136,11 @@ main {
   background-color: #204725;
   padding: 2% 0;
   font-size: 1.3em;
+  transition: .5s all;
+}
+
+.popup form fieldset .plssignup a:hover{
+  transform: scale(1.1);
 }
 
 .emailflex, .passwordflex{
@@ -152,19 +162,21 @@ main {
   border: none;
   border-radius: 1em;
   color: black;
+}
+
+#emaildisable input::placeholder,
+#passworddisable input::placeholder{
+  color: black;
   font-weight: 500;
 }
 
-.emaildisable{
+.emaildisable,
+.passworddisable{
   pointer-events: none;
 }
 
 #passworddisable{
   font-family: 'Neucha', sans-serif;
-}
-
-.passworddisable{
-  pointer-events: none;
 }
 
 /* NAVBAR */
