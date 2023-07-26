@@ -15,8 +15,32 @@ toggle.onclick = function(){
 
 // POP UP CONNEXION
 
+const popup = document.getElementById('popup');
 const connexion = document.getElementById ('email');
 const password = document.getElementById ('password');
+const btnMonCompte = document.getElementById ('moncompte');
+const main = document.querySelector('main');
+const header = document.querySelector('header');
+const closePopup = document.getElementById('closepopup')
+
+btnMonCompte.addEventListener("click", () =>{
+    if(popup.classList.contains("popupdisplay")){
+        popup.classList.remove("popupdisplay");
+        main.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
+        header.style.filter = "blur(0.5em)";
+        header.style.pointerEvents = "none";
+        closePopup.addEventListener("click", () =>{
+            popup.classList.add("popupdisplay");
+            main.style.filter = "none";
+            main.style.pointerEvents = "initial";
+            main.style.transition = ".5s all";
+            header.style.filter = "none";
+            header.style.transition = ".5s all";
+            header.style.pointerEvents = "initial";
+        })
+    }
+})
 
 // FETCH
 
@@ -51,3 +75,4 @@ checkbox.addEventListener("change", () =>{
         passworddisable.classList.remove("passworddisable");
     }
 })
+
