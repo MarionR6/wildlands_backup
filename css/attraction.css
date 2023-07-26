@@ -32,6 +32,12 @@ p {
   --bleu-fonce:#3A8043;
 }
 
+.scrollDown {
+  transform: translateY(1.5s);
+  z-index: 2;
+  position: fixed;
+}
+
 header div#navigation {
   display: none;
 }

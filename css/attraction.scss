@@ -34,6 +34,14 @@ p{
 //une div pour le compte
 //barre de navigation*
 
+//------------------------------------ scroll nav
+.scrollDown{
+    //transition: transform .2s;
+    transform: translateY(1.5s);
+    z-index: 2;
+    position: fixed;
+}
+//------------------------------------------
 header div#navigation{
     display: none;
 }
