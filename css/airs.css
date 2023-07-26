@@ -90,7 +90,6 @@ a {
   font-size: 0.7em;
 }
 .navBar .monCompte {
-  width: 15%;
   background-color: var(--bleuFonce);
   font-family: var(--neucha);
   display: flex;
@@ -98,13 +97,31 @@ a {
   padding: 1% 2%;
   border-radius: 3vh;
 }
-.navBar .monCompte a {
+.navBar .monCompte button {
+  width: 100%;
+  background-color: var(--bleuFonce);
+  border: none;
   text-decoration: none;
   font-size: 1.5em;
   transition: 0.5s all;
+  position: relative;
 }
-.navBar .monCompte a:hover {
+.navBar .monCompte button p {
+  font-family: var(--neucha);
+}
+.navBar .monCompte button:hover {
   transform: scale(1.1);
+}
+.navBar .monCompte button .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  font-size: 0.7em;
+  list-style-type: none;
+  position: absolute;
+  transition: 1 all;
+}
+.navBar .monCompte button .gestionNone {
+  display: none;
 }
 
 .nuages {

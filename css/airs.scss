@@ -94,21 +94,41 @@ a{
         }
     }
     .monCompte{
-        width: 15%;
+        // width: 15%;
         background-color: var(--bleuFonce);
         font-family: var(--neucha);
         display: flex;
         justify-content: center;
         padding: 1% 2%;
         border-radius: 3vh;
-        a{
-        text-decoration: none;
-        font-size: 1.5em;
-        transition: 0.5s all;
-        &:hover{
-            transform: scale(1.1);
-        }
-        }
+        button{
+            width: 100%;
+            background-color: var(--bleuFonce);
+            border:none;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: 0.5s all;
+            position:relative;
+            p{
+                font-family: var(--neucha);
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+            .gestionCompte{
+                display:block;
+                font-family: var(--neucha);
+                font-size:0.7em;
+                list-style-type: none;
+                position:absolute;
+                transition: 1 all;
+            }
+            .gestionNone{
+                display: none;
+            }
+        } 
+        
+
     }
 }
 
