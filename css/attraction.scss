@@ -151,6 +151,15 @@ header div#navigation{
 }
 
 //les différentes types d'attraction
+.reveal{
+    opacity: 0;
+    transform: translate(-20em);
+}
+.reaveal-visible{
+    opacity: 1;
+    transform: translate(0);
+    transition: .3s;
+}
 section.typeAttraction{
     background-color: #8AE395;
     padding-bottom: 5%;

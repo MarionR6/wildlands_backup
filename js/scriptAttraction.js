@@ -1,6 +1,6 @@
 // ----------------------------------- NAV SCROLL
 
-const navScroll = document.querySelector('.navBar')
+const navScroll = document.querySelector('.navBar');
 let lastScroll = window.scrollY;
 
 window.addEventListener("scroll", () =>{
@@ -30,3 +30,13 @@ const menuBurger = () => {
     } 
 }
 menuBurger()
+
+//----------------------------------- Transition header
+
+const attractionScroll = document.querySelector('petiteA');
+
+window.addEventListener("scroll", () =>{
+    if(window.scrollY > 100){
+        
+    }
+})
