@@ -8,6 +8,10 @@
   color: white;
 }
 
+html {
+  font-size: 16px;
+}
+
 a, img {
   display: block;
 }
@@ -23,6 +27,84 @@ a, img {
 main {
   background-color: var(--vert-clair);
   font-family: var(--poppins);
+}
+
+.line {
+  background-color: white;
+  width: 30%;
+  height: 0.1rem;
+  margin: 3% auto;
+}
+
+.bold {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.light {
+  font-weight: 100;
+  padding-left: 5%;
+  font-style: italic;
+}
+
+.under {
+  background-color: var(--vert-fonce);
+  padding: 1%;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding-bottom: 4%;
+  cursor: pointer;
+}
+
+.over {
+  background-color: var(--vert-fonce);
+  padding: 1%;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nb {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5%;
+  font-size: 1.5rem;
+}
+
+.nbPlace {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+}
+.nbPlace i {
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.btn .ajout {
+  background-color: var(--vert-fonce);
+  font-size: 2rem;
+  padding: 2% 4%;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 #navigation {
@@ -101,11 +183,190 @@ header .navBar .monCompte {
 }
 header .navBar .monCompte a {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2em;
   transition: 0.5s all;
 }
 header .navBar .monCompte a:hover {
   transform: scale(1.2);
+}
+
+main .banner {
+  background-image: url(../img/bannière-parc.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
+}
+main .resaParc {
+  width: 100%;
+  margin-top: 5%;
+}
+main .resaParc .oneParc {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+main .resaParc .oneParc .container {
+  width: 30%;
+  background-color: var(--vert);
+  border-radius: 3vh;
+  padding: 2%;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .resaParc .oneParc .container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--neucha);
+  font-weight: 500;
+}
+main .resaParc .twoParcs {
+  width: 30%;
+  margin: 5% auto;
+  background-color: var(--vert);
+  padding: 2%;
+  border-radius: 3vh;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .resaParc .twoParcs h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--neucha);
+  font-weight: 500;
+}
+main .resaParc .sousTotal {
+  width: 20%;
+  cursor: pointer;
+  background-color: var(--vert-fonce);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1% 3%;
+  margin: 0 0 0 70%;
+  border-radius: 3vh;
+  border: solid 2px;
+  border-color: #4e4e4e #111 #111 #4e4e4e;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .resaParc .sousTotal i {
+  font-size: 2rem;
+}
+main .resaParc .sousTotal p {
+  font-size: 2rem;
+}
+main .resaParc .sousTotal a {
+  font-size: 2rem;
+}
+main .night {
+  width: 100%;
+  margin-top: 5%;
+  padding-bottom: 3%;
+}
+main .night .bannerNight {
+  background-image: url(../img/banner-nuit.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main .night .bannerNight h1 {
+  text-align: center;
+  padding: 7% 0%;
+  font-family: "Neucha", cursive;
+  font-size: 7em;
+  color: white;
+  font-weight: 400;
+}
+main .night h2 {
+  font-size: 2rem;
+  padding: 2% 5%;
+  color: var(--vert-fonce);
+}
+main .night .line {
+  background-color: var(--vert-fonce);
+  margin: 0 5%;
+  width: 15%;
+}
+main .night .date {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--vert-fonce);
+  width: 33%;
+  margin: 2% auto;
+  padding: 1%;
+  border-radius: 10vh;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .night .date label {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3%;
+}
+main .night .date input {
+  border-radius: 2vh;
+  height: 5vh;
+  width: 60%;
+  margin: 0 auto;
+  padding-left: 5%;
+  font-style: italic;
+  color: grey;
+}
+main .night .flexContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3% 0;
+}
+main .night .flexContainer .container {
+  background-color: var(--vert);
+  border-radius: 3vh;
+  padding: 1%;
+  width: 22%;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .night .flexContainer .container h2 {
+  font-family: var(--neucha);
+  color: white;
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 2.5rem;
+}
+main .night .flexContainer .container .line {
+  margin: 0 auto;
+  background-color: white;
+}
+main .night .flexContainer .container .infos {
+  display: flex;
+}
+main .night .flexContainer .container p {
+  font-size: 1.1rem;
+}
+main .night .flexContainer .container .btn {
+  margin: 10% 0;
+}
+main .night .flexContainer .container .mentions {
+  font-size: 0.8rem;
+  text-align: center;
+}
+main .night .sousTotal {
+  width: 20%;
+  cursor: pointer;
+  background-color: var(--vert-fonce);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1% 3%;
+  margin: 0 auto;
+  border-radius: 3vh;
+  border: solid 2px;
+  border-color: #4e4e4e #111 #111 #4e4e4e;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .night .sousTotal i {
+  font-size: 2rem;
+}
+main .night .sousTotal p {
+  font-size: 2rem;
+}
+main .night .sousTotal a {
+  font-size: 2rem;
 }
 
 footer {
@@ -190,4 +451,290 @@ footer .mentions {
 footer .mentions .mentionsdroits {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 13px;
+  }
+  main .night .flexContainer .container {
+    width: 23%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .resaParc a .sousTotal {
+    padding: 1%;
+  }
+  main .night .flexContainer .container .nb {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  main .night .flexContainer .container .nb p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  main .night .flexContainer .container .nb .nbPlace {
+    width: 75%;
+    margin: 0 auto;
+  }
+  main .night .flexContainer .container .nb .nbPlace button {
+    width: 8vh;
+    height: 5vh;
+  }
+  main .night .flexContainer .container .nb .nbPlace i {
+    margin-left: 10%;
+  }
+  main .night .flexContainer .container .infos {
+    padding: 0;
+    width: 70%;
+    margin: 0 auto;
+  }
+  main .night .sousTotal {
+    padding: 1%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .navBar nav ul li a {
+    font-size: 1.3rem;
+  }
+  header .navBar nav ul li a:hover {
+    transform: scale(1.4);
+  }
+  header .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  header .monCompte a {
+    font-size: 1.3rem;
+  }
+  main .resaParc .oneParc .container {
+    width: 40%;
+  }
+  main .resaParc .twoParcs {
+    width: 40%;
+  }
+  main .resaParc .sousTotal {
+    width: 25%;
+  }
+  main .night .bannerNight h1 {
+    font-size: 5rem;
+  }
+  main .night .date {
+    width: 50%;
+  }
+  main .night .sousTotal {
+    width: 25%;
+  }
+  main .night .flexContainer {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  main .night .flexContainer .container {
+    width: 40%;
+  }
+  main .night .flexContainer .container .nb p {
+    font-size: 2rem;
+  }
+  main .night .flexContainer .container .nb .nbPlace {
+    width: 50%;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .container img {
+    margin-left: 20px;
+  }
+  footer .flex .container ul li a {
+    font-size: 15px;
+  }
+  footer .flex .container .logo a {
+    margin: 0 15%;
+  }
+  footer .flex .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px 20px 80px 20px;
+    background-color: var(--vert-clair);
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+    top: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--vert-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  main .resaParc .sousTotal {
+    width: 30%;
+    margin-left: 65%;
+  }
+  main .night .date {
+    width: 60%;
+  }
+  main .night .flexContainer {
+    width: 100%;
+    align-items: center;
+  }
+  main .night .flexContainer .container {
+    width: 80%;
+    margin: 2% auto;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  main .night .flexContainer .container .nb {
+    width: 100%;
+    display: flex;
+  }
+  main .night .flexContainer .container .nb p {
+    width: 50%;
+  }
+  main .night .flexContainer .container .btn {
+    margin: 2% auto;
+    padding: 0;
+  }
+  main .night .flexContainer .container .mentions {
+    padding: 0;
+    margin: 0;
+  }
+  main .night .flexContainer .container .infos p {
+    font-size: 1.5rem;
+  }
+  main .night .flexContainer .container .sousTotal {
+    width: 30%;
+  }
+  main .night .sousTotal {
+    width: 30%;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .resaParc .oneParc {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  main .resaParc .oneParc .container {
+    width: 90%;
+  }
 }/*# sourceMappingURL=styles-billetterie.css.map */
