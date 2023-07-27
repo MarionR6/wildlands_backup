@@ -873,13 +873,168 @@ footer{
 
 @media screen and (max-width:480px){
     main{
+        .banner{
+            height: 20vh;
+        }
         .resaParc{
             .oneParc{
                 width: 100%;
                 flex-wrap:wrap;
                 .container{
                     width: 90%;
+                    margin-bottom: 5%;
+                    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
+                    h2{
+                        font-size: 2rem;
+                        letter-spacing: 2px;
+                    }
                 }
+            }
+            .twoParcs{
+                width: 90%;
+                filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
+                margin-top:0;
+                h2{
+                    font-size: 2rem;
+                    letter-spacing: 2px;
+                }
+
+            }
+            .sousTotal{
+                width: 50%;
+                margin: 2% auto;
+                filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
+            }
+        }
+        .night{
+            .bannerNight{
+                h1{
+                    font-size: 3.5rem;
+                }
+            }
+            h2{
+                font-size: 1.3rem;
+            }
+            .date{
+                width: 90%;
+                filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
+                label{
+                    font-size: 1.2rem;
+                }
+                input{
+                    font-size: 1rem;
+                    
+                }
+            }
+            .flexContainer{
+                .container{
+                    width: 90%;
+                    h2{
+                        font-size: 2rem;
+                        letter-spacing: 2px;
+                        
+                    }
+                    .nb{
+                        .bold{
+                            text-align: left;
+                        }
+                        p{
+                            font-size: 1.5rem;
+                            width: 60%;
+                        }
+                        .nbPlace{
+                            width: 32%;
+                        }
+                    }
+                }
+            }
+            .sousTotal{
+                width: 50%;
+                margin: 2% auto;
+                filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
+            }
+        }
+    }
+}
+
+@media screen and (max-width:422px){
+    html{
+        font-size:12px;
+    }
+    main{
+        .banner{
+            height: 15vh;
+        }
+        .resaParc{
+            .oneParc{
+                .container{
+                    h2{
+                        font-size: 2rem;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+            .twoParcs{
+                h2{
+                    font-size: 2rem;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        .night{
+            .flexContainer{
+                .container{
+                    width: 90%;
+                    h2{
+                        font-weight: 300;
+                    }
+                    .infos{
+                        p{
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .nb{
+                        .nbPlace{
+                            .under{
+                                width: 5vh;
+                                height: 3vh;
+                            }
+                            .over{
+                                width: 5vh;
+                                height: 3vh;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:320px){
+    main{
+        .banner{
+            height: 15vh;
+        }
+        .resaParc{
+            .sousTotal{
+                width: 75%;
+                font-size: 2rem;
+            }
+        }
+        .night{
+            .bannerNight{
+                h1{
+                    font-size: 3rem;
+                }
+            }
+            .date{
+                width: 90%;
+                border-radius: 1vh;
+            }
+            .sousTotal{
+                width: 75%;
+                font-size: 2rem;
             }
         }
     }
