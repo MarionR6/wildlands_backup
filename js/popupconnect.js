@@ -8,21 +8,41 @@ const main = document.querySelector('main');
 const header = document.querySelector('header');
 const closePopup = document.getElementById('closepopup');
 
+const allLinks = document.querySelectorAll('a');
+const login = document.getElementById('login')
+
 btnMonCompte.addEventListener("click", () =>{
     if(popup.classList.contains("popupdisplay")){
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
-        main.style.pointerEvents = "none";
+        allLinks.forEach((l)=>{
+            l.style.pointerEvents = "none";
+        });
+        login.style.pointerEvents = "initial";
         header.style.filter = "blur(0.5em)";
-        header.style.pointerEvents = "none";
+        // header.style.pointerEvents = "none";
+
         closePopup.addEventListener("click", () =>{
             popup.classList.add("popupdisplay");
             main.style.filter = "none";
-            main.style.pointerEvents = "initial";
+            // main.style.pointerEvents = "initial";
             main.style.transition = ".5s all";
             header.style.filter = "none";
             header.style.transition = ".5s all";
-            header.style.pointerEvents = "initial";
+            // header.style.pointerEvents = "initial";
+        })
+
+        document.addEventListener("keyup", (e) => {
+            console.log(e);
+            if(e.key  === "Escape"){
+                popup.classList.add("popupdisplay");
+                main.style.filter = "none";
+                // main.style.pointerEvents = "initial";
+                main.style.transition = ".5s all";
+                header.style.filter = "none";
+                header.style.transition = ".5s all";
+                header.style.pointerEvents = "initial";
+            }
         })
         
     }

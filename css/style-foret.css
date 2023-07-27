@@ -48,11 +48,12 @@ main {
 }
 
 /* POP UP CONNEXION */
+
 #popup{
   position: fixed;
-  top: 25vh;
-  left: 40vw;
-  z-index: 80;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
   background-color: #c7e3cb;
   padding: 2% 3%;
   font-size: 1.7em;
@@ -65,7 +66,7 @@ main {
 .popup{
   visibility: visible;
   transition: .5s all;
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup button{
@@ -87,7 +88,7 @@ main {
 
 .popupdisplay{
   visibility: hidden;
-  transform: scale(0);
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .popup form fieldset{
@@ -264,7 +265,7 @@ main {
   padding: 1% 2%;
   border-radius: 3vh;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2em;
   color: white;
   cursor: pointer;
 }
@@ -451,23 +452,6 @@ main .banner h1 {
   background-color: white;
   margin: 0 auto;
   margin-bottom: 4%;
-}
-
-/* ANIMATION JS */
-.revealleft{
-  opacity:0;
-  transform: translateX(-20em);
-}
-
-.revealright{
-  opacity: 0;
-  transform: translateX(20em);
-}
-
-.revealvisible{
-  opacity: 1;
-  transform: translateX(0);
-  transition: 1s;
 }
 
 /* BANNER NUIT BOIS */
@@ -716,6 +700,23 @@ footer .mentions .mentionsdroits{
 
 footer .mentions .mentionsdroits a{
   color: white;
+}
+
+/* ANIMATION JS */
+.revealleft{
+  opacity:0;
+  transform: translateX(-20em);
+}
+
+.revealright{
+  opacity: 0;
+  transform: translateX(20em);
+}
+
+.revealvisible{
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
 }
 
 /* RESPONSIVE */
@@ -1149,6 +1150,7 @@ footer .container .logo a{
   }
   header #navigation.active {
     right: 0;
+    top: 0;
   }
   header #navigation.active .logo {
     display: none;
@@ -1387,7 +1389,9 @@ footer .container .logo a{
 
 @media screen and (max-width: 480px){
 
-  /* MENU BURGER WIP */
+  #popup{
+    width: 80%;
+  }
   
   /* BANNER */
 
@@ -1551,10 +1555,41 @@ footer .container .logo a{
 
 }
 
-
 /* 320px */
 
 @media screen and (max-width: 320px){
+
+  #popup{
+    width: 95%; 
+  }
+
+  .popup form fieldset legend{
+    font-size: 1.2em;
+  }
+
+  .popup form fieldset .connectremember a{
+    font-size: 0.8em;
+  }
+  .popup form fieldset .connectremember a:hover{
+    transform: scale(1);
+  }
+
+  .popup form fieldset .plssignup{
+    font-family: 'Neucha', sans-serif;
+    font-size: 0.7em;
+  }
+  
+  .popup form fieldset .plssignup a{
+    font-size: 1.1em;
+  }
+
+  .popup form fieldset .plssignup a:hover{
+    transform: scale(1);
+  }
+
+  /* MAIN */
+
+
   main .banner h1{
     font-size: 2.5em;
   }
@@ -1618,5 +1653,21 @@ footer .container .logo a{
     margin: 0;
     font-size: 1.5em;
 
+  }
+
+  .revealleft{
+    opacity:1;
+    transform: translateX(0);
+  }
+  
+  .revealright{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .revealvisible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
   }
 }
