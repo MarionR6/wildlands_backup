@@ -118,13 +118,31 @@ a{
             .gestionCompte{
                 display:block;
                 font-family: var(--neucha);
-                font-size:0.7em;
+                // font-size:0.7em;
                 list-style-type: none;
                 position:absolute;
                 transition: 1 all;
+                li{
+                    a{
+                        font-size:0.7em;
+                    }
+                }
             }
             .gestionNone{
                 display: none;
+            }
+            .gestion{
+                width:100%;
+                margin-top:7%;
+                background-color:#1F5180;
+                opacity: 0.8;
+                padding:5%;
+            }
+            .deco{
+                width:100%;
+                background-color:#1F5180;
+                opacity: 0.8;
+                padding:5%;
             }
         } 
         
@@ -132,6 +150,144 @@ a{
     }
 }
 
+// pour le bouton "mon compte" à partir de 768px
+
+
+/* POP UP CONNEXION */
+#popup{
+    position: fixed;
+    top: 25vh;
+    left: 40vw;
+    z-index: 80;
+    background-color: var(--bleuClair);
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    color: white;
+    background-color: var(--bleu);
+    border: 0.07em solid var(--bleuFonce);
+  }
+  
+  .popup{
+    visibility: visible;
+    transition: .5s all;
+    transform: scale(1);
+  }
+  
+  .popup button{
+    background-color: var(--bleuFonce);
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  }
+  
+  .popupdisplay{
+    visibility: hidden;
+    transform: scale(0);
+  }
+  
+  .popup form fieldset{
+    border: none;
+  }
+  
+  .popup form fieldset legend{
+    font-family: 'Neucha', sans-serif;
+    font-size: 1.7em;
+    text-align: center;
+    border-bottom: 0.06em solid white;
+    padding-bottom: 5%;
+  }
+  
+  .popup form fieldset .connectremember a{
+    font-family: 'Neucha', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 10% 0 3% 0;
+    border-radius: 1em;
+    background-color: var(--bleuFonce);
+    padding: 2% 0;
+    transition: .5s all;
+  }
+  
+  .popup form fieldset .connectremember a:hover{
+    transform: scale(1.1);
+  }
+  
+  .popup form fieldset .connectremember label{
+    font-family: 'Neucha', sans-serif;
+    padding-left: 1%;
+    font-size: 0.7em;
+  }
+  
+  .popup form fieldset .plssignup{
+    font-family: 'Neucha', sans-serif;
+    font-size: 0.8em;
+  }
+  
+  .popup form fieldset .plssignup a{
+    font-family: 'Neucha', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 6% 0 3% 0;
+    border-radius: 1em;
+    background-color: var(--bleuFonce);
+    padding: 2% 0;
+    font-size: 1.3em;
+    transition: .5s all;
+  }
+  
+  .popup form fieldset .plssignup a:hover{
+    transform: scale(1.1);
+  }
+  
+  .emailflex, .passwordflex{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #emaildisable{
+    padding: 5% 0 4% 0;
+    font-family: 'Neucha', sans-serif;
+  }
+  
+  #emaildisable input,
+  #passworddisable input{
+    margin-top: 2%;
+    padding: 2% 4%;
+    font-size: 0.6em;
+    background-color: var(--bleuClair);
+    border: none;
+    border-radius: 1em;
+    color: black;
+  }
+  
+  #emaildisable input::placeholder,
+  #passworddisable input::placeholder{
+    color: black;
+    font-weight: 500;
+  }
+  
+  .emaildisable,
+  .passworddisable{
+    pointer-events: none;
+  }
+  
+  #passworddisable{
+    font-family: 'Neucha', sans-serif;
+  }
+  
+
+// S E C T I O N 
 // banner la tete dans les nuages
 .nuages{
     width: 100%;
@@ -252,8 +408,8 @@ a{
 }
 // -----------------------------------> BULLES
 .activities .actcontainer .bubble1{
-    width:12vh;
-    height: 12vh;
+    width:7.5em;
+    height: 7.5em;
     border-radius: 50%;
     padding: 3% 1%;
     background-color: var(--bleuFonce);
@@ -270,8 +426,8 @@ a{
     }
 }
 .activities .actcontainer .bubble2{
-    width:12vh;
-    height: 12vh;
+    width:7.5em;
+    height: 7.5em;
     border-radius: 50%;
     padding: 2% 1%;
     background-color: var(--bleuFonce);
@@ -288,8 +444,8 @@ a{
     }
 }
 .activities .actcontainer .bubble3{
-    width:12vh;
-    height: 12vh;
+    width:7.5em;
+    height: 7.5em;
     border-radius: 50%;
     padding: 2% 1%;
     background-color: var(--bleuFonce);
@@ -668,16 +824,22 @@ footer{
     
     // -----------------------------------> BULLES
     .activities .actcontainer .bubble1{
+        height: 6em;
+        width: 6em;
         p{
             font-size: 1em;
         }
     }
     .activities .actcontainer .bubble2{
+        height: 6em;
+        width: 6em;
         p{
             font-size: 1em;
         }
     }
     .activities .actcontainer .bubble3{
+        height: 6em;
+        width: 6em;
         p{
             font-family: var(--neucha);
             font-size: 1em;
@@ -806,8 +968,8 @@ footer{
         border-radius: 50%;
         padding: 3.5% 1%;
         position: absolute;
-        left:7%;
-        top:-5%;
+        left:4%;
+        top:17%;
     }
     .activities .actcontainer .bubble2{
         padding: 2.5% 1%;
@@ -816,8 +978,8 @@ footer{
     }
     .activities .actcontainer .bubble3{
         padding: 2.5% 1%;
-        left:3.5%;
-        bottom:4.5%;
+        left:1%;
+        bottom:3.5%;
     }
     .activities .actcontainer .acttxtimg{
         width: 80%;
@@ -848,8 +1010,20 @@ footer{
 // media query 768px
 @media screen and (max-width: 768px) {
     header {
+        width: 100%;
         padding: 10px 20px 80px 20px;
         background-color: var(--bleuClair);
+        display: flex;
+        .logIn{
+            align-self: center;
+            width:2.5em;
+            height:2.5em;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: var(--bleuFonce);
+            color: white;
+        }
         .navBar {
             display: none;
         }
@@ -891,11 +1065,14 @@ footer{
 				// on crée une rotation sur le span du haut et on le recentre sur le carré
 				transform: rotate(45deg);
 				top: 0;
+                background-color:var(--bleuFonce);
+
 			}
 			&:after {
 				// on crée une rotation sur le span du bas et on le recentre sur le carré
 				transform: rotate(-45deg);
 				top: 0;
+                background-color:var(--bleuFonce);
 			}
 			//selon le degré de rotation que vous indiquez, le sens de l'animation ne sera pas le même  
         }
@@ -905,6 +1082,7 @@ footer{
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            top:0;
             right: -100%;
             width: 100%;
             height: 100vh;
@@ -914,6 +1092,7 @@ footer{
         }
         #navigation.active {
            right: 0;
+           top: 0;
            .logo{
             display: none;
            }
@@ -999,20 +1178,20 @@ footer{
 }
     // -----------------------------------> BULLES
     .activities .actcontainer .bubble1{
-        width:10vh;
-        height:10vh;
+        width:5.5em;
+        height:5.5em;
         left:7%;
         top:20%;
     }
     .activities .actcontainer .bubble2{
-        width:10vh;
-        height:10vh;
+        width:5.5em;
+        height:5.5em;
         right:35%;
         top:53%;
     }
     .activities .actcontainer .bubble3{
-        width:10vh;
-        height:10vh;
+        width:5.5em;
+        height:5.5em;
         left:8%;
         bottom:20%;
     }

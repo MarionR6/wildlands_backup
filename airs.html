@@ -21,6 +21,9 @@
 </head>
 <body>
     <header>
+        <div >
+            <button class="logIn"><i class="fa-solid fa-user"></i></button>
+        </div>
         <!-- menu burger en responsive -->
         <div id="toggle"></div>
         <div id="navigation">
@@ -54,15 +57,43 @@
                 <li><a href="../billeterie/wip.html">Billetterie</a></li>
             </ul>
         </nav>
-        <div class="monCompte">
+        <div class="monCompte" id="moncompte">
             <button href="airsCo.html">
-                <p class="btnCompte">Mon compte</p>
+                <p>Mon compte</p>
             </button>
         </div>
     </div>
 </header>
 
-    <section>
+<div class="popup popupdisplay" id = "popup">
+    <button id = "closepopup">×</button>
+    <form action="" class="formsignlogin" method="post">
+        <fieldset class="login">
+            <legend class="connect">Connectez-vous</legend>
+            <p id = "emaildisable" class = "emaildisable emailflex">
+                <label for="email">Adresse mail</label>
+                <input type="text" class="enterinfo" placeholder="" name="email" id="email">
+            </p>
+            <p id = "passworddisable" class = "passworddisable passwordflex">
+                <label for="password">Mot de passe</label>
+                <input type="password" class="enterinfo" placeholder="" name="password" id="password">
+            </p>
+            <div class="connectremember">
+                <a href="airsCo.html">Me connecter</a>
+                <input type="checkbox" id="checkbox" checked>
+                <label for="checkbox"></label>
+                <label for="rememberme">Se souvenir de moi</label>
+            </div>
+            <div class="plssignup">
+                <p>Pas encore de compte ?</p>
+                <a href="inscription.html">Inscrivez-vous</a>
+            </div>
+        </fieldset>                
+    </form>
+</div>
+
+
+    <main>
         <!-- banniere nuages -->
         <div class="nuages">
             <h1>La tête dans les nuages</h1>
@@ -190,7 +221,7 @@
         </div>
             
         </div>
-    </section>
+    </main>
 
     <footer>
         <div class="flex">
@@ -245,21 +276,12 @@
     </div>
 </footer>
 
- <!----- SCRIPT MENU BURGER ----->
+ <!----- SCRIPT menu burger ----->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script>
-     const toggle = document.getElementById('toggle');
-     const navigation = document.getElementById('navigation');
-     document.onclick = function(e) {
-         if(e.target.id !== 'toggle' && e.target.id !== 'navigation'){
-             toggle.classList.remove('active');
-             navigation.classList.remove('active');
-         }
-     }
-     toggle.onclick = function(){
-         toggle.classList.toggle('active')
-         navigation.classList.toggle('active')
-     }    
- </script> 
+ <script src="js/burger.js"></script> 
+ <!----- SCRIPT nav connecté ----->
+ <script src="js/scriptNav.js"></script>
+ <!----- SCRIPT pop up connexion ----->
+ <script src="js/popupconnect.js"></script>
 </body>
 </html>
