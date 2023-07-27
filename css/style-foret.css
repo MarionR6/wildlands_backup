@@ -13,6 +13,7 @@ a, img {
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -371,9 +372,6 @@ main .banner h1 {
   width: 100%;
 }
 
-/* .activities .actcontainer .bubble{
-    width: 20%;
-} */
 .activities .actcontainer .reverse {
   display: flex;
   flex-direction: row-reverse;
@@ -455,7 +453,21 @@ main .banner h1 {
 }
 
 /* ANIMATION JS */
+.revealleft{
+  opacity:0;
+  transform: translateX(-20em);
+}
 
+.revealright{
+  opacity: 0;
+  transform: translateX(20em);
+}
+
+.revealvisible{
+  opacity: 1;
+  transform: translateX(0);
+  transition: .5s;
+}
 
 /* BANNER NUIT BOIS */
 .banner3 {
