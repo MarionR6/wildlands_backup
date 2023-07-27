@@ -136,17 +136,6 @@ header div#navigation {
   font-size: 4em;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translate(-20em);
-}
-
-.reaveal-visible {
-  opacity: 1;
-  transform: translate(0);
-  transition: 0.3s;
-}
-
 section.typeAttraction {
   background-color: #8AE395;
   padding-bottom: 5%;
@@ -260,12 +249,12 @@ section.typeAttraction .grandeA .txtA p {
   left: 42%;
   text-align: center;
   background-color: #3A8043;
-  border-radius: 100em;
-  width: 4%;
+  border-radius: 10em;
+  width: 3%;
   padding: 1%;
 }
 .resto .resto1 .vegan-locaux p {
-  font-size: 90%;
+  font-size: 80%;
 }
 .resto .resto1 .txtResto {
   width: 90%;
@@ -293,11 +282,12 @@ section.typeAttraction .grandeA .txtA p {
   left: 80%;
   background-color: #3A8043;
   border-radius: 10em;
-  width: 4%;
+  width: 3%;
   padding: 1%;
 }
 .resto .resto2 .vegan-locaux p {
-  font-size: 90%;
+  font-size: 75%;
+  text-align: center;
 }
 .resto .resto2 .txtResto {
   width: 90%;
@@ -504,16 +494,51 @@ footer .mentions .mentionsdroits a {
   color: white;
 }
 
+@media screen and (min-width: 1920px) {
+  .resto .resto1 .txtResto p {
+    font-size: 2em;
+  }
+  .resto .resto1 .vegan-locaux {
+    padding: 2%;
+    font-size: 1.5em;
+  }
+  .resto .resto2 .txtResto {
+    padding-bottom: 29%;
+  }
+  .resto .resto2 .txtResto p {
+    font-size: 2em;
+  }
+  .resto .resto2 .vegan-locaux {
+    padding: 2%;
+    font-size: 1.5em;
+    left: 85%;
+  }
+  .detente .detente1 .txtDetente p {
+    font-size: 1.5em;
+  }
+  .detente .detente2 .txtDetente p {
+    font-size: 1.5em;
+  }
+  .detente .detente2 .reserve a {
+    font-size: 1.5em;
+  }
+}
 @media screen and (max-width: 1200px) {
   .resto .resto2 .txtResto {
     padding-bottom: 20%;
   }
   .resto .resto2 .vegan-locaux {
     left: 85%;
-    width: 5%;
+    width: 2.5%;
+  }
+  .resto .resto2 .vegan-locaux p {
+    font-size: 60%;
   }
   .resto .resto1 .vegan-locaux {
-    width: 5%;
+    width: 2.5%;
+  }
+  .resto .resto1 .vegan-locaux p {
+    font-size: 60%;
   }
   .detente .detente1 .txtDetente p {
     padding-top: 15%;
@@ -561,10 +586,10 @@ footer .mentions .mentionsdroits a {
   .resto .resto1 .vegan-locaux {
     top: 5%;
     left: 40%;
-    width: 4%;
+    width: 3%;
   }
   .resto .resto1 .vegan-locaux p {
-    font-size: 70%;
+    font-size: 60%;
   }
   .resto .resto1 .txtResto {
     width: 90%;
@@ -582,10 +607,10 @@ footer .mentions .mentionsdroits a {
   .resto .resto2 .vegan-locaux {
     top: 5%;
     left: 88%;
-    width: 4%;
+    width: 3%;
   }
   .resto .resto2 .vegan-locaux p {
-    font-size: 70%;
+    font-size: 60%;
   }
   .bannerDetente h1 {
     font-size: 2em;
@@ -683,6 +708,7 @@ footer .mentions .mentionsdroits a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     right: -100%;
     width: 100%;
     height: 100vh;
@@ -719,16 +745,18 @@ footer .mentions .mentionsdroits a {
     font-size: 2em;
   }
   .resto .resto1 .vegan-locaux {
-    padding: 1.5%;
+    padding: 2%;
+    width: 3.5%;
   }
   .resto .resto1 .vegan-locaux p {
-    font-size: 60%;
+    font-size: 50%;
   }
   .resto .resto2 .vegan-locaux {
-    padding: 1.5%;
+    padding: 2%;
+    width: 3.5%;
   }
   .resto .resto2 .vegan-locaux p {
-    font-size: 55%;
+    font-size: 50%;
   }
   .resto .resto2 .txtResto {
     padding-bottom: 18%;
@@ -787,7 +815,7 @@ footer .mentions .mentionsdroits a {
     width: 100%;
   }
   footer .flex {
-    padding: 2% 0% 0% 5%;
+    padding: 2% 0% 0% 0%;
   }
   footer .flex .center p {
     display: none;
@@ -833,66 +861,74 @@ footer .mentions .mentionsdroits a {
   }
   .resto .resto1 {
     width: 40%;
+    padding-left: 5%;
   }
   .resto .resto1 .imgResto img {
-    width: 50vh;
+    width: 35vh;
   }
   .resto .resto1 .vegan-locaux {
-    border-radius: 0;
-    top: 5.5%;
-    left: 0;
+    border-radius: 10em;
+    top: 8%;
+    left: 32%;
     padding-right: 4%;
   }
   .resto .resto1 .vegan-locaux p {
     font-size: 50%;
   }
   .resto .resto1 .txtResto {
-    width: 100%;
-    padding-left: 28%;
+    width: 90%;
+    padding-left: 5%;
   }
   .resto .resto1 .txtResto p {
-    padding-left: 5%;
+    padding-left: 0%;
     font-size: 85%;
   }
   .resto .resto2 {
     padding-right: 8.4%;
+    width: 33%;
   }
   .resto .resto2 .imgResto img {
-    width: 50vh;
+    width: 35vh;
+    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
   }
   .resto .resto2 .vegan-locaux {
-    border-radius: 0;
-    top: 5.5%;
-    left: 44.7%;
+    border-radius: 10em;
+    top: 8%;
+    left: 85%;
     padding-right: 4%;
   }
   .resto .resto2 .vegan-locaux p {
     font-size: 50%;
   }
   .resto .resto2 .txtResto {
-    padding-bottom: 5%;
+    padding-bottom: 6%;
+    width: 106%;
   }
   .resto .resto2 .txtResto p {
     font-size: 90%;
-    padding-bottom: 30.5%;
+    padding-bottom: 25%;
   }
   .bannerDetente h1 {
     font-size: 1.2em;
+  }
+  .detente .detente1 .txtDetente {
+    width: 50%;
   }
   .detente .detente1 .txtDetente p {
     font-size: 50%;
   }
   .detente .detente2 .imgD {
-    width: 50%;
+    width: 60vh;
   }
   .detente .detente2 .txtDetente {
-    width: 45%;
+    width: 91%;
   }
   .detente .detente2 .txtDetente p {
-    font-size: 30%;
+    font-size: 45%;
+    padding-top: 0;
   }
   .detente .detente2 .reserve {
-    font-size: 70%;
+    font-size: 60%;
   }
   footer .flex .container .coordonnees i {
     font-size: 70%;
@@ -905,5 +941,70 @@ footer .mentions .mentionsdroits a {
   }
   footer .flex .center .logo i {
     font-size: 60%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .resto .resto1 .imgResto img {
+    width: 30vh;
+  }
+  .resto .resto1 .txtResto {
+    width: 90%;
+  }
+  .resto .resto1 .txtResto p {
+    font-size: 65%;
+  }
+  .resto .resto1 .vegan-locaux {
+    padding: 2%;
+    width: 7%;
+    border-radius: 20em;
+  }
+  .resto .resto2 .imgResto img {
+    width: 30vh;
+  }
+  .resto .resto2 .txtResto {
+    width: 102.5%;
+  }
+  .resto .resto2 .txtResto p {
+    font-size: 65%;
+    padding-bottom: 27%;
+  }
+  .resto .resto2 .vegan-locaux {
+    padding: 2%;
+    width: 7%;
+    border-radius: 20em;
+  }
+  .detente .detente1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 7%;
+  }
+  .detente .detente1 .imgD img {
+    width: 40vh;
+  }
+  .detente .detente1 .txtDetente {
+    width: 78%;
+    padding-bottom: 10%;
+    font-size: 1.5em;
+  }
+  .detente .detente2 {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-left: 7%;
+  }
+  .detente .detente2 .imgD {
+    padding-top: 5%;
+  }
+  .detente .detente2 .imgD img {
+    width: 40vh;
+  }
+  .detente .detente2 .txtDetente {
+    width: 78%;
+    padding-top: 5%;
+    font-size: 1.5em;
+  }
+  .detente .detente2 .reserve {
+    padding-right: 30%;
   }
 }/*# sourceMappingURL=attraction.css.map */
