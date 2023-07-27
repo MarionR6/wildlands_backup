@@ -33,6 +33,26 @@ main{
 
 //----------------------------------------------barre de navigation
 //barre de navigation
+
+//------------------------------------ scroll nav
+.scrollDown{
+    z-index: 99;
+    position: fixed;
+}
+.scrollAnimation{
+    transform: translateY(-200px);
+    transition: all 0.5s;
+}
+.scrollAppear{
+    transform: translateY(0px);
+    transition: all 0.5s;
+}
+.scrollAppearUp{
+    transform: translateY(-200px);
+    transition: all 0.5s;
+}
+//------------------------------------------
+
 .navBar{
     width: 100%;
     background-color: var(--bleu);

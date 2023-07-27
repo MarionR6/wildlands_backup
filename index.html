@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Wildlands</title>
+    <!-- icon -->
+    <link rel="icon" href="img/favicon.png">
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -38,7 +40,7 @@
                 </ul>
             </div>
         <!-- navbar classique -->
-        <div class="navBar">
+        <div class="navBar scrollAnimation">
             <div class="logo">
                 <a href="index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
             </div>
@@ -65,7 +67,7 @@
         <h1>Wildlands</h1>
         <div class="line"></div>
         <h2>Des sensations</h2>
-        <h2>Plus ou moins fortes</h2>
+        <h2><span class="zoomPlus">Plus</span> ou <span class="zoomMoins">moins</span> fortes</h2>
     </div>
     
 <main>
@@ -211,22 +213,11 @@
         </div>
     </footer>
 
- <!----- SCRIPT MENU BURGER ----->
+ <!----- SCRIPT ----->
+ <script src="js/navScroll.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script>
-     const toggle = document.getElementById('toggle');
-     const navigation = document.getElementById('navigation');
-     document.onclick = function(e) {
-         if(e.target.id !== 'toggle' && e.target.id !== 'navigation'){
-             toggle.classList.remove('active');
-             navigation.classList.remove('active');
-         }
-     }
-     toggle.onclick = function(){
-         toggle.classList.toggle('active')
-         navigation.classList.toggle('active')
-     }    
- </script>
+ <script src="js/burger.js"></script>
+ <script src="js/zoom.js"></script>
 </body>
 </html>
 
