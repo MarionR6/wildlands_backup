@@ -12,7 +12,8 @@ const handleIntersect = (entries, observer) =>{
         if(entry.intersectionRatio > ratio){
             console.log('visible');
             entry.target.classList.add('revealvisible');
-            observer.unobserve(entry.target);
+        }else{
+            entry.target.classList.remove('revealvisible')
         }
     });
 }
