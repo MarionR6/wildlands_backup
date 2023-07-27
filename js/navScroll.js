@@ -6,23 +6,13 @@ let lastScroll = window.scrollY;
 window.addEventListener("scroll", () =>{
     if(lastScroll < window.scrollY){
         navScroll.classList.remove("scrollDown");
+        navScroll.classList.remove("scrollAppear");
+        
     }
     else{
-        
         navScroll.classList.add("scrollDown");
-        //navScroll.classList.add("scrollUp");
+        navScroll.classList.add("scrollAppear");
+        
     }
     lastScroll = window.scrollY;
 })
-
-//---------------------------------- MENU BURGER
-
-//----------------------------------- Transition header
-
-// const attractionScroll = document.querySelector('petiteA');
-
-// window.addEventListener("scroll", () =>{
-//     if(window.scrollY > 100){
-        
-//     }
-// })

@@ -36,10 +36,20 @@ p{
 
 //------------------------------------ scroll nav
 .scrollDown{
-    //transition: transform .2s;
-    transform: translateY(1.5s);
-    z-index: 2;
+    z-index: 99;
     position: fixed;
+}
+.scrollAnimation{
+    transform: translateY(-200px);
+    transition: all 0.5s;
+}
+.scrollAppear{
+    transform: translateY(0px);
+    transition: all 0.5s;
+}
+.scrollAppearUp{
+    transform: translateY(-200px);
+    transition: all 0.5s;
 }
 //------------------------------------------
 header div#navigation{
@@ -51,6 +61,7 @@ header div#navigation{
     display:flex;
     justify-content: space-around;
     align-items: center;
+    transition: all 0.5s;
     .logo{
         width: 8%;
         padding : 0.5% 0;
