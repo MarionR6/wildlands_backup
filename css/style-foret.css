@@ -325,6 +325,7 @@ main .banner h1 {
   position: absolute;
   right: -5%;
   top: -15%;
+  z-index: 4;
 }
 
 .activities .actcontainer .acttxtimg {
@@ -466,7 +467,7 @@ main .banner h1 {
 .revealvisible{
   opacity: 1;
   transform: translateX(0);
-  transition: .5s;
+  transition: 1s;
 }
 
 /* BANNER NUIT BOIS */
