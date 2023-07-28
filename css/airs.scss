@@ -26,127 +26,197 @@ a{
 
 //barre de navigation
 }
-.navBar{
-    width: 100%;
-    background-color: var(--bleu);
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    .logo{
-        width: 8%;
-        padding : 0.5% 0;
-        img{
-            width: 100%;
-        }
-    }
-    nav{
-        width: 50%;
-        ul{
-            // font-size: 0;
-            display: flex;
-            justify-content: space-around;
-            li{
-                list-style: none;
-                a{
-                    font-family: var(--neucha);
-                    font-size: 1.8em;
-                    text-decoration: none;
-                    transition:0.5s all;
-                    &:hover{
-                        transform: scale(1.1);
-                    }
-                }
-                .sous{
-                    display: none;
-                    position: absolute;
-                    transition: 1 all;
-                }
-                &:hover{
-                    .sous{
-                        display: block;
-                        li{
-                            background-color: var(--bleu);
-                            opacity: 0.8;
-                            border-bottom: solid var(--bleu-clair)1px;
-                            padding: 2%;
-                            background-color: var(--bleuFonce);
-                            a{
-                                font-size:25px;
-                                padding: 2%;
-                                transition:0.5s all;
-                                &:hover{
-                                    color: #091e33;
-                                    transform: scale(1);
-                                }
-                            }
-                        }
-                
-                    }
-                }
-            }
-            .deroulant{
-                    &:after{
-                    content: "⏷";
-                    font-size: 0.7em;
-                    }
-                
-            }
-        }
-    }
-    .monCompte{
-        // width: 15%;
-        background-color: var(--bleuFonce);
-        font-family: var(--neucha);
-        display: flex;
-        justify-content: center;
-        padding: 1% 2%;
-        border-radius: 3vh;
-        button{
+
+header{
+    .milieu{
+        display:none ;
+        // width: 30%;
+        .monCompte2{
+            display:inline-block;
             width: 100%;
             background-color: var(--bleuFonce);
-            border:none;
-            text-decoration: none;
-            font-size: 1.5em;
-            transition: 0.5s all;
-            position:relative;
-            p{
+            font-family: var(--neucha);
+            // display: flex;
+            // justify-content: center;
+            // padding: 1% 2%;
+            border-radius: 3vh;
+            // margin:0 auto;
+            .btnCompte2{
+                display: inline-block;
+                background-color: var(--bleuFonce);
+                border:none;
+                text-decoration: none;
+                font-size: 1em;
+                transition: 0.5s all;
+                position:relative;
+                border-radius: 2vh;
+                padding: .5em 2em;
+                p{
                 font-family: var(--neucha);
-            }
-            &:hover{
-                transform: scale(1.1);
-            }
-            .gestionCompte{
-                display:block;
-                font-family: var(--neucha);
-                // font-size:0.7em;
-                list-style-type: none;
-                position:absolute;
-                transition: 1 all;
-                li{
-                    a{
-                        font-size:0.7em;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                #box2{
+                    align-items: center;
+                    justify-content: center;
+                }
+                .gestionCompte{
+                    display:block;
+                    font-family: var(--neucha);
+                    list-style-type: none;
+                    position:absolute;
+                    left: 10%;
+                    transition: 1 all;
+                    li{
+                        a{
+                                font-size:0.7em;
+                        }
                     }
                 }
+                .gestionNone{
+                        display: none;
+                }
+                .gestion{
+                    width:80%;                        
+                    margin-top:5%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+                .deco{
+                    width:80%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+            } 
+        }
+    }
+    .navBar{
+        width: 100%;
+        background-color: var(--bleu);
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo{
+            width: 8%;
+            padding : 0.5% 0;
+            img{
+                width: 100%;
             }
-            .gestionNone{
-                display: none;
+        }
+        nav{
+            width: 50%;
+            ul{
+                // font-size: 0;
+                display: flex;
+                justify-content: space-around;
+                li{
+                    list-style: none;
+                    a{
+                        font-family: var(--neucha);
+                        font-size: 1.8em;
+                        text-decoration: none;
+                        transition:0.5s all;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .sous{
+                        display: none;
+                        position: absolute;
+                        transition: 1 all;
+                    }
+                    &:hover{
+                        .sous{
+                            display: block;
+                            li{
+                                background-color: var(--bleu);
+                                opacity: 0.8;
+                                border-bottom: solid var(--bleu-clair)1px;
+                                padding: 2%;
+                                background-color: var(--bleuFonce);
+                                a{
+                                    font-size:25px;
+                                    padding: 2%;
+                                    transition:0.5s all;
+                                    &:hover{
+                                        color: #091e33;
+                                        transform: scale(1);
+                                    }
+                                }
+                            }
+                    
+                        }
+                    }
+                }
+                .deroulant{
+                        &:after{
+                        content: "⏷";
+                        font-size: 0.7em;
+                        }
+                }
             }
-            .gestion{
-                width:100%;
-                margin-top:7%;
-                background-color:#1F5180;
-                opacity: 0.8;
-                padding:5%;
-            }
-            .deco{
-                width:100%;
-                background-color:#1F5180;
-                opacity: 0.8;
-                padding:5%;
-            }
-        } 
-        
-
+        }
+        .monCompte{
+            background-color: var(--bleuFonce);
+            font-family: var(--neucha);
+            display: flex;
+            justify-content: center;
+            padding: 1% 2%;
+            border-radius: 3vh;
+            button{
+                width: 100%;
+                background-color: var(--bleuFonce);
+                border:none;
+                text-decoration: none;
+                font-size: 1.5em;
+                transition: 0.5s all;
+                position:relative;
+                p{
+                    font-family: var(--neucha);
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                .gestionCompte{
+                    display:block;
+                    font-family: var(--neucha);
+                    // font-size:0.7em;
+                    list-style-type: none;
+                    position:absolute;
+                    transition: 1 all;
+                    li{
+                        a{
+                            font-size:0.7em;
+                        }
+                    }
+                }
+                .gestionNone{
+                    display: none;
+                }
+                .gestion{
+                    width:100%;
+                    margin-top:7%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+                .panier{
+                    width:100%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }                
+                .deco{
+                    width:100%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+            } 
+        }
     }
 }
 
@@ -172,34 +242,30 @@ a{
     visibility: visible;
     transition: .5s all;
     transform: scale(1);
+    button{
+        background-color: var(--bleuFonce);
+        color: white;
+        font-size: 0.8em;
+        border: none;
+        border-radius: 1em;
+        width: 1.5em;
+        height: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 4%;
+        top: 2.5%;
+        cursor: pointer;
+      }
   }
-  
-  .popup button{
-    background-color: var(--bleuFonce);
-    color: white;
-    font-size: 0.8em;
-    border: none;
-    border-radius: 1em;
-    width: 1.5em;
-    height: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 4%;
-    top: 2.5%;
-    cursor: pointer;
-  }
-  
   .popupdisplay{
     visibility: hidden;
     transform: scale(0);
   }
-  
   .popup form fieldset{
     border: none;
   }
-  
   .popup form fieldset legend{
     font-family: 'Neucha', sans-serif;
     font-size: 1.7em;
@@ -207,7 +273,6 @@ a{
     border-bottom: 0.06em solid white;
     padding-bottom: 5%;
   }
-  
   .popup form fieldset .connectremember a{
     font-family: 'Neucha', sans-serif;
     color: white;
@@ -218,22 +283,18 @@ a{
     padding: 2% 0;
     transition: .5s all;
   }
-  
   .popup form fieldset .connectremember a:hover{
     transform: scale(1.1);
-  }
-  
+  } 
   .popup form fieldset .connectremember label{
     font-family: 'Neucha', sans-serif;
     padding-left: 1%;
     font-size: 0.7em;
   }
-  
   .popup form fieldset .plssignup{
     font-family: 'Neucha', sans-serif;
     font-size: 0.8em;
   }
-  
   .popup form fieldset .plssignup a{
     font-family: 'Neucha', sans-serif;
     color: white;
@@ -245,21 +306,17 @@ a{
     font-size: 1.3em;
     transition: .5s all;
   }
-  
   .popup form fieldset .plssignup a:hover{
     transform: scale(1.1);
   }
-  
   .emailflex, .passwordflex{
     display: flex;
     flex-direction: column;
   }
-  
   #emaildisable{
     padding: 5% 0 4% 0;
     font-family: 'Neucha', sans-serif;
   }
-  
   #emaildisable input,
   #passworddisable input{
     margin-top: 2%;
@@ -269,23 +326,19 @@ a{
     border: none;
     border-radius: 1em;
     color: black;
-  }
-  
+  } 
   #emaildisable input::placeholder,
   #passworddisable input::placeholder{
     color: black;
     font-weight: 500;
   }
-  
   .emaildisable,
   .passworddisable{
     pointer-events: none;
-  }
-  
+  } 
   #passworddisable{
     font-family: 'Neucha', sans-serif;
-  }
-  
+  } 
 
 // S E C T I O N 
 // banner la tete dans les nuages
@@ -596,9 +649,7 @@ footer{
 // ---------------------------- R E S P O N S I V E --------------------------------------------------//
 
 // media query 1820px
-@media screen and (max-width: 1820px) {
-
-    
+@media screen and (max-width: 1820px) {   
     .bleuClair{
         .flex{
             .bleuFonce{
@@ -648,9 +699,7 @@ footer{
 }
 
 // media query 1720px
-@media screen and (max-width: 1720px) {
-
-    
+@media screen and (max-width: 1720px) {   
     .bleuClair{
         .flex{
             .bleuFonce{
@@ -746,7 +795,7 @@ footer{
 
 // media query 1200px
 @media screen and (max-width: 1200px) {
-
+header{
     .navBar{
         nav{
             ul{
@@ -778,7 +827,7 @@ footer{
             }
         }
     }
-    
+}   
     // banner la tete dans les nuages
     .nuages{
         h1{
@@ -880,6 +929,7 @@ footer{
 
 // media query 1024px
 @media screen and (max-width: 1024px) {
+    header{
     .navBar{
         .logo{
             width: 10%;
@@ -909,6 +959,7 @@ footer{
             font-size: 1.4em;
             }
         }
+    }
     }
     .nuages{
         h1{
@@ -1011,18 +1062,35 @@ footer{
 @media screen and (max-width: 768px) {
     header {
         width: 100%;
-        padding: 10px 20px 80px 20px;
+        padding: 2em;
         background-color: var(--bleuClair);
         display: flex;
-        .logIn{
-            align-self: center;
-            width:2.5em;
-            height:2.5em;
-            border: none;
-            border-radius: 50%;
-            display: inline-block;
-            background-color: var(--bleuFonce);
-            color: white;
+        .milieu{
+            height:100%;
+            display: inline-flex;
+            .logIn{
+                align-self: center;
+                width:2.5em;
+                height:2.5em;
+                border: none;
+                border-radius: 50%;
+                // display: inline-block;
+                background-color: var(--bleuFonce);
+                color: white;
+            }
+        }
+        .cart{
+            margin-left: 2%;
+            a{  
+                width:2.05em;
+                height:2.05em;
+                border-radius: 50%;
+                background-color: var(--bleuFonce);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
         .navBar {
             display: none;
@@ -1032,7 +1100,7 @@ footer{
             display: block;
             width: 30px;
             height: 2px;
-            top: 50px;
+            top: 47px;
             right: 50px;
             cursor: pointer;
             background-color:white;

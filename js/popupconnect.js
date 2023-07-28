@@ -1,9 +1,10 @@
 // --- --- --- P O P . U P . C O N N E X I O N --- --- --- //
 
 const popup = document.getElementById('popup');
-const connexion = document.getElementById ('email');
-const password = document.getElementById ('password');
-const btnMonCompte = document.getElementById ('moncompte');
+const connexion = document.getElementById('email');
+const password = document.getElementById('password');
+const btnMonCompte = document.getElementById('moncompte');
+const btnMonCompte2 = document.getElementById('moncompte2');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
 const closePopup = document.getElementById('closepopup');
@@ -27,7 +28,25 @@ btnMonCompte.addEventListener("click", () =>{
         
     }
 })
-
+btnMonCompte2.addEventListener("click", () =>{
+    if(popup.classList.contains("popupdisplay")){
+        popup.classList.remove("popupdisplay");
+        main.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
+        header.style.filter = "blur(0.5em)";
+        header.style.pointerEvents = "none";
+        closePopup.addEventListener("click", () =>{
+            popup.classList.add("popupdisplay");
+            main.style.filter = "none";
+            main.style.pointerEvents = "initial";
+            main.style.transition = ".5s all";
+            header.style.filter = "none";
+            header.style.transition = ".5s all";
+            header.style.pointerEvents = "initial";
+        })
+        
+    }
+})
 // FETCH
 
 const dataUser = "json/data.json"

@@ -28,68 +28,126 @@ a {
   display: none;
 }
 
-.navBar {
+header .milieu {
+  display: none;
+}
+header .milieu .monCompte2 {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--bleuFonce);
+  font-family: var(--neucha);
+  border-radius: 3vh;
+}
+header .milieu .monCompte2 .btnCompte2 {
+  display: inline-block;
+  background-color: var(--bleuFonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  border-radius: 2vh;
+  padding: 0.5em 2em;
+}
+header .milieu .monCompte2 .btnCompte2 p {
+  font-family: var(--neucha);
+}
+header .milieu .monCompte2 .btnCompte2:hover {
+  transform: scale(1.1);
+}
+header .milieu .monCompte2 .btnCompte2 #box2 {
+  align-items: center;
+  justify-content: center;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  left: 10%;
+  transition: 1 all;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
+  font-size: 0.7em;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionNone {
+  display: none;
+}
+header .milieu .monCompte2 .btnCompte2 .gestion {
+  width: 80%;
+  margin-top: 5%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .milieu .monCompte2 .btnCompte2 .deco {
+  width: 80%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar {
   width: 100%;
   background-color: var(--bleu);
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.navBar .logo {
+header .navBar .logo {
   width: 8%;
   padding: 0.5% 0;
 }
-.navBar .logo img {
+header .navBar .logo img {
   width: 100%;
 }
-.navBar nav {
+header .navBar nav {
   width: 50%;
 }
-.navBar nav ul {
+header .navBar nav ul {
   display: flex;
   justify-content: space-around;
 }
-.navBar nav ul li {
+header .navBar nav ul li {
   list-style: none;
 }
-.navBar nav ul li a {
+header .navBar nav ul li a {
   font-family: var(--neucha);
   font-size: 1.8em;
   text-decoration: none;
   transition: 0.5s all;
 }
-.navBar nav ul li a:hover {
+header .navBar nav ul li a:hover {
   transform: scale(1.1);
 }
-.navBar nav ul li .sous {
+header .navBar nav ul li .sous {
   display: none;
   position: absolute;
   transition: 1 all;
 }
-.navBar nav ul li:hover .sous {
+header .navBar nav ul li:hover .sous {
   display: block;
 }
-.navBar nav ul li:hover .sous li {
+header .navBar nav ul li:hover .sous li {
   background-color: var(--bleu);
   opacity: 0.8;
   border-bottom: solid var(--bleu-clair) 1px;
   padding: 2%;
   background-color: var(--bleuFonce);
 }
-.navBar nav ul li:hover .sous li a {
+header .navBar nav ul li:hover .sous li a {
   font-size: 25px;
   padding: 2%;
   transition: 0.5s all;
 }
-.navBar nav ul li:hover .sous li a:hover {
+header .navBar nav ul li:hover .sous li a:hover {
   color: #091e33;
   transform: scale(1);
 }
-.navBar nav ul .deroulant:after {
+header .navBar nav ul .deroulant:after {
   content: "⏷";
   font-size: 0.7em;
 }
-.navBar .monCompte {
+header .navBar .monCompte {
   background-color: var(--bleuFonce);
   font-family: var(--neucha);
   display: flex;
@@ -97,7 +155,7 @@ a {
   padding: 1% 2%;
   border-radius: 3vh;
 }
-.navBar .monCompte button {
+header .navBar .monCompte button {
   width: 100%;
   background-color: var(--bleuFonce);
   border: none;
@@ -106,37 +164,43 @@ a {
   transition: 0.5s all;
   position: relative;
 }
-.navBar .monCompte button p {
+header .navBar .monCompte button p {
   font-family: var(--neucha);
 }
-.navBar .monCompte button:hover {
+header .navBar .monCompte button:hover {
   transform: scale(1.1);
 }
-.navBar .monCompte button .gestionCompte {
+header .navBar .monCompte button .gestionCompte {
   display: block;
   font-family: var(--neucha);
   list-style-type: none;
   position: absolute;
   transition: 1 all;
 }
-.navBar .monCompte button .gestionCompte li a {
+header .navBar .monCompte button .gestionCompte li a {
   font-size: 0.7em;
 }
-.navBar .monCompte button .gestionNone {
+header .navBar .monCompte button .gestionNone {
   display: none;
 }
-.navBar .monCompte button .gestion {
+header .navBar .monCompte button .gestion {
   width: 100%;
   margin-top: 7%;
   background-color: #1F5180;
   opacity: 0.8;
-  padding: 5%;
+  padding: 10%;
 }
-.navBar .monCompte button .deco {
+header .navBar .monCompte button .panier {
   width: 100%;
   background-color: #1F5180;
   opacity: 0.8;
-  padding: 5%;
+  padding: 10%;
+}
+header .navBar .monCompte button .deco {
+  width: 100%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
 }
 
 /* POP UP CONNEXION */
@@ -159,7 +223,6 @@ a {
   transition: 0.5s all;
   transform: scale(1);
 }
-
 .popup button {
   background-color: var(--bleuFonce);
   color: white;
@@ -676,18 +739,18 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 1200px) {
-  .navBar nav ul li a {
+  header .navBar nav ul li a {
     font-size: 1.5em;
   }
-  .navBar nav ul li .sous {
+  header .navBar nav ul li .sous {
     display: none;
     position: absolute;
     transition: 1 all;
   }
-  .navBar nav ul li:hover .sous li a {
+  header .navBar nav ul li:hover .sous li a {
     font-size: 20px;
   }
-  .navBar .monCompte a {
+  header .navBar .monCompte a {
     font-size: 1.3em;
   }
   .nuages h1 {
@@ -760,17 +823,17 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 1024px) {
-  .navBar .logo {
+  header .navBar .logo {
     width: 10%;
     padding: 0.5% 0;
   }
-  .navBar nav ul li a {
+  header .navBar nav ul li a {
     font-size: 1.5em;
   }
-  .navBar nav ul li:hover .sous li a {
+  header .navBar nav ul li:hover .sous li a {
     font-size: 20px;
   }
-  .navBar .monCompte a {
+  header .navBar .monCompte a {
     font-size: 1.4em;
   }
   .nuages h1 {
@@ -846,19 +909,35 @@ footer .mentions .mentionsdroits {
 @media screen and (max-width: 768px) {
   header {
     width: 100%;
-    padding: 10px 20px 80px 20px;
+    padding: 2em;
     background-color: var(--bleuClair);
     display: flex;
   }
-  header .logIn {
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+  }
+  header .milieu .logIn {
     align-self: center;
     width: 2.5em;
     height: 2.5em;
     border: none;
     border-radius: 50%;
-    display: inline-block;
     background-color: var(--bleuFonce);
     color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--bleuFonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   header .navBar {
     display: none;
@@ -868,7 +947,7 @@ footer .mentions .mentionsdroits {
     display: block;
     width: 30px;
     height: 2px;
-    top: 50px;
+    top: 47px;
     right: 50px;
     cursor: pointer;
     background-color: white;
