@@ -58,18 +58,13 @@ main {
   padding: 2% 3%;
   font-size: 1.7em;
   border-radius: 1em;
-  color: white;
   background-color: #3A8043;
   border: 0.07em solid #204725;
+  font-family: 'Neucha', sans-serif;
+  color: white;
 }
 
-.popup{
-  visibility: visible;
-  transition: .5s all;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.popup button{
+.popup #closepopup{
   background-color: #204725;
   color: white;
   font-size: 0.8em;
@@ -86,25 +81,20 @@ main {
   cursor: pointer;
 }
 
-.popupdisplay{
-  visibility: hidden;
-  transform: translate(-50%, -50%) scale(0);
-}
-
-.popup form fieldset{
+fieldset{
   border: none;
 }
 
 .popup form fieldset legend{
-  font-family: 'Neucha', sans-serif;
   font-size: 1.7em;
   text-align: center;
   border-bottom: 0.06em solid white;
   padding-bottom: 5%;
 }
 
-.popup form fieldset .connectremember a{
-  font-family: 'Neucha', sans-serif;
+
+#meconnecter,
+#minscrire{
   color: white;
   text-align: center;
   margin: 10% 0 3% 0;
@@ -112,6 +102,25 @@ main {
   background-color: #204725;
   padding: 2% 0;
   transition: .5s all;
+  border: none;
+  font-family: 'Neucha', sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  transition: .5s all;
+}
+
+#minscrire{
+  font-size: 1em;
+  margin-top: 6%;
+}
+
+#minscrire:hover{
+  transform: scale(1.1);
+}
+
+.popup form fieldset #meconnecter:hover{
+  transform: scale(1.1);
 }
 
 .popup form fieldset .connectremember a:hover{
@@ -119,18 +128,15 @@ main {
 }
 
 .popup form fieldset .connectremember label{
-  font-family: 'Neucha', sans-serif;
   padding-left: 1%;
   font-size: 0.7em;
 }
 
 .popup form fieldset .plssignup{
-  font-family: 'Neucha', sans-serif;
   font-size: 0.8em;
 }
 
 .popup form fieldset .plssignup a{
-  font-family: 'Neucha', sans-serif;
   color: white;
   text-align: center;
   margin: 6% 0 3% 0;
@@ -152,18 +158,15 @@ main {
 
 #emaildisable{
   padding: 5% 0 4% 0;
-  font-family: 'Neucha', sans-serif;
 }
 
-#emaildisable input,
-#passworddisable input{
+.entrystyle input{
   margin-top: 2%;
   padding: 2% 4%;
   font-size: 0.6em;
   background-color: #c7e3cb;
   border: none;
   border-radius: 1em;
-  color: black;
 }
 
 #emaildisable input::placeholder,
@@ -177,8 +180,137 @@ main {
   pointer-events: none;
 }
 
-#passworddisable{
+.popup{
+  visibility: visible;
+  transition: .5s all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popupdisplay{
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* POPUP SIGNUP */
+
+#popupsignup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
   font-family: 'Neucha', sans-serif;
+  color: white;
+  width: 50%;
+}
+
+#closepopupsignup{
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+.signup{
+  visibility: visible;
+  transition: .5s all;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup form .login .connect{
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 4%;
+}
+
+.signup form .login .containersignup{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.1em solid #c7e3cb;
+  border-radius: 1em;
+  padding: 5% 5%;
+  position: relative;
+}
+
+.signup form .login .containersignup label{
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.signup form .login .containersignup .middleentry{
+  margin: 5% 0;
+}
+
+.signup form .login .containersignup .leftsignup{
+  width: 45%;
+}
+
+.signup form .login .containersignup .leftsignup p,
+.signup form .login .containersignup .rightsignup p{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup form .login .containersignup .line{
+  width: 30%;
+  height: 0.07em;
+  background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+  transform: rotate(90deg);
+  align-self: center;
+  position: absolute;
+}
+
+.signup form .login .containersignup .rightsignup{
+  width: 45%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle{
+  width: 100%;
+}
+
+
+.signup form .login .containersignup .rightsignup .entrystyle input{
+  width: 100%;
+}
+
+.signupdisplay{
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.signup .submitsignup{
+  color: white;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 1% 4%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4%;
+  transition: .5s all;
+}
+
+.signup .submitsignup:hover{
+  transform: scale(1.1);
 }
 
 /* NAVBAR */

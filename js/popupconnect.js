@@ -7,29 +7,43 @@ const btnMonCompte = document.getElementById ('moncompte');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
 const closePopup = document.getElementById('closepopup');
-
-const allLinks = document.querySelectorAll('a');
-const login = document.getElementById('login')
+const SignUpButton = document.getElementById('minscrire');
+const popupSignUp = document.getElementById('popupsignup');
+const submitSignUp = document.getElementById('submitsignup');
+const closePopupSignUp = document.getElementById('closepopupsignup');
 
 btnMonCompte.addEventListener("click", () =>{
     if(popup.classList.contains("popupdisplay")){
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
-        allLinks.forEach((l)=>{
-            l.style.pointerEvents = "none";
-        });
-        login.style.pointerEvents = "initial";
         header.style.filter = "blur(0.5em)";
-        // header.style.pointerEvents = "none";
+        header.style.pointerEvents = "none";
+
+        SignUpButton.addEventListener("click", () =>{
+            popup.classList.add("popupdisplay");
+            popupSignUp.classList.remove("signupdisplay");
+
+            closePopupSignUp.addEventListener("click", () =>{
+                popupSignUp.classList.add("signupdisplay");
+                main.style.filter = "none";
+                main.style.pointerEvents = "initial";
+                main.style.transition = ".5s all";
+                header.style.filter = "none";
+                header.style.transition = ".5s all";
+                header.style.pointerEvents = "initial";
+            })
+
+
+        })
 
         closePopup.addEventListener("click", () =>{
             popup.classList.add("popupdisplay");
             main.style.filter = "none";
-            // main.style.pointerEvents = "initial";
+            main.style.pointerEvents = "initial";
             main.style.transition = ".5s all";
             header.style.filter = "none";
             header.style.transition = ".5s all";
-            // header.style.pointerEvents = "initial";
+            header.style.pointerEvents = "initial";
         })
 
         document.addEventListener("keyup", (e) => {
@@ -37,7 +51,7 @@ btnMonCompte.addEventListener("click", () =>{
             if(e.key  === "Escape"){
                 popup.classList.add("popupdisplay");
                 main.style.filter = "none";
-                // main.style.pointerEvents = "initial";
+                main.style.pointerEvents = "initial";
                 main.style.transition = ".5s all";
                 header.style.filter = "none";
                 header.style.transition = ".5s all";
