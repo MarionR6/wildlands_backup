@@ -938,6 +938,12 @@ footer .mentions .mentionsdroits a{
   font-size: 1em;
 }
 
+/* POP UP SIGN UP */
+
+#popupsignup{
+  width: 60%;
+}
+
 /* NAVBAR */
 
 .navBar nav ul li a {
@@ -1082,6 +1088,11 @@ footer .container .logo a{
     width: 7em;
     height: 7em;
   }
+
+  #popupsignup{
+    width: 80%;
+  }
+
   /* NAVBAR */
   .navBar nav ul li a {
     font-size: 1.3em;
@@ -1306,7 +1317,13 @@ footer .container .logo a{
     font-family: var(--neucha);
     margin-bottom: 5%;
   }
+
+  /* POP UP SIGN UP */
   
+  #popupsignup{
+    width: 90%;
+  }
+
   /* BANNER */
 
   main .banner h1{
@@ -1521,8 +1538,24 @@ footer .container .logo a{
 
 @media screen and (max-width: 480px){
 
-  #popup{
-    width: 80%;
+  #popupsignup{
+    font-size: 1.5em;
+  }
+
+  .signup form .login .containersignup{
+    flex-direction: column;
+  }
+
+  .signup form .login .containersignup .leftsignup{
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup{
+    width: 100%;
+  }
+
+  .signup form .login .containersignup .line{
+    display: none;
   }
   
   /* BANNER */
@@ -1717,6 +1750,12 @@ footer .container .logo a{
 
   .popup form fieldset .plssignup a:hover{
     transform: scale(1);
+  }
+
+  /* POP UP SIGN UP */
+
+  #popupsignup{
+    font-size: 1.2em;
   }
 
   /* MAIN */
