@@ -81,31 +81,30 @@
                         <p class="bold">Adulte</p>
                         <p>50€</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id ="attractionAdulteMoins">-</button>
+                            <p id="attractionAdulte"></p>
+                            <button class="over" id="attractionAdultePlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <!-- spécifications sur l'âge -->
 
                     <p class="light">+ de 14 ans</p>
+
                     <!-- ligne resa enfant -->
                     <div class="nb">
                         <p class="bold">Enfant</p>
                         <p>30€</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id ="attractionEnfantMoins">-</button>
+                            <p id="attractionEnfant">0</p>
+                            <button class="over" id ="attractionEnfantPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <p class="light">3-14 ans</p>
                     <!-- boutton d'ajout -->
-                    <div class="btn">
-                        <button class="ajout">Ajouter</button>
-                    </div>
+                    
                 </div>
                 <!-- parc naturel -->
                 <div class="container">
@@ -117,10 +116,10 @@
                         <p class="bold">Adulte</p>
                         <p>75€</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id ="natureAdulteMoins">-</button>
+                            <p id="natureAdulte">0</p>
+                            <button class="over" id ="natureAdultePlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <!-- spécifications sur l'âge -->
@@ -130,17 +129,15 @@
                         <p class="bold">Enfants</p>
                         <p>40€</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id ="natureEnfantMoins">-</button>
+                            <p id="natureEnfant"></p>
+                            <button class="over" id="natureEnfantPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <p class="light">3-14 ans</p>
                     <!-- boutton d'ajout -->
-                    <div class="btn">
-                        <button class="ajout">Ajouter</button>
-                    </div>
+                    
                 </div>
             </div>
             <div class="twoParcs">
@@ -151,10 +148,10 @@
                         <p class="bold">Adulte</p>
                         <p>100€</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id="twoParcsAdulteMoins">-</button>
+                            <p id="twoParcsAdulte"></p>
+                            <button class="over" id="twoParcsAdultePlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <!-- spécifications sur l'âge -->
@@ -164,23 +161,23 @@
                         <p class="bold">Enfants</p>
                         <p>70€</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id="twoParcsEnfantsMoins">-</button>
+                            <p id="twoParcsEnfants"></p>
+                            <button class="over" id="twoParcsEnfantsPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <p class="light">3-14ans</p>
                     <!-- boutton d'ajout -->
-                    <div class="btn">
-                        <button class="ajout">Ajouter</button>
-                    </div>
+                    
             </div>
             <!-- partie que donne le sous total -->
             <a href="wip.html">
                 <button class="sousTotal">
+                    <p class="nbArticle nonvisible" id="nbArticle"></p>
                     <i class="fa-solid fa-basket-shopping"></i>
-                    <p><span class="price">0</span>€ : Réserver</p>
+                    <p><span id="price"></span>€ : Réserver</p>
+                    <i class="fa-solid fa-trash"></i>
                 </button>
             </a>
         </div>
@@ -197,6 +194,15 @@
             <div class="date">
                 <label>La date souhaitée pour votre arrivée</label>
                 <input type="text" placeholder="JJ/MM/AA">
+                <div class="nb">
+                    <p class="bold">Nombre de nuits</p>
+                    <div class="nbPlace">
+                        <button class="under1" id="nuitMoins">-</button>
+                        <p id="number"></p>
+                        <button class="over1" id="nuitPlus">+</button>
+                        <!-- <i class="fa-solid fa-trash"></i> -->
+                    </div>
+                </div>
             </div>
             <!-- différents types de logement -->
             <div class="flexContainer">
@@ -209,10 +215,10 @@
                     <div class="nb">
                         <p class="bold">Nombre de chambres</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id="hotelPlus">-</button>
+                            <p id="hotel"></p>
+                            <button class="over" id = "hotelMoins">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                         <!-- infos suite 1ère ligne -->
@@ -220,20 +226,8 @@
                         <p class="light">75€</p>
                         <p class="light">Lit Double</p>
                     </div>
-                        <!-- nombre de nuits -->
-                    <div class="nb">
-                        <p class="bold">Nombre de nuits</p>
-                        <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-                    <!-- boutton d'ajout -->
-                    <div class="btn">
-                        <button class="ajout">Ajouter</button>
-                    </div>
+                    
+                    
                     <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
                 </div>
 
@@ -246,10 +240,10 @@
                     <div class="nb">
                         <p class="bold">Nombre de chambres</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id="hotelEauMoins">-</button>
+                            <p class="number" id="hotelEau"></p>
+                            <button class="over" id="hotelEauPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <!-- info suite 1ère ligne -->
@@ -261,29 +255,18 @@
                     <div class="nb">
                         <p class="bold">Nombre de hamacs</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id ="hamacsMoins">-</button>
+                            <p class="number" id ="hamacs"></p>
+                            <button class="over" id = hamacsPlus>+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <!-- info suite 1ère ligne -->
                     <div class="infos">
                         <p class="light">25€</p>
                     </div>
-                    <!-- nombre de nuits -->
-                    <div class="nb">
-                        <p class="bold">Nombre de nuits</p>
-                        <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="btn">
-                        <button class="ajout">Ajouter</button>
-                    </div>
+                    
+                    
                     <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
                 </div>
 
@@ -296,10 +279,10 @@
                     <div class="nb">
                         <p class="bold">Réservation d'un chalet</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id="chaletMoins">-</button>
+                            <p id="chalet">0</p>
+                            <button class="over"id ="chaletPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <!-- info suite 1ère ligne -->
@@ -311,29 +294,18 @@
                     <div class="nb">
                         <p class="bold">Emplacement de camping</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id="campingMoins">-</button>
+                            <p id="camping">0</p>
+                            <button class="over" id="campingPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                     <!-- info suite 2nd ligne -->
                     <div class="infos">
                         <p class="light">25€</p>
                     </div>
-                    <!-- nombre de nuits -->
-                    <div class="nb">
-                        <p class="bold">Nombre de nuits</p>
-                        <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="btn">
-                        <button class="ajout">Ajouter</button>
-                    </div>
+                    
+                    
                     <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
                 </div>
 
@@ -346,10 +318,10 @@
                     <div class="nb">
                         <p class="bold">Nombre de bulles</p>
                         <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
+                            <button class="under" id="bullesMoins">-</button>
+                            <p id="bulles">0</p>
+                            <button class="over"id="bullesPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
                     </div>
                 <!-- info suite 1ère ligne -->
@@ -357,28 +329,11 @@
                         <p class="light">75€</p>
                         <p class="light">Lit Double</p>
                     </div>
-                <!-- nombre de nuits -->
-                    <div class="nb">
-                        <p class="bold">Nombre de nuits</p>
-                        <div class="nbPlace">
-                            <button class="under">-</button>
-                            <p class="number">0</p>
-                            <button class="over">+</button>
-                            <i class="fa-solid fa-trash"></i>
-                        </div>
-                    </div>
-                    <div class="btn">
-                        <button class="ajout">Ajouter</button>
-                    </div>
+                
+                    
                     <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
                 </div>
             </div>
-            <a href="wip.html">
-                <button class="sousTotal">
-                    <i class="fa-solid fa-basket-shopping"></i>
-                    <p><span class="price">0</span>€ : Réserver</p>
-                </button>
-            </a>
             
         </div>
     </main>
@@ -437,5 +392,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/burger.js"></script>
+    <script src="js/nombreArt.js"></script>
+    <script src="js/montantPanier.js"></script>
 </body>
 </html>
