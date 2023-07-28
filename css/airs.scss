@@ -93,6 +93,9 @@ header{
             } 
         }
     }
+    .cart{
+        display: none;
+    }
     .navBar{
         width: 100%;
         background-color: var(--bleu);
@@ -1081,6 +1084,7 @@ header{
         }
         .cart{
             margin-left: 2%;
+            display:block;
             a{  
                 width:2.05em;
                 height:2.05em;

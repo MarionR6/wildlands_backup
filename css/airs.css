@@ -86,6 +86,9 @@ header .milieu .monCompte2 .btnCompte2 .deco {
   opacity: 0.8;
   padding: 10%;
 }
+header .cart {
+  display: none;
+}
 header .navBar {
   width: 100%;
   background-color: var(--bleu);
@@ -928,6 +931,7 @@ footer .mentions .mentionsdroits {
   }
   header .cart {
     margin-left: 2%;
+    display: block;
   }
   header .cart a {
     width: 2.05em;
