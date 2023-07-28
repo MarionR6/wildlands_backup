@@ -29,6 +29,9 @@ main{
     font-family: var(--poppins);
 }
 
+body{
+    overflow-x: hidden;
+}
 
 
 //----------------------------------------------barre de navigation
@@ -39,18 +42,18 @@ main{
     z-index: 99;
     position: fixed;
 }
-.scrollAnimation{
-    transform: translateY(-200px);
-    transition: all 0.5s;
-}
-.scrollAppear{
-    transform: translateY(0px);
-    transition: all 0.5s;
-}
-.scrollAppearUp{
-    transform: translateY(-200px);
-    transition: all 0.5s;
-}
+// .scrollAnimation{
+//     transform: translateY(-200px);
+//     transition: all 0.5s;
+// }
+// .scrollAppear{
+//     transform: translateY(0px);
+//     transition: all 0.5s;
+// }
+// .scrollAppearUp{
+//     transform: translateY(-200px);
+//     transition: all 0.5s;
+// }
 //------------------------------------------
 
 .navBar{
@@ -140,6 +143,7 @@ main{
 }
 
 .bannerTitle{
+    overflow-x: hidden;
     width: 100%;
     background-image: url(https://i.goopics.net/k2ntuw.jpg);
     background-position: center;
@@ -161,12 +165,22 @@ main{
         margin-bottom: 4%;
     }
     h2 {
+        // overflow-y: hidden;
+        //display: flex;
+        line-height: 2em;
         text-align: center;
         font-family: "Neucha", cursive;
         font-size: 4em;
         color: white;
         font-weight: 400;
         text-transform: uppercase;
+        .zoomPlus{
+            display: inline-flex;
+            padding-right: 1%;
+        }
+        .zoomMoins{
+            display: inline-flex;
+        }
         .plus{ 
             animation: plus 4s infinite linear;}
         }
@@ -177,13 +191,14 @@ main{
 // -------------------------------------------------------main
 main{
     padding-top: 5%;
-    .presentation{       
+    .presentation{  
+            //height: 50%;     
             display: flex;
-            align-items: center;
+            //align-items: center;
             justify-content: center;
             width: 70%;
             margin: 0 auto 5% auto;
-            background-color: var(--bleu-fonce);
+            //background-color: var(--bleu-fonce);
             filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.50));
             .actimg{
                 width: 50%;
@@ -194,9 +209,11 @@ main{
             .acttxt{
                 background-color: var(--bleu-fonce);
                 width: 50%;
+                //height: 8em;
                 h2{
                     text-align: center;
                     font-size: 2.2em;
+                    //padding: 27.2% 7% 7% 7%;
                     padding: 7%;
                     text-transform: uppercase;
                 }
@@ -484,6 +501,23 @@ footer{
     }
     
 }
+
+/* ANIMATION JS */
+.revealleft{
+    opacity:0;
+    transform: translateX(-20em);
+  }
+  
+  .revealright{
+    opacity: 0;
+    transform: translateX(20em);
+  }
+  
+  .revealvisible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
 
 // responsive
 @media screen and (max-width:1440px){
@@ -968,6 +1002,8 @@ footer{
                     width: 100%;
                     flex-wrap:wrap;
                     .acttxt{
+                        width: 100%;
+                        padding: 2% 0% 2% 0%;
                         h2{
                             font-size: 1em;
                             margin-top:3%
@@ -978,8 +1014,11 @@ footer{
                             margin: 1%;
                         }
                         a{
-                            font-size: 0.7em;
+                            font-size: 1em;
                         }
+                    }
+                    .actimg{
+                        width: 100%;
                     }
                 }
             }
@@ -1052,7 +1091,7 @@ footer{
        .attractions{
             .underTitle{
                 font-size: 0.78m;
-        } 
+        }
     }
     
 

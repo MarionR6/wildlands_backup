@@ -40,7 +40,7 @@
                 </ul>
             </div>
         <!-- navbar classique -->
-        <div class="navBar scrollAnimation">
+        <div class="navBar scrollAnimation scrollDown" id="scrollBar">
             <div class="logo">
                 <a href="index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
             </div>
@@ -72,26 +72,28 @@
     
 <main>
     <div class="presentation">
-                <div class="actimg">
-                <img src="https://i.goopics.net/majkuy.jpg" alt="vue d'une fôret"> 
+                <div class="actimg revealleft">
+                    <img src="https://i.goopics.net/majkuy.jpg" alt="vue d'une fôret"> 
                 </div>
-                <div class="acttxt">
-                    <h2>Bienvenue dans notre parc</h2>
-                    <div class="line"></div>
-                    <p>Découvrez un lieu où la nature et les attractions se rejoignent harmonieusement. Explorez des paysages enchanteurs et profitez de sensations fortes, ou pas. Une expérience inoubliable vous attend, entre biodiversité et divertissement. Venez vivre l'aventure dès maintenant !</p>               
-                </div>
+                    <div class="acttxt revealright">
+                        <h2>Bienvenue dans notre parc</h2>
+                        <div class="line"></div>
+                        <p>Découvrez un lieu où la nature et les attractions se rejoignent harmonieusement. Explorez des paysages enchanteurs et profitez de sensations fortes, ou pas. Une expérience inoubliable vous attend, entre biodiversité et divertissement. Venez vivre l'aventure dès maintenant !</p>               
+                    </div>
         </div>
  <!-- Banner attraction -->
  <div class="banner">
-    <h1>Attractions</h1>
+    <div class="revealleft">
+        <h1>Attractions</h1>
+    </div>
 </div>
 <!-- contenu attraction -->
 <div class="attractions">
     <p class="underTitle">Notre parc propose un grand nombre d'attractions se mélant à la nature à l'entrée de notre parc naturel</p>
     <div class="line"></div>
     <div class="flexContainer">
-        <img src="https://i.goopics.net/35lxvg.jpg" alt="montagne russe">
-        <div class="container">
+        <img src="https://i.goopics.net/35lxvg.jpg" alt="montagne russe" class="revealleft">
+        <div class="container revealright">
             <p>Si vous êtes amateur d'attractions à sensations fortes, plusieurs montages russes et autres manèges à sensation forte, n'hésitez plus !
             </p>
             <p>Vous pourrez découvrir des attractions incroyables qui vous donneront des points de vue incroyable sur l'ensemble du parc.</p>
@@ -99,18 +101,20 @@
         </div>
     </div>
     <div class="flexContainer reverse">
-        <div class="container">
+        <div class="container revealleft">
             <p>Si les sensations fortes ne sont pas pour vous</p>
             <p>vous pourrez également profiter d'attractions correspondant à toute la famille afin de passer un agréable moment.</p>
             <a href="attraction/attraction.html#family">Venez les découvrir</a>
         </div>
-        <img src="https://i.goopics.net/afscp8.jpg" alt="grande roue">
+        <img src="https://i.goopics.net/afscp8.jpg" alt="grande roue" class="revealright">
     </div>
     </div>
 </div>
 <!-- banner parc naturel -->
 <div class="banner2">
-    <h1>Nature</h1>
+    <div class="revealright">
+        <h1>Nature</h1>
+    </div>
 </div>
 
 <!-- les activités au parc naturel -->
@@ -121,10 +125,10 @@
     <div class="line"></div>
     <div class="actcontainer">
         <div class="acttxtimg">
-        <div class="actimg">
+        <div class="actimg revealleft">
             <img src="https://i.goopics.net/4rftif.jpg" alt="accrobranche"> 
         </div>
-        <div class="acttxt">
+        <div class="acttxt revealright">
             <h2>Plutôt forêt</h2>
             <div class="line"></div>
             <p>Des activités pour toute la famille au coeur de la forêt.</p>
@@ -132,10 +136,10 @@
         </div>
         </div>
     <div class="acttxtimg reverse">
-        <div class="actimg">
+        <div class="actimg revealright">
             <img src="https://i.goopics.net/qrre5c.jpg" alt="rafting">
         </div>
-        <div class="acttxt">
+        <div class="acttxt revealleft">
             <h2>Ou alors dans l'eau</h2>
             <div class="line"></div>
             <p>Ou des sensations fortes (ou pas) les pieds dans l’eau </p>
@@ -143,10 +147,10 @@
         </div>
     </div>
     <div class="acttxtimg">
-        <div class="actimg">
+        <div class="actimg revealleft">
             <img src="https://i.goopics.net/wvcsu8.jpg" alt="saut à l'elastique"> 
         </div>
-        <div class="acttxt">
+        <div class="acttxt revealright">
             <h2>Ou dans les airs</h2>
             <div class="line"></div>
             <p>Ou alors des sensations fortes dans les airs </p>
@@ -218,6 +222,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="js/burger.js"></script>
  <script src="js/zoom.js"></script>
+ <script src="js/scrollcards.js"></script>
 </body>
 </html>
 
