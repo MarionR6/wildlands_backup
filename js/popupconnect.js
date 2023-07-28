@@ -1,21 +1,41 @@
-// --- --- --- P O P . U P . C O N N E X I O N --- --- --- //
+// POP UP CONNEXION
 
 const popup = document.getElementById('popup');
-const connexion = document.getElementById('email');
-const password = document.getElementById('password');
-const btnMonCompte = document.getElementById('moncompte');
-const btnMonCompte2 = document.getElementById('moncompte2');
+const connexion = document.getElementById ('email');
+const password = document.getElementById ('password');
+const btnMonCompte = document.getElementById ('moncompte');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
 const closePopup = document.getElementById('closepopup');
+const SignUpButton = document.getElementById('minscrire');
+const popupSignUp = document.getElementById('popupsignup');
+const submitSignUp = document.getElementById('submitsignup');
+const closePopupSignUp = document.getElementById('closepopupsignup');
 
 btnMonCompte.addEventListener("click", () =>{
     if(popup.classList.contains("popupdisplay")){
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
-        main.style.pointerEvents = "none";
         header.style.filter = "blur(0.5em)";
         header.style.pointerEvents = "none";
+
+        SignUpButton.addEventListener("click", () =>{
+            popup.classList.add("popupdisplay");
+            popupSignUp.classList.remove("signupdisplay");
+
+            closePopupSignUp.addEventListener("click", () =>{
+                popupSignUp.classList.add("signupdisplay");
+                main.style.filter = "none";
+                main.style.pointerEvents = "initial";
+                main.style.transition = ".5s all";
+                header.style.filter = "none";
+                header.style.transition = ".5s all";
+                header.style.pointerEvents = "initial";
+            })
+
+
+        })
+
         closePopup.addEventListener("click", () =>{
             popup.classList.add("popupdisplay");
             main.style.filter = "none";
@@ -25,28 +45,23 @@ btnMonCompte.addEventListener("click", () =>{
             header.style.transition = ".5s all";
             header.style.pointerEvents = "initial";
         })
-        
-    }
-})
-btnMonCompte2.addEventListener("click", () =>{
-    if(popup.classList.contains("popupdisplay")){
-        popup.classList.remove("popupdisplay");
-        main.style.filter = "blur(0.5em)";
-        main.style.pointerEvents = "none";
-        header.style.filter = "blur(0.5em)";
-        header.style.pointerEvents = "none";
-        closePopup.addEventListener("click", () =>{
-            popup.classList.add("popupdisplay");
-            main.style.filter = "none";
-            main.style.pointerEvents = "initial";
-            main.style.transition = ".5s all";
-            header.style.filter = "none";
-            header.style.transition = ".5s all";
-            header.style.pointerEvents = "initial";
+
+        document.addEventListener("keyup", (e) => {
+            console.log(e);
+            if(e.key  === "Escape"){
+                popup.classList.add("popupdisplay");
+                main.style.filter = "none";
+                main.style.pointerEvents = "initial";
+                main.style.transition = ".5s all";
+                header.style.filter = "none";
+                header.style.transition = ".5s all";
+                header.style.pointerEvents = "initial";
+            }
         })
         
     }
 })
+
 // FETCH
 
 const dataUser = "json/data.json"

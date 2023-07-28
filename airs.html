@@ -67,33 +67,79 @@
     </div>
 </header>
 
+<!--  D I V . P O P . U P  -->
+
 <div class="popup popupdisplay" id = "popup">
     <button id = "closepopup">×</button>
-    <form action="" class="formsignlogin" method="post">
+    <form action="" method="post">
         <fieldset class="login">
             <legend class="connect">Connectez-vous</legend>
-            <p id = "emaildisable" class = "emaildisable emailflex">
+            <p id = "emaildisable" class = "emaildisable entrystyle emailflex">
                 <label for="email">Adresse mail</label>
-                <input type="text" class="enterinfo" placeholder="" name="email" id="email">
+                <input type="text" placeholder="" name="email" id="email">
             </p>
-            <p id = "passworddisable" class = "passworddisable passwordflex">
+            <p id = "passworddisable" class = "passworddisable passwordflex entrystyle">
                 <label for="password">Mot de passe</label>
-                <input type="password" class="enterinfo" placeholder="" name="password" id="password">
+                <input type="password" placeholder="" name="password" id="password">
             </p>
+            <a href ="airsCo.html" id = "meconnecter">Me connecter</a>
             <div class="connectremember">
-                <a href="airsCo.html">Me connecter</a>
                 <input type="checkbox" id="checkbox" checked>
                 <label for="checkbox"></label>
                 <label for="rememberme">Se souvenir de moi</label>
             </div>
             <div class="plssignup">
                 <p>Pas encore de compte ?</p>
-                <a href="inscription.html">Inscrivez-vous</a>
             </div>
         </fieldset>                
     </form>
+    <button id ="minscrire">Inscrivez-vous</button>
 </div>
 
+<!--  D I V . S I G N . I N  -->
+
+<div class="signup signupdisplay" id = "popupsignup">
+    <button id = "closepopupsignup">×</button>
+    <form action="" method="post">
+        <fieldset class="login">
+            <legend class="connect">Inscription</legend>
+            <div class="containersignup">
+                <div class="leftsignup">
+                    <p class = "entrystyle">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name">
+                    </p>
+                    <p class = "entrystyle middleentry">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" name="firstname" id="firstname">
+                    </p>
+                    <p class = "entrystyle">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" placeholder="" name="phone" id="phone">
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="rightsignup">
+                    <p class = "entrystyle">
+                        <label for="email">Adresse mail</label>
+                        <input type="text" placeholder="" name="email" id="emailsignup">
+                    </p>
+                    <p class = "entrystyle middleentry">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" placeholder="" name="password" id="passwordsignup">
+                    </p>
+                    <p class = "entrystyle">
+                        <label for="password">Confirmer le mot de passe</label>
+                        <input type="password" placeholder="" name="password" id="passwordsignup">
+                    </p>
+                </div>
+            </div>
+        </fieldset>                
+    </form>
+    <a href="airsCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
+</div>
+
+<!--  M A I N  -->
 
     <main>
         <!-- banniere nuages -->
