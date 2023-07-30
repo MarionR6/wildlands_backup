@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Les pieds dans l'eau | Wildlands</title>
+    <title>Les pieds dans l'eau</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles-eau.css">
-    <!-- link icone -->
-    <link rel="icon" href="img/favicon.png">
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +22,11 @@
 </head>
 <body>
 <header>
-    <!-- NAVBAR WIP -->
+    <div class="milieu">
+        <button class="logIn" id="moncompte2"><i class="fa-solid fa-user"></i></button>
+    </div>
+    <div class="cart"><a href=""><i class="fa-solid fa-basket-shopping"></i></a></div>
+
     <!-- menu burger en responsive -->
     <div id="toggle"></div>
     <div id="navigation">
@@ -34,10 +37,11 @@
                 <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
                 <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
                 <li><a href="../contact/contact.html">Contact</a></li>
-                <li><a href="../billeterie/wip.html">Billetterie</a></li>
+                <li><a href="../billeterie/wip.html">Billeterie</a></li>
             </ul>
         </div>
     
+    <!-- NAVBAR -->
     <div class="navBar">
         <div class="logo">
             <a href="../index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
@@ -53,14 +57,90 @@
                     </ul>
                 </li>
                 <li><a href="../contact/contact.html">Contact</a></li>
-                <li><a href="../billeterie/wip.html">Billetterie</a></li>
+                <li><a href="../billeterie/wip.html">Billeterie</a></li>
             </ul>
         </nav>
-        <div class="monCompte">
-            <a href="../billeterie/wip.html">Mon compte</a>
+        <div class="monCompte" id="moncompte">
+            <button href="eauCo.html">
+                <p>Mon compte</p>
+            </button>
         </div>
     </div>
 </header>
+
+
+<!--  D I V . P O P . U P  -->
+
+<div class="popup popupdisplay" id = "popup">
+    <button id = "closepopup">×</button>
+    <form action="" method="post">
+        <fieldset class="login">
+            <legend class="connect">Connectez-vous</legend>
+            <p id = "emaildisable" class = "emaildisable entrystyle emailflex">
+                <label for="email">Adresse mail</label>
+                <input type="text" placeholder="" name="email" id="email">
+            </p>
+            <p id = "passworddisable" class = "passworddisable passwordflex entrystyle">
+                <label for="password">Mot de passe</label>
+                <input type="password" placeholder="" name="password" id="password">
+            </p>
+            <a href ="eauCo.html" id = "meconnecter">Me connecter</a>
+            <div class="connectremember">
+                <input type="checkbox" id="checkbox" checked>
+                <label for="checkbox"></label>
+                <label for="rememberme">Se souvenir de moi</label>
+            </div>
+            <div class="plssignup">
+                <p>Pas encore de compte ?</p>
+            </div>
+        </fieldset>                
+    </form>
+    <button id ="minscrire">Inscrivez-vous</button>
+</div>
+
+<!--  D I V . S I G N . I N  -->
+
+<div class="signup signupdisplay" id = "popupsignup">
+    <button id = "closepopupsignup">×</button>
+    <form action="" method="post">
+        <fieldset class="login">
+            <legend class="connect">Inscription</legend>
+            <div class="containersignup">
+                <div class="leftsignup">
+                    <p class = "entrystyle">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name">
+                    </p>
+                    <p class = "entrystyle middleentry">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" name="firstname" id="firstname">
+                    </p>
+                    <p class = "entrystyle">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" placeholder="" name="phone" id="phone">
+                    </p>
+                </div>
+                <div class="line"></div>
+                <div class="rightsignup">
+                    <p class = "entrystyle">
+                        <label for="email">Adresse mail</label>
+                        <input type="text" placeholder="" name="email" id="emailsignup">
+                    </p>
+                    <p class = "entrystyle middleentry">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" placeholder="" name="password" id="passwordsignup">
+                    </p>
+                    <p class = "entrystyle">
+                        <label for="password">Confirmer le mot de passe</label>
+                        <input type="password" placeholder="" name="password" id="passwordsignup">
+                    </p>
+                </div>
+            </div>
+        </fieldset>                
+    </form>
+    <a href="eauCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
+</div>
+
     <!-- MAIN -->
     <main>
         <!-- BANNER 1 -->
@@ -166,7 +246,7 @@
                 <h2>pour les plus téméraires...</h2>
                 <div class="line"></div>
                 <p>Vous souhaitez observer les étoiles au bord du lac ?</p>
-                <p>C'est possible. Nos hamacs vous attendent pour une superbe expérience</p>
+                <p>C'est possible. Nos hmacs vous attendent pour une superbe expérience</p>
                 <div class="btn">
                     <a href="../billeterie/wip.html">Réserver</a>
                 </div>
@@ -190,78 +270,68 @@
             
             
         </div>
-    </main>
-    <footer>
-        <div class="flex">
-            <div class="container footcontact">
-                <img src="img/wildland-logo.svg" alt="Logo-wildlands">
-                <div class="coordonnees">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>00 00 00 00 00</p>
-                </div>
-                <div class="coordonnees">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:contact@wildlands.com">contact@wildlands.com</a>
-                </div>
-                <div class="coordonnees remonte">
-                    <i class="fa-solid fa-location-pin"></i>
-                    <p class="remonte">100 rue de Larue 07210 ROMS</p>
-                </div>
-            </div>
-        <div class="container footnav">
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
-                <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
-                <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
-                <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
-                <li><a href="../contact/contact.html">Contact</a></li>
-                <li><a href="../billeterie/wip.html">Billeterie</a></li>
-            </ul>
-        </div>
-        <div class="container center">
-            <p>Vous pouvez nous suivre sur :</p>
-            <div class="logo">
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-            </div>
-            <p>Paiement sécurisés via :</p>
-            <div class="logo">
-                <i class="fa-brands fa-cc-mastercard"></i>
-                <i class="fa-brands fa-cc-visa"></i>
-            </div>
-            
-        </div>
-    </div>
-</div>
-    <div class="mentions">
-        <p>© Wildands</p>
-        <div class="mentionsdroits">
-            <a href="../billeterie/wip.html">Mentions légales&nbsp;</a>
-            <p> - Tous droits réservés</p>
-        </div>
-    </div>
-</footer>
 
-        
-      
- <!----- SCRIPT MENU BURGER ----->
+</main>      
+        <footer>
+            <div class="flex">
+                <div class="container footcontact">
+                    <img src="img/wildland-logo.svg" alt="Logo-wildlands">
+                    <div class="coordonnees">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>00 00 00 00 00</p>
+                    </div>
+                    <div class="coordonnees">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contact@wildlands.com">contact@wildlands.com</a>
+                    </div>
+                    <div class="coordonnees remonte">
+                        <i class="fa-solid fa-location-pin"></i>
+                        <p class="remonte">100 rue de Larue 07210 ROMS</p>
+                    </div>
+                </div>
+            <div class="container footnav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
+                    <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                    <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                    <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../billeterie/wip.html">Billeterie</a></li>
+                </ul>
+            </div>
+            <div class="container center">
+                <p>Vous pouvez nous suivre sur :</p>
+                <div class="logo">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p>Paiement sécurisés via :</p>
+                <div class="logo">
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        <div class="mentions">
+            <p>© Wildands</p>
+            <div class="mentionsdroits">
+                <a href="../billeterie/wip.html">Mentions légales&nbsp;</a>
+                <p> - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+ <!----- SCRIPT menu burger ----->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script src="js/burger.js"></script>
- <!-- <script>
-     const toggle = document.getElementById('toggle');
-     const navigation = document.getElementById('navigation');
-     document.onclick = function(e) {
-         if(e.target.id !== 'toggle' && e.target.id !== 'navigation'){
-             toggle.classList.remove('active');
-             navigation.classList.remove('active');
-         }
-     }
-     toggle.onclick = function(){
-         toggle.classList.toggle('active')
-         navigation.classList.toggle('active')
-     }    
- </script> -->
+ <script src="js/burger.js"></script> 
+ <!----- SCRIPT nav connecté ----->
+ <script src="js/scriptNav.js"></script>
+ <!----- SCRIPT pop up connexion ----->
+ <script src="js/popupconnect.js"></script>
+
 </body>
 </html>
