@@ -500,7 +500,7 @@ fieldset {
   flex-direction: column;
   align-items: center;
   filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 .actcontainer .acttxtimg {
   width: 60%;
@@ -542,7 +542,7 @@ fieldset {
 }
 .actcontainer .acttxtimg .actimg .bubble {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: -12%;
 }
 .actcontainer .acttxtimg .actimg .bubble p {
@@ -552,7 +552,7 @@ fieldset {
 }
 .actcontainer .acttxtimg .actimg .bubbleReverse {
   position: absolute;
-  top: 25%;
+  top: 30%;
   right: -12%;
   width: 9em;
   height: 9em;
@@ -576,6 +576,9 @@ fieldset {
   flex-direction: row-reverse;
 }
 
+main {
+  padding-bottom: 8%;
+}
 main .banner {
   width: 100%;
   background-image: url(https://i.goopics.net/4018ca.jpg);
@@ -606,51 +609,55 @@ main .banner2 h1 {
 }
 main .family {
   display: flex;
-  width: 70%;
-  margin: 10% 25%;
+  justify-content: center;
+  width: 100%;
+}
+main .family .container {
+  width: 75%;
+  padding: 7%;
   position: relative;
 }
-main .family .bubble {
+main .family .container .bubble {
   position: absolute;
-  top: 30%;
-  left: -5.5%;
+  top: 40%;
+  left: 4.5%;
 }
-main .family .bubble p {
+main .family .container .bubble p {
   text-align: center;
   padding: 5%;
   font-size: 1.4em;
 }
-main .family .photo {
-  width: 50%;
+main .family .container .photo {
+  width: 60%;
 }
-main .family .photo img {
+main .family .container .photo img {
   width: 100%;
 }
-main .family .txt {
+main .family .container .txt {
   background-color: var(--bleu-fonce);
   width: 40%;
   padding: 5%;
   position: absolute;
-  top: 30%;
-  left: 40%;
+  top: 45%;
+  right: 15%;
   margin-bottom: 2%;
   filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
 }
-main .family .txt h2 {
+main .family .container .txt h2 {
   font-weight: 400;
   margin-bottom: 4%;
   text-transform: uppercase;
   font-size: 2em;
   text-align: center;
 }
-main .family .txt .line {
+main .family .container .txt .line {
   width: 8em;
   height: 0.1em;
   background-color: white;
   margin: 0 auto;
   margin-bottom: 4%;
 }
-main .family .txt p {
+main .family .container .txt p {
   font-size: 1.5em;
   text-align: center;
 }
@@ -659,10 +666,10 @@ main .banner3 {
   background-image: url(https://i.goopics.net/iy1nv7.jpg);
   background-position: center;
   background-size: cover;
-  margin: 5% 0;
+  margin-top: 5%;
 }
 main .banner3 h1 {
-  padding: 7% 0%;
+  padding: 7% 0% 7% 7%;
   font-family: var(--neucha);
   font-size: 5em;
   text-align: center;
@@ -671,57 +678,65 @@ main .banner3 h1 {
 }
 main .night {
   display: flex;
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  margin: 0 0 15% 15%;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 5%;
 }
-main .night img {
-  width: 50%;
+main .night .contain {
+  width: 75%;
+  padding: 7%;
+  position: relative;
+}
+main .night .contain .img {
+  width: 60%;
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 35%;
+  right: 10%;
   z-index: 1;
 }
-main .night .txt {
+main .night .contain .img img {
+  width: 100%;
+}
+main .night .contain .txt {
   background-color: var(--bleu-fonce);
-  width: 50%;
+  width: 55%;
   padding: 5%;
+  position: relative;
   z-index: 2;
   filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
 }
-main .night .txt h2 {
+main .night .contain .txt h2 {
   font-weight: 400;
   margin-bottom: 4%;
   text-transform: uppercase;
   font-size: 2em;
   text-align: center;
 }
-main .night .txt .line {
+main .night .contain .txt .line {
   width: 8em;
   height: 0.1em;
   background-color: white;
   margin: 0 auto;
   margin-bottom: 4%;
 }
-main .night .txt p {
+main .night .contain .txt p {
   font-size: 1.5em;
   text-align: center;
 }
-main .night .txt .btn {
+main .night .contain .txt .btn {
   display: flex;
   background-color: var(--bleu);
   padding: 1% 2%;
   border-radius: 3vh;
   justify-content: center;
-  width: 75%;
+  width: 50%;
   transition: 0.5s all;
   margin: 10% auto 0 auto;
 }
-main .night .txt .btn:hover {
+main .night .contain .txt .btn:hover {
   transform: scale(1.2);
 }
-main .night .txt .btn a {
+main .night .contain .txt .btn a {
   text-transform: uppercase;
   display: inline-block;
   font-size: 1.4em;
@@ -811,54 +826,208 @@ footer .mentions .mentionsdroits {
   justify-content: center;
 }
 
-@media screen and (max-width: 1024px) {
-  .bubble {
-    width: 7em;
-    height: 7em;
+@media screen and (max-width: 1440px) {
+  .actcontainer .acttxtimg .acttxt {
+    padding: 2%;
   }
-  /* NAVBAR */
-  .navBar nav ul li a {
+  .actcontainer .acttxtimg .actimg .bubble {
+    left: -16%;
+    width: 8.5em;
+    height: 8.5em;
+  }
+  .actcontainer .acttxtimg .actimg .bubbleReverse {
+    right: -16%;
+    width: 8.5em;
+    height: 8.5em;
+  }
+  main {
+    padding-bottom: 8%;
+  }
+  main .banner {
+    width: 100%;
+    background-image: url(https://i.goopics.net/4018ca.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10%;
+  }
+  main .banner h1 {
+    text-align: center;
+    padding: 7% 0;
+    font-family: var(--neucha);
+    font-size: 7em;
+    font-weight: 400;
+  }
+  main .banner2 h1 {
+    font-size: 6em;
+  }
+  main .family {
+    padding-bottom: 5%;
+  }
+  main .family .container {
+    padding: 7%;
+  }
+  main .family .container .bubble {
+    width: 8.5em;
+    height: 8.5em;
+    left: 3%;
+  }
+  main .family .container .txt {
+    width: 45%;
+    right: 10%;
+  }
+  main .night {
+    padding-bottom: 5%;
+  }
+  main .night .contain {
+    width: 80%;
+    padding: 7%;
+  }
+  main .night .contain .txt {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .actcontainer .acttxtimg {
+    width: 70%;
+  }
+  main .family .container .bubble {
+    left: 2%;
+  }
+  main .family .container .txt {
+    width: 45%;
+  }
+  main .family .container .txt h2 {
+    font-size: 1.6em;
+  }
+  main .family .container .txt p {
     font-size: 1.3em;
   }
-  .navBar nav ul li a:hover {
-    transform: scale(1.4);
+  main .night {
+    padding-bottom: 3%;
   }
-  .navBar .monCompte {
+  main .night .contain {
+    padding: 7%;
+  }
+  main .night .contain .txt {
+    width: 60%;
+  }
+  main .night .contain .txt h2 {
+    font-size: 1.6em;
+  }
+  main .night .contain .txt p {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .navBar .logo {
+    width: 10%;
+    padding: 0.5% 0;
+  }
+  header .navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  header .navBar nav ul li:hover .sous li a {
+    font-size: 20px;
+  }
+  header .navBar .monCompte {
     width: 15%;
     margin: 1% 0;
   }
-  .navBar .monCompte a {
+  header .navBar .monCompte a {
     font-size: 1.3em;
   }
-  /* BANNER */
+  .actcontainer .acttxtimg {
+    width: 80%;
+  }
+  .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 2em;
+  }
+  .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.2em;
+  }
+  .actcontainer .acttxtimg .actimg .bubble {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 1.2em;
+  }
+  .actcontainer .acttxtimg .actimg .bubbleReverse {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    padding: 15%;
+    font-size: 1.2em;
+  }
+  main {
+    padding-bottom: 8%;
+  }
   main .banner h1 {
     font-size: 5em;
   }
-  /* ACTIVITIES */
-  main .actcontainer .acttxtimg {
-    width: 80%;
+  main .banner2 {
+    margin-bottom: 3%;
   }
   main .banner2 h1 {
-    font-size: 5em;
+    font-size: 4em;
+  }
+  main .family .container {
+    width: 80%;
+    padding: 5%;
+  }
+  main .family .container .bubble {
+    width: 7.5em;
+    height: 7.5em;
+    top: 35%;
+    left: -1%;
+  }
+  main .family .container .bubble p {
+    font-size: 1.2em;
+  }
+  main .family .container .photo {
+    width: 65%;
+  }
+  main .family .container .txt {
+    padding: 4%;
+    width: 45%;
+    top: 45%;
+    right: 10%;
+  }
+  main .family .container .txt h2 {
+    font-size: 1.4em;
+  }
+  main .family .container .txt p {
+    font-size: 1em;
+  }
+  main .banner3 {
+    margin-top: 2%;
   }
   main .banner3 h1 {
     font-size: 4em;
   }
-  main .night {
-    width: 100%;
-    margin-left: 10.5%;
+  main .night .contain {
+    width: 80%;
+    padding: 7%;
   }
-  main .night .txt h2 {
-    font-size: 1.5em;
+  main .night .contain .img {
+    width: 60%;
+    right: 8%;
   }
-  main .night .photo {
-    width: 100%;
+  main .night .contain .txt {
+    width: 60%;
+    padding: 4%;
   }
-  main .night .photo img {
-    width: 20%;
+  main .night .contain .txt h2 {
+    font-size: 1.4em;
+  }
+  main .night .contain .txt p {
+    font-size: 1em;
+  }
+  main .night .contain .txt .btn a {
+    font-size: 1.2em;
   }
   footer {
-    margin-top: 15%;
     font-size: 0.7em;
   }
   footer .flex .container img {
@@ -877,24 +1046,34 @@ footer .mentions .mentionsdroits {
 }
 @media screen and (max-width: 1021px) {
   main .family {
-    display: flex;
     width: 70%;
     margin: 5% auto;
-    background-color: var(--bleu-fonce);
+    padding: 0%;
   }
-  main .family .photo {
-    width: 50%;
-  }
-  main .family .photo img {
+  main .family .container {
     width: 100%;
+    display: flex;
+    padding: 0%;
   }
-  main .family .txt {
-    width: 50%;
+  main .family .container .bubble {
+    width: 7.5em;
+    height: 7.5em;
+    top: 32%;
+    left: -8%;
+  }
+  main .family .container .bubble p {
+    font-size: 1.2em;
+  }
+  main .family .container .photo {
+    width: 55%;
+  }
+  main .family .container .txt {
+    width: 45%;
     position: static;
     padding: 2%;
     margin-bottom: 0;
   }
-  main .family .txt p {
+  main .family .container .txt p {
     font-size: 1em;
   }
 }
@@ -940,7 +1119,7 @@ footer .mentions .mentionsdroits {
     display: block;
     width: 30px;
     height: 2px;
-    top: 50px;
+    top: 47px;
     right: 50px;
     cursor: pointer;
     background-color: white;
@@ -968,10 +1147,12 @@ footer .mentions .mentionsdroits {
   header #toggle.active:before {
     transform: rotate(45deg);
     top: 0;
+    background-color: var(--bleu-fonce);
   }
   header #toggle.active:after {
     transform: rotate(-45deg);
     top: 0;
+    background-color: var(--bleu-fonce);
   }
   header #navigation {
     position: fixed;
@@ -979,13 +1160,13 @@ footer .mentions .mentionsdroits {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
     transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 6;
-    top: 0;
   }
   header #navigation.active {
     right: 0;
@@ -1018,26 +1199,32 @@ footer .mentions .mentionsdroits {
   }
   main .actcontainer {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   main .actcontainer .acttxtimg {
-    width: 90%;
+    width: 80%;
   }
   main .actcontainer .acttxtimg .actimg .bubble {
-    position: absolute;
-    top: 25%;
+    width: 6.5em;
+    height: 6.5em;
     left: 0%;
   }
   main .actcontainer .acttxtimg .actimg .bubble p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   main .actcontainer .acttxtimg .actimg .bubbleReverse {
-    top: 25%;
+    width: 6.5em;
+    height: 6.5em;
     right: 0;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    font-size: 1.1em;
+  }
+  main .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 1.6em;
+  }
+  main .actcontainer .acttxtimg .acttxt p {
+    font-size: 1em;
   }
   main .banner2 h1 {
     font-size: 3.5em;
@@ -1046,7 +1233,14 @@ footer .mentions .mentionsdroits {
     width: 80%;
     margin: 10%;
   }
-  main .family .photo {
+  main .family .container .bubble {
+    width: 6.5em;
+    height: 6.5em;
+  }
+  main .family .container .bubble p {
+    font-size: 1.1em;
+  }
+  main .family .container .photo {
     width: 60%;
   }
   main .banner3 h1 {
@@ -1108,7 +1302,6 @@ footer .mentions .mentionsdroits {
   }
   main .actcontainer .acttxtimg {
     flex-wrap: wrap;
-    width: 100%;
     margin-left: 0;
   }
   main .actcontainer .acttxtimg .acttxt {
@@ -1118,37 +1311,77 @@ footer .mentions .mentionsdroits {
     width: 100%;
   }
   main .actcontainer .acttxtimg .actimg .bubble {
+    height: 6em;
+    width: 6em;
     position: absolute;
     left: 1%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 1em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse {
+    height: 6em;
+    width: 6em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    font-size: 1em;
+  }
+  main .actcontainer .space {
+    margin-top: 10%;
   }
   main .banner2 h1 {
     font-size: 2.5em;
   }
   main .family {
-    flex-wrap: wrap;
     width: 80%;
   }
-  main .family .photo {
+  main .family .container {
+    flex-wrap: wrap;
+  }
+  main .family .container .photo {
     width: 100%;
   }
-  main .family .txt {
+  main .family .container .txt {
     width: 100%;
     filter: none;
+  }
+  main .family .container .bubble {
+    height: 6em;
+    width: 6em;
+    left: 0;
+    top: 20%;
+  }
+  main .family .container .bubble p {
+    font-size: 1em;
   }
   main .banner3 h1 {
     font-size: 2em;
   }
   main .night {
-    flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
+    padding: 0;
   }
-  main .night .txt {
+  main .night .contain {
     width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    padding: 0;
   }
-  main .night .img img {
+  main .night .contain .txt {
+    width: 100%;
+    filter: none;
+  }
+  main .night .contain .img {
+    width: 100%;
     position: static;
+  }
+  main .night .contain .img img {
     width: 100%;
+  }
+  main .space {
+    margin-top: 10%;
   }
   footer .flex .center p {
     display: none;
@@ -1159,5 +1392,147 @@ footer .mentions .mentionsdroits {
   footer .flex .center .logo a {
     font-size: 2em;
     padding: 20%;
+  }
+}
+@media screen and (max-width: 425px) {
+  footer .flex {
+    font-size: 1.2em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    padding: 8% 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  main {
+    padding-bottom: 8%;
+  }
+  main .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 1em;
+  }
+  main .actcontainer .acttxtimg .acttxt p {
+    font-size: 0.8em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble {
+    height: 5.5em;
+    width: 5.5em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 0.9em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse {
+    height: 5.5em;
+    width: 5.5em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    font-size: 0.9em;
+  }
+  main .banner h1 {
+    font-size: 2.2em;
+  }
+  main .banner2 h1 {
+    font-size: 1.7em;
+  }
+  main .family .container .bubble {
+    height: 5.5em;
+    width: 5.5em;
+    top: 5%;
+  }
+  main .family .container .bubble p {
+    font-size: 0.9em;
+  }
+  main .family .container .txt h2 {
+    font-size: 1em;
+  }
+  main .family .container .txt p {
+    font-size: 0.8em;
+  }
+  main .banner3 h1 {
+    font-size: 1.6em;
+  }
+  main .night .contain .txt h2 {
+    font-size: 1em;
+  }
+  main .night .contain .txt p {
+    font-size: 0.8em;
+  }
+  main .night .contain .txt .btn {
+    display: flex;
+    background-color: var(--bleu);
+    padding: 1% 2%;
+    border-radius: 3vh;
+    justify-content: center;
+    width: 50%;
+    transition: 0.5s all;
+    margin: 10% auto 0 auto;
+  }
+  main .night .contain .txt .btn:hover {
+    transform: scale(1.2);
+  }
+  main .night .contain .txt .btn a {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  footer .flex {
+    font-size: 1em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    padding: 8% 0;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 320px) {
+  #popupsignup {
+    font-size: 1.2em;
+  }
+  main .banner h1 {
+    font-size: 1.8em;
+  }
+  main .banner2 h1 {
+    font-size: 1.3em;
+  }
+  main .banner3 h1 {
+    font-size: 1.3em;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.7em;
   }
 }/*# sourceMappingURL=styles-eau.css.map */

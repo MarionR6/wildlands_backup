@@ -489,7 +489,7 @@ header{
     flex-direction: column;
     align-items: center;
     filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     .acttxtimg{
         width: 60%;
         display: flex;
@@ -526,10 +526,9 @@ header{
                 width: 100%;
                 height: 100%;
             }
-        
             .bubble{
                 position:absolute;
-                top: 25%;
+                top: 30%;
                 left: -12%;
                 p{
                     text-align: center;
@@ -540,7 +539,7 @@ header{
             }
             .bubbleReverse{
                 position:absolute;
-                top: 25%;
+                top: 30%;
                 right: -12%;
                 width: 9em;
                 height: 9em;
@@ -557,9 +556,7 @@ header{
                     color: white;
                     font-family: "Neucha", cursive;
                     font-size: 1.4em;
-  }
-
-                            
+                }                  
             }
         }
     }
@@ -572,6 +569,7 @@ header{
 // BANNER 1
 
 main{
+    padding-bottom: 8%;
     .banner{
        width: 100%;
        background-image: url(https://i.goopics.net/4018ca.jpg);
@@ -606,53 +604,55 @@ main{
     // zone photo txt
     .family{
         display:flex;
-        width: 70%;
-        margin: 10% 25%;
-        position: relative;
-        .bubble{
-            position:absolute;
-                top: 30%;
-                left: -5.5%;
-                p{
-                    text-align: center;
-                    padding: 5%;
-                    font-size: 1.4em;
+        justify-content: center;
+        width: 100%;
+        .container{
+            width: 75%;
+            padding: 7%;
+            position: relative;
+            .bubble{
+                position:absolute;
+                    top: 40%;
+                    left: 4.5%;
+                    p{
+                        text-align: center;
+                        padding: 5%;
+                        font-size: 1.4em;
+                    }
+            }
+            .photo{
+                width: 60%;
+                img{
+                    width: 100%;
                 }
-        }
-        .photo{
-            width: 50%;
-            img{
-                width: 100%;
             }
-        }
-        
-
-        .txt{
-            background-color: var(--bleu-fonce);
-            width: 40%;
-            padding: 5%;
-            position: absolute;
-            top: 30%;
-            left: 40%;
-            margin-bottom: 2%;
-            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
-            h2{
-                font-weight: 400;
-                margin-bottom: 4%;
-                text-transform: uppercase;
-                font-size: 2em;
-                text-align: center;
-            }
-            .line{
-                width: 8em;
-                height: 0.1em;
-                background-color: white;
-                margin: 0 auto;
-                margin-bottom: 4%;
-            }
-            p{
-                font-size: 1.5em;
-                text-align: center;
+            .txt{
+                background-color: var(--bleu-fonce);
+                width: 40%;
+                padding: 5%;
+                position: absolute;
+                top: 45%;
+                right: 15%;
+                margin-bottom: 2%;
+                filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+                h2{
+                    font-weight: 400;
+                    margin-bottom: 4%;
+                    text-transform: uppercase;
+                    font-size: 2em;
+                    text-align: center;
+                }
+                .line{
+                    width: 8em;
+                    height: 0.1em;
+                    background-color: white;
+                    margin: 0 auto;
+                    margin-bottom: 4%;
+                }
+                p{
+                    font-size: 1.5em;
+                    text-align: center;
+                    }
                 }
             }
         }
@@ -662,9 +662,9 @@ main{
         background-image: url(https://i.goopics.net/iy1nv7.jpg);
         background-position: center;
         background-size: cover;
-        margin: 5% 0;
+        margin-top: 5%;
         h1{
-            padding: 7% 0% % 7%;
+            padding: 7% 0% 7% 7%;
             font-family: var(--neucha);
             font-size: 5em;
             text-align: center;
@@ -674,62 +674,68 @@ main{
     }
     .night {
         display:flex;
-        width: 80%;
-        margin: 0 auto;
-        position: relative;
-        margin: 0 0 15% 15%;
-        
-        img{
-            width: 50%;
-            position: absolute;
-            top: 30%;
-            left: 30%;
-            z-index: 1;
-        }
-
-        .txt{
-            background-color: var(--bleu-fonce);
-            width: 50%;
-            padding: 5%;
-            z-index: 2;
-            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
-            h2{
-                font-weight: 400;
-                margin-bottom: 4%;
-                text-transform: uppercase;
-                font-size: 2em;
-                text-align: center;
-            }
-            .line{
-                width: 8em;
-                height: 0.1em;
-                background-color: white;
-                margin: 0 auto;
-                margin-bottom: 4%;
-            }
-            p{
-                font-size: 1.5em;
-                text-align: center;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 5%;
+        .contain{
+            width:75%;
+            padding: 7%;
+            position: relative;
+            .img{
+                width: 60%;
+                position: absolute;
+                top: 35%;
+                right: 10%;
+                z-index: 1;
+                img{
+                    width:100%;
                 }
-                .btn{
-                    display: flex;
-                    background-color: var(--bleu);
-                    padding: 1% 2%;
-                    border-radius: 3vh;
-                    justify-content: center;
-                    width: 75%;
-                    transition: 0.5s all;
-                    margin:10% auto 0 auto ;
-                    &:hover{
-                        transform: scale(1.2);
-                    }
-                    
-                    a{
-                        text-transform: uppercase;
-                        display: inline-block;
-                        font-size: 1.4em;
-                    }
+            }
+            .txt{
+                background-color: var(--bleu-fonce);
+                width: 55%;
+                padding: 5%;
+                position:relative;
+                z-index: 2;
+                filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+                h2{
+                    font-weight: 400;
+                    margin-bottom: 4%;
+                    text-transform: uppercase;
+                    font-size: 2em;
+                    text-align: center;
                 }
+                .line{
+                    width: 8em;
+                    height: 0.1em;
+                    background-color: white;
+                    margin: 0 auto;
+                    margin-bottom: 4%;
+                }
+                p{
+                    font-size: 1.5em;
+                    text-align: center;
+                    }
+                    .btn{
+                        display: flex;
+                        background-color: var(--bleu);
+                        padding: 1% 2%;
+                        border-radius: 3vh;
+                        justify-content: center;
+                        width: 50%;
+                        transition: 0.5s all;
+                        margin:10% auto 0 auto ;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                        
+                        a{
+                            text-transform: uppercase;
+                            display: inline-block;
+                            font-size: 1.4em;
+                        }
+                    }
+            }
         }
     }
 }
@@ -822,82 +828,275 @@ footer{
             display: flex;
             justify-content: center;
         }
-    }
-    
-
-    
+    }    
 }
 
 
 // ----------------------------RESPONSIVE
 
-// mediaquery 1024px
-@media screen and (max-width: 1024px){
-    .bubble{
-      width: 7em;
-      height: 7em;
-    }
-    /* NAVBAR */
-    .navBar nav ul li a {
-      font-size: 1.3em;
-    }
-      
-    .navBar nav ul li a:hover{
-      transform: scale(1.4);
-    }
-  
-    .navBar .monCompte {
-      width: 15%;
-      margin: 1% 0;
-    }
-    .navBar .monCompte a {
-      font-size: 1.3em;
-    }
-  
-    /* BANNER */
-  
-    main .banner h1{
-      font-size: 5em;
-    }
-  
-    /* ACTIVITIES */
- main{ 
+//mediaquery 1440px
+@media screen and (max-width: 1440px){
     .actcontainer{
-    .acttxtimg{
-        width: 80%;
-    }
-  }
-  
-  
-
-   .banner2{
-        h1{
-            font-size: 5em;
-        }
-    }
-    .banner3{
-        h1{
-            font-size: 4em;
-        }
-    }
-    .night{
-        width: 100%;
-        margin-left: 10.5%;
-        .txt{
-            h2{
-                font-size: 1.5em;
+        .acttxtimg{
+            .acttxt{
+                padding: 2%;
+            }
+            .actimg{
+                .bubble{
+                    left: -16%;
+                    width: 8.5em;
+                    height: 8.5em;                    
+                }
+                .bubbleReverse{
+                    right: -16%;
+                    width: 8.5em;
+                    height: 8.5em;                 
+                }
             }
         }
-        .photo{
-            width: 100%;
-            img{
-                width: 20%;
+    }
+    main{
+        padding-bottom: 8%;
+        .banner{
+           width: 100%;
+           background-image: url(https://i.goopics.net/4018ca.jpg);
+           background-position: center;
+           background-size: cover;
+           margin-bottom: 10%;
+           h1{
+               text-align: center;
+               padding:7% 0;
+               font-family:var(--neucha);
+               font-size: 7em;
+               font-weight: 400;
+           }
+       }
+    
+        
+    //   family/baignade
+        .banner2{
+            h1{
+                font-size: 6em;
+            }
+        }
+        // zone photo txt
+        .family{
+            padding-bottom:5%;
+            .container{
+                padding: 7%;
+                .bubble{
+                    width:8.5em;
+                    height:8.5em;
+                        left: 3%;
+                }
+                .txt{
+                    width: 45%;
+                    right: 10%;
+                    }
+                }
+            }
+        // zone hôtel
+        .night {
+            padding-bottom: 5%;
+            .contain{
+                width:80%;
+                padding: 7%;
+                .txt{
+                    width: 60%;
+                }
             }
         }
     }
 }
+
+//mediaquery 1200px
+@media screen and (max-width: 1200px){
+    .actcontainer{
+        .acttxtimg{
+            width: 70%;
+        }
+    }
+    main{
+        .family{
+            .container{
+                .bubble{
+                        left: 2%;
+                }
+                .txt{
+                    width: 45%;
+                    h2{
+                        font-size:1.6em;
+                    }
+                    p{
+                        font-size:1.3em;
+                    }
+                    }
+                }
+            }
+        .night {
+            padding-bottom: 3%;
+            .contain{
+                padding: 7%;
+                .txt{
+                    width: 60%;
+                    h2{
+                        font-size: 1.6em;
+                    }
+                    p{
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mediaquery 1024px
+@media screen and (max-width: 1024px){
+    header{ 
+        .navBar{
+            .logo{
+                width: 10%;
+                padding : 0.5% 0;
+            }
+            nav{
+                ul{
+                    li{
+                        a{
+                            font-size: 1.5em;
+                        }
+                        &:hover{
+                            .sous{
+                                li{
+                                    a{
+                                        font-size:20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .monCompte{
+                width: 15%;
+                margin: 1% 0;
+                a{
+                font-size: 1.3em;
+                }
+            }
+        }
+    }
+    .actcontainer{
+        .acttxtimg{
+            width: 80%;
+            .acttxt{
+                h2{
+                    font-size: 2em;
+                }
+                p{
+                    font-size: 1.2em;
+                }
+            }
+            .actimg{
+                .bubble{
+                    width: 7.5em;
+                    height: 7.5em;
+                    p{
+                        font-size: 1.2em;
+                    }
+                    
+                }
+                .bubbleReverse{
+                    width: 7.5em;
+                    height: 7.5em;
+                    p{
+                        padding: 15%;
+                        font-size: 1.2em;
+                    }                  
+                }
+            }     
+            }
+        }
+    main{
+        padding-bottom: 8%;
+        .banner{
+        h1{
+            font-size: 5em;
+        }
+    }
+    //   family/baignade
+        .banner2{
+            margin-bottom:3%;
+            h1{
+                font-size: 4em;
+            }
+        }
+        // zone photo txt
+        .family{
+            .container{
+                width: 80%;
+                padding: 5%;
+                .bubble{
+                    width:7.5em;
+                    height:7.5em;
+                        top: 35%;
+                        left: -1%;
+                        p{
+                            font-size: 1.2em;
+                        }
+                }
+                .photo{
+                    width: 65%;
+                }
+                .txt{
+                    padding:4%;
+                    width: 45%;
+                    top: 45%;
+                    right: 10%;
+                    h2{
+                        font-size: 1.4em;
+                    }
+                    p{
+                        font-size: 1em;
+                        }
+                    }
+                }
+            }
+        // zone hôtel
+        .banner3{
+            margin-top:2%;
+            h1{
+                font-size: 4em;
+            }
+        }
+        .night {
+            // padding-bottom: 5%;
+            .contain{
+                width:80%;
+                padding: 7%;
+                .img{
+                    width: 60%;
+                    right: 8%;
+                }
+                .txt{
+                    width: 60%;
+                    padding: 4%;
+                    h2{
+                        font-size: 1.4em;
+                    }
+                    p{
+                        font-size: 1em;
+                        }
+                    .btn{
+                        a{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
     footer{
-        margin-top: 15%;
         font-size: 0.7em;
         .flex{
             .container{
@@ -927,35 +1126,46 @@ footer{
         }
     }
 }
+
+// mediaquery 1021px
 @media screen and (max-width: 1021px){  
 main{
     .family{
-        display: flex;
         width: 70%;
         margin:5% auto;
-        background-color: var(--bleu-fonce);
-        .photo{
-            width: 50%;
-            img{
-                width: 100%;
+        padding:0%;
+        .container{
+            width: 100%;
+            display: flex;
+            padding:0%;
+            .bubble{
+                width:7.5em;
+                height:7.5em;
+                    top: 32%;
+                    left: -8%;
+                    p{
+                        font-size: 1.2em;
+                    }
+            }
+            .photo{
+                width: 55%;
+            }
+            .txt{
+                width: 45%;
+                position:static;
+                padding:2%;
+                margin-bottom:0;
+                p{
+                    font-size: 1em;
+                }
             }
         }
-        .txt{
-            width: 50%;
-            position:static;
-            padding:2%;
-            margin-bottom:0;
-            p{
-                font-size: 1em;
-            }
-        }
-
-
     }
 }
 
 }
 
+// mediaquery 768px
 @media screen and (max-width: 768px){
     header {
         width: 100%;
@@ -998,7 +1208,7 @@ main{
             display: block;
             width: 30px;
             height: 2px;
-            top: 50px;
+            top: 47px;
             right: 50px;
             cursor: pointer;
             background-color:white;
@@ -1031,11 +1241,13 @@ main{
 				// on crée une rotation sur le span du haut et on le recentre sur le carré
 				transform: rotate(45deg);
 				top: 0;
+                background-color: var(--bleu-fonce);
 			}
 			&:after {
 				// on crée une rotation sur le span du bas et on le recentre sur le carré
 				transform: rotate(-45deg);
 				top: 0;
+                background-color: var(--bleu-fonce);
 			}
 			//selon le degré de rotation que vous indiquez, le sens de l'animation ne sera pas le même  
         }
@@ -1045,13 +1257,13 @@ main{
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            top:0;
             right: -100%;
             width: 100%;
             height: 100vh;
             transition: .5s;
             background-color: rgba(255, 255, 255, 0.9);
             z-index: 6;
-            top:0;
         }
         #navigation.active {
            right: 0;
@@ -1089,30 +1301,38 @@ main{
         }
         .actcontainer{
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
-            margin-bottom: 5%;
+             margin-bottom: 10%;
             .acttxtimg{
-                width: 90%;
-                
+                width: 80%;
                 .actimg{
                     .bubble{
-                        position:absolute;
-                        top: 25%;
+                        width: 6.5em;
+                        height:6.5em;
                         left: 0%;
                         p{
-                            font-size:1.2em;
+                            font-size:1em;
                         }
                         }
                         .bubbleReverse{
-                            top:25%;
+                            width: 6.5em;
+                            height:6.5em;
                             right:0;
+                            p{
+                                font-size:1.1em;
+                            }
                         }
                     
                     }
+                    .acttxt{
+                        h2{
+                            font-size: 1.6em;
+                        }
+                        p{
+                            font-size: 1em;
+                        }
+                    }
                 }
+
             }
     
         .banner2{
@@ -1124,56 +1344,54 @@ main{
     .family{
         width: 80%;
         margin: 10%;
-        .photo{
-            width:60%;
+        .container{
+            .bubble{
+                width:6.5em;
+                height:6.5em;
+                p{
+                    font-size:1.1em;
+                }
+            }
+            .photo{
+                width:60%;
+            }
         }
+
     }
     .banner3{
         h1{
             font-size: 3em;
         }
-        
-    
     }
-}
-    
+}  
   /* FOOTER */
 
   footer{
     font-size: 0.7em;
   }
-
   footer .flex .footcontact img{
-    width: 80%;
-    
+    width: 80%  
   }
-
   footer .center p{
     padding: 7% 15%;
     text-align: center;
   }
-
   footer .container ul li{
     display: none;
   }
-
   footer .center{
     font-size: 1em;
     width: 100%;
   }
-
   footer .center p{
     padding: 2% 0;
   }
-
   footer .flex{
     padding: 5% 10% 5% 10%;
   }
-
   footer .footnav{
     width: 0%;
   }
-
   footer .footcontact{
     width: 70%;
   }
@@ -1194,15 +1412,11 @@ main{
             a{
                 font-size: 2em;
                 padding: 20%;
+            }                     
             }
-           
-            
-            }
-        }
-    
+        }   
         }
     }
-
 }
 
 // mediaquery 480px
@@ -1217,7 +1431,6 @@ main{
         filter: none;
         .acttxtimg{
             flex-wrap:wrap;
-            width: 100%;
             margin-left: 0;
             .acttxt{
                 width: 100%;
@@ -1225,10 +1438,25 @@ main{
             .actimg{
                 width: 100%;
                 .bubble{
-                position:absolute;
-                left:1%;
+                    height:6em;
+                    width:6em;
+                    position:absolute;
+                    left:1%;
+                    p{
+                        font-size: 1em;
+                    }
+                }
+                .bubbleReverse{
+                    height:6em;
+                    width:6em;   
+                    p{
+                        font-size: 1em;
+                    }
                 }
             }
+        }
+        .space{
+            margin-top:10%;
         }
     }
     .banner2{
@@ -1237,36 +1465,64 @@ main{
         }
     }
     .family{
-        flex-wrap: wrap;
         width: 80%;
-        
-        .photo{
-            width: 100%;
+        .container{
+            flex-wrap: wrap;
+            .photo{
+                width: 100%;
+            }
+            .txt{
+                width: 100%;
+                filter: none;
+            }   
+            .bubble{
+                height:6em;
+                width:6em;
+                left:0;
+                top:20%;
+                p{
+                    font-size: 1em;
+                }
+            }
         }
-        .txt{
-            width: 100%;
-            filter: none;
-        }
+
     }
     .banner3{
         h1{
             font-size:2em;
         }
     }
+
     .night{
-        flex-direction: column;
-        width: 100%;
+        // flex-direction: column;
+        width: 80%;
         margin: 0 auto;
-        .txt{
-            width: 100%;
-        }
-        .img{
-            img{
-                position: static;
+        padding: 0;
+        .contain{
+            width:100%;
+            display:flex;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            padding:0;
+            .txt{
                 width: 100%;
-                
+                filter: none;
+                // position: static;
+            }
+            .img{
+                width:100%;
+                position: static;
+                img{
+                    // position: static;
+                    width: 100%;
+                    
+                }
             }
         }
+
+    }
+    .space{
+        margin-top:10%;
     }
 }
 
@@ -1294,4 +1550,210 @@ footer{
 
 }
 
+//mediaquery 425px
+@media screen and (max-width: 425px) {
+    footer{
+        .flex{
 
+            font-size: 1.2em;
+            padding-bottom:2%;
+            .container{
+                img{
+                    width: 50%;
+                    padding: 8% 0;
+                }
+            }
+
+        }  
+    }
+}
+
+// media query 375px
+@media screen and (max-width: 375px) {
+
+    // BANNER 1
+    
+    main{
+        .actcontainer{
+            .acttxtimg{
+                .acttxt{
+                    h2{
+                        font-size: 1em;
+                    }
+                    p{
+                        font-size: .8em;
+                    }
+                }
+                .actimg{
+                    .bubble{
+                        height:5.5em;
+                        width:5.5em;
+                        p{
+                            font-size: 0.9em;
+                        }
+                        
+                    }
+                    .bubbleReverse{
+                        height:5.5em;
+                        width:5.5em;
+                        p{
+                            font-size: 0.9em;
+                        }                  
+                    }
+                }
+            }
+        }
+
+        padding-bottom: 8%;
+        .banner{
+           h1{
+               font-size: 2.2em;
+           }
+       }        
+    //   family/baignade
+        .banner2{
+            h1{
+                font-size: 1.7em;
+            }
+        }
+        // zone photo txt
+        .family{
+            .container{
+                .bubble{
+                    height:5.5em;
+                    width:5.5em;
+                    top:5%;
+                        p{
+                            font-size:.9em;
+                        }
+                }
+                .txt{
+                    h2{
+                        font-size: 1em;
+                    }
+                    p{
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+        // zone hôtel
+        .banner3{
+            h1{
+                font-size: 1.6em;
+            }
+        }
+        .night {
+            .contain{
+                .txt{
+                    h2{
+                        font-size: 1em;
+                    }
+                    p{
+                        font-size: .8em;
+                    }
+                    .btn{
+                        display: flex;
+                        background-color: var(--bleu);
+                        padding: 1% 2%;
+                        border-radius: 3vh;
+                        justify-content: center;
+                        width: 50%;
+                        transition: 0.5s all;
+                        margin:10% auto 0 auto ;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                        
+                        a{
+                            text-transform: uppercase;
+                            display: inline-block;
+                            font-size: .9em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .flex{
+
+            font-size: 1em;
+            padding-bottom:2%;
+            .container{
+                img{
+                    width: 50%;
+                    padding: 8% 0;
+                }
+            }
+
+        }
+        .center{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding: 2%;
+                }
+            .logo{
+                display:flex;
+                width: 20%;
+                justify-content: space-around;
+                a{
+                    padding: 0 15%;
+                }
+                i{
+                    font-size:0.9em;
+                }  
+            }
+        }   
+    }
+}
+
+// media query 320px
+@media screen and (max-width: 320px) {
+    
+    #popupsignup{
+        font-size: 1.2em;
+      }
+      
+    main{
+        .banner{
+            h1{
+                font-size: 1.8em;
+            }
+        }
+        .banner2{
+            h1{
+                font-size: 1.3em;
+            }
+        }
+        .banner3{
+            h1{
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    footer{
+        .center{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding: 2%;
+                }
+            .logo{
+                display:flex;
+                width: 20%;
+                justify-content: space-around;
+                a{
+                    padding: 0 15%;
+                }
+                i{
+                    font-size:0.7em;
+                }  
+            }
+        }   
+    }
+}
