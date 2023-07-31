@@ -18,48 +18,55 @@
 <body>
     <header>
         <div class="milieu">
-            <button class="logIn" id="moncompte2"><i class="fa-solid fa-user"></i></button>
+            <div class="monCompte2 connexionCompte2" id = "moncompte2">
+                <button class="btnCompte2" href="airs.html"></button>
+            </div>
+        </div>  
+        <div class="cart">
+            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
         </div>
-        <div class="cart"><a href=""><i class="fa-solid fa-basket-shopping"></i></a></div>
+
         <!-- menu burger en responsive -->
         <div id="toggle"></div>
         <div id="navigation">
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../attraction/attraction.html">Parcs d'attractions</a></li>
-                    <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
                     <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                    <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
                     <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
                     <li><a href="../contact/contact.html">Contact</a></li>
                     <li><a href="../billeterie/wip.html">Billetterie</a></li>
                 </ul>
             </div>
-        
-        <div class="navBar">
-            <div class="logo">
-                <a href="../index.html"><img src="img/wildland-logo (1).svg" alt="LOGO de Wildlands"></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
-                    <li><a href="" class="deroulant">Parc naturel</a>
-                        <ul class="sous">
-                            <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
-                            <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
-                            <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../contact/contact.html">Contact</a></li>
-                    <li><a href="../billeterie/wip.html">Billetterie</a></li>
-                </ul>
-            </nav>
-            <div class="monCompte" id = "moncompte">
-                <btn><p>Mon compte</p></btn>
-            </div>
+    <!-- NAVBAR -->
+    <div class="navBar">
+        <div class="logo">
+            <a href="../index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
         </div>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
+                <li><a href="" class="deroulant">Parc naturel</a>
+                    <ul class="sous">
 
-    <div class="popup popupdisplay" id = "popup">
+                        <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                        <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                        <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../billeterie/wip.html">Billetterie</a></li>
+            </ul>
+        </nav>
+        <div class="monCompte connexionCompte">
+            <button class="btnCompte" href="airs.html"></button>
+        </div>
+    </div>
+    
+</header>
+
+    <!-- <div class="popup popupdisplay" id = "popup">
         <button id = "closepopup">×</button>
         <form action="" method="post">
             <fieldset class="login">
@@ -72,7 +79,7 @@
                     <label for="password">Mot de passe</label>
                     <input type="password" placeholder="" name="password" id="password">
                 </p>
-                <a href ="foretCo.html" id = "meconnecter">Me connecter</a>
+                <a href ="" id = "meconnecter">Me connecter</a>
                 <div class="connectremember">
                     <input type="checkbox" id="checkbox" checked>
                     <label for="checkbox"></label>
@@ -118,14 +125,14 @@
                         </p>
                         <p class = "entrystyle">
                             <label for="password">Confirmer le mot de passe</label>
-                            <input type="password" placeholder="" name="password">
+                            <input type="password" placeholder="" name="password" id="passwordsignup">
                         </p>
                     </div>
                 </div>
             </fieldset>                
         </form>
-        <a href="foretCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
-    </div>
+        <a href="" id="submitsignup" class="submitsignup">Je m'inscris</a>
+    </div> -->
     <!-- MAIN -->
     <main>
         <!-- BANNER 1 -->
@@ -322,10 +329,11 @@
     </main>
 
     <!----- SCRIPT MENU BURGER ----->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script src="js/popupconnect.js"></script>
- <script src="js/burger.js"></script>
- <script src="js/scrollcards.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/burger.js"> </script>
+    <!----- SCRIPT nav connecté ----->
+    <script src="js/scriptNav.js"></script>
+    <script src="js/scrollcards.js"></script>
 </body>
 
 </html>

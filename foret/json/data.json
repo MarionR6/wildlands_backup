@@ -2,19 +2,19 @@
     "users":[
         {
             "name": "Dupont",
-            "fisrtname": "Alice",
+            "firstname": "Alice",
             "email": "dupont.alice@gmail.com",
             "password": "•••••••••"
         },
         {
             "name": "Lefebvre",
-            "fisrtname": "Toto",
+            "firstname": "Toto",
             "email": "lefebvre.toto@gmail.com",
             "password": "•••••"
         },
         {
             "name": "ghost",
-            "fisrtname": "Titi",
+            "firstname": "Titi",
             "email": "ghost.titi@gmail.com",
             "password": "••••••••••••"
         }
