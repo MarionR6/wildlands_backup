@@ -56,7 +56,306 @@ body{
 // }
 //------------------------------------------
 
-.navBar{
+
+
+/* POP UP CONNEXION */
+
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: var(--bleu-clair);
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color: var(--bleu);
+    border: 0.07em solid var(--bleu-fonce);
+    font-family: 'Neucha', sans-serif;
+    color: white;
+  }
+  .popup #closepopup{
+    background-color: var(--bleu-fonce);
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  }
+  fieldset{
+    border: none;
+  }
+  .popup form fieldset legend{
+    font-size: 1.7em;
+    text-align: center;
+    border-bottom: 0.06em solid white;
+    padding-bottom: 5%;
+  }
+  #meconnecter,
+  #minscrire{
+    color: white;
+    text-align: center;
+    margin: 10% 0 3% 0;
+    border-radius: 1em;
+    background-color: var(--bleu-fonce);
+    padding: 2% 0;
+    transition: .5s all;
+    border: none;
+    font-family: 'Neucha', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: .5s all;
+  }
+  #minscrire{
+    font-size: 1em;
+    margin-top: 6%;
+  }
+  #minscrire:hover{
+    transform: scale(1.1);
+  }
+  .popup form fieldset #meconnecter:hover{
+    transform: scale(1.1);
+  }
+  .popup form fieldset .connectremember a:hover{
+    transform: scale(1.1);
+  }
+  .popup form fieldset .connectremember label{
+    padding-left: 1%;
+    font-size: 0.7em;
+  }
+  .popup form fieldset .plssignup{
+    font-size: 0.8em;
+  }
+  .popup form fieldset .plssignup a{
+    color: white;
+    text-align: center;
+    margin: 6% 0 3% 0;
+    border-radius: 1em;
+    background-color: var(--bleu-fonce);
+    padding: 2% 0;
+    font-size: 1.3em;
+    transition: .5s all;
+  }
+  .popup form fieldset .plssignup a:hover{
+    transform: scale(1.1);
+  }
+  .emailflex, .passwordflex{
+    display: flex;
+    flex-direction: column;
+  }
+  #emaildisable{
+    padding: 5% 0 4% 0;
+  }
+  .entrystyle input{
+    margin-top: 2%;
+    padding: 2% 4%;
+    font-size: 0.6em;
+    background-color: var(--bleu-clair);
+    border: none;
+    border-radius: 1em;
+  }
+  #emaildisable input::placeholder,
+  #passworddisable input::placeholder{
+    color: black;
+    font-weight: 500;
+  }
+  .emaildisable,
+  .passworddisable{
+    pointer-events: none;
+  }
+  .popup{
+    visibility: visible;
+    transition: .5s all;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .popupdisplay{
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  /* POPUP SIGNUP */
+  #popupsignup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: var(--bleu-clair);
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color:var(--bleu);
+    border: 0.07em solid var(--bleu-fonce);
+    font-family: 'Neucha', sans-serif;
+    color: white;
+    width: 50%;
+  } 
+  #closepopupsignup{
+    background-color: var(--bleu-fonce);
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  } 
+  .signup{
+    visibility: visible;
+    transition: .5s all;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+  }
+  .signup form .login .connect{
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 4%;
+  }
+  .signup form .login .containersignup{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.1em solid var(--bleu-clair);
+    border-radius: 1em;
+    padding: 5% 5%;
+    position: relative;
+  }
+  .signup form .login .containersignup label{
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .signup form .login .containersignup .middleentry{
+    margin: 5% 0;
+  }
+  .signup form .login .containersignup .leftsignup{
+    width: 45%;
+  }
+  .signup form .login .containersignup .leftsignup p,
+  .signup form .login .containersignup .rightsignup p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .signup form .login .containersignup .line{
+    width: 30%;
+    height: 0.07em;
+    background: linear-gradient(to left, --bleu, --bleu-clair, --bleu);
+    transform: rotate(90deg);
+    align-self: center;
+    position: absolute;
+  }
+  .signup form .login .containersignup .rightsignup{
+    width: 45%;
+  }
+  .signup form .login .containersignup .rightsignup .entrystyle{
+    width: 100%;
+  }
+  .signup form .login .containersignup .rightsignup .entrystyle input{
+    width: 100%;
+  }
+  .signupdisplay{
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  .signup .submitsignup{
+    color: white;
+    border-radius: 1em;
+    background-color: var(--bleu-fonce);
+    padding: 1% 4%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 4%;
+    transition: .5s all;
+  } 
+  .signup .submitsignup:hover{
+    transform: scale(1.1);
+  }
+  header{
+    .milieu{
+        display:none ;
+        // width: 30%;
+        .monCompte2{
+            display:inline-block;
+            width: 100%;
+            background-color: var(--bleuFonce);
+            font-family: var(--neucha);
+            // display: flex;
+            // justify-content: center;
+            // padding: 1% 2%;
+            border-radius: 3vh;
+            // margin:0 auto;
+            .btnCompte2{
+                display: inline-block;
+                background-color: var(--bleuFonce);
+                border:none;
+                text-decoration: none;
+                font-size: 1em;
+                transition: 0.5s all;
+                position:relative;
+                border-radius: 2vh;
+                padding: .5em 2em;
+                p{
+                font-family: var(--neucha);
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                #box2{
+                    align-items: center;
+                    justify-content: center;
+                }
+                .gestionCompte{
+                    display:block;
+                    font-family: var(--neucha);
+                    list-style-type: none;
+                    position:absolute;
+                    left: 10%;
+                    transition: 1 all;
+                    li{
+                        a{
+                                font-size:0.7em;
+                        }
+                    }
+                }
+                .gestionNone{
+                        display: none;
+                }
+                .gestion{
+                    width:80%;                        
+                    margin-top:5%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+                .deco{
+                    width:80%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+            } 
+        }
+    }
+    .cart{
+        display: none;
+    }
+    .navBar{
     width: 100%;
     background-color: var(--bleu);
     display:flex;
@@ -124,23 +423,66 @@ body{
         }
     }
     .monCompte{
-        width: 15%;
         background-color: var(--bleu-fonce);
         font-family: var(--neucha);
         display: flex;
         justify-content: center;
         padding: 1% 2%;
         border-radius: 3vh;
-        a{
-        text-decoration: none;
-        font-size: 1.5em;
-        transition: 0.5s all;
-        &:hover{
-            transform: scale(1.1);
-        }
+        button{
+            width: 100%;
+            background-color: var(--bleu-fonce);
+            border:none;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: 0.5s all;
+            position:relative;
+            p{
+                font-family: var(--neucha);
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+            .gestionCompte{
+                display:block;
+                font-family: var(--neucha);
+                // font-size:0.7em;
+                list-style-type: none;
+                position:absolute;
+                transition: 1 all;
+                li{
+                    a{
+                        font-size:0.7em;
+                    }
+                }
+            }
+            .gestionNone{
+                display: none;
+            }
+            .gestion{
+                width:100%;
+                margin-top:7%;
+                background-color: var(--bleu-fonce);
+                opacity: 0.8;
+                padding:10%;
+            }
+            .panier{
+                width:100%;
+                background-color:var(--bleu-fonce);
+                opacity: 0.8;
+                padding:10%;
+            }                
+            .deco{
+                width:100%;
+                background-color:var(--bleu-fonce);
+                opacity: 0.8;
+                padding:10%;
+            }
         }
     }
 }
+}
+
 
 .bannerTitle{
     overflow-x: hidden;
@@ -523,6 +865,7 @@ footer{
 @media screen and (max-width:1440px){
     main{
         .presentation{
+            padding-top: 5%;
             .acttxt{
                 p{
                     font-size:1.5em
@@ -703,9 +1046,12 @@ footer{
 
 // mediaquery 768px
 @media screen and (max-width: 768px){
+    
     header {
         padding: 10px 20px 80px 20px;
         background-color: var(--bleu-clair);
+        
+        
         .navBar {
             display: none;
         }
@@ -1003,7 +1349,7 @@ footer{
                     flex-wrap:wrap;
                     .acttxt{
                         width: 100%;
-                        padding: 2% 0% 2% 0%;
+                        padding: 2% 0% 3% 0%;
                         h2{
                             font-size: 1em;
                             margin-top:3%
@@ -1012,6 +1358,7 @@ footer{
                             font-size: 0.8em;
                             padding: 0;
                             margin: 1%;
+                            padding-bottom: 5%;
                         }
                         a{
                             font-size: 1em;
@@ -1079,6 +1426,21 @@ footer{
     }
 }  
 @media screen and (max-width: 320px){
+    .revealleft{
+        opacity:1;
+        transform: translateX(0);
+    }
+      
+    .revealright{
+        opacity: 1;
+        transform: translateX(0);
+    }
+      
+    .revealvisible{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
     .bannerTitle{
         h1{
             font-size: 3em;
