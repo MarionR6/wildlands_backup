@@ -19,6 +19,9 @@ a, img{
     --bleu-fonce :#1f5180;
 
 }
+body{
+    overflow-x: hidden;
+}
 
 main{
     background-color: var(--bleu-clair);
@@ -449,7 +452,7 @@ header{
   .signup form .login .containersignup .line{
     width: 30%;
     height: 0.07em;
-    background: linear-gradient(to left, --bleu, --bleu-clair, --bleu);
+    background: linear-gradient(to left, #567BB4, #bac7d6, #567BB4);
     transform: rotate(90deg);
     align-self: center;
     position: absolute;
@@ -911,6 +914,9 @@ footer{
 
 //mediaquery 1200px
 @media screen and (max-width: 1200px){
+    #popupsignup{
+        width:60%;
+    }
     .actcontainer{
         .acttxtimg{
             width: 70%;
@@ -985,6 +991,9 @@ footer{
                 }
             }
         }
+    }
+    #popupsignup{
+        width:80%;
     }
     .actcontainer{
         .acttxtimg{
@@ -1293,6 +1302,9 @@ main{
             }    
         }    
     }
+    #popupsignup{
+        width:90%;
+    }
     main{
         .banner{
             h1{
@@ -1421,6 +1433,22 @@ main{
 
 // mediaquery 480px
 @media screen and (max-width: 480px){
+    #popupsignup{
+        font-size:1.5em;
+    }
+    #popup{
+        width:70%;
+    }
+    .signup form .login .containersignup{
+        flex-direction: column;
+        .leftsignup{
+            width:100%;
+            margin-bottom:4%;
+        }
+        .rightsignup{
+            width:100%;
+        }
+    }
 main{
     .banner {
         h1{
@@ -1716,6 +1744,9 @@ footer{
     #popupsignup{
         font-size: 1.2em;
       }
+      #popup{
+        width:95%;
+    }
       
     main{
         .banner{

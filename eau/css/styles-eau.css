@@ -20,6 +20,10 @@ a, img {
   --bleu-fonce:#1f5180;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main {
   background-color: var(--bleu-clair);
   font-family: var(--poppins);
@@ -456,7 +460,7 @@ fieldset {
 .signup form .login .containersignup .line {
   width: 30%;
   height: 0.07em;
-  background: linear-gradient(to left, --bleu, --bleu-clair, --bleu);
+  background: linear-gradient(to left, #567BB4, #bac7d6, #567BB4);
   transform: rotate(90deg);
   align-self: center;
   position: absolute;
@@ -887,6 +891,9 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 1200px) {
+  #popupsignup {
+    width: 60%;
+  }
   .actcontainer .acttxtimg {
     width: 70%;
   }
@@ -935,6 +942,9 @@ footer .mentions .mentionsdroits {
   }
   header .navBar .monCompte a {
     font-size: 1.3em;
+  }
+  #popupsignup {
+    width: 80%;
   }
   .actcontainer .acttxtimg {
     width: 80%;
@@ -1194,6 +1204,9 @@ footer .mentions .mentionsdroits {
     font-family: var(--neucha);
     margin-bottom: 5%;
   }
+  #popupsignup {
+    width: 90%;
+  }
   main .banner h1 {
     font-size: 4em;
   }
@@ -1294,6 +1307,22 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 480px) {
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  #popup {
+    width: 70%;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 100%;
+  }
   main .banner h1 {
     font-size: 3em;
   }
@@ -1506,6 +1535,9 @@ footer .mentions .mentionsdroits {
 @media screen and (max-width: 320px) {
   #popupsignup {
     font-size: 1.2em;
+  }
+  #popup {
+    width: 95%;
   }
   main .banner h1 {
     font-size: 1.8em;

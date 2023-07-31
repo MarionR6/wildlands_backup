@@ -23,7 +23,7 @@ transform: scale(1);
 
 // aller chercher le prénom de l'utilisateur dans les données Json
 
-const url = "../json/data.json";
+const url = "json/data.json";
 const getName = async () =>{
     await fetch(url, {
         method : "GET",
