@@ -128,6 +128,7 @@ main{
 #navigation{
     display: none
 }
+
 .visible{
     visibility: visible;
 }
@@ -378,6 +379,14 @@ main{
                 font-style: italic;
                 color: grey;
                 margin-bottom: 5%;
+                font-size: 1.5rem;
+                font-family: var(--neucha);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background-color: var(--vert-clair);
+                border: 2px var(--vert-fonce)solid;
+                font-weight: 800 ;
+                color: var(--vert-fonce);
             }
             .nb{
                 width: 60%;
