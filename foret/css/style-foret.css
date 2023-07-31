@@ -435,6 +435,7 @@ header .milieu .monCompte2 .btnCompte2 {
   position: relative;
   border-radius: 2vh;
   padding: 0.5em 2em;
+  color: white;
 }
 header .milieu .monCompte2 .btnCompte2 p {
   font-family: var(--neucha);
@@ -542,7 +543,7 @@ header .navBar .monCompte {
   display: flex;
   justify-content: center;
   padding: 1% 2%;
-  border-radius: 3vh;
+  border-radius: 2em;
   text-decoration: none;
   font-size: 1.2em;
   color: white;
@@ -598,6 +599,9 @@ header .navBar .monCompte button .deco {
   opacity: 0.8;
   padding: 10%;
 }
+
+/* BOUTONS PROFIL ET CART */
+
 
 /* POP UP CONNEXION */
 #popup{
@@ -1167,7 +1171,7 @@ main .banner h1 {
 
 .campchacontainer .btncamp{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 4%;
 }
 
@@ -1175,7 +1179,7 @@ main .banner h1 {
   background-color: #3A8043;
   color: white;
   padding: 1%;
-  border-radius: 3vh;
+  border-radius: 2em;
   font-family: "Neucha", cursive;
   font-size: 1.5em;
 }
@@ -1677,14 +1681,45 @@ footer .container .logo a{
 
 @media screen and (max-width: 768px){
 
-  /* MENU BURGER */
   header {
-    padding: 10px 20px 80px 20px;
-    background-color: #c7e3cb;
+      width: 100%;
+      padding: 2em;
+      background-color: var(--vert-clair);
+      display: flex;
   }
+
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+  }
+  header .milieu .logIn {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   header .navBar {
     display: none;
   }
+
   header #toggle {
     position: fixed;
     display: block;
@@ -1982,6 +2017,10 @@ footer .container .logo a{
 /* RESPONSIVE 480PX */
 
 @media screen and (max-width: 480px){
+
+  #popup{
+    width: 70%;
+  }
 
   #popupsignup{
     font-size: 1.5em;

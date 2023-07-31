@@ -34,7 +34,6 @@ const getName = async () =>{
     })
     .then(response => response.json())
     .then(data=>{
-        console.log(data);
         p.innerText = `Bienvenue ${data.users[0].firstname}`;
     })
 };
@@ -42,16 +41,16 @@ getName();
 
 // mouse over pour scale
 
-connexionCompte.addEventListener("mouseover", ()=>{
-    btnCompte.style.cssText=`
-    transform: scale(1.1);
-    `
-})
-connexionCompte.addEventListener("mouseout", ()=>{
-    btnCompte.style.cssText=`
-    transform: scale(1);
-    `
-})
+// connexionCompte.addEventListener("mouseover", ()=>{
+//     btnCompte.style.cssText=`
+//     transform: scale(1.1);
+//     `
+// })
+// connexionCompte.addEventListener("mouseout", ()=>{
+//     btnCompte.style.cssText=`
+//     transform: scale(1);
+//     `
+// })
 
 
 //--- ---  M E N U . O N . C L I C K . G E S T I O N . D U . C O M P T E . E T . D E C O N N E X I O N  --- --- //
@@ -125,7 +124,6 @@ const getName2 = async () =>{
     })
     .then(response => response.json())
     .then(data=>{
-        console.log(data);
         p2.innerText = `${data.users[0].firstname}`;
     })
 };

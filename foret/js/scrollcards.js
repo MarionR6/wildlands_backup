@@ -10,7 +10,6 @@ const options = {
 const handleIntersect = (entries, observer) =>{
     entries.forEach((entry) => {
         if(entry.intersectionRatio > ratio){
-            console.log('visible');
             entry.target.classList.add('revealvisible');
         }else{
             entry.target.classList.remove('revealvisible')
