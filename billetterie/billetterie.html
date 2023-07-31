@@ -62,6 +62,9 @@
             </div>
         </div>
     </header>
+    <div id="modal">
+
+    </div>
     <!-- Main -->
     <main>
         <!-- banner -->
@@ -183,10 +186,12 @@
             <button class="sousTotal">
                 <a href="wip.html">
                     <p class="nbArticle" id="nbArticle"></p>
-                    <i class="fa-solid fa-basket-shopping"></i>
-                    <p><span id="price"></span>€ : Réserver</p>
+                    <i class="fa-solid fa-basket-shopping "></i>
+                    <p><span id="price"></span>€  Réserver</p>
                 </a>
-                <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-trash corbeille"></i>
+                
+                
             </button>
         </div>
         
@@ -206,7 +211,7 @@
                     <p class="bold">Nombre de nuits</p>
                     <div class="nbPlace">
                         <button class="under1" id="nuitMoins">-</button>
-                        <p id="number"></p>
+                        <p id="night2"></p>
                         <button class="over1" id="nuitPlus">+</button>
                         <!-- <i class="fa-solid fa-trash"></i> -->
                     </div>
@@ -264,7 +269,7 @@
                         <p class="bold">Nombre de hamacs</p>
                         <div class="nbPlace">
                             <button class="under" id ="hamacsMoins">-</button>
-                            <p class="number" id ="hamacs"></p>
+                            <p id ="hamacs"></p>
                             <button class="over" id = hamacsPlus>+</button>
                             <!-- <i class="fa-solid fa-trash"></i> -->
                         </div>
@@ -372,7 +377,7 @@
                 <li><a href="eau/eau.html">Les pieds dans l'eau</a></li>
                 <li><a href="airs/airs.html">La tête dans les nuages</a></li>
                 <li><a href="contact/contact.html">Contact</a></li>
-                <li><a href="billetterie/wip.html">Billeterie</a></li>
+                <li><a href="billetterie/wip.html">Billetterie</a></li>
             </ul>
         </div>
         <div class="container center">
@@ -402,6 +407,7 @@
     <script src="js/burger.js"></script>
     <script src="js/montantPanier.js"></script>
     <script src="js/nombreArt.js"></script>
+    <script src="js/remiseAZero.js"></script>
     
 </body>
 </html>

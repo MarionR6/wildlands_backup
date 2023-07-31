@@ -269,11 +269,11 @@ main .resaParc .twoParcs h2 {
   font-weight: 500;
 }
 main .resaParc .sousTotal {
-  width: 25%;
+  width: 29%;
   position: fixed;
   top: 15%;
+  right: 7%;
   z-index: 4;
-  display: flex;
   cursor: pointer;
   background-color: var(--vert-fonce);
   display: flex;
@@ -288,12 +288,20 @@ main .resaParc .sousTotal {
 }
 main .resaParc .sousTotal i {
   font-size: 2rem;
+  width: 25%;
 }
 main .resaParc .sousTotal p {
   font-size: 2rem;
+  width: 85%;
+  text-align: center;
 }
 main .resaParc .sousTotal a {
   font-size: 2rem;
+  display: flex;
+  width: 80%;
+}
+main .resaParc .sousTotal a p {
+  text-align: center;
 }
 main .resaParc .sousTotal .nbArticle {
   align-self: center;
@@ -306,7 +314,7 @@ main .resaParc .sousTotal .nbArticle {
   width: 2vh;
   height: 2vh;
   top: 50%;
-  left: 22%;
+  left: 19%;
 }
 main .night {
   width: 100%;
@@ -340,7 +348,7 @@ main .night .date {
   display: flex;
   flex-direction: column;
   background-color: var(--vert);
-  width: 33%;
+  width: 45%;
   margin: 2% auto;
   padding: 1%;
   border-radius: 10vh;
@@ -402,43 +410,6 @@ main .night .flexContainer .container .btn {
 main .night .flexContainer .container .mentions {
   font-size: 0.8rem;
   text-align: center;
-}
-main .night .sousTotal {
-  width: 20%;
-  position: relative;
-  cursor: pointer;
-  background-color: var(--vert-fonce);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1% 3%;
-  margin: 0 auto;
-  border-radius: 3vh;
-  border: solid 2px;
-  border-color: #4e4e4e #111 #111 #4e4e4e;
-  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
-}
-main .night .sousTotal i {
-  font-size: 2rem;
-}
-main .night .sousTotal p {
-  font-size: 2rem;
-}
-main .night .sousTotal a {
-  font-size: 2rem;
-}
-main .night .sousTotal .nbArticle {
-  align-self: center;
-  justify-self: center;
-  padding-top: 0.4%;
-  position: absolute;
-  background-color: rgb(123, 17, 17);
-  border-radius: 50%;
-  font-size: 1rem;
-  width: 2vh;
-  height: 2vh;
-  top: 50%;
-  left: 22%;
 }
 
 footer {
@@ -512,7 +483,7 @@ footer .center .logo {
   justify-content: space-around;
 }
 footer .center .logo i {
-  padding: 15%;
+  padding-top: 0;
 }
 footer .mentions {
   width: 100%;
@@ -526,26 +497,23 @@ footer .mentions .mentionsdroits {
 }
 
 @media screen and (max-width: 1540px) {
-  main .resaParc a .sousTotal {
-    width: 22%;
+  main .resaParc .sousTotal {
+    width: 35%;
   }
-  main .resaParc a .sousTotal .nbArticle {
-    top: 55%;
-    padding-top: 0.2%;
+  main .resaParc .sousTotal a .nbArticle {
+    left: 18%;
+    padding-top: 0.1%;
   }
   main .night .flexContainer .container .nb .bold {
     width: 50%;
-  }
-  main .night a .sousTotal {
-    width: 22%;
-  }
-  main .night a .sousTotal .nbArticle {
-    top: 55%;
   }
 }
 @media screen and (max-width: 1440px) {
   html {
     font-size: 13px;
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 17%;
   }
   main .night .flexContainer .container {
     width: 23%;
@@ -623,8 +591,8 @@ footer .mentions .mentionsdroits {
   main .resaParc .twoParcs {
     width: 40%;
   }
-  main .resaParc a .sousTotal {
-    width: 25%;
+  main .resaParc .sousTotal {
+    width: 40%;
   }
   main .night .bannerNight h1 {
     font-size: 5rem;
@@ -752,9 +720,20 @@ footer .mentions .mentionsdroits {
     font-family: var(--neucha);
     margin-bottom: 5%;
   }
-  main .resaParc a .sousTotal {
-    width: 30%;
-    margin-left: 60%;
+  main .resaParc .sousTotal {
+    width: 45%;
+  }
+  main .resaParc .sousTotal a p {
+    font-size: 1.8rem;
+  }
+  main .resaParc .sousTotal a i {
+    font-size: 1.8rem;
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 15%;
+  }
+  main .resaParc .sousTotal i {
+    font-size: 1.8rem;
   }
   main .night .date {
     width: 60%;
@@ -865,10 +844,11 @@ footer .mentions .mentionsdroits {
     font-size: 2rem;
     letter-spacing: 2px;
   }
-  main .resaParc a .sousTotal {
-    width: 50%;
+  main .resaParc .sousTotal {
+    width: 75%;
+    right: 50%;
+    transform: translateX(50%);
     top: 15%;
-    right: 25%;
     filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
   }
   main .night .bannerNight h1 {
@@ -936,6 +916,12 @@ footer .mentions .mentionsdroits {
     font-size: 2rem;
     letter-spacing: 2px;
   }
+  main .resaParc .sousTotal a p {
+    left: 10%;
+  }
+  main .night .date {
+    border-radius: 4vh;
+  }
   main .night .flexContainer .container {
     width: 90%;
   }
@@ -955,16 +941,21 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 380px) {
-  main .resaParc a .sousTotal {
-    width: 60%;
-    padding: 1%;
-    right: 20%;
+  main .resaParc .sousTotal {
+    width: 90%;
+    padding: 2% 3%;
   }
-  main .resaParc a .sousTotal .nbArticle {
-    padding-top: 0;
+  main .resaParc .sousTotal a .nbArticle {
+    left: 13%;
   }
-  main .night a .sousTotal {
-    width: 60%;
+  main .night .date input {
+    width: 80%;
+  }
+  main .night .date .nbPlace {
+    width: 100%;
+  }
+  main .night .date .nbPlace .bold {
+    width: 100%;
   }
 }
 @media screen and (max-width: 320px) {
