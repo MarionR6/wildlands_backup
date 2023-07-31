@@ -24,6 +24,11 @@ a {
   --bleuFonce:#1F5180;
 }
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 #navigation {
   display: none;
 }
@@ -1162,48 +1167,45 @@ footer .mentions .mentionsdroits {
     font-family: var(--neucha);
     margin-bottom: 5%;
   }
-  #popupsignup {
-    width: 90%;
-  }
-  .nuages h1 {
+  main .nuages h1 {
     font-size: 3.5em;
   }
-  .couleurs h1, .etoiles h1 {
+  main .couleurs h1, main .etoiles h1 {
     font-size: 3em;
   }
-  .bleuClair {
+  main .bleuClair {
     padding: 5% 1%;
   }
-  .bleuClair .flex {
+  main .bleuClair .flex {
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
-  .bleuClair .flex .bleuFonce {
+  main .bleuClair .flex .bleuFonce {
     width: 45%;
     padding: 3%;
     filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
   }
-  .bleuClair .flex .bleuFonce .image {
+  main .bleuClair .flex .bleuFonce .image {
     width: 100%;
   }
-  .bleuClair .flex .bleuFonce .image img {
+  main .bleuClair .flex .bleuFonce .image img {
     width: 100%;
   }
-  .bleuClair .flex .bleuFonce .txt {
+  main .bleuClair .flex .bleuFonce .txt {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .bleuClair .flex .bleuFonce .txt h4 {
+  main .bleuClair .flex .bleuFonce .txt h4 {
     font-size: 1.3em;
   }
-  .bleuClair .flex .bleuFonce .txt p {
+  main .bleuClair .flex .bleuFonce .txt p {
     text-align: center;
     font-size: 1em;
   }
-  .bleuClair .flex .bleuFonce .txt .reserver {
+  main .bleuClair .flex .bleuFonce .txt .reserver {
     width: 40%;
     background-color: var(--bleuClair);
     border-radius: 2vh;
@@ -1213,33 +1215,33 @@ footer .mentions .mentionsdroits {
     margin-top: 7%;
     filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5));
   }
-  .bleuClair .flex .bleuFonce .txt .reserver a {
+  main .bleuClair .flex .bleuFonce .txt .reserver a {
     color: black;
     font-weight: 600;
     font-size: 1em;
   }
-  .activities .actcontainer .bubble1 {
+  main .activities .actcontainer .bubble1 {
     width: 5.5em;
     height: 5.5em;
     left: 7%;
     top: 20%;
   }
-  .activities .actcontainer .bubble2 {
+  main .activities .actcontainer .bubble2 {
     width: 5.5em;
     height: 5.5em;
     right: 35%;
     top: 53%;
   }
-  .activities .actcontainer .bubble3 {
+  main .activities .actcontainer .bubble3 {
     width: 5.5em;
     height: 5.5em;
     left: 8%;
     bottom: 20%;
   }
-  .activities .actcontainer .acttxtimg {
+  main .activities .actcontainer .acttxtimg {
     width: 90%;
   }
-  .activities .actcontainer .acttxtimg .acttxt h3 {
+  main .activities .actcontainer .acttxtimg .acttxt h3 {
     font-size: 1.3em;
   }
   footer {

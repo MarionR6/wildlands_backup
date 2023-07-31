@@ -19,6 +19,10 @@ a{
     --bleu:#567BB4;
     --bleuFonce:#1F5180;
 }
+body{
+    width:100%;
+    overflow-x: hidden;
+}
 
 // ne sert que pour le menu burger
 #navigation{
@@ -1317,10 +1321,10 @@ header{
     }
 
     // responsive pop up 
-    #popupsignup{
-        width: 90%;
-      }
-    
+    // #popupsignup{
+    //     width: 90%;
+    //   }
+main{ 
     .nuages{
         h1{
             font-size: 3.5em;
@@ -1406,6 +1410,7 @@ header{
     .activities .actcontainer .acttxtimg .acttxt h3{
         font-size: 1.3em;
     }
+}
     footer{
         font-size: 0.7em;
       }
