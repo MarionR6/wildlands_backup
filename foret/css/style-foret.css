@@ -2247,6 +2247,13 @@ footer .container .logo a{
     font-size: 1.2em;
   }
 
+
+  /* MENU BURGER */
+
+  header #navigation.active ul li a{
+    font-size: 25px;
+  }
+
   /* MAIN */
 
 
