@@ -150,6 +150,67 @@ main {
   visibility: hidden;
 }
 
+header .milieu {
+  display: none;
+}
+header .milieu .monCompte2 {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  border-radius: 3vh;
+}
+header .milieu .monCompte2 .btnCompte2 {
+  display: inline-block;
+  background-color: var(--vert-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  border-radius: 2vh;
+  padding: 0.5em 2em;
+}
+header .milieu .monCompte2 .btnCompte2 p {
+  font-family: var(--neucha);
+}
+header .milieu .monCompte2 .btnCompte2:hover {
+  transform: scale(1.1);
+}
+header .milieu .monCompte2 .btnCompte2 #box2 {
+  align-items: center;
+  justify-content: center;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  left: 10%;
+  transition: 1 all;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
+  font-size: 1.8vw;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionNone {
+  display: none;
+}
+header .milieu .monCompte2 .btnCompte2 .gestion {
+  width: 80%;
+  margin-top: 5%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .milieu .monCompte2 .btnCompte2 .deco {
+  width: 80%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .cart {
+  display: none;
+}
 header .navBar {
   width: 100%;
   background-color: var(--vert);
@@ -204,7 +265,7 @@ header .navBar nav ul li:hover .sous li a {
   transition: 0.5s all;
 }
 header .navBar nav ul li:hover .sous li a:hover {
-  color: #204725;
+  color: #091e33;
   transform: scale(1);
 }
 header .navBar nav ul .deroulant:after {
@@ -212,7 +273,6 @@ header .navBar nav ul .deroulant:after {
   font-size: 0.7em;
 }
 header .navBar .monCompte {
-  width: 15%;
   background-color: var(--vert-fonce);
   font-family: var(--neucha);
   display: flex;
@@ -220,21 +280,328 @@ header .navBar .monCompte {
   padding: 1% 2%;
   border-radius: 3vh;
 }
-header .navBar .monCompte a {
+header .navBar .monCompte button {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  border: none;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
+  transition: 0.5s all;
+  position: relative;
+}
+header .navBar .monCompte button p {
+  font-family: var(--neucha);
+}
+header .navBar .monCompte button:hover {
+  transform: scale(1.1);
+}
+header .navBar .monCompte button .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar .monCompte button .gestionCompte li a {
+  font-size: 1.8vw;
+}
+header .navBar .monCompte button .gestionNone {
+  display: none;
+}
+header .navBar .monCompte button .gestion {
+  width: 100%;
+  margin-top: 7%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .panier {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .deco {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+
+/* POP UP CONNEXION */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: "Neucha", sans-serif;
+  color: white;
+}
+
+.popup #closepopup {
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+.popup form fieldset legend {
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 0.06em solid white;
+  padding-bottom: 5%;
+}
+
+#meconnecter,
+#minscrire {
+  color: white;
+  text-align: center;
+  margin: 10% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  transition: 0.5s all;
+  border: none;
+  font-family: "Neucha", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
   transition: 0.5s all;
 }
-header .navBar .monCompte a:hover {
-  transform: scale(1.2);
+
+#minscrire {
+  font-size: 1em;
+  margin-top: 6%;
+}
+
+#minscrire:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset #meconnecter:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember a:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember label {
+  padding-left: 1%;
+  font-size: 0.7em;
+}
+
+.popup form fieldset .plssignup {
+  font-size: 0.8em;
+}
+
+.popup form fieldset .plssignup a {
+  color: white;
+  text-align: center;
+  margin: 6% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  font-size: 1.3em;
+  transition: 0.5s all;
+}
+
+.popup form fieldset .plssignup a:hover {
+  transform: scale(1.1);
+}
+
+.emailflex, .passwordflex {
+  display: flex;
+  flex-direction: column;
+}
+
+#emaildisable {
+  padding: 5% 0 4% 0;
+}
+
+.entrystyle input {
+  margin-top: 2%;
+  padding: 2% 4%;
+  font-size: 0.6em;
+  background-color: #c7e3cb;
+  color: black;
+  border: none;
+  border-radius: 1em;
+}
+
+#emaildisable input::-moz-placeholder, #passworddisable input::-moz-placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+#emaildisable input::placeholder,
+#passworddisable input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.emaildisable,
+.passworddisable {
+  pointer-events: none;
+}
+
+.popup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* POPUP SIGNUP */
+#popupsignup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: "Neucha", sans-serif;
+  color: black;
+  width: 50%;
+}
+
+#closepopupsignup {
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+.signup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup form .login .connect {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 4%;
+}
+
+.signup form .login .containersignup {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.1em solid #c7e3cb;
+  border-radius: 1em;
+  padding: 5% 5%;
+  position: relative;
+}
+
+.signup form .login .containersignup label {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.signup form .login .containersignup .middleentry {
+  margin: 5% 0;
+}
+
+.signup form .login .containersignup .leftsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .leftsignup p,
+.signup form .login .containersignup .rightsignup p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup form .login .containersignup .line {
+  width: 30%;
+  height: 0.07em;
+  background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+  transform: rotate(90deg);
+  align-self: center;
+  position: absolute;
+}
+
+.signup form .login .containersignup .rightsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle {
+  width: 100%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle input {
+  width: 100%;
+}
+
+.signupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.signup .submitsignup {
+  color: white;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 1% 4%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4%;
+  transition: 0.5s all;
+}
+
+.signup .submitsignup:hover {
+  transform: scale(1.1);
 }
 
 main .banner {
-  background-image: url(../img/bannière-parc.jpg);
+  background-image: url(https://i.goopics.net/rdmja5.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 30vh;
+  height: 45vh;
 }
 main .resaParc {
   width: 100%;
@@ -326,7 +693,7 @@ main .night {
   padding-bottom: 3%;
 }
 main .night .bannerNight {
-  background-image: url(../img/banner-nuit.jpg);
+  background-image: url(https://i.goopics.net/k3oi71.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -648,8 +1015,37 @@ footer .mentions .mentionsdroits {
 }
 @media screen and (max-width: 768px) {
   header {
-    padding: 10px 20px 80px 20px;
+    width: 100%;
+    padding: 2em;
+    display: flex;
     background-color: var(--vert-clair);
+  }
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+  }
+  header .milieu .login {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   header .navBar {
     display: none;
@@ -659,10 +1055,10 @@ footer .mentions .mentionsdroits {
     display: block;
     width: 30px;
     height: 2px;
-    top: 50px;
+    top: 47px;
     right: 50px;
     cursor: pointer;
-    background-color: #204725;
+    background-color: var(--vert-fonce);
     transition: all 0.3s ease-in-out;
     z-index: 8;
   }
@@ -672,7 +1068,7 @@ footer .mentions .mentionsdroits {
     display: block;
     width: 30px;
     height: 2px;
-    background-color: #204725;
+    background-color: var(--vert-fonce);
     transition: all 0.3s ease-in-out;
   }
   header #toggle:before {
@@ -687,10 +1083,12 @@ footer .mentions .mentionsdroits {
   header #toggle.active:before {
     transform: rotate(45deg);
     top: 0;
+    background-color: var(--vert-fonce);
   }
   header #toggle.active:after {
     transform: rotate(-45deg);
     top: 0;
+    background-color: var(--vert-fonce);
   }
   header #navigation {
     position: fixed;
@@ -698,10 +1096,10 @@ footer .mentions .mentionsdroits {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    top: 0;
     right: -100%;
     width: 100%;
     height: 100vh;
-    top: 0;
     transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 6;
@@ -731,6 +1129,9 @@ footer .mentions .mentionsdroits {
     text-align: center;
     font-family: var(--neucha);
     margin-bottom: 5%;
+  }
+  #popupsignup {
+    width: 90%;
   }
   main .resaParc .sousTotal {
     width: 45%;
@@ -841,6 +1242,18 @@ footer .mentions .mentionsdroits {
   main .banner {
     height: 20vh;
   }
+  main .resaParc .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .resaParc .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .resaParc .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+  }
   main .resaParc .oneParc {
     width: 100%;
     flex-wrap: wrap;
@@ -869,6 +1282,21 @@ footer .mentions .mentionsdroits {
     transform: translateX(50%);
     top: 15%;
     filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 14%;
+  }
+  main .night .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .night .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .night .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
   }
   main .night .bannerNight h1 {
     font-size: 3.5rem;
@@ -918,6 +1346,25 @@ footer .mentions .mentionsdroits {
     width: 50%;
     margin: 2% auto;
     filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  #popup {
+    width: 70%;
+  }
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 100%;
+  }
+  .signup form .login .containersignup .line {
+    display: none;
   }
 }
 @media screen and (max-width: 422px) {
@@ -978,6 +1425,32 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 320px) {
+  #popup {
+    width: 95%;
+  }
+  .popup form fieldset legend {
+    font-size: 1.2em;
+  }
+  .popup form fieldset .connectremember a {
+    font-size: 0.8em;
+  }
+  .popup form fieldset .connectremember a:hover {
+    transform: scale(1);
+  }
+  .popup form fieldset .plssignup {
+    font-family: "Neucha", sans-serif;
+    font-size: 0.7em;
+  }
+  .popup form fieldset .plssignup a {
+    font-size: 1.1em;
+  }
+  .popup form fieldset .plssignup a:hover {
+    transform: scale(1);
+  }
+  /* POP UP SIGN UP */
+  #popupsignup {
+    font-size: 1.2em;
+  }
   main .banner {
     height: 15vh;
   }
@@ -1000,12 +1473,12 @@ footer .mentions .mentionsdroits {
 /* ANIMATION JS */
 .revealleft {
   opacity: 0;
-  transform: translateX(-20em);
+  transform: translateX(-10em);
 }
 
 .revealright {
   opacity: 0;
-  transform: translateX(20em);
+  transform: translateX(10em);
 }
 
 .revealvisible {
