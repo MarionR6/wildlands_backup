@@ -1,12 +1,16 @@
 
 const date=()=>{
     const now = new Date();
-    let day = now.getDay();
+    let day = now.getDate();
     let month = now.getMonth();
     let year = now.getFullYear();
-    day.toString();
-    month.toString();
-    year.toString();
+    month++
+    if(month<10){
+        month =`0${month}`;
+    }
+    if(day<10){
+        day=`0${day}`;
+    }
 
     let min = `${year}-${month}-${day}`;
     console.log(min);
@@ -14,8 +18,9 @@ const date=()=>{
 }
 
 const calendrier = document.getElementById("calendrier");
-calendrier.value=date()
 calendrier.min=date();
+calendrier.value=date()
+
 
 console.log(calendrier)
 
