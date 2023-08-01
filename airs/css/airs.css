@@ -32,6 +32,11 @@ body {
   display: none;
 }
 
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}
+
 header .milieu {
   display: none;
 }
@@ -95,6 +100,7 @@ header .cart {
 }
 header .navBar {
   width: 100%;
+  height: 100px;
   background-color: var(--bleu);
   display: flex;
   justify-content: space-around;
@@ -495,6 +501,7 @@ main {
 .nuages {
   width: 100%;
   padding: 7%;
+  padding-top: 11%;
   background-image: url(../img/nuage.jpg);
   background-position: right;
   background-size: cover;
@@ -995,6 +1002,9 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 1024px) {
+  header .navBar {
+    height: 60px;
+  }
   header .navBar nav ul li a {
     font-size: 1.5em;
   }
@@ -1193,6 +1203,10 @@ footer .mentions .mentionsdroits {
   }
   #popupsignup {
     width: 90%;
+  }
+  .nuages {
+    padding-top: 0;
+    padding: 7%;
   }
   .nuages h1 {
     font-size: 3.5em;
