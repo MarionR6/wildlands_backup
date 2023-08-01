@@ -249,6 +249,10 @@ fieldset {
   font-size: 0.9em;
 }
 
+.signup form .login .containersignup input {
+  color: black;
+}
+
 .signup form .login .containersignup .middleentry {
   margin: 5% 0;
 }
@@ -530,7 +534,7 @@ header .navBar .monCompte button .deco {
 }
 
 main {
-  padding-top: 5%;
+  padding-top: 4%;
 }
 main .presentation {
   display: flex;
@@ -930,9 +934,49 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 768px) {
+  #popupsignup {
+    width: 90%;
+  }
   header {
-    padding: 10px 20px 80px 20px;
+    width: 100%;
+    padding: 1em;
     background-color: var(--bleu-clair);
+    display: flex;
+    align-items: center;
+  }
+  header .milieu {
+    display: inline-flex;
+  }
+  header .milieu .logIn {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--bleu-fonce);
+    color: white;
+  }
+  header .milieu .monCompte2 .btnCompte2 #box2 {
+    background-color: #3A8043;
+    border-radius: 1em;
+    padding: 0.5em;
+  }
+  header .milieu .monCompte2 .btnCompte2 ul {
+    background-color: var(--bleu-fonce);
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--bleu-fonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   header .navBar {
     display: none;
@@ -989,6 +1033,7 @@ footer .mentions .mentionsdroits {
     z-index: 6;
   }
   header #navigation.active {
+    top: 0;
     right: 0;
   }
   header #navigation.active .logo {
@@ -1008,7 +1053,7 @@ footer .mentions .mentionsdroits {
   }
   header #navigation.active ul li a {
     color: var(--bleu-fonce);
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
     font-family: var(--neucha);
     margin-bottom: 5%;
@@ -1102,6 +1147,25 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 480px) {
+  #popup {
+    width: 70%;
+  }
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 100%;
+  }
+  .signup form .login .containersignup .line {
+    display: none;
+  }
   .bannerTitle h1 {
     font-size: 4em;
   }
