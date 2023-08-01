@@ -24,6 +24,10 @@ a, img {
   --vert-fonce:#3A8043;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main {
   background-color: var(--vert-clair);
   font-family: var(--poppins);
@@ -744,7 +748,8 @@ footer .mentions .mentionsdroits {
     font-size: 1.8rem;
   }
   main .night .date {
-    width: 60%;
+    width: 75%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
   }
   main .night .flexContainer {
     width: 100%;
@@ -763,6 +768,9 @@ footer .mentions .mentionsdroits {
   main .night .flexContainer .container .nb p {
     width: 50%;
   }
+  main .night .flexContainer .container .nb .bold {
+    font-size: 1em;
+  }
   main .night .flexContainer .container .btn {
     margin: 2% auto;
     padding: 0;
@@ -773,9 +781,6 @@ footer .mentions .mentionsdroits {
   }
   main .night .flexContainer .container .infos p {
     font-size: 1.5rem;
-  }
-  main .night .flexContainer .container .sousTotal {
-    width: 30%;
   }
   main .night a .sousTotal {
     width: 30%;
@@ -827,6 +832,12 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 480px) {
+  header #navigation.active ul {
+    align-items: center;
+  }
+  header #navigation.active ul li a {
+    font-size: 25px;
+  }
   main .banner {
     height: 20vh;
   }
@@ -985,4 +996,25 @@ footer .mentions .mentionsdroits {
     width: 75%;
     font-size: 2rem;
   }
+}
+/* ANIMATION JS */
+.revealleft {
+  opacity: 0;
+  transform: translateX(-20em);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translateX(20em);
+}
+
+.revealvisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+.scrollDown {
+  z-index: 99;
+  position: fixed;
 }/*# sourceMappingURL=styles-billetterie.css.map */

@@ -11,7 +11,6 @@ const date=()=>{
     if(day<10){
         day=`0${day}`;
     }
-
     let min = `${year}-${month}-${day}`;
     console.log(min);
     return min
@@ -21,8 +20,6 @@ const calendrier = document.getElementById("calendrier");
 calendrier.min=date();
 calendrier.value=date()
 
-
-console.log(calendrier)
 
 
 

@@ -22,6 +22,9 @@ a, img{
     --vert-fonce :#3A8043;
 
 }
+body{
+    overflow-x: hidden;
+}
 
 main{
     background-color: var(--vert-clair);
@@ -754,6 +757,7 @@ footer{
 }
 
 @media screen and (max-width:768px){
+    
     header {
         padding: 10px 20px 80px 20px;
         background-color: var(--vert-clair);
@@ -871,7 +875,8 @@ footer{
         }
         .night{
             .date{
-                width: 60%;
+                width: 75%;
+                filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
             }
             .flexContainer{
                 width: 100%;
@@ -886,6 +891,9 @@ footer{
                         margin: 0 auto;
                         p{
                             width: 50%;
+                        }
+                        .bold{
+                            font-size: 1em;
                         }
                         
                     }
@@ -902,9 +910,7 @@ footer{
                         font-size: 1.5rem;
                        }
                     }
-                    .sousTotal{
-                        width: 30%;
-                    }
+                    
                 }
 
             }
@@ -984,6 +990,18 @@ footer{
 }
 
 @media screen and (max-width:480px){
+    header{
+        #navigation.active{
+            ul{
+                align-items: center;
+                li{
+                    a{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
     main{
         .banner{
             height: 20vh;
@@ -1214,4 +1232,27 @@ footer{
     }
             
     }
+}
+// css nécessaire pour animation JS
+/* ANIMATION JS */
+// cards
+.revealleft{
+    opacity:0;
+    transform: translateX(-20em);
+  }
+  
+.revealright{
+    opacity: 0;
+    transform: translateX(20em);
+  }
+  
+.revealvisible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+//   navscroll
+.scrollDown{
+    z-index: 99;
+    position: fixed;
 }
