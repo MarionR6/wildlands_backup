@@ -342,11 +342,6 @@ fieldset {
   font-weight: 500;
 }
 
-.emaildisable,
-.passworddisable {
-  pointer-events: none;
-}
-
 .popup {
   visibility: visible;
   transition: 0.5s all;
@@ -478,6 +473,22 @@ fieldset {
   transform: scale(1.1);
 }
 
+.revealleft {
+  opacity: 0;
+  transform: translateX(-20em);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translateX(20em);
+}
+
+.revealvisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+
 .nuages {
   width: 100%;
   padding: 7%;
@@ -598,8 +609,8 @@ fieldset {
 }
 
 .activities .actcontainer .bubble1 {
-  width: 7.5em;
-  height: 7.5em;
+  width: 9em;
+  height: 9em;
   border-radius: 50%;
   padding: 3% 1%;
   background-color: var(--bleuFonce);
@@ -610,6 +621,7 @@ fieldset {
   text-align: center;
   left: 9%;
   top: 18%;
+  z-index: 3;
 }
 .activities .actcontainer .bubble1 p {
   font-family: var(--neucha);
@@ -617,8 +629,8 @@ fieldset {
 }
 
 .activities .actcontainer .bubble2 {
-  width: 7.5em;
-  height: 7.5em;
+  width: 9em;
+  height: 9em;
   border-radius: 50%;
   padding: 2% 1%;
   background-color: var(--bleuFonce);
@@ -629,15 +641,16 @@ fieldset {
   text-align: center;
   right: 6%;
   top: 49%;
+  z-index: 3;
 }
 .activities .actcontainer .bubble2 p {
   font-family: var(--neucha);
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .activities .actcontainer .bubble3 {
-  width: 7.5em;
-  height: 7.5em;
+  width: 9em;
+  height: 9em;
   border-radius: 50%;
   padding: 2% 1%;
   background-color: var(--bleuFonce);
@@ -648,6 +661,7 @@ fieldset {
   text-align: center;
   left: 5%;
   bottom: 4%;
+  z-index: 3;
 }
 .activities .actcontainer .bubble3 p {
   font-family: var(--neucha);
@@ -697,6 +711,7 @@ fieldset {
 
 .activities .actcontainer .acttxtimg .actimg img {
   width: 100%;
+  height: 100%;
 }
 
 .activities .actcontainer .reverse {
@@ -857,7 +872,7 @@ footer .mentions .mentionsdroits {
     font-weight: 100;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .bleuClair .flex .bleuFonce .txt h4 {
     font-size: 1.5em;
   }
@@ -874,6 +889,27 @@ footer .mentions .mentionsdroits {
     font-size: 1.1em;
     line-height: 1.4em;
     font-weight: 100;
+  }
+  .activities .actcontainer .bubble1 {
+    height: 7em;
+    width: 7em;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble2 {
+    height: 7em;
+    width: 7em;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble3 {
+    height: 7em;
+    width: 7em;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1134,7 +1170,7 @@ footer .mentions .mentionsdroits {
     align-items: center;
     flex-direction: column;
     top: 0;
-    right: -100%;
+    right: 100%;
     width: 100%;
     height: 100vh;
     transition: 0.5s;
@@ -1166,6 +1202,9 @@ footer .mentions .mentionsdroits {
     text-align: center;
     font-family: var(--neucha);
     margin-bottom: 5%;
+  }
+  #popupsignup {
+    width: 90%;
   }
   main .nuages h1 {
     font-size: 3.5em;
@@ -1291,67 +1330,6 @@ footer .mentions .mentionsdroits {
   footer .flex .center .logo a {
     font-size: 2em;
     padding: 20%;
-  }
-}
-@media screen and (max-width: 480px) {
-  #popupsignup {
-    font-size: 1.5em;
-  }
-  footer .flex {
-    margin: 0;
-  }
-  .nuages h1 {
-    font-size: 2.5em;
-  }
-  .couleurs h1, .etoiles h1 {
-    font-size: 2em;
-  }
-  .bleuClair .flex {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  .bleuClair .flex .bleuFonce {
-    width: 90%;
-    margin: 2.5% 0;
-    filter: none;
-  }
-  .bleuClair .flex .bleuFonce .txt .reserver {
-    filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.5));
-    font-size: 0.9em;
-  }
-  .activities .actcontainer .bubble1 {
-    top: 12%;
-    left: 10%;
-  }
-  .activities .actcontainer .bubble2 {
-    top: 43%;
-    left: 10%;
-  }
-  .activities .actcontainer .bubble3 {
-    bottom: 25%;
-    left: 10%;
-  }
-  .activities .actcontainer {
-    filter: none;
-  }
-  .activities .actcontainer .acttxtimg {
-    width: 90%;
-    flex-wrap: wrap-reverse;
-  }
-  .activities .actcontainer .acttxtimg .acttxt {
-    width: 100%;
-  }
-  .activities .actcontainer .acttxtimg .acttxt h3 {
-    font-size: 1.3em;
-  }
-  .activities .actcontainer .acttxtimg .acttxt p {
-    font-size: 1em;
-  }
-  .activities .actcontainer .acttxtimg .actimg {
-    width: 100%;
-  }
-  .espace {
-    margin-top: 5%;
   }
 }
 @media screen and (max-width: 375px) {
