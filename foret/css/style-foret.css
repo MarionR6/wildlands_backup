@@ -461,7 +461,8 @@ header .milieu .monCompte2 .btnCompte2 .gestionCompte {
   transition: 1 all;
 }
 header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
-  font-size: 0.7em;
+  font-size: 1.8vw;
+  color: white;
 }
 header .milieu .monCompte2 .btnCompte2 .gestionNone {
   display: none;
@@ -579,7 +580,7 @@ header .navBar .monCompte button .gestionCompte {
   transition: 1 all;
 }
 header .navBar .monCompte button .gestionCompte li a {
-  font-size: 1em;
+  font-size: 1.8vw;
   color: white;
 }
 header .navBar .monCompte button .gestionNone {
@@ -608,269 +609,7 @@ header .navBar .monCompte button .deco {
 /* BOUTONS PROFIL ET CART */
 
 
-/* POP UP CONNEXION */
-#popup{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 20;
-  background-color: #c7e3cb;
-  padding: 2% 3%;
-  font-size: 1.7em;
-  border-radius: 1em;
-  background-color: #3A8043;
-  border: 0.07em solid #204725;
-  font-family: 'Neucha', sans-serif;
-  color: white;
-}
 
-.popup #closepopup{
-  background-color: #204725;
-  color: white;
-  font-size: 0.8em;
-  border: none;
-  border-radius: 1em;
-  width: 1.5em;
-  height: 1.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 4%;
-  top: 2.5%;
-  cursor: pointer;
-}
-
-fieldset{
-  border: none;
-}
-
-.popup form fieldset legend{
-  font-size: 1.7em;
-  text-align: center;
-  border-bottom: 0.06em solid white;
-  padding-bottom: 5%;
-}
-
-
-#meconnecter,
-#minscrire{
-  color: white;
-  text-align: center;
-  margin: 10% 0 3% 0;
-  border-radius: 1em;
-  background-color: #204725;
-  padding: 2% 0;
-  transition: .5s all;
-  border: none;
-  font-family: 'Neucha', sans-serif;
-  font-size: 1em;
-  cursor: pointer;
-  width: 100%;
-  transition: .5s all;
-}
-
-#minscrire{
-  font-size: 1em;
-  margin-top: 6%;
-}
-
-#minscrire:hover{
-  transform: scale(1.1);
-}
-
-.popup form fieldset #meconnecter:hover{
-  transform: scale(1.1);
-}
-
-.popup form fieldset .connectremember a:hover{
-  transform: scale(1.1);
-}
-
-.popup form fieldset .connectremember label{
-  padding-left: 1%;
-  font-size: 0.7em;
-}
-
-.popup form fieldset .plssignup{
-  font-size: 0.8em;
-}
-
-.popup form fieldset .plssignup a{
-  color: white;
-  text-align: center;
-  margin: 6% 0 3% 0;
-  border-radius: 1em;
-  background-color: #204725;
-  padding: 2% 0;
-  font-size: 1.3em;
-  transition: .5s all;
-}
-
-.popup form fieldset .plssignup a:hover{
-  transform: scale(1.1);
-}
-
-.emailflex, .passwordflex{
-  display: flex;
-  flex-direction: column;
-}
-
-#emaildisable{
-  padding: 5% 0 4% 0;
-}
-
-.entrystyle input{
-  margin-top: 2%;
-  padding: 2% 4%;
-  font-size: 0.6em;
-  background-color: #c7e3cb;
-  border: none;
-  border-radius: 1em;
-}
-
-#emaildisable input::placeholder,
-#passworddisable input::placeholder{
-  color: black;
-  font-weight: 500;
-}
-
-.emaildisable,
-.passworddisable{
-  pointer-events: none;
-}
-
-.popup{
-  visibility: visible;
-  transition: .5s all;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.popupdisplay{
-  visibility: hidden;
-  transform: translate(-50%, -50%) scale(0);
-}
-
-/* POPUP SIGNUP */
-#popupsignup{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 20;
-  background-color: #c7e3cb;
-  padding: 2% 3%;
-  font-size: 1.7em;
-  border-radius: 1em;
-  background-color: #3A8043;
-  border: 0.07em solid #204725;
-  font-family: 'Neucha', sans-serif;
-  color: white;
-  width: 50%;
-}
-
-#closepopupsignup{
-  background-color: #204725;
-  color: white;
-  font-size: 0.8em;
-  border: none;
-  border-radius: 1em;
-  width: 1.5em;
-  height: 1.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 4%;
-  top: 2.5%;
-  cursor: pointer;
-}
-
-.signup{
-  visibility: visible;
-  transition: .5s all;
-  transform: translate(-50%, -50%) scale(1);
-  display: flex;
-  flex-direction: column;
-}
-
-.signup form .login .connect{
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 4%;
-}
-
-.signup form .login .containersignup{
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  border: 0.1em solid #c7e3cb;
-  border-radius: 1em;
-  padding: 5% 5%;
-  position: relative;
-}
-
-.signup form .login .containersignup label{
-  width: 100%;
-  font-size: 0.9em;
-}
-
-.signup form .login .containersignup .middleentry{
-  margin: 5% 0;
-}
-
-.signup form .login .containersignup .leftsignup{
-  width: 45%;
-}
-
-.signup form .login .containersignup .leftsignup p,
-.signup form .login .containersignup .rightsignup p{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.signup form .login .containersignup .line{
-  width: 30%;
-  height: 0.07em;
-  background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
-  transform: rotate(90deg);
-  align-self: center;
-  position: absolute;
-}
-
-.signup form .login .containersignup .rightsignup{
-  width: 45%;
-}
-
-.signup form .login .containersignup .rightsignup .entrystyle{
-  width: 100%;
-}
-
-
-.signup form .login .containersignup .rightsignup .entrystyle input{
-  width: 100%;
-}
-
-.signupdisplay{
-  visibility: hidden;
-  transform: translate(-50%, -50%) scale(0);
-}
-
-.signup .submitsignup{
-  color: white;
-  border-radius: 1em;
-  background-color: #204725;
-  padding: 1% 4%;
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 4%;
-  transition: .5s all;
-}
-
-.signup .submitsignup:hover{
-  transform: scale(1.1);
-}
 /* BANNER 1 */
 main .banner {
   width: 100%;
@@ -881,7 +620,7 @@ main .banner {
 
 main .banner h1 {
   text-align: center;
-  padding: 7% 0% 7% 0%;
+  padding: 11% 0% 7% 0%;
   font-family: "Neucha", cursive;
   font-size: 7em;
   color: white;
@@ -1297,12 +1036,12 @@ footer .mentions .mentionsdroits a{
 /* ANIMATION JS */
 .revealleft{
   opacity:0;
-  transform: translateX(-20em);
+  transform: translateX(-10em);
 }
 
 .revealright{
   opacity: 0;
-  transform: translateX(20em);
+  transform: translateX(10em);
 }
 
 .revealvisible{
@@ -1730,7 +1469,7 @@ footer .container .logo a{
     display: block;
     width: 30px;
     height: 2px;
-    top: 50px;
+    top: 47px;
     right: 50px;
     cursor: pointer;
     background-color: #204725;
@@ -2022,6 +1761,22 @@ footer .container .logo a{
 /* RESPONSIVE 480PX */
 
 @media screen and (max-width: 480px){
+
+  .revealleft{
+    opacity:1;
+    transform: translateX(0);
+  }
+  
+  .revealright{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .revealvisible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
 
   #popup{
     width: 70%;
@@ -2320,21 +2075,5 @@ footer .container .logo a{
     margin: 0;
     font-size: 1.5em;
 
-  }
-
-  .revealleft{
-    opacity:1;
-    transform: translateX(0);
-  }
-  
-  .revealright{
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
-  .revealvisible{
-    opacity: 1;
-    transform: translateX(0);
-    transition: 1s;
   }
 }
