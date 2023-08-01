@@ -25,7 +25,6 @@ a {
 }
 
 body {
-  width: 100%;
   overflow-x: hidden;
 }
 
@@ -73,7 +72,7 @@ header .milieu .monCompte2 .btnCompte2 .gestionCompte {
   transition: 1 all;
 }
 header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
-  font-size: 0.7em;
+  font-size: 1.8vw;
 }
 header .milieu .monCompte2 .btnCompte2 .gestionNone {
   display: none;
@@ -186,7 +185,7 @@ header .navBar .monCompte button .gestionCompte {
   transition: 1 all;
 }
 header .navBar .monCompte button .gestionCompte li a {
-  font-size: 0.7em;
+  font-size: 1.8vw;
 }
 header .navBar .monCompte button .gestionNone {
   display: none;
@@ -475,18 +474,22 @@ fieldset {
 
 .revealleft {
   opacity: 0;
-  transform: translateX(-20em);
+  transform: translateX(-10em);
 }
 
 .revealright {
   opacity: 0;
-  transform: translateX(20em);
+  transform: translateX(10em);
 }
 
 .revealvisible {
   opacity: 1;
   transform: translateX(0);
   transition: 1s;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 .nuages {
@@ -916,14 +919,6 @@ footer .mentions .mentionsdroits {
   header .navBar nav ul li a {
     font-size: 1.5em;
   }
-  header .navBar nav ul li .sous {
-    display: none;
-    position: absolute;
-    transition: 1 all;
-  }
-  header .navBar nav ul li:hover .sous li a {
-    font-size: 20px;
-  }
   header .navBar .monCompte a {
     font-size: 1.3em;
   }
@@ -1000,18 +995,11 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 1024px) {
-  header .navBar .logo {
-    width: 10%;
-    padding: 0.5% 0;
-  }
   header .navBar nav ul li a {
     font-size: 1.5em;
   }
-  header .navBar nav ul li:hover .sous li a {
-    font-size: 20px;
-  }
   header .navBar .monCompte a {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   #popupsignup {
     width: 80%;
@@ -1123,7 +1111,7 @@ footer .mentions .mentionsdroits {
   header .navBar {
     display: none;
   }
-  header #toggle {
+  #toggle {
     position: fixed;
     display: block;
     width: 30px;
@@ -1135,7 +1123,7 @@ footer .mentions .mentionsdroits {
     transition: all 0.3s ease-in-out;
     z-index: 8;
   }
-  header #toggle:before, header #toggle:after {
+  #toggle:before, #toggle:after {
     content: "";
     position: absolute;
     display: block;
@@ -1144,59 +1132,59 @@ footer .mentions .mentionsdroits {
     background-color: white;
     transition: all 0.3s ease-in-out;
   }
-  header #toggle:before {
+  #toggle:before {
     top: -10px;
   }
-  header #toggle:after {
+  #toggle:after {
     top: 10px;
   }
-  header #toggle.active {
+  #toggle.active {
     background-color: transparent;
   }
-  header #toggle.active:before {
+  #toggle.active:before {
     transform: rotate(45deg);
     top: 0;
     background-color: var(--bleuFonce);
   }
-  header #toggle.active:after {
+  #toggle.active:after {
     transform: rotate(-45deg);
     top: 0;
     background-color: var(--bleuFonce);
   }
-  header #navigation {
+  #navigation {
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     top: 0;
-    right: 100%;
+    right: -100%;
     width: 100%;
     height: 100vh;
     transition: 0.5s;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 6;
   }
-  header #navigation.active {
+  #navigation.active {
     right: 0;
     top: 0;
   }
-  header #navigation.active .logo {
+  #navigation.active .logo {
     display: none;
   }
-  header #navigation.active ul {
+  #navigation.active ul {
     display: flex;
     flex-direction: column;
   }
-  header #navigation.active ul li {
+  #navigation.active ul li {
     display: block;
     margin-bottom: 20px;
     width: 100%;
   }
-  header #navigation.active ul li .sous {
+  #navigation.active ul li .sous {
     display: none;
   }
-  header #navigation.active ul li a {
+  #navigation.active ul li a {
     color: var(--bleuFonce);
     font-size: 35px;
     text-align: center;
@@ -1206,45 +1194,45 @@ footer .mentions .mentionsdroits {
   #popupsignup {
     width: 90%;
   }
-  main .nuages h1 {
+  .nuages h1 {
     font-size: 3.5em;
   }
-  main .couleurs h1, main .etoiles h1 {
+  .couleurs h1, .etoiles h1 {
     font-size: 3em;
   }
-  main .bleuClair {
+  .bleuClair {
     padding: 5% 1%;
   }
-  main .bleuClair .flex {
+  .bleuClair .flex {
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
-  main .bleuClair .flex .bleuFonce {
+  .bleuClair .flex .bleuFonce {
     width: 45%;
     padding: 3%;
     filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
   }
-  main .bleuClair .flex .bleuFonce .image {
+  .bleuClair .flex .bleuFonce .image {
     width: 100%;
   }
-  main .bleuClair .flex .bleuFonce .image img {
+  .bleuClair .flex .bleuFonce .image img {
     width: 100%;
   }
-  main .bleuClair .flex .bleuFonce .txt {
+  .bleuClair .flex .bleuFonce .txt {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  main .bleuClair .flex .bleuFonce .txt h4 {
+  .bleuClair .flex .bleuFonce .txt h4 {
     font-size: 1.3em;
   }
-  main .bleuClair .flex .bleuFonce .txt p {
+  .bleuClair .flex .bleuFonce .txt p {
     text-align: center;
     font-size: 1em;
   }
-  main .bleuClair .flex .bleuFonce .txt .reserver {
+  .bleuClair .flex .bleuFonce .txt .reserver {
     width: 40%;
     background-color: var(--bleuClair);
     border-radius: 2vh;
@@ -1254,33 +1242,33 @@ footer .mentions .mentionsdroits {
     margin-top: 7%;
     filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5));
   }
-  main .bleuClair .flex .bleuFonce .txt .reserver a {
+  .bleuClair .flex .bleuFonce .txt .reserver a {
     color: black;
     font-weight: 600;
     font-size: 1em;
   }
-  main .activities .actcontainer .bubble1 {
+  .activities .actcontainer .bubble1 {
     width: 5.5em;
     height: 5.5em;
     left: 7%;
     top: 20%;
   }
-  main .activities .actcontainer .bubble2 {
+  .activities .actcontainer .bubble2 {
     width: 5.5em;
     height: 5.5em;
     right: 35%;
     top: 53%;
   }
-  main .activities .actcontainer .bubble3 {
+  .activities .actcontainer .bubble3 {
     width: 5.5em;
     height: 5.5em;
     left: 8%;
     bottom: 20%;
   }
-  main .activities .actcontainer .acttxtimg {
+  .activities .actcontainer .acttxtimg {
     width: 90%;
   }
-  main .activities .actcontainer .acttxtimg .acttxt h3 {
+  .activities .actcontainer .acttxtimg .acttxt h3 {
     font-size: 1.3em;
   }
   footer {
@@ -1330,6 +1318,80 @@ footer .mentions .mentionsdroits {
   footer .flex .center .logo a {
     font-size: 2em;
     padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  footer .flex {
+    margin: 0;
+  }
+  .nuages h1 {
+    font-size: 2.5em;
+  }
+  .couleurs h1, .etoiles h1 {
+    font-size: 2em;
+  }
+  .bleuClair .flex {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .bleuClair .flex .bleuFonce {
+    width: 90%;
+    margin: 2.5% 0;
+    filter: none;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver {
+    filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.5));
+    font-size: 0.9em;
+  }
+  .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+  .activities .actcontainer .bubble1 {
+    top: 12%;
+    left: 10%;
+  }
+  .activities .actcontainer .bubble2 {
+    top: 43%;
+    left: 10%;
+  }
+  .activities .actcontainer .bubble3 {
+    bottom: 25%;
+    left: 10%;
+  }
+  .activities .actcontainer {
+    filter: none;
+  }
+  .activities .actcontainer .acttxtimg {
+    width: 90%;
+    flex-wrap: wrap-reverse;
+  }
+  .activities .actcontainer .acttxtimg .acttxt {
+    width: 100%;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.3em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1em;
+  }
+  .activities .actcontainer .acttxtimg .actimg {
+    width: 100%;
+  }
+  .espace {
+    margin-top: 5%;
   }
 }
 @media screen and (max-width: 375px) {
