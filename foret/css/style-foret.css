@@ -48,6 +48,11 @@ main {
   font-size: 1.1em;
 }
 
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}
+
 /* POP UP CONNEXION */
 
 #popup{
