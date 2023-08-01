@@ -349,8 +349,7 @@ fieldset{
 .navBar nav ul li {
   list-style-type: none;
 }
-.navBar nav ul li a,
-.navBar nav ul .deroulant {
+.navBar nav ul li a{
   font-family: var(--neucha);
   color: white;
   font-size: 1.8em;
@@ -1060,11 +1059,6 @@ footer .mentions .mentionsdroits a{
     padding: 1.2% 0;
   }
 
-  /* .navBar nav ul li a,
-  .navBar nav ul .deroulant{
-    font-size: 2.2em;
-  } */
-
   .navBar .monCompte a{
     font-size: 2.2em;
   }
@@ -1089,8 +1083,7 @@ footer .mentions .mentionsdroits a{
 /* 1540px */
 
 @media screen and (max-width: 1540px){
-  .navBar nav ul li a,
-  .navBar nav ul .deroulant{
+  .navBar nav ul li a{
     font-size: 1.8em;
   }
 
@@ -1289,10 +1282,6 @@ footer .container .logo a{
 
   /* NAVBAR */
   .navBar nav ul li a {
-    font-size: 1.3em;
-  }
-
-  .navBar nav ul li .deroulant {
     font-size: 1.3em;
   }
     
