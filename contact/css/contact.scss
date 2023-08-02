@@ -309,12 +309,12 @@ header {
 		.monCompte2 {
 			display: inline-block;
 			width: 100%;
-			background-color: var(--vertFonce);
+			background-color: #204725;
 			font-family: $font-family_1;
 			border-radius: 3vh;
 			.btnCompte2 {
 				display: inline-block;
-				background-color: var(--vertFonce);
+				background-color: #204725;
 				border: none;
 				text-decoration: none;
 				font-size: 1em;
@@ -342,7 +342,7 @@ header {
 					transition: 1 all;
 					li {
 						a {
-							font-size: 1.4vw;
+							// font-size: 1.4vw;
 							color: white;
 						}
 					}
@@ -440,7 +440,7 @@ header {
 			padding: 1% 2%;
 			border-radius: 2em;
 			text-decoration: none;
-			font-size: 1.7em;
+			font-size: 1.4vw;
 			color: $color_1;
 			cursor: pointer;
 			button {
@@ -579,7 +579,7 @@ header {
         border-radius: 3vh;
         a{
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.4vw;
         transition: 0.5s all;
         // &:hover{
         //     // transform: scale(1.1);
@@ -589,7 +589,7 @@ header {
 }
 
 // -----------------------------------> SECTION 
-main{
+section{
     background-color: var(--vertClair);
     width: 100%;
     padding: 7%;
@@ -738,6 +738,12 @@ footer{
 }
 
 // ----------------------------RESPONSIVE
+
+@media screen and (max-width: 1200px){
+	#popupsignup{
+		width: 60%;
+	  }
+}
 // media query 1024px
 @media screen and (max-width: 1024px) {
     .navBar{
@@ -768,6 +774,11 @@ footer{
             font-size: 1.4em;
         }
     }
+
+	#popupsignup{
+		width: 80%;
+	  }
+
     footer{
         .flex{
             font-size: 1.2em;
@@ -787,99 +798,135 @@ footer{
 
 // media query 768px
 @media screen and (max-width: 768px) {
+	#toggle {
+		position:fixed;
+		display: block;
+		width: 30px;
+		height: 2px;
+		top: 50px;
+		right: 50px;
+		cursor: pointer;
+		background-color:#204725;
+		// transform: translate(-50%, -50%);
+		transition: all .3s ease-in-out; // on peut préciser le type de transition que l'on veut (de base linéaire) ; ease-in-out = la transition commence lentement, s'accélère puis ralentit à nouveau avant la fin
+		// D'autres transition : ease-in (augmente progressivement) ; ease-out (ralentit progressivement) ; ...
+		z-index: 8;
+		&:before, &:after {
+			content: '';
+			// pas comme :hover, il faudra repréciser le display, la width, la height...
+			position: absolute;
+			display: block;
+			width: 30px;
+			height: 2px;
+			background-color:#204725;
+			transition: all .3s ease-in-out; 
+		}
+		&:before {
+			top: -10px;
+		}
+		&:after {
+			top: 10px;
+		}  
+	}
+	#toggle.active { 
+
+		//on va également créer la petite animation des span à l'ouverture du menu
+		background-color: transparent; // on rend transparent le span du milieu
+		&:before {
+			// on crée une rotation sur le span du haut et on le recentre sur le carré
+			transform: rotate(45deg);
+			top: 0;
+		}
+		&:after {
+			// on crée une rotation sur le span du bas et on le recentre sur le carré
+			transform: rotate(-45deg);
+			top: 0;
+		}
+		//selon le degré de rotation que vous indiquez, le sens de l'animation ne sera pas le même  
+	}
+	#navigation {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		transition: .5s;
+		background-color: rgba(255, 255, 255, 0.9);
+		z-index: 6;
+	}
+	#navigation.active {
+	   right: 0;
+	   top: 0;
+	   .logo{
+		display: none;
+	   }
+		ul {
+			display:flex;
+			flex-direction: column;
+			li {
+				display: block;
+				margin-bottom: 20px;
+				width: 100%;
+				.sous{
+					display: none;
+				}
+				a {
+					color: #204725;
+					font-size: 35px;
+					text-align: center;
+					font-family: var(--neucha);
+					margin-bottom: 5%;
+					// display: block;
+				}
+			}
+		}    
+	}  
+
     header {
-        padding: 10px 20px 80px 20px;
+        padding: 2em;
         background-color: var(--vertClair);
+		display: flex;
+		.cart {
+			margin-left: 2%;
+			display: block;
+			a {
+				width: 2.05em;
+				height: 2.05em;
+				border-radius: 50%;
+				background-color: #204725;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			  }
+		  }
+		.milieu {
+			height: 100%;
+			display: inline-flex;
+			.logIn {
+				align-self: center;
+				width: 2.5em;
+				height: 2.5em;
+				border: none;
+				border-radius: 50%;
+				background-color: #204725;
+				color: white;
+			  }
+		  }
         .navBar {
             display: none;
         }
-        #toggle {
-            position:fixed;
-            display: block;
-            width: 30px;
-            height: 2px;
-            top: 50px;
-            right: 50px;
-            cursor: pointer;
-            background-color:white;
-            // transform: translate(-50%, -50%);
-            transition: all .3s ease-in-out; // on peut préciser le type de transition que l'on veut (de base linéaire) ; ease-in-out = la transition commence lentement, s'accélère puis ralentit à nouveau avant la fin
-            // D'autres transition : ease-in (augmente progressivement) ; ease-out (ralentit progressivement) ; ...
-            z-index: 8;
-            &:before, &:after {
-                content: '';
-                // pas comme :hover, il faudra repréciser le display, la width, la height...
-                position: absolute;
-                display: block;
-                width: 30px;
-                height: 2px;
-                background-color:white;
-                transition: all .3s ease-in-out; 
-            }
-            &:before {
-                top: -10px;
-            }
-            &:after {
-                top: 10px;
-            }  
-        }
-        #toggle.active { 
-
-            //on va également créer la petite animation des span à l'ouverture du menu
-			background-color: transparent; // on rend transparent le span du milieu
-			&:before {
-				// on crée une rotation sur le span du haut et on le recentre sur le carré
-				transform: rotate(45deg);
-				top: 0;
-			}
-			&:after {
-				// on crée une rotation sur le span du bas et on le recentre sur le carré
-				transform: rotate(-45deg);
-				top: 0;
-			}
-			//selon le degré de rotation que vous indiquez, le sens de l'animation ne sera pas le même  
-        }
-        #navigation {
-            position: fixed;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            right: -100%;
-            width: 100%;
-            height: 100vh;
-            transition: .5s;
-            background-color: rgba(255, 255, 255, 0.9);
-            z-index: 6;
-        }
-        #navigation.active {
-           right: 0;
-           .logo{
-            display: none;
-           }
-            ul {
-                display:flex;
-                flex-direction: column;
-                li {
-                    display: block;
-                    margin-bottom: 20px;
-                    width: 100%;
-                    .sous{
-                        display: none;
-                    }
-                    a {
-                        color: var(--vertFonce);
-                        font-size: 35px;
-                        text-align: center;
-                        font-family: var(--neucha);
-                        margin-bottom: 5%;
-                        // display: block;
-                    }
-                }
-            }    
-        }    
+          
     }
-    main{
+
+	#popupsignup{
+		width: 90%;
+	  }
+
+    section{
         padding: 1% 5% 10% 5%;
         .formulaire{
             width:90%;
@@ -952,6 +999,31 @@ footer{
 
 // media query 480px
 @media screen and (max-width: 480px) {
+
+	#popup{
+		width: 70%;
+	  }
+	
+	  #popupsignup{
+		font-size: 1.5em;
+	  }
+	
+	  .signup form .login .containersignup{
+		flex-direction: column;
+	  }
+	
+	  .signup form .login .containersignup .leftsignup{
+		width: 100%;
+		margin-bottom: 4%;
+	  }
+	  .signup form .login .containersignup .rightsignup{
+		width: 100%;
+	  }
+	
+	  .signup form .login .containersignup .line{
+		display: none;
+	  }
+
     footer{
         .flex{
             margin: 0;
@@ -960,6 +1032,52 @@ footer{
 }
 
 @media screen and (max-width:320px){
+	#popup{
+		width: 95%; 
+	  }
+	
+	  .popup form fieldset legend{
+		font-size: 1.2em;
+	  }
+	
+	  .popup form fieldset .connectremember a{
+		font-size: 0.8em;
+	  }
+	  .popup form fieldset .connectremember a:hover{
+		transform: scale(1);
+	  }
+	
+	  .popup form fieldset .plssignup{
+		font-family: 'Neucha', sans-serif;
+		font-size: 0.7em;
+	  }
+	  
+	  .popup form fieldset .plssignup a{
+		font-size: 1.1em;
+	  }
+	
+	  .popup form fieldset .plssignup a:hover{
+		transform: scale(1);
+	  }
+	
+	  /* POP UP SIGN UP */
+	
+	  #popupsignup{
+		font-size: 1.2em;
+	  }
+
+	  header{
+		#navigation.active{
+			ul{
+				li{
+					a{
+						font-size: 25px;
+					}
+				}
+			}
+		}
+	  }
+	
     footer{
         .flex{
             padding-left: 3%;

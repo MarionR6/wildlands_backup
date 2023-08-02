@@ -15,29 +15,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png">
 
 
 </head>
 <body>
     <!-- HEADER -->
-<header>
+    <div id="navigation">
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../attraction/attraction.html">Parcs d'attractions</a></li>
+            <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+            <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+            <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+            <li><a href="../billetterie/billetterie.html">Billetterie</a></li>
+        </ul>
+    </div>
+    <header>
+    <div id="toggle"></div>
     <div class="milieu">
         <button class="logIn" id="moncompte2"><i class="fa-solid fa-user"></i></button>
     </div>
     <div class="cart"><a href=""><i class="fa-solid fa-basket-shopping"></i></a></div>
     <!-- menu burger en responsive -->
-    <div id="toggle"></div>
-    <div id="navigation">
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../attraction/attraction.html">Parcs d'attractions</a></li>
-                <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
-                <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
-                <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
-                <li><a href="../contact/contact.html">Contact</a></li>
-                <li><a href="../billetterie/billetterie.html">Billetterie</a></li>
-            </ul>
-        </div>
     
     <div class="navBar scrollDown" id="scrollBar">
         <div class="logo">
@@ -132,6 +133,7 @@
 </div>
 
 <main>
+<section>
     <form class="formulaire">
         <fieldset class="infos">
             <legend>VOS INFORMATIONS</legend>
@@ -167,7 +169,7 @@
 
         <p class="champs"><span class="red">* champs obligatoires</span></p>
     </form>
-</main>
+</section>
    
 <!-- FOOTER -->
 <footer>
@@ -222,11 +224,12 @@
         </div>
 </div>
 </footer>
+</main>
 
 <!----- SCRIPT MENU BURGER ----->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/burger.js"></script>
-<script src="js/popupconnect.js"></script>
+<script src="../js/burger.js"></script>
+<script src="../js/popupconnect.js"></script>
 
 </body>
 </html>
