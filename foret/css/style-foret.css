@@ -460,7 +460,7 @@ header .milieu .monCompte2 .btnCompte2 .gestionCompte {
   transition: 1 all;
 }
 header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
-  font-size: 1.8vw;
+  font-size: 1.4vw;
   color: white;
 }
 header .milieu .monCompte2 .btnCompte2 .gestionNone {
@@ -579,7 +579,7 @@ header .navBar .monCompte button .gestionCompte {
   transition: 1 all;
 }
 header .navBar .monCompte button .gestionCompte li a {
-  font-size: 1.8vw;
+  font-size: 1.4vw;
   color: white;
 }
 header .navBar .monCompte button .gestionNone {
