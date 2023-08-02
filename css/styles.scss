@@ -440,6 +440,7 @@ body{
             font-size: 1.5em;
             transition: 0.5s all;
             position:relative;
+            cursor: pointer;
             p{
                 font-family: var(--neucha);
             }
@@ -496,7 +497,7 @@ body{
     padding-bottom: 15%; 
     h1 {
     text-align: center;
-    padding: 7% 0% 2% 0%;
+    padding: 12% 0% 2% 0%;
     font-family: "Neucha", cursive;
     font-size: 10em;
     color: white;
@@ -535,7 +536,6 @@ body{
 }
 // -------------------------------------------------------main
 main{
-    padding-top: 4%;
     .presentation{  
             //height: 50%;     
             display: flex;
@@ -543,6 +543,7 @@ main{
             justify-content: center;
             width: 70%;
             margin: 0 auto 5% auto;
+            margin-top: 4%;
             //background-color: var(--bleu-fonce);
             filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.50));
             .actimg{
@@ -554,6 +555,9 @@ main{
             .acttxt{
                 background-color: var(--bleu-fonce);
                 width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 //height: 8em;
                 h2{
                     text-align: center;
@@ -567,7 +571,7 @@ main{
                 height: 0.2em;
                 background-color: white;
                 margin: 0 auto;
-                margin-bottom: 10%;
+                margin-bottom: 3%;
                 }
                 p{
                 text-align: center;
