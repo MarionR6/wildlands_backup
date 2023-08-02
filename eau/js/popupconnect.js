@@ -18,6 +18,7 @@ btnMonCompte.addEventListener("click", () =>{
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
         header.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
         header.style.pointerEvents = "none";
 
         SignUpButton.addEventListener("click", () =>{
@@ -69,6 +70,7 @@ btnMonCompte768.addEventListener("click", () =>{
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
         header.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
         header.style.pointerEvents = "none";
 
         SignUpButton.addEventListener("click", () =>{
