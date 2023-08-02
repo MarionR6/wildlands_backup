@@ -1,0 +1,1608 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+}
+
+a, img {
+  display: block;
+}
+
+:root {
+  --poppins:"Poppins",sans-serif;
+  --neucha:"Neucha", cursive;
+  --bleu-clair:#bac7d6;
+  --bleu:#567BB4;
+  --bleu-fonce:#1f5180;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  background-color: var(--bleu-clair);
+  font-family: var(--poppins);
+}
+
+.bubble {
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  background-color: var(--bleu-fonce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1em #091e33;
+}
+.bubble p {
+  padding: 20% 20%;
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+  font-family: "Neucha", cursive;
+  font-size: 1.1em;
+}
+
+/* NAVBAR WIP */
+#navigation {
+  display: none;
+}
+
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}
+
+header .milieu {
+  display: none;
+}
+header .milieu .monCompte2 {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--bleu-fonce);
+  font-family: var(--neucha);
+  border-radius: 3vh;
+}
+header .milieu .monCompte2 .btnCompte2 {
+  display: inline-block;
+  background-color: var(--bleu-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  border-radius: 2vh;
+  padding: 0.5em 2em;
+}
+header .milieu .monCompte2 .btnCompte2 p {
+  font-family: var(--neucha);
+}
+header .milieu .monCompte2 .btnCompte2:hover {
+  transform: scale(1.1);
+}
+header .milieu .monCompte2 .btnCompte2 #box2 {
+  align-items: center;
+  justify-content: center;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  left: 10%;
+  transition: 1 all;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
+  font-size: 0.7em;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionNone {
+  display: none;
+}
+header .milieu .monCompte2 .btnCompte2 .gestion {
+  width: 80%;
+  margin-top: 5%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .milieu .monCompte2 .btnCompte2 .deco {
+  width: 80%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .cart {
+  display: none;
+}
+header .navBar {
+  width: 100%;
+  background-color: var(--bleu);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+header .navBar .logo img {
+  width: 100%;
+}
+header .navBar nav {
+  width: 50%;
+}
+header .navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header .navBar nav ul li {
+  list-style: none;
+}
+header .navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+header .navBar nav ul li a:hover {
+  transform: scale(1.1);
+}
+header .navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar nav ul li:hover .sous {
+  display: block;
+}
+header .navBar nav ul li:hover .sous li {
+  background-color: var(--bleu);
+  opacity: 0.8;
+  border-bottom: solid var(--bleu-clair) 1px;
+  padding: 2%;
+  background-color: var(--bleu-fonce);
+}
+header .navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+header .navBar nav ul li:hover .sous li a:hover {
+  color: #091e33;
+  transform: scale(1);
+}
+header .navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+header .navBar .monCompte {
+  background-color: var(--bleu-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+header .navBar .monCompte button {
+  width: 100%;
+  background-color: var(--bleu-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+  position: relative;
+  cursor: pointer;
+}
+header .navBar .monCompte button p {
+  font-family: var(--neucha);
+}
+header .navBar .monCompte button:hover {
+  transform: scale(1.1);
+}
+header .navBar .monCompte button .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar .monCompte button .gestionCompte li a {
+  font-size: 0.7em;
+}
+header .navBar .monCompte button .gestionNone {
+  display: none;
+}
+header .navBar .monCompte button .gestion {
+  width: 100%;
+  margin-top: 7%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .panier {
+  width: 100%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .deco {
+  width: 100%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+
+.revealleft {
+  opacity: 0;
+  transform: translateX(-10em);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translateX(10em);
+}
+
+.revealvisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+/* POP UP CONNEXION */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: var(--bleu-clair);
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: var(--bleu);
+  border: 0.07em solid var(--bleu-fonce);
+  font-family: "Neucha", sans-serif;
+  color: white;
+}
+
+.popup #closepopup {
+  background-color: var(--bleu-fonce);
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+.popup form fieldset legend {
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 0.06em solid white;
+  padding-bottom: 5%;
+}
+
+#meconnecter,
+#minscrire {
+  color: white;
+  text-align: center;
+  margin: 10% 0 3% 0;
+  border-radius: 1em;
+  background-color: var(--bleu-fonce);
+  padding: 2% 0;
+  transition: 0.5s all;
+  border: none;
+  font-family: "Neucha", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.5s all;
+}
+
+#minscrire {
+  font-size: 1em;
+  margin-top: 6%;
+}
+
+#minscrire:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset #meconnecter:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember a:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember label {
+  padding-left: 1%;
+  font-size: 0.7em;
+}
+
+.popup form fieldset .plssignup {
+  font-size: 0.8em;
+}
+
+.popup form fieldset .plssignup a {
+  color: white;
+  text-align: center;
+  margin: 6% 0 3% 0;
+  border-radius: 1em;
+  background-color: var(--bleu-fonce);
+  padding: 2% 0;
+  font-size: 1.3em;
+  transition: 0.5s all;
+}
+
+.popup form fieldset .plssignup a:hover {
+  transform: scale(1.1);
+}
+
+.emailflex, .passwordflex {
+  display: flex;
+  flex-direction: column;
+}
+
+#emaildisable {
+  padding: 5% 0 4% 0;
+}
+
+.entrystyle input {
+  margin-top: 2%;
+  padding: 2% 4%;
+  font-size: 0.6em;
+  background-color: var(--bleu-clair);
+  border: none;
+  border-radius: 1em;
+}
+
+#emaildisable input::-moz-placeholder, #passworddisable input::-moz-placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+#emaildisable input::placeholder,
+#passworddisable input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.emaildisable,
+.passworddisable {
+  pointer-events: none;
+}
+
+.popup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* POPUP SIGNUP */
+#popupsignup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: var(--bleu-clair);
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: var(--bleu);
+  border: 0.07em solid var(--bleu-fonce);
+  font-family: "Neucha", sans-serif;
+  color: white;
+  width: 50%;
+}
+
+#closepopupsignup {
+  background-color: var(--bleu-fonce);
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+.signup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup form .login .connect {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 4%;
+}
+
+.signup form .login .containersignup {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.1em solid var(--bleu-clair);
+  border-radius: 1em;
+  padding: 5% 5%;
+  position: relative;
+}
+
+.signup form .login .containersignup label {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.signup form .login .containersignup .middleentry {
+  margin: 5% 0;
+}
+
+.signup form .login .containersignup .leftsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .leftsignup p,
+.signup form .login .containersignup .rightsignup p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup form .login .containersignup .line {
+  width: 30%;
+  height: 0.07em;
+  background: linear-gradient(to left, #567BB4, #bac7d6, #567BB4);
+  transform: rotate(90deg);
+  align-self: center;
+  position: absolute;
+}
+
+.signup form .login .containersignup .rightsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle {
+  width: 100%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle input {
+  width: 100%;
+}
+
+.signupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.signup .submitsignup {
+  color: white;
+  border-radius: 1em;
+  background-color: var(--bleu-fonce);
+  padding: 1% 4%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4%;
+  transition: 0.5s all;
+}
+
+.signup .submitsignup:hover {
+  transform: scale(1.1);
+}
+
+.actcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  margin-bottom: 10%;
+}
+.actcontainer .acttxtimg {
+  width: 60%;
+  display: flex;
+}
+.actcontainer .acttxtimg .acttxt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bleu-fonce);
+  text-align: center;
+  padding: 0 2%;
+  color: white;
+}
+.actcontainer .acttxtimg .acttxt h2 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 2.5em;
+}
+.actcontainer .acttxtimg .acttxt .line {
+  width: 8em;
+  height: 0.1em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+.actcontainer .acttxtimg .acttxt p {
+  font-size: 1.3em;
+}
+.actcontainer .acttxtimg .actimg {
+  width: 50%;
+  position: relative;
+}
+.actcontainer .acttxtimg .actimg img {
+  width: 100%;
+  height: 100%;
+}
+.actcontainer .acttxtimg .actimg .bubble {
+  position: absolute;
+  top: 30%;
+  left: -12%;
+}
+.actcontainer .acttxtimg .actimg .bubble p {
+  text-align: center;
+  padding: 15%;
+  font-size: 1.4em;
+}
+.actcontainer .acttxtimg .actimg .bubbleReverse {
+  position: absolute;
+  top: 30%;
+  right: -12%;
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  background-color: var(--bleu-fonce);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1em #091e33;
+}
+.actcontainer .acttxtimg .actimg .bubbleReverse p {
+  padding: 20% 20%;
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+  font-family: "Neucha", cursive;
+  font-size: 1.4em;
+}
+.actcontainer .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+main {
+  padding-bottom: 8%;
+}
+main .banner {
+  width: 100%;
+  background-image: url(https://i.goopics.net/4018ca.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10%;
+}
+main .banner h1 {
+  text-align: center;
+  padding: 7% 0;
+  font-family: var(--neucha);
+  font-size: 7em;
+  font-weight: 400;
+}
+main .banner2 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/v51jzu.jpg);
+  background-position: center;
+  background-size: cover;
+}
+main .banner2 h1 {
+  padding: 7% 0% 7% 7%;
+  font-family: var(--neucha);
+  font-size: 7em;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+main .family {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .family .container {
+  width: 75%;
+  padding: 7%;
+  position: relative;
+}
+main .family .container .bubble {
+  position: absolute;
+  top: 40%;
+  left: 4.5%;
+  z-index: 3;
+}
+main .family .container .bubble p {
+  text-align: center;
+  padding: 5%;
+  font-size: 1.4em;
+}
+main .family .container .photo {
+  width: 60%;
+}
+main .family .container .photo img {
+  width: 100%;
+}
+main .family .container .txt {
+  background-color: var(--bleu-fonce);
+  width: 40%;
+  padding: 5%;
+  position: absolute;
+  top: 45%;
+  right: 15%;
+  margin-bottom: 2%;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .family .container .txt h2 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+}
+main .family .container .txt .line {
+  width: 8em;
+  height: 0.1em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+main .family .container .txt p {
+  font-size: 1.5em;
+  text-align: center;
+}
+main .banner3 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/iy1nv7.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-top: 5%;
+}
+main .banner3 h1 {
+  padding: 7% 0% 7% 7%;
+  font-family: var(--neucha);
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+main .night {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 5%;
+}
+main .night .contain {
+  width: 75%;
+  padding: 7%;
+  position: relative;
+}
+main .night .contain .img {
+  width: 60%;
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  z-index: 1;
+}
+main .night .contain .img img {
+  width: 100%;
+}
+main .night .contain .txt {
+  background-color: var(--bleu-fonce);
+  width: 55%;
+  padding: 5%;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .night .contain .txt h2 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+}
+main .night .contain .txt .line {
+  width: 8em;
+  height: 0.1em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+main .night .contain .txt p {
+  font-size: 1.5em;
+  text-align: center;
+}
+main .night .contain .txt .btn {
+  display: flex;
+  background-color: var(--bleu);
+  padding: 1% 2%;
+  border-radius: 3vh;
+  justify-content: center;
+  width: 50%;
+  transition: 0.5s all;
+  margin: 10% auto 0 auto;
+}
+main .night .contain .txt .btn:hover {
+  transform: scale(1.1);
+}
+main .night .contain .txt .btn a {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.4em;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--bleu);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.1);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo a {
+  padding-right: 0 15%;
+}
+footer .mentions {
+  width: 100%;
+  background-color: var(--bleu-fonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .actcontainer .acttxtimg .acttxt {
+    padding: 2%;
+  }
+  .actcontainer .acttxtimg .actimg .bubble {
+    left: -16%;
+    width: 8.5em;
+    height: 8.5em;
+  }
+  .actcontainer .acttxtimg .actimg .bubbleReverse {
+    right: -16%;
+    width: 8.5em;
+    height: 8.5em;
+  }
+  main {
+    padding-bottom: 8%;
+  }
+  main .banner {
+    width: 100%;
+    background-image: url(https://i.goopics.net/4018ca.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10%;
+  }
+  main .banner h1 {
+    text-align: center;
+    padding: 7% 0;
+    font-family: var(--neucha);
+    font-size: 7em;
+    font-weight: 400;
+  }
+  main .banner2 h1 {
+    font-size: 6em;
+  }
+  main .family {
+    padding-bottom: 5%;
+  }
+  main .family .container {
+    padding: 7%;
+  }
+  main .family .container .bubble {
+    width: 8.5em;
+    height: 8.5em;
+    left: 3%;
+  }
+  main .family .container .txt {
+    width: 45%;
+    right: 10%;
+  }
+  main .night {
+    padding-bottom: 5%;
+  }
+  main .night .contain {
+    width: 80%;
+    padding: 7%;
+  }
+  main .night .contain .txt {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #popupsignup {
+    width: 60%;
+  }
+  .actcontainer .acttxtimg {
+    width: 70%;
+  }
+  main .family .container .bubble {
+    left: 2%;
+  }
+  main .family .container .txt {
+    width: 45%;
+  }
+  main .family .container .txt h2 {
+    font-size: 1.6em;
+  }
+  main .family .container .txt p {
+    font-size: 1.3em;
+  }
+  main .night {
+    padding-bottom: 3%;
+  }
+  main .night .contain {
+    padding: 7%;
+  }
+  main .night .contain .txt {
+    width: 60%;
+  }
+  main .night .contain .txt h2 {
+    font-size: 1.6em;
+  }
+  main .night .contain .txt p {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .navBar .logo {
+    width: 10%;
+    padding: 0.5% 0;
+  }
+  header .navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  header .navBar nav ul li:hover .sous li a {
+    font-size: 20px;
+  }
+  header .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  header .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+  #popupsignup {
+    width: 80%;
+  }
+  .actcontainer .acttxtimg {
+    width: 80%;
+  }
+  .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 2em;
+  }
+  .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.2em;
+  }
+  .actcontainer .acttxtimg .actimg .bubble {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 1.2em;
+  }
+  .actcontainer .acttxtimg .actimg .bubbleReverse {
+    width: 7.5em;
+    height: 7.5em;
+  }
+  .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    padding: 15%;
+    font-size: 1.2em;
+  }
+  main {
+    padding-bottom: 8%;
+  }
+  main .banner h1 {
+    font-size: 5em;
+  }
+  main .banner2 {
+    margin-bottom: 3%;
+  }
+  main .banner2 h1 {
+    font-size: 4em;
+  }
+  main .family .container {
+    width: 80%;
+    padding: 5%;
+  }
+  main .family .container .bubble {
+    width: 7.5em;
+    height: 7.5em;
+    top: 35%;
+    left: -1%;
+  }
+  main .family .container .bubble p {
+    font-size: 1.2em;
+  }
+  main .family .container .photo {
+    width: 65%;
+  }
+  main .family .container .txt {
+    padding: 4%;
+    width: 45%;
+    top: 45%;
+    right: 10%;
+  }
+  main .family .container .txt h2 {
+    font-size: 1.4em;
+  }
+  main .family .container .txt p {
+    font-size: 1em;
+  }
+  main .banner3 {
+    margin-top: 2%;
+  }
+  main .banner3 h1 {
+    font-size: 4em;
+  }
+  main .night .contain {
+    width: 80%;
+    padding: 7%;
+  }
+  main .night .contain .img {
+    width: 60%;
+    right: 8%;
+  }
+  main .night .contain .txt {
+    width: 60%;
+    padding: 4%;
+  }
+  main .night .contain .txt h2 {
+    font-size: 1.4em;
+  }
+  main .night .contain .txt p {
+    font-size: 1em;
+  }
+  main .night .contain .txt .btn a {
+    font-size: 1.2em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .container img {
+    margin-left: 20px;
+  }
+  footer .flex .container ul li a {
+    font-size: 15px;
+  }
+  footer .flex .container .logo a {
+    margin: 0 15%;
+  }
+  footer .flex .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1021px) {
+  main .family {
+    width: 70%;
+    margin: 5% auto;
+    padding: 0%;
+  }
+  main .family .container {
+    width: 100%;
+    display: flex;
+    padding: 0%;
+  }
+  main .family .container .bubble {
+    width: 7.5em;
+    height: 7.5em;
+    top: 32%;
+    left: -8%;
+  }
+  main .family .container .bubble p {
+    font-size: 1.2em;
+  }
+  main .family .container .photo {
+    width: 55%;
+  }
+  main .family .container .txt {
+    width: 45%;
+    position: static;
+    padding: 2%;
+    margin-bottom: 0;
+  }
+  main .family .container .txt p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    background-color: var(--bleu-clair);
+  }
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+  }
+  header .milieu .logIn {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--bleu-fonce);
+    color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--bleu-fonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 47px;
+    right: 50px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--bleu-fonce);
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--bleu-fonce);
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+    top: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--bleu-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  #popupsignup {
+    width: 90%;
+  }
+  main .banner h1 {
+    font-size: 4em;
+  }
+  main .actcontainer {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  main .actcontainer .acttxtimg {
+    width: 80%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble {
+    width: 6.5em;
+    height: 6.5em;
+    left: 0%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 1em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse {
+    width: 6.5em;
+    height: 6.5em;
+    right: 0;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    font-size: 1.1em;
+  }
+  main .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 1.6em;
+  }
+  main .actcontainer .acttxtimg .acttxt p {
+    font-size: 1em;
+  }
+  main .banner2 h1 {
+    font-size: 3.5em;
+  }
+  main .family {
+    width: 80%;
+    margin: 10%;
+  }
+  main .family .container .bubble {
+    width: 6.5em;
+    height: 6.5em;
+    left: 1%;
+    top: 2%;
+  }
+  main .family .container .bubble p {
+    font-size: 1.1em;
+  }
+  main .family .container .photo {
+    width: 60%;
+  }
+  main .banner3 h1 {
+    font-size: 3em;
+  }
+  /* FOOTER */
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  #popup {
+    width: 70%;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 100%;
+  }
+  main .banner h1 {
+    font-size: 3em;
+  }
+  main .actcontainer {
+    filter: none;
+  }
+  main .actcontainer .acttxtimg {
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+  main .actcontainer .acttxtimg .acttxt {
+    width: 100%;
+  }
+  main .actcontainer .acttxtimg .actimg {
+    width: 100%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble {
+    height: 6em;
+    width: 6em;
+    position: absolute;
+    left: 1%;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 1em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse {
+    height: 6em;
+    width: 6em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    font-size: 1em;
+  }
+  main .actcontainer .space {
+    margin-top: 10%;
+  }
+  main .banner2 h1 {
+    font-size: 2.5em;
+  }
+  main .family {
+    width: 80%;
+  }
+  main .family .container {
+    flex-wrap: wrap;
+  }
+  main .family .container .photo {
+    width: 100%;
+  }
+  main .family .container .txt {
+    width: 100%;
+    filter: none;
+  }
+  main .family .container .bubble {
+    height: 6em;
+    width: 6em;
+    left: 0;
+    top: 20%;
+  }
+  main .family .container .bubble p {
+    font-size: 1em;
+  }
+  main .banner3 h1 {
+    font-size: 2em;
+  }
+  main .night {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  main .night .contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  main .night .contain .txt {
+    width: 100%;
+    filter: none;
+  }
+  main .night .contain .img {
+    width: 100%;
+    position: static;
+  }
+  main .night .contain .img img {
+    width: 100%;
+  }
+  main .space {
+    margin-top: 10%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 425px) {
+  footer .flex {
+    font-size: 1.2em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    padding: 8% 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  main {
+    padding-bottom: 8%;
+  }
+  main .actcontainer .acttxtimg .acttxt h2 {
+    font-size: 1em;
+  }
+  main .actcontainer .acttxtimg .acttxt p {
+    font-size: 0.8em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble {
+    height: 5.5em;
+    width: 5.5em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubble p {
+    font-size: 0.9em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse {
+    height: 5.5em;
+    width: 5.5em;
+  }
+  main .actcontainer .acttxtimg .actimg .bubbleReverse p {
+    font-size: 0.9em;
+  }
+  main .banner h1 {
+    font-size: 2.2em;
+  }
+  main .banner2 h1 {
+    font-size: 1.7em;
+  }
+  main .family .container .bubble {
+    height: 5.5em;
+    width: 5.5em;
+    top: 5%;
+  }
+  main .family .container .bubble p {
+    font-size: 0.9em;
+  }
+  main .family .container .txt h2 {
+    font-size: 1em;
+  }
+  main .family .container .txt p {
+    font-size: 0.8em;
+  }
+  main .banner3 h1 {
+    font-size: 1.6em;
+  }
+  main .night .contain .txt h2 {
+    font-size: 1em;
+  }
+  main .night .contain .txt p {
+    font-size: 0.8em;
+  }
+  main .night .contain .txt .btn {
+    display: flex;
+    background-color: var(--bleu);
+    padding: 1% 2%;
+    border-radius: 3vh;
+    justify-content: center;
+    width: 50%;
+    transition: 0.5s all;
+    margin: 10% auto 0 auto;
+  }
+  main .night .contain .txt .btn:hover {
+    transform: scale(1.1);
+  }
+  main .night .contain .txt .btn a {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  footer .flex {
+    font-size: 1em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    padding: 8% 0;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 320px) {
+  #popupsignup {
+    font-size: 1.2em;
+  }
+  #popup {
+    width: 95%;
+  }
+  main .banner h1 {
+    font-size: 1.8em;
+  }
+  main .banner2 h1 {
+    font-size: 1.3em;
+  }
+  main .banner3 h1 {
+    font-size: 1.3em;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.7em;
+  }
+}/*# sourceMappingURL=styles-eau.css.map */
