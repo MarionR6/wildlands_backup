@@ -1,0 +1,1090 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    scroll-behavior: smooth;
+}
+img{
+    display: block;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+:root{
+    --poppins: 'Poppins', sans-serif;
+    --neucha: 'Neucha', cursive;
+    --vertClair: #c7e3cb;
+    --vert:#56B462;
+    --vertFonce:#3A8043;
+}
+
+$color_1: white;
+$color_2: black;
+$font-family_1: 'Neucha', sans-serif;
+$background-color_1: #c7e3cb;
+$background-color_2: #3A8043;
+$background-color_3: #204725;
+
+/* POPUP SIGNUP */
+#popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 20;
+	background-color: $background-color_1;
+	padding: 2% 3%;
+	font-size: 1.7em;
+	border-radius: 1em;
+	background-color: $background-color_2;
+	border: 0.07em solid #204725;
+	font-family: $font-family_1;
+	color: $color_1;
+}
+.popup {
+	#closepopup {
+		background-color: $background-color_3;
+		color: $color_1;
+		font-size: 0.8em;
+		border: none;
+		border-radius: 1em;
+		width: 1.5em;
+		height: 1.5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		right: 4%;
+		top: 2.5%;
+		cursor: pointer;
+	}
+	form {
+		fieldset {
+			legend {
+				font-size: 1.7em;
+				text-align: center;
+				border-bottom: 0.06em solid white;
+				padding-bottom: 5%;
+			}
+			#meconnecter {
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+			.connectremember {
+				a {
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+				label {
+					padding-left: 1%;
+					font-size: 0.7em;
+				}
+			}
+			.plssignup {
+				font-size: 0.8em;
+				a {
+					color: $color_1;
+					text-align: center;
+					margin: 6% 0 3% 0;
+					border-radius: 1em;
+					background-color: $background-color_3;
+					padding: 2% 0;
+					font-size: 1.3em;
+					transition: .5s all;
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
+	visibility: visible;
+	transition: .5s all;
+	transform: translate(-50%, -50%) scale(1);
+}
+fieldset {
+	border: none;
+}
+#meconnecter {
+	color: $color_1;
+	text-align: center;
+	margin: 10% 0 3% 0;
+	border-radius: 1em;
+	background-color: $background-color_3;
+	padding: 2% 0;
+	transition: .5s all;
+	border: none;
+	font-family: $font-family_1;
+	font-size: 1em;
+	cursor: pointer;
+	width: 100%;
+	transition: .5s all;
+}
+#minscrire {
+	color: $color_1;
+	text-align: center;
+	margin: 10% 0 3% 0;
+	border-radius: 1em;
+	background-color: $background-color_3;
+	padding: 2% 0;
+	transition: .5s all;
+	border: none;
+	font-family: $font-family_1;
+	font-size: 1em;
+	cursor: pointer;
+	width: 100%;
+	transition: .5s all;
+	font-size: 1em;
+	margin-top: 6%;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+.emailflex {
+	display: flex;
+	flex-direction: column;
+}
+.passwordflex {
+	display: flex;
+	flex-direction: column;
+}
+#emaildisable {
+	padding: 5% 0 4% 0;
+	input {
+		&::placeholder {
+			color: $color_2;
+			font-weight: 500;
+		}
+	}
+}
+.entrystyle {
+	input {
+		margin-top: 2%;
+		padding: 2% 4%;
+		font-size: 0.6em;
+		background-color: $background-color_1;
+		border: none;
+		border-radius: 1em;
+	}
+}
+#passworddisable {
+	input {
+		&::placeholder {
+			color: $color_2;
+			font-weight: 500;
+		}
+	}
+}
+.emaildisable {
+	pointer-events: none;
+}
+.passworddisable {
+	pointer-events: none;
+}
+.popupdisplay {
+	visibility: hidden;
+	transform: translate(-50%, -50%) scale(0);
+}
+#popupsignup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 20;
+	background-color: $background-color_1;
+	padding: 2% 3%;
+	font-size: 1.7em;
+	border-radius: 1em;
+	background-color: $background-color_2;
+	border: 0.07em solid #204725;
+	font-family: $font-family_1;
+	color: $color_1;
+	width: 50%;
+}
+#closepopupsignup {
+	background-color: $background-color_3;
+	color: $color_1;
+	font-size: 0.8em;
+	border: none;
+	border-radius: 1em;
+	width: 1.5em;
+	height: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 4%;
+	top: 2.5%;
+	cursor: pointer;
+}
+.signup {
+	visibility: visible;
+	transition: .5s all;
+	transform: translate(-50%, -50%) scale(1);
+	display: flex;
+	flex-direction: column;
+	form {
+		.login {
+			.connect {
+				text-align: center;
+				font-size: 1.5em;
+				padding-bottom: 4%;
+			}
+			.containersignup {
+				display: flex;
+				width: 100%;
+				justify-content: space-around;
+				align-items: center;
+				border: 0.1em solid #c7e3cb;
+				border-radius: 1em;
+				padding: 5% 5%;
+				position: relative;
+				label {
+					width: 100%;
+					font-size: 0.9em;
+				}
+				.middleentry {
+					margin: 5% 0;
+				}
+				.leftsignup {
+					width: 45%;
+					p {
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+					}
+				}
+				.rightsignup {
+					p {
+						display: flex;
+						flex-direction: column;
+						width: 100%;
+					}
+					width: 45%;
+					.entrystyle {
+						width: 100%;
+						input {
+							width: 100%;
+						}
+					}
+				}
+				.line {
+					width: 30%;
+					height: 0.07em;
+					background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+					transform: rotate(90deg);
+					align-self: center;
+					position: absolute;
+				}
+			}
+		}
+	}
+	.submitsignup {
+		color: $color_1;
+		border-radius: 1em;
+		background-color: $background-color_3;
+		padding: 1% 4%;
+		display: inline-block;
+		margin: 0 auto;
+		margin-top: 4%;
+		transition: .5s all;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+.signupdisplay {
+	visibility: hidden;
+	transform: translate(-50%, -50%) scale(0);
+}
+
+// VERSION CONNECTEE
+
+/* VERSION CONNECTEE */
+header {
+	.milieu {
+		display: none;
+		.monCompte2 {
+			display: inline-block;
+			width: 100%;
+			background-color: #204725;
+			font-family: $font-family_1;
+			border-radius: 3vh;
+			.btnCompte2 {
+				display: inline-block;
+				background-color: #204725;
+				border: none;
+				text-decoration: none;
+				font-size: 1em;
+				transition: 0.5s all;
+				position: relative;
+				border-radius: 2vh;
+				padding: 0.5em 2em;
+				color: white;
+				p {
+					font-family: $font-family_1;
+				}
+				&:hover {
+					transform: scale(1.1);
+				}
+				#box2 {
+					align-items: center;
+					justify-content: center;
+				}
+				.gestionCompte {
+					display: block;
+					font-family: $font-family_1;
+					list-style-type: none;
+					position: absolute;
+					left: 10%;
+					transition: 1 all;
+					li {
+						a {
+							// font-size: 1.4vw;
+							color: white;
+						}
+					}
+				}
+				.gestionNone {
+					display: none;
+				}
+				.gestion {
+					width: 80%;
+					margin-top: 5%;
+					background-color: #3A8043;
+					opacity: 0.8;
+					padding: 10%;
+				}
+				.deco {
+					width: 80%;
+					background-color: #3A8043;
+					opacity: 0.8;
+					padding: 10%;
+				}
+			}
+		}
+	}
+	.cart {
+		display: none;
+	}
+	.navBar {
+		width: 100%;
+		background-color: var(--vert);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		.logo {
+			width: 8%;
+			padding: 0.5% 0;
+			img {
+				width: 100%;
+			}
+		}
+		nav {
+			width: 50%;
+			ul {
+				display: flex;
+				justify-content: space-around;
+				li {
+					list-style: none;
+					a {
+						font-family: $font-family_1;
+						text-decoration: none;
+						transition: 0.5s all;
+						&:hover {
+							transform: scale(1.1);
+						}
+					}
+					.sous {
+						display: none;
+						position: absolute;
+						transition: 1 all;
+					}
+					&:hover {
+						.sous {
+							display: block;
+							li {
+								background-color: var(--vert);
+								opacity: 0.8;
+								border-bottom: solid var(--vert-clair) 1px;
+								padding: 2%;
+								background-color: var(--vertFonce);
+								a {
+									font-size: 25px;
+									padding: 2%;
+									transition: 0.5s all;
+									&:hover {
+										color: #204725;
+										transform: scale(1);
+									}
+								}
+							}
+						}
+					}
+				}
+				.deroulant {
+					&:after {
+						content: "⏷";
+						font-size: 0.7em;
+					}
+				}
+			}
+		}
+		.monCompte {
+			background-color: var(--vertFonce);
+			font-family: $font-family_1;
+			display: flex;
+			justify-content: center;
+			padding: 1% 2%;
+			border-radius: 2em;
+			text-decoration: none;
+			font-size: 1.4vw;
+			color: $color_1;
+			cursor: pointer;
+			button {
+				width: 100%;
+				background-color: var(--vertFonce);
+				border: none;
+				text-decoration: none;
+				font-size: 1em;
+				transition: 0.5s all;
+				position: relative;
+				color: $color_1;
+				cursor: pointer;
+				p {
+					font-family: $font-family_1;
+				}
+				&:hover {
+					transform: scale(1.1);
+				}
+				.gestionCompte {
+					display: block;
+					font-family: $font-family_1;
+					list-style-type: none;
+					position: absolute;
+					transition: 1 all;
+					li {
+						a {
+							font-size: 1.4vw;
+							color: white;
+						}
+					}
+				}
+				.gestionNone {
+					display: none;
+				}
+				.gestion {
+					width: 100%;
+					margin-top: 7%;
+					background-color: #3A8043;
+					opacity: 0.8;
+					padding: 10%;
+				}
+				.panier {
+					width: 100%;
+					background-color: #3A8043;
+					opacity: 0.8;
+					padding: 10%;
+				}
+				.deco {
+					width: 100%;
+					background-color: #3A8043;
+					opacity: 0.8;
+					padding: 10%;
+				}
+			}
+		}
+	}
+}
+
+// ne sert que pour le menu burger
+#navigation{
+    display: none;
+
+//barre de navigation
+}
+.navBar{
+    width: 100%;
+    background-color: var(--vert);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo{
+        width: 8%;
+        padding : 0.5% 0;
+        img{
+            width: 100%;
+        }
+    }
+    nav{
+        width: 50%;
+        ul{
+            // font-size: 0;
+            display: flex;
+            justify-content: space-around;
+            li{
+                list-style: none;
+                a{
+                    font-family: var(--neucha);
+                    font-size: 1.8em;
+                    text-decoration: none;
+                    transition:0.5s all;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                .sous{
+                    display: none;
+                    position: absolute;
+                    transition: 1 all;
+                }
+                &:hover{
+                    .sous{
+                        display: block;
+                        li{
+                            background-color: var(--vert);
+                            opacity: 0.8;
+                            border-bottom: solid var(--vertClair)1px;
+                            padding: 2%;
+                            background-color: var(--vertFonce);
+                            a{
+                                font-size:25px;
+                                padding: 2%;
+                                transition:0.5s all;
+                                &:hover{
+                                    color: #204725;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .deroulant{
+                    &:after{
+                    content: "⏷";
+                    font-size: 0.7em;
+                    }
+            }
+        }
+    }
+    .monCompte{
+        background-color: var(--vertFonce);
+        font-family: var(--neucha);
+        display: flex;
+        justify-content: center;
+        padding: 1% 2%;
+        border-radius: 3vh;
+        a{
+        text-decoration: none;
+        font-size: 1.4vw;
+        transition: 0.5s all;
+        // &:hover{
+        //     // transform: scale(1.1);
+        // }
+        }
+    }
+}
+
+// -----------------------------------> SECTION 
+section{
+    background-color: var(--vertClair);
+    width: 100%;
+    padding: 7%;
+    display: flex;
+    justify-content: center;
+    .formulaire{
+        background-color: var(--vertFonce);
+        width: 70%;
+        padding: 5%;
+        input,textarea{
+            display: block;
+            width: 100%;
+            border: 0;
+            padding: 1.5%;
+        }
+        .champs{
+            padding-top: 3%;
+        }
+        span{
+            font-weight: bold;
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5vw;
+            padding-bottom: 2%;
+        }
+        .infos, .contact{
+            border: dashed .2vw white;
+            border-radius: 1vh;
+            padding: 3%;
+            legend{
+                font-family: 'Neucha', cursive;
+                font-size: 2.5vw;
+                letter-spacing: .3vw;
+            }
+        }
+        .infos{
+            margin-bottom: 5%;
+        }
+        .contact{
+            .envoyer{
+                padding: 2%;
+                background-color: #204725;
+                color: white;
+                cursor: pointer;
+                border: none;
+                border-radius: 3vh;
+                font-family: 'Poppins', sans-serif;
+                font-size:1.3vw;
+                font-weight: bold;
+                display: block;
+                margin: 0 auto;
+                width: 30%;
+            }
+        }
+    }
+}
+
+
+// --------------------------------------> FOOTER
+footer{
+    width: 100%;
+    background-color:var(--vert);
+    font-family:var(--neucha);
+    a{
+        transition: 0.5s all;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .flex{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        padding-bottom:2%;
+        .container{
+            width: 50%;
+            display:flex;
+            flex-direction: column;
+            margin: 0 4%;
+            img{
+                width: 50%;
+                padding: 8% 0;
+            }
+            .coordonnees{
+                display: flex;
+                padding : 0 5% 5% 5%;
+                margin-right:2%;
+                i{
+                    text-align: center;
+                    color:white;
+                    margin-right: 5.5%;
+                }
+            }
+            ul{
+                font-size: 0;
+                margin-top: 10%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                li{
+                    padding-bottom:4%;
+                    a{
+                        color: white;
+                        font-size: 25px;  
+                    }
+                }
+            }
+        }
+        i{
+            text-align: center;
+        }
+    }
+    .center{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            padding: 2%;
+            }
+        .logo{
+            display:flex;
+            width: 20%;
+            justify-content: space-around;
+            a{
+                padding: 0 15%;
+            }
+            i{
+                padding:15%;
+            }  
+        }
+    }
+    .mentions{
+        width: 100%;
+        background-color: var(--vertFonce);
+        text-align: center;
+        padding: 2%;
+        .mentionsdroits{
+            display: flex;
+            justify-content: center;
+        }
+    }    
+}
+
+// ----------------------------RESPONSIVE
+
+@media screen and (max-width: 1200px){
+	#popupsignup{
+		width: 60%;
+	  }
+}
+// media query 1024px
+@media screen and (max-width: 1024px) {
+    .navBar{
+        .logo{
+            width: 10%;
+            padding : 0.5% 0;
+        }
+        nav{
+            ul{
+                li{
+                    a{
+                        font-size: 1.5em;
+                    }
+                    &:hover{
+                        .sous{
+                            li{
+                                a{
+                                    font-size:20px;
+                                }
+                            }
+                    
+                        }
+                    }
+                }
+            }
+        }
+        .monCompte{
+            font-size: 1.4em;
+        }
+    }
+
+	#popupsignup{
+		width: 80%;
+	  }
+
+    footer{
+        .flex{
+            font-size: 1.2em;
+            .container{
+                ul{
+                    li{
+                        a{
+                            color: white;
+                            font-size: 18px;  
+                        }
+                    }
+                }
+            }
+        }  
+    }   
+}
+
+// media query 768px
+@media screen and (max-width: 768px) {
+	#toggle {
+		position:fixed;
+		display: block;
+		width: 30px;
+		height: 2px;
+		top: 50px;
+		right: 50px;
+		cursor: pointer;
+		background-color:#204725;
+		// transform: translate(-50%, -50%);
+		transition: all .3s ease-in-out; // on peut préciser le type de transition que l'on veut (de base linéaire) ; ease-in-out = la transition commence lentement, s'accélère puis ralentit à nouveau avant la fin
+		// D'autres transition : ease-in (augmente progressivement) ; ease-out (ralentit progressivement) ; ...
+		z-index: 8;
+		&:before, &:after {
+			content: '';
+			// pas comme :hover, il faudra repréciser le display, la width, la height...
+			position: absolute;
+			display: block;
+			width: 30px;
+			height: 2px;
+			background-color:#204725;
+			transition: all .3s ease-in-out; 
+		}
+		&:before {
+			top: -10px;
+		}
+		&:after {
+			top: 10px;
+		}  
+	}
+	#toggle.active { 
+
+		//on va également créer la petite animation des span à l'ouverture du menu
+		background-color: transparent; // on rend transparent le span du milieu
+		&:before {
+			// on crée une rotation sur le span du haut et on le recentre sur le carré
+			transform: rotate(45deg);
+			top: 0;
+		}
+		&:after {
+			// on crée une rotation sur le span du bas et on le recentre sur le carré
+			transform: rotate(-45deg);
+			top: 0;
+		}
+		//selon le degré de rotation que vous indiquez, le sens de l'animation ne sera pas le même  
+	}
+	#navigation {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		transition: .5s;
+		background-color: rgba(255, 255, 255, 0.9);
+		z-index: 6;
+	}
+	#navigation.active {
+	   right: 0;
+	   top: 0;
+	   .logo{
+		display: none;
+	   }
+		ul {
+			display:flex;
+			flex-direction: column;
+			li {
+				display: block;
+				margin-bottom: 20px;
+				width: 100%;
+				.sous{
+					display: none;
+				}
+				a {
+					color: #204725;
+					font-size: 35px;
+					text-align: center;
+					font-family: var(--neucha);
+					margin-bottom: 5%;
+					// display: block;
+				}
+			}
+		}    
+	}  
+
+    header {
+        padding: 2em;
+        background-color: var(--vertClair);
+		display: flex;
+		.cart {
+			margin-left: 2%;
+			display: block;
+			a {
+				width: 2.05em;
+				height: 2.05em;
+				border-radius: 50%;
+				background-color: #204725;
+				color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			  }
+		  }
+		.milieu {
+			height: 100%;
+			display: inline-flex;
+			.logIn {
+				align-self: center;
+				width: 2.5em;
+				height: 2.5em;
+				border: none;
+				border-radius: 50%;
+				background-color: #204725;
+				color: white;
+			  }
+		  }
+        .navBar {
+            display: none;
+        }
+          
+    }
+
+	#popupsignup{
+		width: 90%;
+	  }
+
+    section{
+        padding: 1% 5% 10% 5%;
+        .formulaire{
+            width:90%;
+            p{
+                font-size: 2vw;
+            }
+            legend{
+                font-size: 3vw;
+                ;
+            }
+            .envoyer{
+                font-size:1.9vw;
+            }
+        }
+    }
+    footer{
+        font-size: 0.7em;
+      }
+      footer .flex .footcontact img{
+        width: 80%;  
+      }
+      footer .center p{
+        padding: 7% 15%;
+        text-align: center;
+      }
+      footer .container ul li{
+        display: none;
+      }
+      footer .center{
+        font-size: 1em;
+        width: 100%;
+      }
+      footer .center p{
+        padding: 2% 0;
+      }
+      footer .flex{
+        padding: 5% 10% 5% 10%;
+      }
+      footer .footnav{
+        width: 0%;
+      }
+      footer .footcontact{
+        width: 70%;
+      }
+      footer .footcontact .coordonnees{
+        width: 100%;
+      }
+      footer{
+        .flex{
+            // margin:;
+            padding-left: 20%;
+            .center{
+            p{
+                display:none;
+            }
+            .logo{
+                &:nth-last-child(1){
+                    display: none;
+                }
+                margin-right:100%;
+                a{
+                    font-size: 2em;
+                    padding: 20%;
+                }         
+                }
+            }
+            }
+        }    
+}
+
+// media query 480px
+@media screen and (max-width: 480px) {
+
+	#popup{
+		width: 70%;
+	  }
+	
+	  #popupsignup{
+		font-size: 1.5em;
+	  }
+	
+	  .signup form .login .containersignup{
+		flex-direction: column;
+	  }
+	
+	  .signup form .login .containersignup .leftsignup{
+		width: 100%;
+		margin-bottom: 4%;
+	  }
+	  .signup form .login .containersignup .rightsignup{
+		width: 100%;
+	  }
+	
+	  .signup form .login .containersignup .line{
+		display: none;
+	  }
+
+    footer{
+        .flex{
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width:320px){
+	#popup{
+		width: 95%; 
+	  }
+	
+	  .popup form fieldset legend{
+		font-size: 1.2em;
+	  }
+	
+	  .popup form fieldset .connectremember a{
+		font-size: 0.8em;
+	  }
+	  .popup form fieldset .connectremember a:hover{
+		transform: scale(1);
+	  }
+	
+	  .popup form fieldset .plssignup{
+		font-family: 'Neucha', sans-serif;
+		font-size: 0.7em;
+	  }
+	  
+	  .popup form fieldset .plssignup a{
+		font-size: 1.1em;
+	  }
+	
+	  .popup form fieldset .plssignup a:hover{
+		transform: scale(1);
+	  }
+	
+	  /* POP UP SIGN UP */
+	
+	  #popupsignup{
+		font-size: 1.2em;
+	  }
+
+	  header{
+		#navigation.active{
+			ul{
+				li{
+					a{
+						font-size: 25px;
+					}
+				}
+			}
+		}
+	  }
+	
+    footer{
+        .flex{
+            padding-left: 3%;
+            .container{
+            width: 100%;
+            }
+        }
+        
+    }
+}
