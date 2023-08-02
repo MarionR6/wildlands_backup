@@ -38,36 +38,36 @@
         <div id="toggle"></div>
         <div id="navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="attraction/attraction.html">Parcs d'attractions</a></li>
-                    <li><a href="eau/eau.html">Les pieds dans l'eau</a></li>
-                    <li><a href="foret/foret.html">Au coeur de la forêt</a></li>
-                    <li><a href="airs/airs.html">La tête dans les nuages</a></li>
-                    <li><a href="contact/contact.html">Contact</a></li>
-                    <li><a href="billeterie/wip.html">Billeterie</a></li>
+                    <li><a href="indexCo.html">Home</a></li>
+                    <li><a href="attraction/attractionCo.html">Parcs d'attractions</a></li>
+                    <li><a href="eau/eauCo.html">Les pieds dans l'eau</a></li>
+                    <li><a href="foret/foretCo.html">Au coeur de la forêt</a></li>
+                    <li><a href="airs/airsCo.html">La tête dans les nuages</a></li>
+                    <li><a href="contact/contactCo.html">Contact</a></li>
+                    <li><a href="billetterie/billetterieCo.html">billetterie</a></li>
                 </ul>
             </div>
         <!-- navbar classique -->
         <div class="navBar scrollAnimation scrollDown" id="scrollBar">
             <div class="logo">
-                <a href="index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
+                <a href="indexCo.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="attraction/attraction.html">Parc d'attractions</a></li>
-                    <li><a href="" class="deroulant">Parc naturel</a>
+                    <li><a href="attraction/attractionCo.html">Parc d'attractions</a></li>
+                    <li><a href="indexCo.html#nature" class="deroulant">Parc naturel</a>
                         <ul class="sous">
-                            <li><a href="eau/eau.html">Les pieds dans l'eau</a></li>
-                            <li><a href="foret/foret.html">Au coeur de la forêt</a></li>
-                            <li><a href="airs/airs.html">La tête dans les nuages</a></li>
+                            <li><a href="eau/eauCo.html">Les pieds dans l'eau</a></li>
+                            <li><a href="foret/foretCo.html">Au coeur de la forêt</a></li>
+                            <li><a href="airs/airsCo.html">La tête dans les nuages</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact/contact.html">Contact</a></li>
-                    <li><a href="billeterie/wip.html">Billeterie</a></li>
+                    <li><a href="contact/contactCo.html">Contact</a></li>
+                    <li><a href="billetterie/billetterieCo.html">billetterie</a></li>
                 </ul>
             </nav>
             <div class="monCompte connexionCompte">
-                <button class="btnCompte" href="index.html"></button>
+                <button class="btnCompte"></button>
             </div>
         </div>
     </header>
@@ -79,79 +79,10 @@
     </div>
     <!--  D I V . P O P . U P  -->
 
-<div class="popup popupdisplay" id = "popup">
-    <button id = "closepopup">×</button>
-    <form action="" method="post">
-        <fieldset class="login">
-            <legend class="connect">Connectez-vous</legend>
-            <p id = "emaildisable" class = "emaildisable entrystyle emailflex">
-                <label for="email">Adresse mail</label>
-                <input type="text" placeholder="" name="email" id="email">
-            </p>
-            <p id = "passworddisable" class = "passworddisable passwordflex entrystyle">
-                <label for="password">Mot de passe</label>
-                <input type="password" placeholder="" name="password" id="password">
-            </p>
-            <a href ="homeCo.html" id = "meconnecter">Me connecter</a>
-            <div class="connectremember">
-                <input type="checkbox" id="checkbox" checked>
-                <label for="checkbox"></label>
-                <label for="rememberme">Se souvenir de moi</label>
-            </div>
-            <div class="plssignup">
-                <p>Pas encore de compte ?</p>
-            </div>
-        </fieldset>                
-    </form>
-    <button id ="minscrire">Inscrivez-vous</button>
-</div>
-
-<!--  D I V . S I G N . I N  -->
-
-<div class="signup signupdisplay" id = "popupsignup">
-    <button id = "closepopupsignup">×</button>
-    <form action="" method="post">
-        <fieldset class="login">
-            <legend class="connect">Inscription</legend>
-            <div class="containersignup">
-                <div class="leftsignup">
-                    <p class = "entrystyle">
-                        <label for="name">Nom</label>
-                        <input type="text" name="name" id="name">
-                    </p>
-                    <p class = "entrystyle middleentry">
-                        <label for="firstname">Prénom</label>
-                        <input type="text" name="firstname" id="firstname">
-                    </p>
-                    <p class = "entrystyle">
-                        <label for="phone">Numéro de téléphone</label>
-                        <input type="tel" placeholder="" name="phone" id="phone">
-                    </p>
-                </div>
-                <div class="line"></div>
-                <div class="rightsignup">
-                    <p class = "entrystyle">
-                        <label for="email">Adresse mail</label>
-                        <input type="text" placeholder="" name="email" id="emailsignup">
-                    </p>
-                    <p class = "entrystyle middleentry">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" placeholder="" name="password" id="passwordsignup">
-                    </p>
-                    <p class = "entrystyle">
-                        <label for="password">Confirmer le mot de passe</label>
-                        <input type="password" placeholder="" name="password" id="passwordsignup">
-                    </p>
-                </div>
-            </div>
-        </fieldset>                
-    </form>
-    <a href="homeCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
-</div>
 <main>
     <div class="presentation">
                 <div class="actimg revealleft">
-                    <img src="https://i.goopics.net/majkuy.jpg" alt="vue d'une fôret"> 
+                    <img src="https://i.goopics.net/majkuy.jpg" alt="vue d'une forêt"> 
                 </div>
                     <div class="acttxt revealright">
                         <h2>Bienvenue dans notre parc</h2>
@@ -175,14 +106,14 @@
             <p>Si vous êtes amateur d'attractions à sensations fortes, plusieurs montages russes et autres manèges à sensation forte, n'hésitez plus !
             </p>
             <p>Vous pourrez découvrir des attractions incroyables qui vous donneront des points de vue incroyable sur l'ensemble du parc.</p>
-            <a href="attraction/attraction.html#sensation">Venez les découvrir</a>
+            <a href="attraction/attractionCo.html#sensation">Venez les découvrir</a>
         </div>
     </div>
     <div class="flexContainer reverse">
         <div class="container revealleft">
             <p>Si les sensations fortes ne sont pas pour vous</p>
             <p>vous pourrez également profiter d'attractions correspondant à toute la famille afin de passer un agréable moment.</p>
-            <a href="attraction/attraction.html#family">Venez les découvrir</a>
+            <a href="attraction/attractionCo.html#family">Venez les découvrir</a>
         </div>
         <img src="https://i.goopics.net/afscp8.jpg" alt="grande roue" class="revealright">
     </div>
@@ -210,7 +141,7 @@
             <h2>Plutôt forêt</h2>
             <div class="line"></div>
             <p>Des activités pour toute la famille au coeur de la forêt.</p>
-            <a href="foret/foret.html">Venez les découvrir</a>                
+            <a href="foret/foretCo.html">Venez les découvrir</a>                
         </div>
         </div>
     <div class="acttxtimg reverse">
@@ -221,7 +152,7 @@
             <h2>Ou alors dans l'eau</h2>
             <div class="line"></div>
             <p>Ou des sensations fortes (ou pas) les pieds dans l’eau </p>
-            <a href="eau/eau.html">Venez les découvrir</a>  
+            <a href="eau/eauCo.html">Venez les découvrir</a>  
         </div>
     </div>
     <div class="acttxtimg">
@@ -232,7 +163,7 @@
             <h2>Ou dans les airs</h2>
             <div class="line"></div>
             <p>Ou alors des sensations fortes dans les airs </p>
-            <a href="airs/airs.html">Venez les découvrir</a>  
+            <a href="airs/airsCo.html">Venez les découvrir</a>  
         </div>
         
     </div>
@@ -261,13 +192,13 @@
                 </div>
             <div class="container footnav">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="attraction/attraction.html">Parc d'attractions</a></li>
-                    <li><a href="foret/foret.html">Au coeur de la forêt</a></li>
-                    <li><a href="eau/eau.html">Les pieds dans l'eau</a></li>
-                    <li><a href="airs/airs.html">La tête dans les nuages</a></li>
-                    <li><a href="contact/contact.html">Contact</a></li>
-                    <li><a href="billeterie/wip.html">Billeterie</a></li>
+                    <li><a href="indexCo.html">Accueil</a></li>
+                    <li><a href="attraction/attractionCo.html">Parc d'attractions</a></li>
+                    <li><a href="foret/foretCo.html">Au coeur de la forêt</a></li>
+                    <li><a href="eau/eauCo.html">Les pieds dans l'eau</a></li>
+                    <li><a href="airs/airsCo.html">La tête dans les nuages</a></li>
+                    <li><a href="contact/contactCo.html">Contact</a></li>
+                    <li><a href="billetterie/billetterieCo.html">billetterie</a></li>
                 </ul>
             </div>
             <div class="container center">
@@ -289,7 +220,7 @@
         <div class="mentions">
             <p>© Wildands</p>
             <div class="mentionsdroits">
-                <a href="">Mentions légales&nbsp;</a>
+                <a href="billetterie/wipCo.html">Mentions légales&nbsp;</a>
                 <p> - Tous droits réservés</p>
             </div>
         </div>
