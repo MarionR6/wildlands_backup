@@ -12,7 +12,6 @@ const date=()=>{
         day=`0${day}`;
     }
     let min = `${year}-${month}-${day}`;
-    console.log(min);
     return min
 }
 
