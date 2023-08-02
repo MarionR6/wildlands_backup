@@ -152,7 +152,7 @@ const gestion2 = document.createElement("li");
 const deco2 = document.createElement("li");
 // const backHome = document.createElement("a");
 gestion2.innerHTML=`<a>Modifier le profil</a>`;
-deco2.innerHTML=`<a href="foret.html">Déconnexion</a>`;
+deco2.innerHTML=`<a href="index.html">Déconnexion</a>`;
 menu2.append(gestion2, deco2);
 btnCompte2.append(box2, menu2);
 
