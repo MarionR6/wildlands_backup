@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+
+    <script src="https://kit.fontawesome.com/5fa515c205.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:wght@100&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- HEADER -->
+<header>
+        <div class="milieu">
+            <div class="monCompte2 connexionCompte2" id = "moncompte2">
+                <button class="btnCompte2" href="contact.html"></button>
+            </div>
+        </div>  
+        <div class="cart">
+            <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+        </div>
+
+        <!-- menu burger en responsive -->
+        <div id="toggle"></div>
+        <div id="navigation">
+                <ul>
+                    <li><a href="../indexCo.html">Accueil</a></li>
+                    <li><a href="../attraction/attractionCo.html">Parc d'attractions</a></li>
+                    <li><a href="../foret/foretCo.html">Au coeur de la forêt</a></li>
+                    <li><a href="../eau/eauCo.html">Les pieds dans l'eau</a></li>
+                    <li><a href="../airs/airsCo.html">La tête dans les nuages</a></li>
+                    <li><a href="../contact/contactCo.html">Contact</a></li>
+                    <li><a href="../billetterie/billetterieCo.html">Billetterie</a></li>
+                </ul>
+            </div>
+    <!-- NAVBAR -->
+    <div class="navBar scrollDown" id="scrollBar">
+        <div class="logo">
+            <a href="../index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../attraction/attractionCo.html">Parc d'attractions</a></li>
+                <li><a href="indexCo.html#nature" class="deroulant">Parc naturel</a>
+                    <ul class="sous">
+
+                        <li><a href="../eau/eauCo.html">Les pieds dans l'eau</a></li>
+                        <li><a href="../foret/foretCo.html">Au coeur de la forêt</a></li>
+                        <li><a href="../airs/airsCo.html">La tête dans les nuages</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact/contactCo.html">Contact</a></li>
+                <li><a href="../billetterie/billetterieCo.html">Billetterie</a></li>
+            </ul>
+        </nav>
+        <div class="monCompte connexionCompte">
+            <button class="btnCompte" href="contact.html"></button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <form class="formulaire">
+        <fieldset class="infos">
+            <legend>VOS INFORMATIONS</legend>
+            <p>
+                <label class="msg" for="nom">Votre nom <span>*</span></label>
+                <input placeholder="Nom" type="text" name="nom" required> 
+            </p>
+
+            <p>
+            <label class="msg" for="prenom">Votre prénom <span>*</span></label>
+            <input placeholder="Prénom" type="text" name="prénom" required> 
+            </p>
+
+            <p>
+                <label class="msg" for="mail">Votre adresse mail <span>*</span></label>
+                <input placeholder="E-mail" type="email" name="mail" id="">
+            </p>
+        </fieldset>
+
+
+        <fieldset class="contact">
+            <legend>FORMULAIRE DE CONTACT</legend>
+            <p>
+                <label class="msg" for="sujet">Sujet de votre demande <span>*</span></label>
+                <input type="text" placeholder="écrivez ici" name="sujet" required>
+            </p>
+            <p>
+                <label class="msg" for="msg">Votre message <span>*</span> :</label>
+                <textarea placeholder="..." name="msg" id="" cols="30" rows="10"></textarea>
+            </p>
+            <input type="submit" value="Envoyer" class="envoyer">
+        </fieldset>
+
+        <p class="champs"><span class="red">* champs obligatoires</span></p>
+    </form>
+</main>
+   
+<!-- FOOTER -->
+<footer>
+    <div class="flex">
+        <div class="container">
+                <img src="img/wildland-logo.svg" alt="Logo-wildlands">
+                <div class="coordonnees">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>00 00 00 00 00</p>
+                </div>
+                <div class="coordonnees">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:contact@wildlands.com">contact@wildlands.com</a>
+                </div>
+                <div class="coordonnees remonte">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <p>100 rue de Larue 07210 ROMS</p>
+                </div>
+        </div>
+        <div class="container navFooter">
+            <ul>
+                <li><a href="../indexCo.html">Accueil</a></li>
+                <li><a href="../attraction/attractionCo.html">Parc d'attractions</a></li>
+                <li><a href="../foret/foretCo.html">Au coeur de la forêt</a></li>
+                <li><a href="../eau/eauCo.html">Les pieds dans l'eau</a></li>
+                <li><a href="../airs/airsCo.html">La tête dans les nuages</a></li>
+                <li><a href="../contact/contactCo.html">Contact</a></li>
+                <li><a href="../billetterie/billetterieCo.html">Billetterie</a></li>
+            </ul>
+        </div>
+        <div class="container center">
+            <p>Vous pouvez nous suivre sur :</p>
+            <div class="logo">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+            <p>Paiement sécurisés via :</p>
+            <div class="logo">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+            </div>
+                
+        </div>
+    </div>
+</div>
+<div class="mentions">
+    <p>© Wildands</p>
+        <div class="mentionsdroits">
+            <a href="../billetterie/wipCo.html">Mentions légales&nbsp;</a>
+            <p> - Tous droits réservés</p>
+        </div>
+</div>
+</footer>
+
+<!----- SCRIPT MENU BURGER ----->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/burger.js"></script>
+<script src="js/scriptNav.js"></script>
+
+</body>
+</html>
