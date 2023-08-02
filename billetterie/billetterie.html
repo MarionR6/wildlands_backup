@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     
+    <title>Billetterie | Wildlands</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles-billetterie.css">
+    
+
+     <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Dancing+Script:wght@400;500;600;700&family=Neucha&family=Roboto:ital,wght@0,300;1,100&family=Seaweed+Script&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png">
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/5fa515c205.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <!-- menu burger en responsive -->
+        <div id="toggle"></div>
+        <div id="navigation">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
+                    <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                    <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                    <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../billeterie/wip.html">Billetterie</a></li>
+                </ul>
+            </div>
+            <div class="milieu"> 
+                <button class="login" id="moncompte2" href="billetterie.html"><i class="fa-solid fa-user"></i></button>
+            </div>
+        <div class="navBar scrollDown" id="scrollBar">
+            <div class="logo">
+                <a href="../index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
+                    <li><a href="" class="deroulant">Parc naturel</a>
+                        <ul class="sous">
+                            <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                            <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                            <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="billetterie.html">Billetterie</a></li>
+                </ul>
+            </nav>
+            <div class="monCompte" id="moncompte">
+                <button href="billetterieCo.html">
+                    <p>Mon compte</p>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- popup signup -->
+    <div class="popup popupdisplay" id = "popup">
+        <button id = "closepopup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Connectez-vous</legend>
+                <p id = "emaildisable" class = "emaildisable entrystyle emailflex">
+                    <label for="email">Adresse mail</label>
+                    <input type="text" placeholder="" name="email" id="email">
+                </p>
+                <p id = "passworddisable" class = "passworddisable passwordflex entrystyle">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" placeholder="" name="password" id="password">
+                </p>
+                <a href ="billetterieCo.html" id = "meconnecter">Me connecter</a>
+                <div class="connectremember">
+                    <input type="checkbox" id="checkbox" checked>
+                    <label for="checkbox"></label>
+                    <label for="rememberme">Se souvenir de moi</label>
+                </div>
+                <div class="plssignup">
+                    <p>Pas encore de compte ?</p>
+                </div>
+            </fieldset>                
+        </form>
+        <button id ="minscrire">Inscrivez-vous</button>
+    </div>
+
+    <div class="signup signupdisplay" id = "popupsignup">
+        <button id = "closepopupsignup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Inscription</legend>
+                <div class="containersignup">
+                    <div class="leftsignup">
+                        <p class = "entrystyle">
+                            <label for="name">Nom</label>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" name="firstname" id="firstname">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="phone">Numéro de téléphone</label>
+                            <input type="tel" placeholder="" name="phone" id="phone">
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="rightsignup">
+                        <p class = "entrystyle">
+                            <label for="email">Adresse mail</label>
+                            <input type="text" placeholder="" name="email" id="emailsignup">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" placeholder="" name="password" id="passwordsignup">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="password">Confirmer le mot de passe</label>
+                            <input type="password" placeholder="" name="password">
+                        </p>
+                    </div>
+                </div>
+            </fieldset>                
+        </form>
+        <a href="billetterieCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <!-- banner -->
+        <div class="banner">
+        </div>
+        <!-- partie réservation -->
+        <div class="resaParc">
+            <!-- div avec la resa pour un parc -->
+            <div class="oneParc">
+                <!-- contenu du parc -->
+                <div class="container revealleft">
+                    <!-- titre -->
+                    <h2>Parc d'Attractions</h2>
+                    <div class="line"></div>
+                    <!-- ajout de la ligne adulte -->
+                    <div class="nb">
+                        <p class="bold">Adulte</p>
+                        <p>50€</p>
+                        <div class="nbPlace">
+                            <button class="under" id ="attractionAdulteMoins">-</button>
+                            <p id="attractionAdulte"></p>
+                            <button class="over" id="attractionAdultePlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <!-- spécifications sur l'âge -->
+
+                    <p class="light">+ de 14 ans</p>
+
+                    <!-- ligne resa enfant -->
+                    <div class="nb">
+                        <p class="bold">Enfant</p>
+                        <p>30€</p>
+                        <div class="nbPlace">
+                            <button class="under" id ="attractionEnfantMoins">-</button>
+                            <p id="attractionEnfant">0</p>
+                            <button class="over" id ="attractionEnfantPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <p class="light">3-14 ans</p>
+                    <!-- boutton d'ajout -->
+                    
+                </div>
+                <!-- parc naturel -->
+                <div class="container revealright">
+                    <!-- titre -->
+                    <h2>Parc Naturel</h2>
+                    <div class="line"></div>
+                    <!-- ajout de la ligne adulte -->
+                    <div class="nb">
+                        <p class="bold">Adulte</p>
+                        <p>75€</p>
+                        <div class="nbPlace">
+                            <button class="under" id ="natureAdulteMoins">-</button>
+                            <p id="natureAdulte">0</p>
+                            <button class="over" id ="natureAdultePlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <!-- spécifications sur l'âge -->
+                    <p class ="light">+ de 14 ans</p>
+                    <!-- ligne resa enfant -->
+                    <div class="nb">
+                        <p class="bold">Enfants</p>
+                        <p>40€</p>
+                        <div class="nbPlace">
+                            <button class="under" id ="natureEnfantMoins">-</button>
+                            <p id="natureEnfant"></p>
+                            <button class="over" id="natureEnfantPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <p class="light">3-14 ans</p>
+                    <!-- boutton d'ajout -->
+                    
+                </div>
+            </div>
+            <div class="twoParcs revealleft">
+                <h2>Les deux parcs</h2>
+                    <div class="line"></div>
+                    <!-- ajout de la ligne adulte -->
+                    <div class="nb">
+                        <p class="bold">Adulte</p>
+                        <p>100€</p>
+                        <div class="nbPlace">
+                            <button class="under" id="twoParcsAdulteMoins">-</button>
+                            <p id="twoParcsAdulte"></p>
+                            <button class="over" id="twoParcsAdultePlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <!-- spécifications sur l'âge -->
+                    <p class="light">+ de 14 ans</p>
+                    <!-- ligne resa enfant -->
+                    <div class="nb">
+                        <p class="bold">Enfants</p>
+                        <p>70€</p>
+                        <div class="nbPlace">
+                            <button class="under" id="twoParcsEnfantsMoins">-</button>
+                            <p id="twoParcsEnfants"></p>
+                            <button class="over" id="twoParcsEnfantsPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <p class="light">3-14ans</p>
+                    <!-- boutton d'ajout -->
+                    
+            </div>
+            <!-- partie que donne le sous total -->
+            <!-- <a href="wip.html">
+                <button class="sousTotal">
+                    <p class="nbArticle" id="nbArticle"></p>
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <p><span id="price"></span>€ : Réserver</p>
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </a> -->
+            <button class="sousTotal revealright">
+                <a href="wip.html">
+                    <p class="nbArticle" id="nbArticle"></p>
+                    <i class="fa-solid fa-basket-shopping "></i>
+                    <p><span id="price"></span>€  Réserver</p>
+                </a>
+                <i class="fa-solid fa-trash corbeille"></i>
+                
+                
+            </button>
+        </div>
+        
+
+        <!-- 2nde partie résa nuit -->
+        <div class="night">
+            <div class="bannerNight">
+                <div class="revealright"><h1>Et si on prolongeait ?</h1></div>
+                
+            </div>
+            <div class="revealright">
+                <h2>Réserver votre séjour</h2>
+            </div>
+            
+            <div class="line"></div>
+            <div class="carrousel">
+                <div id="container"></div>
+                <img src="img/bouton2.png" alt=""class="bouton" id = "g">
+                <img src="img/bouton2.png" alt=""class="bouton"id="d"> 
+            </div>
+            <!-- date souhaitée -->
+            <div class="date">
+                <label>La date souhaitée pour votre arrivée</label>
+                <input type="date" id="calendrier">
+                <div class="nb">
+                    <p class="bold">Nombre de nuits</p>
+                    <div class="nbPlace">
+                        <button class="under1" id="nuitMoins">-</button>
+                        <p id="night2"></p>
+                        <button class="over1" id="nuitPlus">+</button>
+                        <!-- <i class="fa-solid fa-trash"></i> -->
+                    </div>
+                </div>
+            </div>
+            <!-- différents types de logement -->
+            <div class="flexContainer">
+                <!-- Hotel -->
+                <div class="container revealleft">
+                    <!-- titre -->
+                    <h2>Hotel</h2>
+                    <div class="line"></div>
+                    <!-- 1ère ligne -->
+                    <div class="nb">
+                        <p class="bold">Nombre de chambres</p>
+                        <div class="nbPlace">
+                            <button class="under" id="hotelMoins">-</button>
+                            <p id="hotel"></p>
+                            <button class="over" id = "hotelPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                        <!-- infos suite 1ère ligne -->
+                    <div class="infos">
+                        <p class="light">75€</p>
+                        <p class="light">Lit Double</p>
+                    </div>
+                    
+                    
+                    <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
+                </div>
+
+                <!-- logements eau -->
+                <div class="container revealleft">
+                    <!-- titre -->
+                    <h2>Eau</h2>
+                    <div class="line"></div>
+                    <!-- 1ere ligne de resa -->
+                    <div class="nb">
+                        <p class="bold">Nombre de chambres</p>
+                        <div class="nbPlace">
+                            <button class="under" id="hotelEauMoins">-</button>
+                            <p class="number" id="hotelEau"></p>
+                            <button class="over" id="hotelEauPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <!-- info suite 1ère ligne -->
+                    <div class="infos">
+                        <p class="light">75€</p>
+                        <p class="light">Lit Double</p>
+                    </div>
+                    <!-- nombre de hamacs -->
+                    <div class="nb">
+                        <p class="bold">Nombre de hamacs</p>
+                        <div class="nbPlace">
+                            <button class="under" id ="hamacsMoins">-</button>
+                            <p id ="hamacs"></p>
+                            <button class="over" id = hamacsPlus>+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <!-- info suite 1ère ligne -->
+                    <div class="infos">
+                        <p class="light">25€</p>
+                    </div>
+                    
+                    
+                    <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
+                </div>
+
+                <!-- logement forêt -->
+                <div class="container revealright">
+                    <!-- titre -->
+                    <h2>Forêt</h2>
+                    <div class="line"></div>
+                    <!-- 1ere ligne de resa -->
+                    <div class="nb">
+                        <p class="bold">Réservation d'un chalet</p>
+                        <div class="nbPlace">
+                            <button class="under" id="chaletMoins">-</button>
+                            <p id="chalet">0</p>
+                            <button class="over"id ="chaletPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <!-- info suite 1ère ligne -->
+                    <div class="infos">
+                        <p class="light">250€/nuit</p>
+                        <p class="light">6 places</p>
+                    </div>
+                    <!-- nombre de hamacs // 2nd ligne-->
+                    <div class="nb">
+                        <p class="bold">Emplacement de camping</p>
+                        <div class="nbPlace">
+                            <button class="under" id="campingMoins">-</button>
+                            <p id="camping">0</p>
+                            <button class="over" id="campingPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                    <!-- info suite 2nd ligne -->
+                    <div class="infos">
+                        <p class="light">25€</p>
+                    </div>
+                    
+                    
+                    <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
+                </div>
+
+               <!-- logement airs -->
+               <div class="container revealright">
+                <!-- titre -->
+                    <h2>Airs</h2>
+                    <div class="line"></div>
+                <!-- 1ere ligne de resa -->
+                    <div class="nb">
+                        <p class="bold">Nombre de bulles</p>
+                        <div class="nbPlace">
+                            <button class="under" id="bullesMoins">-</button>
+                            <p id="bulles">0</p>
+                            <button class="over"id="bullesPlus">+</button>
+                            <!-- <i class="fa-solid fa-trash"></i> -->
+                        </div>
+                    </div>
+                <!-- info suite 1ère ligne -->
+                    <div class="infos">
+                        <p class="light">75€</p>
+                        <p class="light">Lit Double</p>
+                    </div>
+                
+                    
+                    <p class="mentions light">Possibilité d'ajouter un lit pliable ou enfant</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="flex">
+            <div class="container footcontact">
+                <img src="img/wildland-logo.svg" alt="Logo-wildlands">
+                <div class="coordonnees">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>00 00 00 00 00</p>
+                </div>
+                <div class="coordonnees">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:contact@wildlands.com">contact@wildlands.com</a>
+                </div>
+                <div class="coordonnees remonte">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <p class="remonte">100 rue de Larue 07210 ROMS</p>
+                </div>
+            </div>
+        <div class="container footnav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="attraction/attraction.html">Parc d'attractions</a></li>
+                <li><a href="foret/foret.html">Au coeur de la forêt</a></li>
+                <li><a href="eau/eau.html">Les pieds dans l'eau</a></li>
+                <li><a href="airs/airs.html">La tête dans les nuages</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
+                <li><a href="billetterie/wip.html">Billetterie</a></li>
+            </ul>
+        </div>
+        <div class="container center">
+            <p>Vous pouvez nous suivre sur :</p>
+            <div class="logo">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>Paiement sécurisés via :</p>
+            <div class="logo">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+            </div> 
+        </div>
+        </div>
+        </div>
+    <div class="mentions">
+        <p>© Wildands</p>
+            <div class="mentionsdroits">
+                <a href="wipCo.html">Mentions légales&nbsp;</a>
+                <p> - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/montantpanier.js"></script>
+    <script src="js/nombreart.js"></script>
+    <script src="js/remiseazero.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/scrollcards.js"></script>
+    <script src="js/navScroll.js"></script>
+    <script src="js/popupconnect.js"></script>
+    <script src="js/scriptNav.js"></script>
+    <script src="js/carrousel.js"></script>
+</body>
+</html>
