@@ -59,7 +59,7 @@ a {
   transition: 0.5s all;
 }
 .navBar nav ul li a:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 .navBar nav ul li .sous {
   display: none;
@@ -104,7 +104,7 @@ a {
   transition: 0.5s all;
 }
 .navBar .monCompte a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 section {
@@ -151,8 +151,8 @@ section .formulaire .infos {
 }
 section .formulaire .contact .envoyer {
   padding: 2%;
-  background-color: var(--vertClair);
-  color: #204725;
+  background-color: #204725;
+  color: white;
   cursor: pointer;
   border: none;
   border-radius: 3vh;
@@ -173,7 +173,7 @@ footer a {
   transition: 0.5s all;
 }
 footer a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 footer .flex {
   width: 100%;

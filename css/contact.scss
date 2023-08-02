@@ -53,7 +53,7 @@ a{
                     text-decoration: none;
                     transition:0.5s all;
                     &:hover{
-                        transform: scale(1.4);
+                        transform: scale(1.1);
                     }
                 }
                 .sous{
@@ -104,7 +104,7 @@ a{
         font-size: 1.5em;
         transition: 0.5s all;
         &:hover{
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
         }
     }
@@ -154,8 +154,8 @@ section{
         .contact{
             .envoyer{
                 padding: 2%;
-                background-color: var(--vertClair);
-                color: #204725;
+                background-color: #204725;
+                color: white;
                 cursor: pointer;
                 border: none;
                 border-radius: 3vh;
@@ -179,7 +179,7 @@ footer{
     a{
         transition: 0.5s all;
         &:hover{
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
     }
     .flex{
