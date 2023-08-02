@@ -2,21 +2,21 @@
     "users":[
         {
             "name": "Dupont",
-            "fisrtname": "Alice",
+            "firstname": "Alice",
             "email": "dupont.alice@gmail.com",
-            "password": 123
+            "password": "•••••••••"
         },
         {
             "name": "Lefebvre",
-            "fisrtname": "Toto",
+            "firstname": "Toto",
             "email": "lefebvre.toto@gmail.com",
-            "password": 1234
+            "password": "•••••••••"
         },
         {
             "name": "ghost",
-            "fisrtname": "Titi",
+            "firstname": "Titi",
             "email": "ghost.titi@gmail.com",
-            "password": 12345
+            "password": "•••••••••"
         }
     ]
 }

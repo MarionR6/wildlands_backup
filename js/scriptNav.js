@@ -64,7 +64,7 @@ const deco = document.createElement("li");
 // const backHome = document.createElement("a");
 gestion.innerHTML=`<a>Modifier le profil</a>`;
 panier.innerHTML=`<a>Mon panier</a>`;
-deco.innerHTML=`<a href="attraction.html">Déconnexion</a>`;
+deco.innerHTML=`<a href="index.html">Déconnexion</a>`;
 menu.append(gestion, panier, deco);
 btnCompte.append(box, menu);
 

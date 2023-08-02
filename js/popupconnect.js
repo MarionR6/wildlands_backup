@@ -17,6 +17,7 @@ btnMonCompte.addEventListener("click", () =>{
     if(popup.classList.contains("popupdisplay")){
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
         header.style.filter = "blur(0.5em)";
         header.style.pointerEvents = "none";
 
