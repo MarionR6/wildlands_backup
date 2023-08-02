@@ -1,0 +1,1781 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    scroll-behavior: smooth;
+}
+img{
+    display: block;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+:root{
+    --poppins: 'Poppins', sans-serif;
+    --neucha: 'Neucha', cursive;
+    --bleuClair: #bac7d6;
+    --bleu:#567BB4;
+    --bleuFonce:#1F5180;
+}
+body{
+    // width:100%;
+    overflow-x: hidden;
+}
+
+// ne sert que pour le menu burger
+#navigation{
+    display: none;
+
+//barre de navigation
+}
+
+//animation pour la nav
+.scrollDown{
+    z-index: 99;
+    position: fixed;
+}
+
+header{
+    .milieu{
+        display:none ;
+        .monCompte2{
+            display:inline-block;
+            width: 100%;
+            background-color: var(--bleuFonce);
+            font-family: var(--neucha);
+            // display: flex;
+            // justify-content: center;
+            // padding: 1% 2%;
+            border-radius: 3vh;
+            // margin:0 auto;
+            .btnCompte2{
+                display: inline-block;
+                background-color: var(--bleuFonce);
+                border:none;
+                text-decoration: none;
+                font-size: 1em;
+                transition: 0.5s all;
+                position:relative;
+                border-radius: 2vh;
+                padding: .5em 2em;
+                p{
+                font-family: var(--neucha);
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                #box2{
+                    align-items: center;
+                    justify-content: center;
+                }
+                .gestionCompte{
+                    display:block;
+                    font-family: var(--neucha);
+                    list-style-type: none;
+                    position:absolute;
+                    left: 10%;
+                    transition: 1 all;
+                    li{
+                        a{
+                                font-size:1.8vw;
+                        }
+                    }
+                }
+                .gestionNone{
+                        display: none;
+                }
+                .gestion{
+                    width:80%;                        
+                    margin-top:5%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+                .deco{
+                    width:80%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+            } 
+        }
+    }
+    .cart{
+        display: none;
+    }
+    .navBar{
+        width: 100%;
+        height:100px;
+        background-color: var(--bleu);
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo{
+            width: 8%;
+            padding : 0.5% 0;
+            img{
+                width: 100%;
+            }
+        }
+        nav{
+            width: 50%;
+            ul{
+                // font-size: 0;
+                display: flex;
+                justify-content: space-around;
+                li{
+                    list-style: none;
+                    a{
+                        font-family: var(--neucha);
+                        font-size: 1.8em;
+                        text-decoration: none;
+                        transition:0.5s all;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    .sous{
+                        display: none;
+                        position: absolute;
+                        transition: 1 all;
+                    }
+                    &:hover{
+                        .sous{
+                            display: block;
+                            li{
+                                background-color: var(--bleu);
+                                opacity: 0.8;
+                                border-bottom: solid var(--bleu-clair)1px;
+                                padding: 2%;
+                                background-color: var(--bleuFonce);
+                                a{
+                                    font-size:25px;
+                                    padding: 2%;
+                                    transition:0.5s all;
+                                    &:hover{
+                                        color: #091e33;
+                                        transform: scale(1);
+                                    }
+                                }
+                            }
+                    
+                        }
+                    }
+                }
+                .deroulant{
+                        &:after{
+                        content: "⏷";
+                        font-size: 0.7em;
+                        }
+                }
+            }
+        }
+        .monCompte{
+            background-color: var(--bleuFonce);
+            font-family: var(--neucha);
+            display: flex;
+            justify-content: center;
+            padding: 1% 2%;
+            border-radius: 3vh;
+            button{
+                width: 100%;
+                background-color: var(--bleuFonce);
+                border:none;
+                text-decoration: none;
+                font-size: 1.5em;
+                transition: 0.5s all;
+                position:relative;
+                cursor: pointer;
+                p{
+                    font-family: var(--neucha);
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                .gestionCompte{
+                    display:block;
+                    font-family: var(--neucha);
+                    // font-size:0.7em;
+                    list-style-type: none;
+                    position:absolute;
+                    transition: 1 all;
+                    li{
+                        a{
+                            font-size:1.8vw;
+                        }
+                    }
+                }
+                .gestionNone{
+                    display: none;
+                }
+                .gestion{
+                    width:100%;
+                    margin-top:7%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+                .panier{
+                    width:100%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }                
+                .deco{
+                    width:100%;
+                    background-color:#1F5180;
+                    opacity: 0.8;
+                    padding:10%;
+                }
+            } 
+        }
+    }
+}
+
+// pour le bouton "mon compte" à partir de 768px
+
+
+/* POP UP CONNEXION */
+
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: var(--bleuClair);
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color: var(--bleu);
+    border: 0.07em solid var(--bleuFonce);
+    font-family: 'Neucha', sans-serif;
+    color: white;
+  }
+  .popup #closepopup{
+    background-color: var(--bleuFonce);
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  }
+  fieldset{
+    border: none;
+  }
+  .popup form fieldset legend{
+    font-size: 1.7em;
+    text-align: center;
+    border-bottom: 0.06em solid white;
+    padding-bottom: 5%;
+  }
+  #meconnecter,
+  #minscrire{
+    color: white;
+    text-align: center;
+    margin: 10% 0 3% 0;
+    border-radius: 1em;
+    background-color: var(--bleuFonce);
+    padding: 2% 0;
+    transition: .5s all;
+    border: none;
+    font-family: 'Neucha', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: .5s all;
+  }
+  #minscrire{
+    font-size: 1em;
+    margin-top: 6%;
+  }
+  #minscrire:hover{
+    transform: scale(1.1);
+  }
+  .popup form fieldset #meconnecter:hover{
+    transform: scale(1.1);
+  }
+  .popup form fieldset .connectremember a:hover{
+    transform: scale(1.1);
+  }
+  .popup form fieldset .connectremember label{
+    padding-left: 1%;
+    font-size: 0.7em;
+  }
+  .popup form fieldset .plssignup{
+    font-size: 0.8em;
+  }
+  .popup form fieldset .plssignup a{
+    color: white;
+    text-align: center;
+    margin: 6% 0 3% 0;
+    border-radius: 1em;
+    background-color: var(--bleuFonce);
+    padding: 2% 0;
+    font-size: 1.3em;
+    transition: .5s all;
+  }
+  .popup form fieldset .plssignup a:hover{
+    transform: scale(1.1);
+  }
+  .emailflex, .passwordflex{
+    display: flex;
+    flex-direction: column;
+  }
+  #emaildisable{
+    padding: 5% 0 4% 0;
+  }
+  .entrystyle input{
+    margin-top: 2%;
+    padding: 2% 4%;
+    font-size: 0.6em;
+    background-color: var(--bleuClair);
+    border: none;
+    border-radius: 1em;
+  }
+  #emaildisable input::placeholder,
+  #passworddisable input::placeholder{
+    color: black;
+    font-weight: 500;
+  }
+//   .emaildisable,
+//   .passworddisable{
+//     pointer-events: none;
+//   }
+  .popup{
+    visibility: visible;
+    transition: .5s all;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .popupdisplay{
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  /* POPUP SIGNUP */
+  #popupsignup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: var(--bleuClair);
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color:var(--bleu);
+    border: 0.07em solid var(--bleuFonce);
+    font-family: 'Neucha', sans-serif;
+    color: white;
+    width: 50%;
+  } 
+  #closepopupsignup{
+    background-color: var(--bleuFonce);
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  } 
+  .signup{
+    visibility: visible;
+    transition: .5s all;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+  }
+  .signup form .login .connect{
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 4%;
+  }
+  .signup form .login .containersignup{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.1em solid var(--bleuClair);
+    border-radius: 1em;
+    padding: 5% 5%;
+    position: relative;
+  }
+  .signup form .login .containersignup label{
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .signup form .login .containersignup .middleentry{
+    margin: 5% 0;
+  }
+  .signup form .login .containersignup .leftsignup{
+    width: 45%;
+  }
+  .signup form .login .containersignup .leftsignup p,
+  .signup form .login .containersignup .rightsignup p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .signup form .login .containersignup .line{
+    width: 30%;
+    height: 0.07em;
+    background: linear-gradient(to left, --bleu, --bleuClair, --bleu);
+    transform: rotate(90deg);
+    align-self: center;
+    position: absolute;
+  }
+  .signup form .login .containersignup .rightsignup{
+    width: 45%;
+  }
+  .signup form .login .containersignup .rightsignup .entrystyle{
+    width: 100%;
+  }
+  .signup form .login .containersignup .rightsignup .entrystyle input{
+    width: 100%;
+  }
+  .signupdisplay{
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  .signup .submitsignup{
+    color: white;
+    border-radius: 1em;
+    background-color: var(--bleuFonce);
+    padding: 1% 4%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 4%;
+    transition: .5s all;
+  } 
+  .signup .submitsignup:hover{
+    transform: scale(1.1);
+  }
+   
+
+
+// animation left / right 
+
+.revealleft{
+    opacity:0;
+    transform: translateX(-10em);
+  }
+  
+  .revealright{
+    opacity: 0;
+    transform: translateX(10em);
+  }
+  
+  .revealvisible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+
+  // M A I N 
+
+main{
+    overflow-x: hidden;
+}
+// banner la tete dans les nuages
+.nuages{
+    width: 100%;
+    padding: 7%;
+    padding-top: 11%;
+    background-image: url(https://i.goopics.net/6dpmfg.jpg);
+    background-position: right;
+    background-size: cover;
+    h1{
+        font-family: var(--neucha);
+        font-size: 7em;
+        text-align: center;
+        font-weight:400;
+    }
+}
+.couleurs{
+    width: 100%;
+    padding: 7%;
+    background-image: url(https://i.goopics.net/67auvg.jpg);
+    background-position:bottom;
+    background-size:cover;
+    h1{
+        font-family: var(--neucha);
+        font-size: 6em;
+        text-align: right;
+        font-weight:400;
+    }
+}
+.etoiles{
+    width: 100%;
+    padding: 7%;
+    background-image: url(https://i.goopics.net/6xskv2.jpg);
+    background-position:center;
+    background-size:cover;
+    h1{
+        font-family: var(--neucha);
+        font-size: 6em;
+        font-weight:400;
+        text-align: left;
+    }
+}
+
+.bleuClair{
+    width: 100%;
+    background-color: var(--bleuClair);
+    font-family: var(--poppins);
+    padding: 10%;
+    .flex{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        .bleuFonce{
+            background-color: var(--bleuFonce);
+            width: 40%;
+            padding: 3%;
+            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+            .image{
+                width: 100%;
+                img{
+                    width:100%;
+                }
+            }
+            .txt{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h4{
+                    font-size: 2.4em;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    padding-top: 7%;
+                }
+                .ligne{
+                    width: 8em;
+                    height: 0.02em; 
+                    background-color: white;
+                    // margin: 0 auto;
+                    margin: 2% 0 5%;
+                }
+                p{
+                    text-align: center;
+                    font-size: 1.6em;
+                    font-weight:200;
+                }
+                .reserver{
+                    width: 40%;
+                    font-weight:400;
+                    background-color: var(--bleuClair);
+                    border-radius: 2vh;
+                    padding: 2% 3%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 7%;
+                    filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.50));
+                    a{
+                        color: black;
+                        font-weight: 600;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ACTIVITIES */
+
+.activities{
+    width: 100%;
+}
+.activities .actcontainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+    position: relative;
+}
+// -----------------------------------> BULLES
+.activities .actcontainer .bubble1{
+    width:9em;
+    height: 9em;
+    border-radius: 50%;
+    padding: 3% 1%;
+    background-color: var(--bleuFonce);
+    position: absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    left:9%;
+    top:18%;
+    z-index:3;
+    p{
+        font-family: var(--neucha);
+        font-size: 1.4em;
+    }
+}
+.activities .actcontainer .bubble2{
+    width:9em;
+    height: 9em;
+    border-radius: 50%;
+    padding: 2% 1%;
+    background-color: var(--bleuFonce);
+    position: absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    right:6%;
+    top:49%;
+    z-index:3;
+    p{
+        font-family: var(--neucha);
+        font-size: 1.5em;
+    }
+}
+.activities .actcontainer .bubble3{
+    width:9em;
+    height: 9em;
+    border-radius: 50%;
+    padding: 2% 1%;
+    background-color: var(--bleuFonce);
+    position: absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    left:5%;
+    bottom:4%;
+    z-index:3;
+
+    p{
+        font-family: var(--neucha);
+        font-size: 1.4em;
+    }
+}
+.activities .actcontainer .acttxtimg{
+    width: 75%;
+    display: flex;
+}
+.activities .actcontainer .acttxtimg .acttxt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bleuFonce);
+    text-align: center;
+    padding: 3% 2%;
+    // line-height: 3em;
+    color: white;
+}
+.activities .actcontainer .acttxtimg .acttxt h3{
+    font-weight: 400;
+    margin-bottom: 3%;
+    text-transform: uppercase;
+    font-size: 2.4em;
+}
+.activities .actcontainer .acttxtimg .acttxt .line{
+    width: 8em;
+    height: 0.02em; 
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 4%;
+}
+.activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1.6em;
+    line-height: 1.6em;
+    font-weight:200;
+}
+.activities .actcontainer .acttxtimg .actimg{
+    width: 50%;
+}
+.activities .actcontainer .acttxtimg .actimg img{
+    width: 100%;
+    height:100%;
+}
+.activities .actcontainer .reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+// --------------------------------------> footer
+footer{
+    width: 100%;
+    background-color:var(--bleu);
+    font-family:var(--neucha);
+    a{
+        transition: 0.5s all;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .flex{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        padding-bottom:2%;
+        .container{
+            width: 50%;
+            display:flex;
+            flex-direction: column;
+            margin: 0 4%;
+            img{
+                width: 50%;
+                padding: 8% 0;
+            }
+            .coordonnees{
+                display: flex;
+                padding : 0 5% 5% 5%;
+                margin-right:2%;
+                i{
+                    text-align: center;
+                    color:white;
+                    margin-right: 5.5%;
+                }
+            }
+            ul{
+                font-size: 0;
+                margin-top: 10%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                li{
+                    padding-bottom:4%;
+                    a{
+                        color: white;
+                        font-size: 25px;  
+                    }
+                }
+            }
+        }
+        i{
+            text-align: center;
+        }
+    }
+    .center{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            padding: 2%;
+            }
+        .logo{
+            display:flex;
+            width: 20%;
+            justify-content: space-around;
+            a{
+                padding: 0 15%;
+            }
+            i{
+                padding:15%;
+            }  
+        }
+    }
+    .mentions{
+        width: 100%;
+        background-color: var(--bleuFonce);
+        text-align: center;
+        padding: 2%;
+        .mentionsdroits{
+            display: flex;
+            justify-content: center;
+        }
+    }    
+}
+
+// ---------------------------- R E S P O N S I V E --------------------------------------------------//
+
+// media query 1820px
+@media screen and (max-width: 1820px) {   
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 2.3em;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 1.5em;
+                        font-weight:100;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // -----------------------------------> BULLES
+    .activities .actcontainer .bubble1{
+        p{
+            font-size: 1.2em;
+        }
+    }
+    .activities .actcontainer .bubble2{
+        p{
+            font-size: 1.2em;
+        }
+    }
+    .activities .actcontainer .bubble3{
+        p{
+            font-size: 1.2em;
+        }
+    }
+
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 2.3em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.5em;
+        line-height:1.5em;
+    }   
+}
+
+// media query 1720px
+@media screen and (max-width: 1720px) {   
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 2em;
+                    }
+                    p{
+                        font-size: 1.3em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1.1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 2em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.3em;
+        line-height:1.3em;
+    }   
+}
+
+// media query 1520px
+@media screen and (max-width: 1520px) {
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 1.8em;
+                    }
+                    p{
+                        font-size: 1.2em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1.1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.8em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.2em;
+        line-height:1.5em;
+        font-weight:100;
+    }   
+}
+
+// media query 1440px
+@media screen and (max-width: 1440px) {
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 1.5em;
+                    }
+                    p{
+                        font-size: 1.1em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+        
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.5em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.1em;
+        line-height:1.4em;
+        font-weight:100;
+    } 
+    .activities .actcontainer .bubble1{
+        height: 7em;
+        width: 7em;
+        p{
+            font-size: 1.2em;
+        }
+    }
+    .activities .actcontainer .bubble2{
+        height: 7em;
+        width: 7em;
+        p{
+            font-size: 1.2em;
+        }
+    }
+    .activities .actcontainer .bubble3{
+        height: 7em;
+        width: 7em;
+        p{
+            font-size: 1.2em;
+        }
+    }
+}
+
+// media query 1200px
+@media screen and (max-width: 1200px) {
+header{
+    .navBar{
+        nav{
+            ul{
+                li{
+                    a{
+                        font-size: 1.5em;
+                    }
+                    // &:hover{
+                    //     .sous{
+                    //         li{
+                    //             a{
+                    //                 font-size:20px;
+                    //             }
+                    //         }
+                    
+                    //     }
+                    // }              
+                }
+            }
+        }
+        .monCompte{
+            a{
+            font-size: 1.3em;
+            }
+        }
+    }
+}  
+
+// responsive pop up
+#popupsignup{
+    width: 60%;
+  }
+
+    // banner la tete dans les nuages
+    .nuages{
+        h1{
+            font-family: var(--neucha);
+            font-size: 5.5em;
+            text-align: center;
+            font-weight:400;
+        }
+    }
+    .couleurs{
+
+        h1{
+            font-size: 4.5em;
+
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 4.5em;
+        }
+    }
+    
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+                .txt{
+                    h4{
+                        font-size: 1.5em;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 1.1em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // -----------------------------------> BULLES
+    .activities .actcontainer .bubble1{
+        height: 6em;
+        width: 6em;
+        p{
+            font-size: 1em;
+        }
+    }
+    .activities .actcontainer .bubble2{
+        height: 6em;
+        width: 6em;
+        p{
+            font-size: 1em;
+        }
+    }
+    .activities .actcontainer .bubble3{
+        height: 6em;
+        width: 6em;
+        p{
+            font-family: var(--neucha);
+            font-size: 1em;
+        }
+    }
+
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.5em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1.05em;
+        line-height:1.5em;
+    }
+
+    // --- --- --- footer
+    footer{
+        width: 100%;
+        background-color:var(--bleu);
+        font-family:var(--neucha);
+        a{
+            transition: 0.5s all;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .flex{
+            font-size: 1.3em;
+            ul{
+                li{
+                    a{
+                        font-size: 20px;  
+                    }
+                }
+            }
+        }
+    }    
+}
+
+// media query 1024px
+@media screen and (max-width: 1024px) {
+    header{
+    .navBar{
+        height:60px;
+        // .logo{
+        //     width: 10%;
+        //     padding : 0.5% 0;
+        // }
+        nav{
+            ul{
+                li{
+                    a{
+                        font-size: 1.5em;
+                    }
+                    // &:hover{
+                    //     .sous{
+                    //         li{
+                    //             a{
+                    //                 font-size:20px;
+                    //             }
+                    //         }
+                    
+                    //     }
+                    // }
+                }
+            }
+        }
+        .monCompte{
+            a{
+            font-size: 1.3em;
+            }
+        }
+    }
+    }
+
+    // responsive pop up 
+    #popupsignup{
+        width: 80%;
+      }
+
+    .nuages{
+        h1{
+            font-size: 4em;
+        }
+    }
+    .couleurs{
+
+        h1{
+            font-size: 3em;
+
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 3em;
+        }
+    }
+    // ---------------------------> les cartes 
+    .bleuClair{
+        .flex{
+            justify-content:space-between;
+            .bleuFonce{
+                width:47%;
+                .txt{
+                    h4{
+                        font-size: 1.4em;
+                    }
+                    p{
+                        text-align: center;
+                        font-size: 1.05em;
+                    }
+                    .reserver{
+                        a{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ---------------------------> activités 
+    .activities{
+        width: 100%;
+    }
+    .activities .actcontainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+        position: relative;
+    }
+    // -----------------------------------> BULLES
+    .activities .actcontainer .bubble1{
+        border-radius: 50%;
+        padding: 3.5% 1%;
+        position: absolute;
+        left:4%;
+        top:17%;
+    }
+    .activities .actcontainer .bubble2{
+        padding: 2.5% 1%;
+        right:3%;
+        top:50%;
+    }
+    .activities .actcontainer .bubble3{
+        padding: 2.5% 1%;
+        left:1%;
+        bottom:3.5%;
+    }
+    .activities .actcontainer .acttxtimg{
+        width: 80%;
+    }
+    .activities .actcontainer .acttxtimg .acttxt{
+        line-height: 1.7em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.5em;
+    }
+    footer{
+        .flex{
+            font-size: 1.2em;
+            .container{
+                ul{
+                    li{
+                        a{
+                            color: white;
+                            font-size: 18px;  
+                        }
+                    }
+                }
+            }
+        }  
+    }   
+}
+
+// media query 768px
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        padding: 2em;
+        background-color: var(--bleuClair);
+        display: flex;
+        .milieu{
+            height:100%;
+            display: inline-flex;
+            .logIn{
+                align-self: center;
+                width:2.5em;
+                height:2.5em;
+                border: none;
+                border-radius: 50%;
+                // display: inline-block;
+                background-color: var(--bleuFonce);
+                color: white;
+            }
+        }
+        .cart{
+            margin-left: 2%;
+            display:block;
+            a{  
+                width:2.05em;
+                height:2.05em;
+                border-radius: 50%;
+                background-color: var(--bleuFonce);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .navBar {
+            display: none;
+        }
+    }
+    #toggle {
+        position:fixed;
+        display: block;
+        width: 30px;
+        height: 2px;
+        top: 47px;
+        right: 50px;
+        cursor: pointer;
+        background-color:white;
+        // transform: translate(-50%, -50%);
+        transition: all .3s ease-in-out; // on peut préciser le type de transition que l'on veut (de base linéaire) ; ease-in-out = la transition commence lentement, s'accélère puis ralentit à nouveau avant la fin
+        // D'autres transition : ease-in (augmente progressivement) ; ease-out (ralentit progressivement) ; ...
+        z-index: 8;
+        &:before, &:after {
+            content: '';
+            // pas comme :hover, il faudra repréciser le display, la width, la height...
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color:white;
+            transition: all .3s ease-in-out; 
+        }
+        &:before {
+            top: -10px;
+        }
+        &:after {
+            top: 10px;
+        }  
+    }
+    #toggle.active { 
+
+        //on va également créer la petite animation des span à l'ouverture du menu
+        background-color: transparent; // on rend transparent le span du milieu
+        &:before {
+            // on crée une rotation sur le span du haut et on le recentre sur le carré
+            transform: rotate(45deg);
+            top: 0;
+            background-color:var(--bleuFonce);
+
+        }
+        &:after {
+            // on crée une rotation sur le span du bas et on le recentre sur le carré
+            transform: rotate(-45deg);
+            top: 0;
+            background-color:var(--bleuFonce);
+        }
+        //selon le degré de rotation que vous indiquez, le sens de l'animation ne sera pas le même  
+    }
+    #navigation {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top:0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        transition: .5s;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 6;
+    }
+    #navigation.active {
+       right: 0;
+       top: 0;
+       .logo{
+        display: none;
+       }
+        ul {
+            display:flex;
+            flex-direction: column;
+            li {
+                display: block;
+                margin-bottom: 20px;
+                width: 100%;
+                .sous{
+                    display: none;
+                }
+                a {
+                    color: var(--bleuFonce);
+                    font-size: 35px;
+                    text-align: center;
+                    font-family: var(--neucha);
+                    margin-bottom: 5%;
+                    // display: block;
+                }
+            }
+        }    
+    }    
+
+    // responsive pop up 
+    #popupsignup{
+        width: 90%;
+      }
+
+    .nuages{
+        padding-top:0;
+        padding:7%;
+        h1{
+            font-size: 3.5em;
+        }
+    }
+    .couleurs, .etoiles{
+        h1{
+            font-size: 3em;
+        }
+    }
+ // ------------------------------> PARTIE BLEU CLAIR
+ .bleuClair{
+    padding: 5% 1%;
+    .flex{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        .bleuFonce{
+            width: 45%;
+            padding: 3%;
+            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.50));
+            .image{
+                width: 100%;
+                img{
+                    width:100%;
+                }
+            }
+            .txt{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h4{
+                    font-size: 1.3em;
+                }
+                p{
+                    text-align: center;
+                    font-size: 1em;
+                }
+                .reserver{
+                    width: 40%;
+                    background-color: var(--bleuClair);
+                    border-radius: 2vh;
+                    padding: 2% 3%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 7%;
+                    filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.50));
+                    a{
+                        color: black;
+                        font-weight: 600;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+    // -----------------------------------> BULLES
+    .activities .actcontainer .bubble1{
+        width:5.5em;
+        height:5.5em;
+        left:7%;
+        top:20%;
+    }
+    .activities .actcontainer .bubble2{
+        width:5.5em;
+        height:5.5em;
+        right:35%;
+        top:53%;
+    }
+    .activities .actcontainer .bubble3{
+        width:5.5em;
+        height:5.5em;
+        left:8%;
+        bottom:20%;
+    }
+    
+    // ----------------------------------> ACTIVITES
+    .activities .actcontainer .acttxtimg{
+        width: 90%;
+    }
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.3em;
+    }
+
+    footer{
+        font-size: 0.7em;
+      }
+    
+      footer .flex .footcontact img{
+        width: 80%;
+        
+      }
+    
+      footer .center p{
+        padding: 7% 15%;
+        text-align: center;
+      }
+    
+      footer .container ul li{
+        display: none;
+      }
+    
+      footer .center{
+        font-size: 1em;
+        width: 100%;
+      }
+    
+      footer .center p{
+        padding: 2% 0;
+      }
+    
+      footer .flex{
+        padding: 5% 10% 5% 10%;
+      }
+    
+      footer .footnav{
+        width: 0%;
+      }
+    
+      footer .footcontact{
+        width: 70%;
+      }
+      footer .footcontact .coordonnees{
+        width: 100%;
+      }
+      footer{
+        .flex{
+            // margin:;
+            padding-left: 20%;
+            .center{
+            p{
+                display:none;
+            }
+            .logo{
+                &:nth-last-child(1){
+                    display: none;
+                }
+                margin-right:100%;
+                a{
+                    font-size: 2em;
+                    padding: 20%;
+                }
+               
+                
+                }
+            }
+            }
+        }    
+}
+
+// media query 480px
+@media screen and (max-width: 480px) {
+// header{
+//     padding:1.5em;
+// }
+    #popupsignup{
+        font-size: 1.5em;
+      }
+
+    footer{
+        .flex{
+            margin: 0;
+        }
+    }
+    .nuages{
+        h1{
+            font-size: 2.5em;
+        }
+    }
+    .couleurs, .etoiles{
+        h1{
+            font-size: 2em;
+        }
+    }
+ // ------------------------------> PARTIE BLEU CLAIR
+ .bleuClair{
+    .flex{
+        width: 100%;
+        flex-wrap: wrap;
+        .bleuFonce{
+            width: 90%;
+            margin: 2.5% 0;
+            filter: none;
+            .txt{
+                .reserver{
+                     filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.50));
+                    font-size:0.9em;
+                }
+            }
+            }
+
+        }
+    }
+    .revealleft{
+        opacity:1;
+        transform: translateX(0);
+    }
+      
+    .revealright{
+        opacity: 1;
+        transform: translateX(0);
+    }
+      
+    .revealvisible{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+    }
+    // -----------------------------------> BULLES
+    .activities .actcontainer .bubble1{
+        top:12%;
+        left:10%;
+    }
+    .activities .actcontainer .bubble2{
+        top : 43%;
+        left: 10%;
+    }
+    .activities .actcontainer .bubble3{
+        bottom:25%;
+        left: 10%;
+    }
+    
+    // ----------------------------------> ACTIVITES
+    .activities .actcontainer{
+        filter: none;
+    }
+    .activities .actcontainer .acttxtimg{
+        width: 90%;
+        flex-wrap: wrap-reverse;
+    }
+    .activities .actcontainer .acttxtimg .acttxt{
+        width: 100%;
+    }
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.3em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 1em;
+    }
+    .activities .actcontainer .acttxtimg .actimg{
+        width: 100%;
+    }
+    .espace{
+        margin-top:5%;
+    }
+}
+
+// media query 375px
+@media screen and (max-width: 375px) {
+    .nuages{
+        h1{
+            font-size:2em;
+        }
+    }
+    .couleurs{
+        h1{
+            font-size: 1.7em;
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 1.7em;
+        }
+    }
+    .activities .actcontainer .bubble1{
+        left:10%;
+        top:11%;
+    }
+    .activities .actcontainer .bubble2{
+        right:35%;
+        top:45%;
+    }
+    .activities .actcontainer .bubble3{
+        left:8%;
+        bottom:25%;
+    }
+    footer{
+        .flex{
+
+            font-size: 1em;
+            padding-bottom:2%;
+            .container{
+                img{
+                    width: 50%;
+                    padding: 8% 0;
+                }
+            }
+
+        }
+        .center{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding: 2%;
+                }
+            .logo{
+                display:flex;
+                width: 20%;
+                justify-content: space-around;
+                a{
+                    padding: 0 15%;
+                }
+                i{
+                    font-size:0.9em;
+                }  
+            }
+        }   
+    }
+}
+
+// media query 320px
+@media screen and (max-width: 320px) {
+    
+    #popupsignup{
+        font-size: 1.2em;
+      }
+
+    .nuages{
+        h1{
+            font-size:1.8em;
+        }
+    }
+    .couleurs{
+        h1{
+            font-size: 1.5em;
+        }
+    }
+    .etoiles{
+        h1{
+            font-size: 1.5em;
+        }
+    }
+    .bleuClair{
+        .flex{
+            .bleuFonce{
+            .txt{
+                h4{
+                    font-size: 1.1em;
+                }
+                p{
+                    text-align: center;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
+    .activities .actcontainer .bubble1{
+        left:10%;
+        top:10%;
+        p{
+            font-size:0.9em;
+        }
+    }
+    .activities .actcontainer .bubble2{
+        left:10%;
+        top:44%;
+        p{
+            font-size:0.9em;
+        }
+    }
+    .activities .actcontainer .bubble3{
+        left:10%;
+        bottom:23%;
+        p{
+            font-size:0.9em;
+        }
+    }
+    .activities .actcontainer .acttxtimg .acttxt h3{
+        font-size: 1.1em;
+    }
+    .activities .actcontainer .acttxtimg .acttxt p{
+        font-size: 0.9em;
+    }
+    footer{
+        .center{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding: 2%;
+                }
+            .logo{
+                display:flex;
+                width: 20%;
+                justify-content: space-around;
+                a{
+                    padding: 0 15%;
+                }
+                i{
+                    font-size:0.7em;
+                }  
+            }
+        }   
+    }
+}
