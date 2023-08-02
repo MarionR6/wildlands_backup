@@ -176,6 +176,7 @@ header .navBar .monCompte button {
   font-size: 1.5em;
   transition: 0.5s all;
   position: relative;
+  cursor: pointer;
 }
 header .navBar .monCompte button p {
   font-family: var(--neucha);
