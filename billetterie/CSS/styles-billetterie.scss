@@ -738,8 +738,8 @@ main{
             width: 15%;
         }
         .carrousel{
-            width: 50vw;
-            height: 60vh;
+            width: 62vw;
+            height: 75vh;
             position: relative;
             margin: 5% auto;
             overflow: hidden;
@@ -749,7 +749,7 @@ main{
                 height: 100%;
                 overflow: hidden;
                 .photo{
-                    width: 50vw;
+                    width: 62vw;
                     height: 60vh;
                     display:inline-block;
                     img{
@@ -760,7 +760,7 @@ main{
             }
             .bouton{
                 position:absolute;
-                top: 35%;
+                top: 33%;
                 width:15%;
                 filter: invert(1);
                 cursor: pointer;
@@ -1034,6 +1034,9 @@ footer{
             .date{
                 width: 40%;
             }
+            .carrousel{
+                height: 48vh;
+            }
             .flexContainer{
                 .container{
                     .nb{
@@ -1122,6 +1125,9 @@ footer{
                 h1{
                     font-size: 5rem;
                 }
+            }
+            .carrousel{
+                height: 40vh;
             }
             .date{
                 width: 50%;
@@ -1336,6 +1342,14 @@ footer{
             }
         }
         .night{
+            .carrousel{
+                height: 35vh;
+                .bouton{
+                    top: 35%;
+                    width: 20%;
+                    opacity: 1;
+                }
+            }
             .date{
                 width: 75%;
                 filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
@@ -1547,9 +1561,14 @@ footer{
             h2{
                 font-size: 1.3rem;
             }
+            .carrousel{
+                height: 25vh;
+                
+            }
             .date{
                 width: 90%;
                 filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.50));
+                border-radius: 3vh;
                 label{
                     font-size: 1.2rem;
                 }
@@ -1705,10 +1724,15 @@ footer{
             }
         }
         .night{
+            .carrousel{
+                height: 20vh;
+    
+                }
             .date{
                 input {
                     width: 80%;
                 }
+                
                 .nbPlace{
                     width: 100%;
                     .bold{
@@ -1772,9 +1796,12 @@ footer{
                     font-size: 3rem;
                 }
             }
+            .carroussel{
+                height:15vh;
+            }
             .date{
                 width: 90%;
-                border-radius: 1vh;
+                border-radius: 3vh;
             }
             a{
                 .sousTotal{

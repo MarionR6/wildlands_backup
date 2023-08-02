@@ -33,29 +33,30 @@ images.map(e=>{
     div.className="photo";
     div.style.backgroundImage=e.image;
     div.style.backgroundSize="cover";
-    div.style.backgroundPosition="center"
+    div.style.backgroundPosition="center";
+    div.style.height="100%";
     container.append(div)
 })
 const carrousel=()=>{
     d.addEventListener("click",()=>{
     if(position<nombrePhotos-1){
         position++;
-        container.style.transform=`translateX(${-50*position}vw)`;
+        container.style.transform=`translateX(${-62*position}vw)`;
         container.style.transition="all .5s ease";;
     }else{
             position=0;
-            container.style.transform=`translateX(${-50*position}vw)`;
+            container.style.transform=`translateX(${-62*position}vw)`;
             container.style.transition="all 1s ease";
     }
 })
     g.addEventListener("click",()=>{
     if(position>0){
         position--;
-        container.style.transform=`translateX(${-50*position}vw)`;
+        container.style.transform=`translateX(${-62*position}vw)`;
         container.style.transition="all .5s ease";
     }else{
         position=5;
-        container.style.transform=`translateX(${-50*position}vw)`;
+        container.style.transform=`translateX(${-62*position}vw)`;
         container.style.transition="all 1s ease";
     }
 })
