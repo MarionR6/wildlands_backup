@@ -184,7 +184,7 @@ header{
                     list-style-type: none;
                     position:absolute;
                     left: 10%;
-                    transition: 1 all;
+                    transition: 1s all;
                     li{
                         a{
                                 font-size:1.5vw;
@@ -309,10 +309,10 @@ header{
                     // font-size:0.7em;
                     list-style-type: none;
                     position:absolute;
-                    transition: 1 all;
+                    transition: 1s all;
                     li{
                         a{
-                            font-size:1.4vw;
+                            font-size:1vw;
                         }
                     }
                 }

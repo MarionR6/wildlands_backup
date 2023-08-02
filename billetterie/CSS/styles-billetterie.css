@@ -187,7 +187,7 @@ header .milieu .monCompte2 .btnCompte2 .gestionCompte {
   list-style-type: none;
   position: absolute;
   left: 10%;
-  transition: 1 all;
+  transition: 1s all;
 }
 header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
   font-size: 1.5vw;
@@ -300,10 +300,10 @@ header .navBar .monCompte button .gestionCompte {
   font-family: var(--neucha);
   list-style-type: none;
   position: absolute;
-  transition: 1 all;
+  transition: 1s all;
 }
 header .navBar .monCompte button .gestionCompte li a {
-  font-size: 1.4vw;
+  font-size: 1vw;
 }
 header .navBar .monCompte button .gestionNone {
   display: none;
