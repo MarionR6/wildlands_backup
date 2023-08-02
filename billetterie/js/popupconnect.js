@@ -1,21 +1,3 @@
-const dataUser = "json/data.json"
-
-const fetchUser = async () => {
-    const response = await fetch (dataUser, {
-        method:"GET",
-        headers:{
-            "Accept" : "application/json"
-        },
-    })
-    .then(response => response.json())
-    .then (data => {
-        connexion.placeholder = `${data.users[0].email}`;
-        password.placeholder = `${data.users[0].password}`;
-    })
-}
-
-fetchUser()
-
 // POP UP CONNEXION
 
 const popup = document.getElementById('popup');
@@ -35,6 +17,7 @@ btnMonCompte.addEventListener("click", () =>{
     if(popup.classList.contains("popupdisplay")){
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
         header.style.filter = "blur(0.5em)";
         header.style.pointerEvents = "none";
 
@@ -69,6 +52,7 @@ btnMonCompte.addEventListener("click", () =>{
             console.log(e);
             if(e.key  === "Escape"){
                 popup.classList.add("popupdisplay");
+                popupSignUp.classList.add("signupdisplay");
                 main.style.filter = "none";
                 main.style.pointerEvents = "initial";
                 main.style.transition = ".5s all";
@@ -81,9 +65,76 @@ btnMonCompte.addEventListener("click", () =>{
     }
 })
 
+// meme fonctionnalité pour l'icone mon compte à partir de 768 px
+btnMonCompte768.addEventListener("click", () =>{
+    if(popup.classList.contains("popupdisplay")){
+        popup.classList.remove("popupdisplay");
+        main.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
+        header.style.filter = "blur(0.5em)";
+        header.style.pointerEvents = "none";
 
+        SignUpButton.addEventListener("click", () =>{
+            popup.classList.add("popupdisplay");
+            popupSignUp.classList.remove("signupdisplay");
+
+            closePopupSignUp.addEventListener("click", () =>{
+                popupSignUp.classList.add("signupdisplay");
+                main.style.filter = "none";
+                main.style.pointerEvents = "initial";
+                main.style.transition = ".5s all";
+                header.style.filter = "none";
+                header.style.transition = ".5s all";
+                header.style.pointerEvents = "initial";
+            })
+
+
+        })
+
+        closePopup.addEventListener("click", () =>{
+            popup.classList.add("popupdisplay");
+            main.style.filter = "none";
+            main.style.pointerEvents = "initial";
+            main.style.transition = ".5s all";
+            header.style.filter = "none";
+            header.style.transition = ".5s all";
+            header.style.pointerEvents = "initial";
+        })
+
+        document.addEventListener("keyup", (e) => {
+            console.log(e);
+            if(e.key  === "Escape"){
+                popup.classList.add("popupdisplay");
+                popupSignUp.classList.add("signupdisplay");
+                main.style.filter = "none";
+                main.style.pointerEvents = "initial";
+                main.style.transition = ".5s all";
+                header.style.filter = "none";
+                header.style.transition = ".5s all";
+                header.style.pointerEvents = "initial";
+            }
+        })
+        
+    }
+})
 
 // FETCH
+
+const dataUser = "json/data.json"
+
+const fetchUser = async () => {
+    const response = await fetch (dataUser, {
+        method:"GET",
+        headers:{
+            "Accept" : "application/json"
+        },
+    })
+    .then(response => response.json())
+    .then (data => {
+        connexion.placeholder = `${data.users[0].email}`;
+        password.placeholder = `${data.users[0].password}`;
+    })
+}
 
 fetchUser()
 
@@ -98,55 +149,5 @@ checkbox.addEventListener("change", () =>{
     }else{
         emaildisable.classList.remove("emaildisable");
         passworddisable.classList.remove("passworddisable");
-    }
-})
-// meme fonctionnalité pour l'icone mon compte à partir de 768 px
-btnMonCompte768.addEventListener("click", () =>{
-    if(popup.classList.contains("popupdisplay")){
-        popup.classList.remove("popupdisplay");
-        main.style.filter = "blur(0.5em)";
-        header.style.filter = "blur(0.5em)";
-        header.style.pointerEvents = "none";
-
-        SignUpButton.addEventListener("click", () =>{
-            popup.classList.add("popupdisplay");
-            popupSignUp.classList.remove("signupdisplay");
-
-            closePopupSignUp.addEventListener("click", () =>{
-                popupSignUp.classList.add("signupdisplay");
-                main.style.filter = "none";
-                main.style.pointerEvents = "initial";
-                main.style.transition = ".5s all";
-                header.style.filter = "none";
-                header.style.transition = ".5s all";
-                header.style.pointerEvents = "initial";
-            })
-
-
-        })
-
-        closePopup.addEventListener("click", () =>{
-            popup.classList.add("popupdisplay");
-            main.style.filter = "none";
-            main.style.pointerEvents = "initial";
-            main.style.transition = ".5s all";
-            header.style.filter = "none";
-            header.style.transition = ".5s all";
-            header.style.pointerEvents = "initial";
-        })
-
-        document.addEventListener("keyup", (e) => {
-            console.log(e);
-            if(e.key  === "Escape"){
-                popup.classList.add("popupdisplay");
-                main.style.filter = "none";
-                main.style.pointerEvents = "initial";
-                main.style.transition = ".5s all";
-                header.style.filter = "none";
-                header.style.transition = ".5s all";
-                header.style.pointerEvents = "initial";
-            }
-        })
-        
     }
 })

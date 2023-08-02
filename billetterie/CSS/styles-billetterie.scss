@@ -185,11 +185,7 @@ header{
                     position:absolute;
                     left: 10%;
                     transition: 1s all;
-                    li{
-                        a{
-                                font-size:1.5vw;
-                        }
-                    }
+                    
                 }
                 .gestionNone{
                         display: none;
@@ -262,7 +258,7 @@ header{
                                     padding: 2%;
                                     transition:0.5s all;
                                     &:hover{
-                                        color: #091e33;
+                                        color: #18381c;
                                         transform: scale(1);
                                     }
                                 }
@@ -297,6 +293,7 @@ header{
                 font-size: 1.5em;
                 transition: 0.5s all;
                 position:relative;
+                cursor: pointer;
                 p{
                     font-family: var(--neucha);
                 }
@@ -310,11 +307,6 @@ header{
                     list-style-type: none;
                     position:absolute;
                     transition: 1s all;
-                    li{
-                        a{
-                            font-size:1vw;
-                        }
-                    }
                 }
                 .gestionNone{
                     display: none;
