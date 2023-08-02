@@ -602,9 +602,6 @@ fieldset {
   flex-direction: row-reverse;
 }
 
-main {
-  padding-bottom: 8%;
-}
 main .banner {
   width: 100%;
   background-image: url(https://i.goopics.net/4018ca.jpg);
@@ -866,9 +863,6 @@ footer .mentions .mentionsdroits {
     right: -16%;
     width: 8.5em;
     height: 8.5em;
-  }
-  main {
-    padding-bottom: 8%;
   }
   main .banner {
     width: 100%;
