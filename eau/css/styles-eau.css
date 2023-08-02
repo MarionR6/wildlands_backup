@@ -53,6 +53,11 @@ main {
   display: none;
 }
 
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}
+
 header .milieu {
   display: none;
 }
@@ -145,7 +150,7 @@ header .navBar nav ul li a {
   transition: 0.5s all;
 }
 header .navBar nav ul li a:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 header .navBar nav ul li .sous {
   display: none;
@@ -229,6 +234,22 @@ header .navBar .monCompte button .deco {
   background-color: #1F5180;
   opacity: 0.8;
   padding: 10%;
+}
+
+.revealleft {
+  opacity: 0;
+  transform: translateX(-10em);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translateX(10em);
+}
+
+.revealvisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
 }
 
 /* POP UP CONNEXION */
@@ -625,6 +646,7 @@ main .family .container .bubble {
   position: absolute;
   top: 40%;
   left: 4.5%;
+  z-index: 3;
 }
 main .family .container .bubble p {
   text-align: center;
@@ -738,7 +760,7 @@ main .night .contain .txt .btn {
   margin: 10% auto 0 auto;
 }
 main .night .contain .txt .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 main .night .contain .txt .btn a {
   text-transform: uppercase;
@@ -755,7 +777,7 @@ footer a {
   transition: 0.5s all;
 }
 footer a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 footer .flex {
   width: 100%;
@@ -1249,6 +1271,8 @@ footer .mentions .mentionsdroits {
   main .family .container .bubble {
     width: 6.5em;
     height: 6.5em;
+    left: 1%;
+    top: 2%;
   }
   main .family .container .bubble p {
     font-size: 1.1em;
@@ -1307,6 +1331,19 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 480px) {
+  .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
   #popupsignup {
     font-size: 1.5em;
   }
@@ -1497,7 +1534,7 @@ footer .mentions .mentionsdroits {
     margin: 10% auto 0 auto;
   }
   main .night .contain .txt .btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   main .night .contain .txt .btn a {
     text-transform: uppercase;

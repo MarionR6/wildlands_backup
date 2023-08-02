@@ -44,7 +44,7 @@
         </div>
     
     <!-- NAVBAR -->
-    <div class="navBar">
+    <div class="navBar scrollDown" id="scrollBar">
         <div class="logo">
             <a href="../index.html"><img src="img/wildland-logo.svg" alt="LOGO de Wildlands"></a>
         </div>
@@ -153,13 +153,13 @@
         <!-- ACTIVITIES -->
             <div class="actcontainer">
                 <div class="acttxtimg">
-                    <div class="actimg">
+                    <div class="actimg revealleft">
                         <img src="https://i.goopics.net/wtsfsy.jpg" alt="image de canyoning">
-                        <div class="bubble">
+                        <div class="bubble revealleft">
                         <p>Possibilité d'être accompagné</p>
                         </div> 
                     </div>
-                    <div class="acttxt">
+                    <div class="acttxt revealright">
                         <h2>Canyoning</h2>
                         <div class="line"></div>
 
@@ -170,13 +170,13 @@
                
 
                 <div class="acttxtimg reverse space">
-                    <div class="actimg">
+                    <div class="actimg revealright">
                         <img src="https://i.goopics.net/nhmack.jpg" alt="">
-                        <div class="bubbleReverse">
+                        <div class="bubbleReverse revealright">
                             <p>Différents niveaux de difficultés</p>
                         </div> 
                     </div>
-                    <div class="acttxt">
+                    <div class="acttxt revealleft">
                         <h2>Rafting</h2>
                         <div class="line"></div>
                         <p>Le rafting consiste à descendre des rivières tumultueuses à bord d'un radeau pneumatique. Équipé d'un gilet de sauvetage, d'un casque et d'une pagaie, vous pagayez en équipe pour naviguer à travers les rapides. Avec différents niveaux de difficulté, le rafting offre des sensations fortes tout en respectant les règles de sécurité. </p>
@@ -185,13 +185,13 @@
                 </div>
 
                 <div class="acttxtimg space">
-                    <div class="actimg">
+                    <div class="actimg revealleft">
                         <img src="https://i.goopics.net/55fidg.jpg" alt="">
-                        <div class="bubble">
+                        <div class="bubble revealleft">
                             <p>Plus de 15 km2 de lac à parcourir</p>
                             </div> 
                     </div>
-                    <div class="acttxt">
+                    <div class="acttxt revealright">
                         <h2>Canoe</h2>
                         <div class="line"></div>
                         <p>Le canoë est une activité nautique calme et paisible pratiquée sur les lacs, les rivières et les étangs. Il implique la navigation à l'aide d'un canoë propulsé par une pagaie. On peut l'utiliser pour la randonnée, la pêche, le camping ou la compétition.</p>
@@ -203,19 +203,21 @@
         <!-- BANNER FAMILLE -->
 
         <div class="banner2">
-            <h1>Une petite baignade</h1>
+            <div class="revealleft">
+                <h1>Une petite baignade</h1>
+            </div>
         </div>
 
         <!-- activité baignade famille -->
         <div class="family">
             <div class="container">
-                <div class="bubble">
+                <div class="bubble revealleft">
                     <p>Plus de 10 plages privées</p>
                 </div> 
-                <div class="photo">
+                <div class="photo revealleft">
                     <img src="https://i.goopics.net/tb5oj5.jpg" alt="homme plongeant dans l'eau">
                 </div>
-                <div class="txt">
+                <div class="txt revealright">
                     <h2>Plage</h2>
                     <div class="line"></div>
                         <p>Des plages aménagées sont à votre disposition.</p>
@@ -226,13 +228,13 @@
 
         <div class="family">
             <div class="container">
-               <div class="bubble">
+               <div class="bubble revealleft">
                     <p>Groupe de 4 à 6 personnes</p>
                 </div>
-                <div class="photo">
+                <div class="photo revealleft">
                     <img src="https://i.goopics.net/xottdm.jpg" alt="Pedalo">
                 </div>
-                <div class="txt">
+                <div class="txt revealright">
                     <h2>pedalo</h2>
                     <div class="line"></div>
                     <p>Une petite ballade sur le lac vous tente ?</p>
@@ -243,12 +245,14 @@
             
                <!--banner nuit  -->
         <div class="banner3">
-            <h1>La nuit avec le doux son des vagues</h1>
+            <div class="revealright">
+                <h1>La nuit avec le doux son des vagues</h1>
+            </div>
         </div>
 
         <div class="night space">
             <div class="contain">
-                <div class="txt">
+                <div class="txt revealleft">
                     <h2>pour les plus téméraires...</h2>
                     <div class="line"></div>
                     <p>Vous souhaitez observer les étoiles au bord du lac ?</p>
@@ -257,7 +261,7 @@
                         <a href="../billeterie/wip.html">Réserver</a>
                     </div>
                 </div>
-                <div class="img">
+                <div class="img revealright">
                     <img src="https://i.goopics.net/38g26e.jpg" alt="hamac sur la plage">
                 </div>
             </div>   
@@ -265,7 +269,7 @@
 
         <div class="night space">
             <div class="contain">
-                <div class="txt">
+                <div class="txt revealleft">
                     <h2>... et pour les autres</h2>
                     <div class="line"></div>
                     <p>Vous cherchez plutôt la tranquilité, l'intimité, nos chambres sur pilotis sont à votre disposition</p>
@@ -273,11 +277,12 @@
                         <a href="../billeterie/wip.html">Réserver</a>
                     </div>
                 </div>
-                <div class="img">
+                <div class="img revealright">
                     <img src="https://i.goopics.net/yuukqt.jpg" alt="homme plongeant dans l'eau">
                 </div>
             </div>            
         </div>
+
 
 </main>      
 
@@ -341,6 +346,10 @@
  <script src="js/scriptNav.js"></script>
  <!----- SCRIPT pop up connexion ----->
  <script src="js/popupconnect.js"></script>
+ <!----- SCRIPT scroll cards ----->
+ <script src="js/scrollcards.js"></script>
+ <!----- SCRIPT nav scroll ----->
+ <script src="js/navScroll.js"></script>
 
 </body>
 </html>
