@@ -581,6 +581,10 @@ main{
                         color: black;
                         font-weight: 600;
                         font-size: 1.5em;
+                        transition: .5s all;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
                     }
                 }
             }
