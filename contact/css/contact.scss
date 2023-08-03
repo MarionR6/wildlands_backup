@@ -393,6 +393,7 @@ header {
 						font-family: $font-family_1;
 						text-decoration: none;
 						transition: 0.5s all;
+						font-size: 1.8em;
 						&:hover {
 							transform: scale(1.1);
 						}
@@ -412,7 +413,7 @@ header {
 								padding: 2%;
 								background-color: var(--vertFonce);
 								a {
-									font-size: 25px;
+									font-size: 2em;
 									padding: 2%;
 									transition: 0.5s all;
 									&:hover {
@@ -455,16 +456,18 @@ header {
 				cursor: pointer;
 				p {
 					font-family: $font-family_1;
-				}
-				&:hover {
+					transition: 0.5s all;
+					&:hover {
 					transform: scale(1.1);
+					}
 				}
+				
 				.gestionCompte {
 					display: block;
 					font-family: $font-family_1;
 					list-style-type: none;
 					position: absolute;
-					transition: 1 all;
+					transition: 1s all;
 					li {
 						a {
 							font-size: 1.4vw;
@@ -505,88 +508,7 @@ header {
 
 //barre de navigation
 }
-.navBar{
-    width: 100%;
-    background-color: var(--vert);
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    .logo{
-        width: 8%;
-        padding : 0.5% 0;
-        img{
-            width: 100%;
-        }
-    }
-    nav{
-        width: 50%;
-        ul{
-            // font-size: 0;
-            display: flex;
-            justify-content: space-around;
-            li{
-                list-style: none;
-                a{
-                    font-family: var(--neucha);
-                    font-size: 1.8em;
-                    text-decoration: none;
-                    transition:0.5s all;
-                    &:hover{
-                        transform: scale(1.1);
-                    }
-                }
-                .sous{
-                    display: none;
-                    position: absolute;
-                    transition: 1 all;
-                }
-                &:hover{
-                    .sous{
-                        display: block;
-                        li{
-                            background-color: var(--vert);
-                            opacity: 0.8;
-                            border-bottom: solid var(--vertClair)1px;
-                            padding: 2%;
-                            background-color: var(--vertFonce);
-                            a{
-                                font-size:25px;
-                                padding: 2%;
-                                transition:0.5s all;
-                                &:hover{
-                                    color: #204725;
-                                    transform: scale(1);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .deroulant{
-                    &:after{
-                    content: "⏷";
-                    font-size: 0.7em;
-                    }
-            }
-        }
-    }
-    .monCompte{
-        background-color: var(--vertFonce);
-        font-family: var(--neucha);
-        display: flex;
-        justify-content: center;
-        padding: 1% 2%;
-        border-radius: 3vh;
-        a{
-        text-decoration: none;
-        font-size: 1.4vw;
-        transition: 0.5s all;
-        // &:hover{
-        //     // transform: scale(1.1);
-        // }
-        }
-    }
-}
+
 
 // -----------------------------------> SECTION 
 section{
