@@ -1,9 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    list-style: none;
-    
+    list-style: none; 
 }
 body{
     overflow-x: hidden;
@@ -46,21 +44,23 @@ p{
 /* POP UP CONNEXION */
 
 #popup{
+    font-family: var(--neucha);
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 20;
-    background-color: var(--bleu-clair);
+    background-color: #c7e3cb;
     padding: 2% 3%;
     font-size: 1.7em;
     border-radius: 1em;
-    background-color: var(--bleu);
-    border: 0.07em solid var(--bleu-fonce);
+    background-color: #3A8043;
+    border: 0.07em solid #204725;
     font-family: 'Neucha', sans-serif;
     color: white;
   }
+  
   .popup #closepopup{
-    background-color: var(--bleu-fonce);
+    background-color: #204725;
     color: white;
     font-size: 0.8em;
     border: none;
@@ -75,22 +75,31 @@ p{
     top: 2.5%;
     cursor: pointer;
   }
+  
   fieldset{
     border: none;
   }
+  
   .popup form fieldset legend{
     font-size: 1.7em;
     text-align: center;
     border-bottom: 0.06em solid white;
     padding-bottom: 5%;
   }
+  
+  #meconnecter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   #meconnecter,
   #minscrire{
     color: white;
     text-align: center;
     margin: 10% 0 3% 0;
     border-radius: 1em;
-    background-color: var(--bleu-fonce);
+    background-color: #204725;
     padding: 2% 0;
     transition: .5s all;
     border: none;
@@ -100,91 +109,108 @@ p{
     width: 100%;
     transition: .5s all;
   }
+  
   #minscrire{
     font-size: 1em;
     margin-top: 6%;
   }
+  
   #minscrire:hover{
     transform: scale(1.1);
   }
+  
   .popup form fieldset #meconnecter:hover{
     transform: scale(1.1);
   }
+  
   .popup form fieldset .connectremember a:hover{
     transform: scale(1.1);
   }
+  
   .popup form fieldset .connectremember label{
     padding-left: 1%;
     font-size: 0.7em;
   }
+  
   .popup form fieldset .plssignup{
     font-size: 0.8em;
   }
+  
   .popup form fieldset .plssignup a{
     color: white;
     text-align: center;
     margin: 6% 0 3% 0;
     border-radius: 1em;
-    background-color: var(--bleu-fonce);
+    background-color: #204725;
     padding: 2% 0;
     font-size: 1.3em;
     transition: .5s all;
   }
+  
   .popup form fieldset .plssignup a:hover{
     transform: scale(1.1);
   }
+  
   .emailflex, .passwordflex{
     display: flex;
     flex-direction: column;
   }
+  
   #emaildisable{
     padding: 5% 0 4% 0;
   }
+  
   .entrystyle input{
     margin-top: 2%;
     padding: 2% 4%;
     font-size: 0.6em;
-    background-color: var(--bleu-clair);
+    background-color: #c7e3cb;
     border: none;
     border-radius: 1em;
   }
+  
   #emaildisable input::placeholder,
   #passworddisable input::placeholder{
     color: black;
     font-weight: 500;
   }
+  
   .emaildisable,
   .passworddisable{
     pointer-events: none;
   }
+  
   .popup{
     visibility: visible;
     transition: .5s all;
     transform: translate(-50%, -50%) scale(1);
   }
+  
   .popupdisplay{
     visibility: hidden;
     transform: translate(-50%, -50%) scale(0);
   }
-
+  
   /* POPUP SIGNUP */
+  
   #popupsignup{
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 20;
-    background-color: var(--bleu-clair);
+    background-color: #c7e3cb;
     padding: 2% 3%;
     font-size: 1.7em;
     border-radius: 1em;
-    background-color:var(--bleu);
-    border: 0.07em solid var(--bleu-fonce);
+    background-color: #3A8043;
+    border: 0.07em solid #204725;
     font-family: 'Neucha', sans-serif;
     color: white;
     width: 50%;
-  } 
+  }
+  
   #closepopupsignup{
-    background-color: var(--bleu-fonce);
+    background-color: #204725;
     color: white;
     font-size: 0.8em;
     border: none;
@@ -198,7 +224,8 @@ p{
     right: 4%;
     top: 2.5%;
     cursor: pointer;
-  } 
+  }
+  
   .signup{
     visibility: visible;
     transition: .5s all;
@@ -206,71 +233,82 @@ p{
     display: flex;
     flex-direction: column;
   }
+  
   .signup form .login .connect{
     text-align: center;
     font-size: 1.5em;
     padding-bottom: 4%;
   }
+  
   .signup form .login .containersignup{
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: space-around;
     align-items: center;
-    border: 0.1em solid var(--bleu-clair);
+    border: 0.1em solid #c7e3cb;
     border-radius: 1em;
     padding: 5% 5%;
     position: relative;
   }
+  
   .signup form .login .containersignup label{
     width: 100%;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
-  .signup form .login .containersignup input{
-    color: black;
-  }
+  
   .signup form .login .containersignup .middleentry{
     margin: 5% 0;
   }
+  
   .signup form .login .containersignup .leftsignup{
     width: 45%;
   }
+  
   .signup form .login .containersignup .leftsignup p,
   .signup form .login .containersignup .rightsignup p{
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+  
   .signup form .login .containersignup .line{
     width: 30%;
     height: 0.07em;
-    background: linear-gradient(to left, --bleu, --bleu-clair, --bleu);
+    background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
     transform: rotate(90deg);
     align-self: center;
     position: absolute;
   }
+  
   .signup form .login .containersignup .rightsignup{
     width: 45%;
   }
+  
   .signup form .login .containersignup .rightsignup .entrystyle{
     width: 100%;
   }
+  
+  
   .signup form .login .containersignup .rightsignup .entrystyle input{
     width: 100%;
   }
+  
   .signupdisplay{
     visibility: hidden;
     transform: translate(-50%, -50%) scale(0);
   }
+  
   .signup .submitsignup{
     color: white;
     border-radius: 1em;
-    background-color: var(--bleu-fonce);
+    background-color: #204725;
     padding: 1% 4%;
     display: inline-block;
     margin: 0 auto;
     margin-top: 4%;
     transition: .5s all;
-  } 
+  }
+  
   .signup .submitsignup:hover{
     transform: scale(1.1);
   }
@@ -280,90 +318,88 @@ header div#navigation{
     display: none;
 }
 header{
-.milieu{
-    display:none ;
-    // width: 30%;
-    .monCompte2{
-        display:inline-block;
-        width: 100%;
-        background-color: var(--bleu-fonce);
-        font-family: var(--neucha);
-        // display: flex;
-        // justify-content: center;
-        // padding: 1% 2%;
-        border-radius: 3vh;
-        // margin:0 auto;
-        .btnCompte2{
-            display: inline-block;
+    .milieu{
+        display:none ;
+        // width: 30%;
+        .monCompte2{
+            display:inline-block;
+            width: 100%;
             background-color: var(--bleu-fonce);
-            border:none;
-            text-decoration: none;
-            font-size: 1em;
-            transition: 0.5s all;
-            position:relative;
-            border-radius: 2vh;
-            padding: .5em 2em;
-            p{
             font-family: var(--neucha);
-            }
-            &:hover{
-                transform: scale(1.1);
-            }
-            #box2{
-                align-items: center;
-                justify-content: center;
-            }
-            .gestionCompte{
-                display:block;
+            // display: flex;
+            // justify-content: center;
+            // padding: 1% 2%;
+            border-radius: 3vh;
+            // margin:0 auto;
+            .btnCompte2{
+                color: white;
+                display: inline-block;
+                background-color: var(--bleu-fonce);
+                border:none;
+                text-decoration: none;
+                font-size: 1em;
+                transition: 0.5s all;
+                position:relative;
+                border-radius: 3vh;
+                padding: 0.20em 2em;
+                p{
                 font-family: var(--neucha);
-                list-style-type: none;
-                position:absolute;
-                left: 10%;
-                transition: 1 all;
-                li{
-                    a{
-                            font-size:0.7em;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                #box2{
+                    align-items: center;
+                    justify-content: center;
+                }
+                .gestionCompte{
+                    display:block;
+                    font-family: var(--neucha);
+                    list-style-type: none;
+                    position:absolute;
+                    left: 10%;
+                    transition: 1 all;
+                    li{
+                        a{
+                                font-size:0.7em;
+                        }
                     }
                 }
-            }
-            .gestionNone{
-                    display: none;
-            }
-            .gestion{
-                width:80%;                        
-                margin-top:5%;
-                background-color: var(--bleu-fonce);
-                opacity: 0.8;
-                padding:10%;
-            }
-            .deco{
-                width:80%;
-                background-color:var(--bleu-fonce);
-                opacity: 0.8;
-                padding:10%;
-            }
-        } 
-    }
-}
-
-.cart{
-    display: none;
-}
-.navBar{
-    width: 100%;
-    //height: 80px;
-    background-color: var(--bleu);
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    //transition: all 0.5s;
-    .logo{
-        width: 8%;
-        padding : 0.5% 0;
-        img{
-            width: 100%;
+                .gestionNone{
+                        display: none;
+                }
+                .gestion{
+                    width:60%;                    
+                    margin-top:3%;
+                    background-color: var(--bleu-fonce);
+                    opacity: 0.8;
+                    padding:10%;
+                }
+                .deco{
+                    width:60%;
+                    background-color: var(--bleu-fonce);
+                    opacity: 0.8;
+                    padding:10%;
+                }
+            } 
         }
     }
+    .cart{
+        display: none;
+    }
+    .navBar{
+        width: 100%;
+        background-color: var(--bleu);
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo{
+            width: 8%;
+            padding : 0.5% 0;
+            img{
+                width: 100%;
+            }
+        }
     nav{
         width: 50%;
         ul{
@@ -422,31 +458,24 @@ header{
     }
 
     .monCompte{
-        width: 15%;
+        // width: 15%;
         background-color: var(--bleu-fonce);
         font-family: var(--neucha);
         display: flex;
         justify-content: center;
-        padding: 1% 0.5%;
-        border-radius: 3vh;
-        // a{
-        // text-decoration: none;
-        // font-size: 1.5em;
-        // transition: 0.5s all;
-        // font-family: "Neucha", cursive;
-        // &:hover{
-        //     transform: scale(1.1);
-        // }
-        // }
+        padding: 1% 2%;
+        border-radius: 5em;
         button{
-            color: rgba(255, 255, 255, 0);
-            width: 80%;
+            color: white;
+            width: 100%;
             background-color: var(--bleu-fonce);
             border:none;
             text-decoration: none;
             font-size: 1.5em;
             transition: 0.5s all;
             position:relative;
+            cursor: pointer;
+            align-items: center;
             p{
                 font-family: var(--neucha);
             }
@@ -454,6 +483,7 @@ header{
                 transform: scale(1.1);
             }
             .gestionCompte{
+                color: black;
                 display:block;
                 font-family: var(--neucha);
                 // font-size:0.7em;
@@ -463,7 +493,6 @@ header{
                 li{
                     a{
                         font-size:0.7em;
-                        font-family: var(--neucha);
                     }
                 }
             }
@@ -471,25 +500,25 @@ header{
                 display: none;
             }
             .gestion{
-                width: 100%;
+                width:80%;
                 margin-top:7%;
                 background-color: var(--bleu-fonce);
                 opacity: 0.8;
-                padding:5%;
+                padding:10%;
             }
             .panier{
-                width:100%;
+                width:80%;
                 background-color:var(--bleu-fonce);
                 opacity: 0.8;
-                padding:5%;
+                padding:10%;
             }                
             .deco{
-                width:100%;
+                width:80%;
                 background-color:var(--bleu-fonce);
                 opacity: 0.8;
-                padding:5%;
+                padding:10%;
             }
-        }
+        } 
     }
 }
 }
@@ -969,6 +998,11 @@ footer{
 // Responsive en 1200px
 
 @media screen and (max-width: 1200px){
+    /* POP UP SIGN UP */
+
+    #popupsignup{
+        width: 60%;
+    }
     //partie restaurant
     .resto{
         .resto2{
@@ -1019,6 +1053,9 @@ footer{
 
 // Responsive en 1024px
 @media screen and (max-width: 1024px){
+    #popupsignup{
+        width: 80%;
+    }
     // navbar
     .navBar nav ul li a {
         font-size: 1.3em;
@@ -1051,9 +1088,9 @@ footer{
             }
         }
         .moyenneA{
-            .txtA{
+            // .txtA{
                 
-            }
+            // }
             .imgA{
                 width: 83.8%;
             }
@@ -1175,19 +1212,29 @@ footer{
 
 // responsive en 768px
 @media screen and (max-width: 768px){
+    /* POP UP SIGN UP */
+  
+    #popupsignup{
+        width: 90%;
+    }
+    .signup form .login .containersignup label{
+        width: 100%;
+        font-size: 0.7em;
+      }
     header div#navigation{
         display: block;
     }
     header {
-        padding: 10px 20px 80px 20px;
+        width: 100%;
+        padding: 2em;
+        display: flex;        
         background-color: var(--bleu-clair);
-        padding: 1em;
-        display: flex;
-        align-items: center;
         .milieu{
-            //width: 15%;
+            height:100%;
             display: inline-flex;
+            z-index: 99;
             .logIn{
+                
                 align-self: center;
                 width:2.5em;
                 height:2.5em;
@@ -1196,20 +1243,6 @@ footer{
                 // display: inline-block;
                 background-color: var(--bleu-fonce);
                 color: white;
-            }
-            .monCompte2{
-                .btnCompte2{
-                    #box2{
-                        color: white;
-                        background-color: #3A8043;
-                        border-radius: 1em;
-                        //padding: 0.5em;
-                    }
-                    ul{
-                            background-color: var(--bleu-fonce);
-                        
-                    }
-                }
             }
         }
         .cart{
@@ -1226,6 +1259,7 @@ footer{
                 align-items: center;
             }
         }
+        
         .navBar {
             display: none;
         }
@@ -1234,7 +1268,7 @@ footer{
             display: block;
             width: 30px;
             height: 2px;
-            //top: 50px;
+            top: 47px;
             right: 50px;
             cursor: pointer;
             background-color:var(--bleu-fonce);
@@ -1314,7 +1348,7 @@ footer{
                         // display: block;
                     }
                 }
-            }    
+            }   
         }    
     }
 
@@ -1449,6 +1483,30 @@ footer{
 
 // responsive en 480px
 @media screen and (max-width: 480px){
+    #popup{
+        width: 70%;
+      }
+    
+      #popupsignup{
+        font-size: 1.5em;
+      }
+    
+      .signup form .login .containersignup{
+        flex-direction: column;
+      }
+    
+      .signup form .login .containersignup .leftsignup{
+        width: 100%;
+        margin-bottom: 4%;
+      }
+      .signup form .login .containersignup .rightsignup{
+        width: 93%;
+        align-self: flex-start;
+      }
+    
+      .signup form .login .containersignup .line{
+        display: none;
+      }
     //header
     .headerP{
        h1{

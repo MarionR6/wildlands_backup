@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   list-style: none;
 }
 
@@ -43,22 +42,23 @@ p {
 
 /* POP UP CONNEXION */
 #popup {
+  font-family: var(--neucha);
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: 20;
-  background-color: var(--bleu-clair);
+  background-color: #c7e3cb;
   padding: 2% 3%;
   font-size: 1.7em;
   border-radius: 1em;
-  background-color: var(--bleu);
-  border: 0.07em solid var(--bleu-fonce);
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
   font-family: "Neucha", sans-serif;
   color: white;
 }
 
 .popup #closepopup {
-  background-color: var(--bleu-fonce);
+  background-color: #204725;
   color: white;
   font-size: 0.8em;
   border: none;
@@ -85,13 +85,19 @@ fieldset {
   padding-bottom: 5%;
 }
 
+#meconnecter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #meconnecter,
 #minscrire {
   color: white;
   text-align: center;
   margin: 10% 0 3% 0;
   border-radius: 1em;
-  background-color: var(--bleu-fonce);
+  background-color: #204725;
   padding: 2% 0;
   transition: 0.5s all;
   border: none;
@@ -133,7 +139,7 @@ fieldset {
   text-align: center;
   margin: 6% 0 3% 0;
   border-radius: 1em;
-  background-color: var(--bleu-fonce);
+  background-color: #204725;
   padding: 2% 0;
   font-size: 1.3em;
   transition: 0.5s all;
@@ -156,7 +162,7 @@ fieldset {
   margin-top: 2%;
   padding: 2% 4%;
   font-size: 0.6em;
-  background-color: var(--bleu-clair);
+  background-color: #c7e3cb;
   border: none;
   border-radius: 1em;
 }
@@ -194,19 +200,19 @@ fieldset {
   top: 50%;
   left: 50%;
   z-index: 20;
-  background-color: var(--bleu-clair);
+  background-color: #c7e3cb;
   padding: 2% 3%;
   font-size: 1.7em;
   border-radius: 1em;
-  background-color: var(--bleu);
-  border: 0.07em solid var(--bleu-fonce);
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
   font-family: "Neucha", sans-serif;
   color: white;
   width: 50%;
 }
 
 #closepopupsignup {
-  background-color: var(--bleu-fonce);
+  background-color: #204725;
   color: white;
   font-size: 0.8em;
   border: none;
@@ -238,10 +244,10 @@ fieldset {
 
 .signup form .login .containersignup {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: space-around;
   align-items: center;
-  border: 0.1em solid var(--bleu-clair);
+  border: 0.1em solid #c7e3cb;
   border-radius: 1em;
   padding: 5% 5%;
   position: relative;
@@ -249,11 +255,7 @@ fieldset {
 
 .signup form .login .containersignup label {
   width: 100%;
-  font-size: 0.9em;
-}
-
-.signup form .login .containersignup input {
-  color: black;
+  font-size: 0.8em;
 }
 
 .signup form .login .containersignup .middleentry {
@@ -274,7 +276,7 @@ fieldset {
 .signup form .login .containersignup .line {
   width: 30%;
   height: 0.07em;
-  background: linear-gradient(to left, --bleu, --bleu-clair, --bleu);
+  background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
   transform: rotate(90deg);
   align-self: center;
   position: absolute;
@@ -300,7 +302,7 @@ fieldset {
 .signup .submitsignup {
   color: white;
   border-radius: 1em;
-  background-color: var(--bleu-fonce);
+  background-color: #204725;
   padding: 1% 4%;
   display: inline-block;
   margin: 0 auto;
@@ -327,6 +329,7 @@ header .milieu .monCompte2 {
   border-radius: 3vh;
 }
 header .milieu .monCompte2 .btnCompte2 {
+  color: white;
   display: inline-block;
   background-color: var(--bleu-fonce);
   border: none;
@@ -334,8 +337,8 @@ header .milieu .monCompte2 .btnCompte2 {
   font-size: 1em;
   transition: 0.5s all;
   position: relative;
-  border-radius: 2vh;
-  padding: 0.5em 2em;
+  border-radius: 3vh;
+  padding: 0.2em 2em;
 }
 header .milieu .monCompte2 .btnCompte2 p {
   font-family: var(--neucha);
@@ -362,14 +365,14 @@ header .milieu .monCompte2 .btnCompte2 .gestionNone {
   display: none;
 }
 header .milieu .monCompte2 .btnCompte2 .gestion {
-  width: 80%;
-  margin-top: 5%;
+  width: 60%;
+  margin-top: 3%;
   background-color: var(--bleu-fonce);
   opacity: 0.8;
   padding: 10%;
 }
 header .milieu .monCompte2 .btnCompte2 .deco {
-  width: 80%;
+  width: 60%;
   background-color: var(--bleu-fonce);
   opacity: 0.8;
   padding: 10%;
@@ -439,23 +442,24 @@ header .navBar nav ul .deroulant:after {
   font-size: 0.7em;
 }
 header .navBar .monCompte {
-  width: 15%;
   background-color: var(--bleu-fonce);
   font-family: var(--neucha);
   display: flex;
   justify-content: center;
-  padding: 1% 0.5%;
-  border-radius: 3vh;
+  padding: 1% 2%;
+  border-radius: 5em;
 }
 header .navBar .monCompte button {
-  color: rgba(255, 255, 255, 0);
-  width: 80%;
+  color: white;
+  width: 100%;
   background-color: var(--bleu-fonce);
   border: none;
   text-decoration: none;
   font-size: 1.5em;
   transition: 0.5s all;
   position: relative;
+  cursor: pointer;
+  align-items: center;
 }
 header .navBar .monCompte button p {
   font-family: var(--neucha);
@@ -464,6 +468,7 @@ header .navBar .monCompte button:hover {
   transform: scale(1.1);
 }
 header .navBar .monCompte button .gestionCompte {
+  color: black;
   display: block;
   font-family: var(--neucha);
   list-style-type: none;
@@ -472,29 +477,28 @@ header .navBar .monCompte button .gestionCompte {
 }
 header .navBar .monCompte button .gestionCompte li a {
   font-size: 0.7em;
-  font-family: var(--neucha);
 }
 header .navBar .monCompte button .gestionNone {
   display: none;
 }
 header .navBar .monCompte button .gestion {
-  width: 100%;
+  width: 80%;
   margin-top: 7%;
   background-color: var(--bleu-fonce);
   opacity: 0.8;
-  padding: 5%;
+  padding: 10%;
 }
 header .navBar .monCompte button .panier {
-  width: 100%;
+  width: 80%;
   background-color: var(--bleu-fonce);
   opacity: 0.8;
-  padding: 5%;
+  padding: 10%;
 }
 header .navBar .monCompte button .deco {
-  width: 100%;
+  width: 80%;
   background-color: var(--bleu-fonce);
   opacity: 0.8;
-  padding: 5%;
+  padding: 10%;
 }
 
 .headerP {
@@ -916,6 +920,10 @@ footer .mentions .mentionsdroits a {
   }
 }
 @media screen and (max-width: 1200px) {
+  /* POP UP SIGN UP */
+  #popupsignup {
+    width: 60%;
+  }
   .resto .resto2 .txtResto {
     padding-bottom: 20%;
   }
@@ -947,6 +955,9 @@ footer .mentions .mentionsdroits a {
   }
 }
 @media screen and (max-width: 1024px) {
+  #popupsignup {
+    width: 80%;
+  }
   .navBar nav ul li a {
     font-size: 1.3em;
   }
@@ -1049,18 +1060,27 @@ footer .mentions .mentionsdroits a {
   }
 }
 @media screen and (max-width: 768px) {
+  /* POP UP SIGN UP */
+  #popupsignup {
+    width: 90%;
+  }
+  .signup form .login .containersignup label {
+    width: 100%;
+    font-size: 0.7em;
+  }
   header div#navigation {
     display: block;
   }
   header {
-    padding: 10px 20px 80px 20px;
-    background-color: var(--bleu-clair);
-    padding: 1em;
+    width: 100%;
+    padding: 2em;
     display: flex;
-    align-items: center;
+    background-color: var(--bleu-clair);
   }
   header .milieu {
+    height: 100%;
     display: inline-flex;
+    z-index: 99;
   }
   header .milieu .logIn {
     align-self: center;
@@ -1070,14 +1090,6 @@ footer .mentions .mentionsdroits a {
     border-radius: 50%;
     background-color: var(--bleu-fonce);
     color: white;
-  }
-  header .milieu .monCompte2 .btnCompte2 #box2 {
-    color: white;
-    background-color: #3A8043;
-    border-radius: 1em;
-  }
-  header .milieu .monCompte2 .btnCompte2 ul {
-    background-color: var(--bleu-fonce);
   }
   header .cart {
     margin-left: 2%;
@@ -1101,6 +1113,7 @@ footer .mentions .mentionsdroits a {
     display: block;
     width: 30px;
     height: 2px;
+    top: 47px;
     right: 50px;
     cursor: pointer;
     background-color: var(--bleu-fonce);
@@ -1264,6 +1277,26 @@ footer .mentions .mentionsdroits a {
   }
 }
 @media screen and (max-width: 480px) {
+  #popup {
+    width: 70%;
+  }
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 93%;
+    align-self: flex-start;
+  }
+  .signup form .login .containersignup .line {
+    display: none;
+  }
   .headerP h1 {
     font-size: 1.5em;
   }
