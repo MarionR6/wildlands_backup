@@ -611,7 +611,7 @@ main .banner {
 }
 main .banner h1 {
   text-align: center;
-  padding: 7% 0;
+  padding: 11% 0 7% 0;
   font-family: var(--neucha);
   font-size: 7em;
   font-weight: 400;
