@@ -31,6 +31,7 @@ main {
 
 body {
   overflow-x: hidden;
+  background-color: var(--bleu-clair);
 }
 
 .scrollDown {
@@ -445,14 +446,14 @@ header .navBar .monCompte button {
   border: none;
   text-decoration: none;
   font-size: 1.5em;
-  transition: 0.5s all;
   position: relative;
   cursor: pointer;
 }
 header .navBar .monCompte button p {
   font-family: var(--neucha);
+  transition: 0.5s all;
 }
-header .navBar .monCompte button:hover {
+header .navBar .monCompte button p:hover {
   transform: scale(1.1);
 }
 header .navBar .monCompte button .gestionCompte {

@@ -51,6 +51,7 @@ btnMonCompte.addEventListener("click", () =>{
             console.log(e);
             if(e.key  === "Escape"){
                 popup.classList.add("popupdisplay");
+                popupSignUp.classList.add("signupdisplay");
                 main.style.filter = "none";
                 main.style.pointerEvents = "initial";
                 main.style.transition = ".5s all";
@@ -102,6 +103,7 @@ btnMonCompte768.addEventListener("click", () =>{
             console.log(e);
             if(e.key  === "Escape"){
                 popup.classList.add("popupdisplay");
+                popupSignUp.classList.add("signupdisplay");
                 main.style.filter = "none";
                 main.style.pointerEvents = "initial";
                 main.style.transition = ".5s all";
@@ -116,7 +118,7 @@ btnMonCompte768.addEventListener("click", () =>{
 
 // FETCH
 
-const dataUser = "json/data.json";
+const dataUser = "json/data.json"
 
 const fetchUser = async () => {
     const response = await fetch (dataUser, {
@@ -133,7 +135,6 @@ const fetchUser = async () => {
 }
 
 fetchUser()
-//console.log(`${data.users[0]}`);
 
 const checkbox = document.getElementById('checkbox');
 const emaildisable = document.getElementById("emaildisable");
