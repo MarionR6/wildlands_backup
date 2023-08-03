@@ -391,6 +391,7 @@ header .navBar nav ul li a {
   font-family: "Neucha", sans-serif;
   text-decoration: none;
   transition: 0.5s all;
+  font-size: 1.8em;
 }
 header .navBar nav ul li a:hover {
   transform: scale(1.1);
@@ -411,7 +412,7 @@ header .navBar nav ul li:hover .sous li {
   background-color: var(--vertFonce);
 }
 header .navBar nav ul li:hover .sous li a {
-  font-size: 25px;
+  font-size: 2em;
   padding: 2%;
   transition: 0.5s all;
 }
@@ -440,7 +441,6 @@ header .navBar .monCompte button {
   background-color: var(--vertFonce);
   border: none;
   text-decoration: none;
-  font-size: 1em;
   transition: 0.5s all;
   position: relative;
   color: white;
@@ -448,8 +448,9 @@ header .navBar .monCompte button {
 }
 header .navBar .monCompte button p {
   font-family: "Neucha", sans-serif;
+  transition: 0.5s all;
 }
-header .navBar .monCompte button:hover {
+header .navBar .monCompte button p:hover {
   transform: scale(1.1);
 }
 header .navBar .monCompte button .gestionCompte {
@@ -457,7 +458,7 @@ header .navBar .monCompte button .gestionCompte {
   font-family: "Neucha", sans-serif;
   list-style-type: none;
   position: absolute;
-  transition: 1 all;
+  transition: 1s all;
 }
 header .navBar .monCompte button .gestionCompte li a {
   font-size: 1.4vw;
@@ -488,81 +489,6 @@ header .navBar .monCompte button .deco {
 
 #navigation {
   display: none;
-}
-
-.navBar {
-  width: 100%;
-  background-color: var(--vert);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.navBar .logo {
-  width: 8%;
-  padding: 0.5% 0;
-}
-.navBar .logo img {
-  width: 100%;
-}
-.navBar nav {
-  width: 50%;
-}
-.navBar nav ul {
-  display: flex;
-  justify-content: space-around;
-}
-.navBar nav ul li {
-  list-style: none;
-}
-.navBar nav ul li a {
-  font-family: var(--neucha);
-  font-size: 1.8em;
-  text-decoration: none;
-  transition: 0.5s all;
-}
-.navBar nav ul li a:hover {
-  transform: scale(1.1);
-}
-.navBar nav ul li .sous {
-  display: none;
-  position: absolute;
-  transition: 1 all;
-}
-.navBar nav ul li:hover .sous {
-  display: block;
-}
-.navBar nav ul li:hover .sous li {
-  background-color: var(--vert);
-  opacity: 0.8;
-  border-bottom: solid var(--vertClair) 1px;
-  padding: 2%;
-  background-color: var(--vertFonce);
-}
-.navBar nav ul li:hover .sous li a {
-  font-size: 25px;
-  padding: 2%;
-  transition: 0.5s all;
-}
-.navBar nav ul li:hover .sous li a:hover {
-  color: #204725;
-  transform: scale(1);
-}
-.navBar nav ul .deroulant:after {
-  content: "⏷";
-  font-size: 0.7em;
-}
-.navBar .monCompte {
-  background-color: var(--vertFonce);
-  font-family: var(--neucha);
-  display: flex;
-  justify-content: center;
-  padding: 1% 2%;
-  border-radius: 3vh;
-}
-.navBar .monCompte a {
-  text-decoration: none;
-  font-size: 1.4vw;
-  transition: 0.5s all;
 }
 
 section {

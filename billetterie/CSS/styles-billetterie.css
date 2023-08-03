@@ -239,7 +239,7 @@ header .navBar nav ul li a {
   transition: 0.5s all;
 }
 header .navBar nav ul li a:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
 header .navBar nav ul li .sous {
   display: none;
@@ -840,7 +840,7 @@ footer a {
   transition: 0.5s all;
 }
 footer a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 footer .flex {
   width: 100%;

@@ -31,6 +31,7 @@ main{
 
 body{
     overflow-x: hidden;
+    background-color: var(--bleu-clair);
 }
 
 
@@ -438,14 +439,14 @@ body{
             border:none;
             text-decoration: none;
             font-size: 1.5em;
-            transition: 0.5s all;
             position:relative;
             cursor: pointer;
             p{
                 font-family: var(--neucha);
-            }
-            &:hover{
-                transform: scale(1.1);
+                transition: 0.5s all;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
             .gestionCompte{
                 display:block;

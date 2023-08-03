@@ -76,9 +76,6 @@ header .milieu .monCompte2 .btnCompte2 .gestionCompte {
   left: 10%;
   transition: 1 all;
 }
-header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
-  font-size: 1.8vw;
-}
 header .milieu .monCompte2 .btnCompte2 .gestionNone {
   display: none;
 }
@@ -190,9 +187,6 @@ header .navBar .monCompte button .gestionCompte {
   list-style-type: none;
   position: absolute;
   transition: 1 all;
-}
-header .navBar .monCompte button .gestionCompte li a {
-  font-size: 1.8vw;
 }
 header .navBar .monCompte button .gestionNone {
   display: none;
@@ -603,6 +597,10 @@ main {
   color: black;
   font-weight: 600;
   font-size: 1.5em;
+  transition: 0.5s all;
+}
+.bleuClair .flex .bleuFonce .txt .reserver a:hover {
+  transform: scale(1.1);
 }
 
 /* ACTIVITIES */

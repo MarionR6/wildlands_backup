@@ -128,7 +128,7 @@
     transition: 0.5s all;
   }
   header .navBar nav ul li a:hover {
-    transform: scale(1.4);
+    transform: scale(1.1);
   }
   header .navBar nav ul li .sous {
     display: none;
@@ -546,7 +546,7 @@ footer {
   }
   
   footer a:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   
   footer .flex {
@@ -689,7 +689,7 @@ footer .flex .container img{
       font-size: 1.3rem;
     }
     header .navBar nav ul li a:hover {
-      transform: scale(1.4);
+      transform: scale(1.1);
     }
     header .navBar .monCompte {
       width: 15%;

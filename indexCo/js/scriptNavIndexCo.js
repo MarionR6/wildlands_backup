@@ -23,7 +23,7 @@ transform: scale(1);
 
 // aller chercher le prénom de l'utilisateur dans les données Json
 
-const url = "json/data.json";
+const url = "../json/data.json";
 const getName = async () =>{
     await fetch(url, {
         method : "GET",
@@ -62,7 +62,7 @@ const gestion = document.createElement("li");
 const panier = document.createElement("li");
 const deco = document.createElement("li");
 // const backHome = document.createElement("a");
-gestion.innerHTML=`<a>Mon profil</a>`;
+gestion.innerHTML=`<a>Modifier le profil</a>`;
 panier.innerHTML=`<a>Mon panier</a>`;
 deco.innerHTML=`<a href="../index.html">Déconnexion</a>`;
 menu.append(gestion, panier, deco);
