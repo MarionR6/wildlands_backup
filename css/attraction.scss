@@ -23,7 +23,7 @@ p{
 }
 
 :root{
-    --poppins:'Poppins',sans-serif;
+    --poppins:"Poppins", sans-serif;
     --neucha:"Neucha", cursive;
     --bleu-clair: #c7e3cb ;
     --bleu : #56B462 ;
@@ -526,15 +526,15 @@ header{
 // header
 .headerP{
     background-image: url(../image/banner-attraction2.jpeg);
-    max-width: 100%;
+    width: 100%;
+    padding: 7%;
+    padding-top: 11%;
     background-size: cover;
     background-position: center;
     h1{
         color: white;
-        padding-top: 10%;
-        padding-bottom: 12%;
-        padding-left: 15%;
-        font-size: 4em;
+        font-size: 7em;
+        font-weight: 400;
     }
 }
 
@@ -549,83 +549,42 @@ header{
 //     transition: .3s;
 // }
 section.typeAttraction{
+    font-family: var(--poppins);
     background-color: #8AE395;
     padding-bottom: 5%;
     padding-top: 5%;
-    .petiteA{
-        width: 70%;
-        display: flex;
-        padding-left: 15%;
-        padding-top: 2%;
-        .imgA{
-        
-            img{
-                width: 100%;
-                
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .allAttraction{
+        width: 80%;
+        filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+        .attractionParc{
+            width: 100%;
+            display: flex;
+            .imgA{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
             }
-        }
-        .txtA{
-            background-color: #3A8043;
-            padding: 5%;
-            width: 80%;
-            display: block;
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            p{
-                color: white;
-                text-align: center;
-                padding-top: 10%;
-                font-size: 1.6vw;
-            }
-        }
-    }
-    .moyenneA{
-        width: 70%;
-        display: flex;
-        padding-left: 15%;
-        .txtA{
-            background-color: #3A8043;
-            padding: 5%;
-            width: 63.6%;
-            p{
-                color: white;
-                text-align: center;
-                padding-top: 10%;
-                font-size: 1.6vw;
-            }
-        }
-        .imgA{
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            img{
-                width: 100%;
-                
-            }
+            .txtA{
+                width: 50%;
+                background-color: #3A8043;
+                display: flex;
+                align-items: center;
+                p{
+                    padding: 5%;
+                    color: white;
+                    text-align: center;
+                    padding-top: 10%;
+                    font-size: 1.5em;
+                    line-height: 1.8em;
+                }
         }
     }
-    .grandeA{
-        width: 70%;
-        display: flex;
-        padding-left: 15%;
-        .imgA{
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            img{
-                width: 100%;
-            }
-        }
-        .txtA{
-            background-color: #3A8043;
-            padding: 5%;
-            margin-bottom: 0.8%;
-            width: 70.5%;
-            margin: 0 auto;
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            p{
-                color: white;
-                text-align: center;
-                padding-top: 5%;
-                font-size: 1.6vw;
-            }
-        }
-}
+    }
+    
 }
 
 //partie restaurant
@@ -633,174 +592,148 @@ section.typeAttraction{
 //banner
 .bannerResto{
     background-image: url(../image/banner-restaurant2.jpeg);
+    width: 100%;
+    padding: 7%;
+    padding-top: 11%;
     background-size: cover;
-    display: block;
     background-position: center;
     h1{
-        padding-top: 7%;
-        padding-bottom: 7%;
-        padding-left: 15%;
-        font-size: 5vw;
+        color: white;
+        font-size: 7em;
+        font-weight: 400;
     }
 }
 
 //section resto
-.resto{
+.restos{
+    font-family: var(--poppins);
     background-color: #8AE395;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     padding-top: 5%;
-    position: relative;
     padding-bottom: 5%;
-    .resto1{
-        margin-left: 20%;
-        .imgResto{
-            width: 100%;
-            img{
-                width: 60vh;
-                box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
+    .allResto{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        .resto{
+            width: 45%;
+            position: relative;
+            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+            .imgResto{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
             }
-        }
-        .vegan-locaux{
-            position: absolute;
-            top: 8%;
-            left: 42%;
-            text-align: center;
-            background-color: #3A8043;
-            border-radius: 10em;
-            width: 3%;
-            padding: 1%;
-            p{
-                font-size: 80%;
-            }
-        }
-        .txtResto{
-            width: 90%;
-            background-color: #3A8043;
-            padding: 10% 5% 14% 5%;
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            p{
+            .vegan-locaux{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 8%;
+                left: 75%;
                 text-align: center;
+                background-color: #3A8043;
+                border-radius: 50%;
+                width: 7em;
+                height: 7em;
+                z-index: 3;
+                p{
+                    font-family: var(--neucha);
+                    font-size: 1.5em;
+                    
+                }
+            }
+            .txtResto{
+                width: 100%;
+                background-color: #3A8043;
+                height: 40%;
+                display: flex;
+                align-items: center;
+                p{
+                    line-height: 1.8em;
+                    font-size: 1.5em;
+                    text-align: center;
+                    padding: 5% 10%;
+                }
             }
         }
     }
-    .resto2{
-        margin-right: 20%;
-        padding-left: 10%;
-        .imgResto{
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            width: 100%;
-            img{
-                width: 60vh;
-            }
-        }
-        .vegan-locaux{
-            position: absolute;
-            top: 8%;
-            left: 80%;
-            background-color: #3A8043;
-            border-radius: 10em;
-            width: 3%;
-            padding: 1%;
-            p{
-                font-size: 75%;
-                text-align: center;
-            }
-        }
-        .txtResto{
-            width: 90%;
-            background-color: #3A8043;
-            padding: 10% 5% 28% 5%;
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            p{
-                text-align: center;
-            }
-        }
     }
-}
 
 //espace détente
 ///banner détente
 .bannerDetente{
     background-image: url(../image/banner-detente7.jpeg);
+    width: 100%;
+    padding: 7%;
+    padding-top: 11%;
     background-size: cover;
     background-position: center;
     h1{
-        padding: 5% 0% 7% 10%;
-        font-size: 5em;
+        color: white;
+        font-size: 7em;
+        font-weight: 400;
     }
 }
 
 ///section détente
-.detente{
+.detentes {
+    font-family: var(--poppins);
     background-color: #8AE395;
     padding-bottom: 5%;
     padding-top: 5%;
-    .detente1{
-        display: flex;
-        width: 60%;
-        margin-left: 20%;
-        .imgD{
-            width: 50%;
-            img{
-                width: 100%;
-            }
-        }
-        .txtDetente{
-            background-color: #3A8043;
-            width: 50%;
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            p{
-                text-align: center;
-                padding: 25% 5% 0% 5%;
-                font-size: 2ex;
-            }
-        }
-    }
-    .detente2{
-        display: flex;
-        width: 60%;
-        margin-left: 20%;
-        .imgD{
+    display: flex;
+    justify-content: center;
+    .allDetente {
+        width: 80%;
+       .detente {
+            display: flex;
             width: 100%;
-            img{
-                width: 100%;
-                box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            }
-        }
-        .txtDetente{
-            background-color: #3A8043;
-            width: 100%;
-            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-            p{
-                text-align: center;
-                padding-top: 10%;
-                font-size: 2ex;
-                padding-left: 2%;
-                padding-right: 2%;
-            }
-            .reserve{
-                padding-top: 15%;
-                padding-left: 30%;
-                a{
-                    background-color: #8AE395;
-                    padding: 1% 15% 1% 15%;
-                    border-radius: 0.5em;
-                    color: black;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    &:hover{
-                        color: white;
-                        padding: 3% 20% 3% 20%;
-                    }
+            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+            .imgDetente {
+                width: 50%;
+                img{
+                    width: 100%;
                 }
             }
+            .txtDetente {
+                background-color: #3A8043;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                p {
+                    text-align: center;
+                    padding: 5% 10%;
+                    font-size: 1.5em;
+                    line-height: 1.8em;
+                }
+                
+            }
+        }
+        .detenteReserve{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .reserve{
+                background-color: var(--bleu);
+                    padding: 2% 6%;
+                    border-radius: 2em;
+                a{
+                    font-size: 1.5em;
+                }
+                
+            }
         }
     }
+    
 }
 
 //footer
-footer{
+footer {
     width: 100%;
     background-color:var(--bleu);
     font-family:var(--neucha);
