@@ -409,7 +409,7 @@ fieldset{
 
 .navBar .monCompte p{
   transition: 0.5s all;
-  font-size: 1.5em;
+  font-size: 1.4vw;
 }
 
 .navBar .monCompte p:hover{
