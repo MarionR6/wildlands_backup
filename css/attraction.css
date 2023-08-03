@@ -823,151 +823,89 @@ footer .mentions .mentionsdroits a {
   transition: 1s;
 }
 
-@media screen and (min-width: 1920px) {
-  .resto .resto1 .txtResto p {
-    font-size: 2em;
-  }
-  .resto .resto1 .vegan-locaux {
-    padding: 2%;
-    font-size: 1.5em;
-  }
-  .resto .resto2 .txtResto {
-    padding-bottom: 45%;
-  }
-  .resto .resto2 .txtResto p {
-    font-size: 2em;
-  }
-  .resto .resto2 .vegan-locaux {
-    padding: 2%;
-    font-size: 1.5em;
-    left: 77%;
-  }
-  .detente .detente1 .txtDetente p {
-    font-size: 1.5em;
-  }
-  .detente .detente2 .txtDetente p {
-    font-size: 1.5em;
-  }
-  .detente .detente2 .reserve a {
-    font-size: 1.5em;
+@media screen and (max-width: 1440px) {
+  .detentes .allDetente .detente .detenteReserve p {
+    font-size: 1.45em;
   }
 }
 @media screen and (max-width: 1200px) {
+  .headerP h1 {
+    font-size: 6em;
+  }
   /* POP UP SIGN UP */
   #popupsignup {
     width: 60%;
   }
-  .resto .resto2 .txtResto {
-    padding-bottom: 20%;
+  .bannerResto h1 {
+    font-size: 6em;
   }
-  .resto .resto2 .vegan-locaux {
-    left: 85%;
-    top: 12%;
-    width: 5%;
+  .restos .allResto .resto .txtResto {
+    height: 55%;
   }
-  .resto .resto2 .vegan-locaux p {
-    font-size: 1em;
+  .restos .allResto .resto .vegan-locaux {
+    left: 65%;
+    top: 5%;
   }
-  .resto .resto1 .vegan-locaux {
-    width: 5%;
-    top: 12%;
-    left: 35%;
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 1.5em;
   }
-  .resto .resto1 .vegan-locaux p {
-    font-size: 1em;
+  .bannerDetente h1 {
+    font-size: 6em;
   }
-  .detente .detente1 .txtDetente p {
-    padding-top: 15%;
+  .detentes .allDetente .detente .detenteReserve .reserve {
+    padding: 1% 5%;
   }
-  .detente .detente2 .txtDetente {
-    padding: 0% 5% 0% 5%;
-    width: 80%;
-  }
-  .detente .detente2 .txtDetente .reserve {
-    padding-top: 2%;
+  .detentes .allDetente .detente .detenteReserve .reserve a {
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 1024px) {
   #popupsignup {
     width: 80%;
   }
-  .navBar nav ul li a {
+  header .navBar nav ul li a {
     font-size: 1.3em;
   }
-  .navBar nav ul li a:hover {
+  header .navBar nav ul li a:hover {
     transform: scale(1.4);
   }
-  .navBar .monCompte {
+  header .navBar .monCompte {
     width: 15%;
     margin: 1% 0;
   }
-  .navBar .monCompte a {
+  header .navBar .monCompte a {
     font-size: 1.3em;
   }
   .headerP h1 {
-    font-size: 2.5em;
+    font-size: 5em;
   }
-  .typeAttraction .petiteA .imgA {
-    width: 95%;
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 1.3em;
   }
-  .typeAttraction .moyenneA .imgA {
-    width: 83.8%;
+  .bannerResto h1 {
+    font-size: 5em;
   }
-  .typeAttraction .grandeA .imgA {
-    width: 84%;
+  .restos .allResto .resto .vegan-locaux {
+    width: 5em;
+    height: 5em;
   }
-  .resto .resto1 {
-    width: 100%;
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 1.3em;
   }
-  .resto .resto1 .imgResto img {
-    width: 50vh;
-  }
-  .resto .resto1 .vegan-locaux {
-    top: 12%;
-    left: 32%;
-    width: 6%;
-  }
-  .resto .resto1 .vegan-locaux p {
-    font-size: 1em;
-  }
-  .resto .resto1 .txtResto {
-    width: 90%;
-    padding-bottom: 9%;
-  }
-  .resto .resto2 {
-    padding-left: 13%;
-  }
-  .resto .resto2 .imgResto img {
-    width: 50vh;
-  }
-  .resto .resto2 .txtResto {
-    padding-bottom: 16%;
-  }
-  .resto .resto2 .vegan-locaux {
-    top: 12%;
-    left: 83%;
-    width: 6%;
-  }
-  .resto .resto2 .vegan-locaux p {
-    font-size: 1em;
+  .restos .allResto .resto .txtResto p {
+    font-size: 1.3em;
   }
   .bannerDetente h1 {
-    font-size: 2em;
+    font-size: 5em;
   }
-  .detente .detente1 .txtDetente {
-    width: 50%;
+  .detentes .allDetente .detente .txtDetente p {
+    font-size: 1.2em;
   }
-  .detente .detente1 .txtDetente p {
-    font-size: 90%;
+  .detentes .allDetente .detente .txtDetente .reserve {
+    padding: 1% 3%;
   }
-  .detente .detente2 .txtDetente {
-    width: 80%;
-  }
-  .detente .detente2 .txtDetente p {
-    font-size: 89%;
-  }
-  .detente .detente2 .txtDetente .reserve {
-    padding-top: 10%;
+  .detentes .allDetente .detente .txtDetente .reserve a {
+    font-size: 0.9em;
   }
   footer {
     font-size: 0.7em;
@@ -1120,47 +1058,29 @@ footer .mentions .mentionsdroits a {
     margin-bottom: 5%;
   }
   .headerP h1 {
-    font-size: 2em;
+    font-size: 3.9em;
   }
-  .resto .resto1 .vegan-locaux {
-    padding: 2%;
-    width: 3.5%;
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 1em;
   }
-  .resto .resto1 .vegan-locaux p {
-    font-size: 50%;
+  .bannerResto h1 {
+    font-size: 3.9em;
   }
-  .resto .resto2 .vegan-locaux {
-    padding: 2%;
-    width: 3.5%;
+  .restos .allResto .resto .txtResto p {
+    font-size: 1em;
   }
-  .resto .resto2 .vegan-locaux p {
-    font-size: 50%;
+  .restos .allResto .resto .vegan-locaux {
+    width: 4em;
+    height: 4em;
   }
-  .resto .resto2 .txtResto {
-    padding-bottom: 18%;
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 1em;
   }
-  .detente .detente1 .txtDetente {
-    width: 46%;
-    padding: 0% 2%;
+  .bannerDetente h1 {
+    font-size: 3.9em;
   }
-  .detente .detente1 .txtDetente p {
-    font-size: 60%;
-  }
-  .detente .detente1 .imgD {
-    width: 49%;
-  }
-  .detente .detente2 .txtDetente {
-    width: 45%;
-    padding: 2%;
-  }
-  .detente .detente2 .txtDetente p {
-    font-size: 60%;
-  }
-  .detente .detente2 .imgD {
-    width: 50%;
-  }
-  .detente .detente2 .reserve a {
-    font-size: 80%;
+  .detentes .allDetente .detente .txtDetente p {
+    font-size: 0.89em;
   }
   /* FOOTER */
   footer {
@@ -1231,102 +1151,39 @@ footer .mentions .mentionsdroits a {
     display: none;
   }
   .headerP h1 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
-  .typeAttraction {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 0.7em;
+    padding-top: 2%;
   }
-  .typeAttraction .petiteA {
-    width: 100%;
+  .bannerResto h1 {
+    font-size: 2em;
   }
-  .typeAttraction .petiteA .txtA {
-    width: 100%;
-    font-size: 100%;
+  .restos .allResto .resto .txtResto p {
+    font-size: 0.7em;
+    padding-bottom: 10%;
   }
-  .typeAttraction .petiteA .txtA p {
-    font-size: 5em;
+  .restos .allResto .resto .vegan-locaux {
+    width: 2em;
+    height: 2em;
+    left: 35%;
   }
-  .typeAttraction .moyenneA {
-    width: 100%;
-  }
-  .typeAttraction .grandeA {
-    width: 100%;
-  }
-  .resto {
-    width: 100%;
-  }
-  .resto .resto1 {
-    width: 40%;
-    padding-left: 5%;
-  }
-  .resto .resto1 .imgResto img {
-    width: 35vh;
-  }
-  .resto .resto1 .vegan-locaux {
-    border-radius: 10em;
-    top: 8%;
-    left: 25%;
-    padding-right: 4%;
-  }
-  .resto .resto1 .vegan-locaux p {
-    font-size: 0.4em;
-  }
-  .resto .resto1 .txtResto {
-    width: 90%;
-    padding-left: 5%;
-  }
-  .resto .resto1 .txtResto p {
-    padding-left: 0%;
-    font-size: 85%;
-  }
-  .resto .resto2 {
-    padding-right: 8.4%;
-    width: 33%;
-  }
-  .resto .resto2 .imgResto img {
-    width: 35vh;
-    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.25);
-  }
-  .resto .resto2 .vegan-locaux {
-    border-radius: 10em;
-    top: 8%;
-    left: 80%;
-    padding-right: 4%;
-  }
-  .resto .resto2 .vegan-locaux p {
-    font-size: 0.4em;
-  }
-  .resto .resto2 .txtResto {
-    padding-bottom: 6%;
-    width: 90%;
-  }
-  .resto .resto2 .txtResto p {
-    font-size: 90%;
-    padding-bottom: 58%;
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 0.7em;
   }
   .bannerDetente h1 {
-    font-size: 1.2em;
+    font-size: 2em;
   }
-  .detente .detente1 .txtDetente {
-    width: 50%;
+  .detentes .allDetente .detente .txtDetente p {
+    padding-top: 0%;
+    font-size: 0.55em;
   }
-  .detente .detente1 .txtDetente p {
-    font-size: 50%;
+  .detentes .allDetente .detente .txtDetente .reserve {
+    padding: 0% 5%;
   }
-  .detente .detente2 .imgD {
-    width: 60vh;
-  }
-  .detente .detente2 .txtDetente {
-    width: 91%;
-  }
-  .detente .detente2 .txtDetente p {
-    font-size: 45%;
-    padding-top: 0;
-  }
-  .detente .detente2 .reserve {
-    font-size: 60%;
+  .detentes .allDetente .detente .txtDetente .reserve a {
+    font-size: 0.5em;
   }
   footer .flex .container .coordonnees i {
     font-size: 70%;
@@ -1341,68 +1198,87 @@ footer .mentions .mentionsdroits a {
     font-size: 60%;
   }
 }
-@media screen and (max-width: 425px) {
-  .resto .resto1 .imgResto img {
-    width: 30vh;
+@media screen and (max-width: 320px) {
+  #popupsignup {
+    font-size: 1.2em;
   }
-  .resto .resto1 .txtResto {
+  #popup {
+    width: 95%;
+  }
+  .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+  .headerP h1 {
+    font-size: 1.5em;
+  }
+  main .typeAttraction .allAttraction {
     width: 90%;
   }
-  .resto .resto1 .txtResto p {
-    font-size: 65%;
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 0.5em;
+    padding-top: 2%;
   }
-  .resto .resto1 .vegan-locaux {
-    padding: 2%;
-    width: 7%;
-    border-radius: 20em;
-  }
-  .resto .resto2 .imgResto img {
-    width: 30vh;
-  }
-  .resto .resto2 .txtResto {
-    width: 102.5%;
-  }
-  .resto .resto2 .txtResto p {
-    font-size: 65%;
-    padding-bottom: 27%;
-  }
-  .resto .resto2 .vegan-locaux {
-    padding: 2%;
-    width: 7%;
-    border-radius: 20em;
-  }
-  .detente .detente1 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-left: 7%;
-  }
-  .detente .detente1 .imgD img {
-    width: 40vh;
-  }
-  .detente .detente1 .txtDetente {
-    width: 78%;
-    padding-bottom: 10%;
+  .bannerResto h1 {
     font-size: 1.5em;
   }
-  .detente .detente2 {
-    display: flex;
-    flex-direction: column-reverse;
-    text-align: center;
-    padding-left: 7%;
+  .restos .allResto {
+    width: 90%;
   }
-  .detente .detente2 .imgD {
-    padding-top: 5%;
+  .restos .allResto .resto .txtResto p {
+    font-size: 0.5em;
+    padding-bottom: 15%;
   }
-  .detente .detente2 .imgD img {
-    width: 40vh;
+  .restos .allResto .resto .vegan-locaux {
+    width: 2em;
+    height: 2em;
+    left: 70%;
   }
-  .detente .detente2 .txtDetente {
-    width: 78%;
-    padding-top: 5%;
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 0.6em;
+  }
+  .bannerDetente h1 {
     font-size: 1.5em;
   }
-  .detente .detente2 .reserve {
-    padding-right: 30%;
+  .detentes .allDetente {
+    width: 90%;
+  }
+  .detentes .allDetente .detente .txtDetente p {
+    padding-top: 0%;
+    font-size: 0.4em;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve {
+    padding: 0% 5%;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve a {
+    font-size: 0.5em;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.7em;
   }
 }/*# sourceMappingURL=attraction.css.map */

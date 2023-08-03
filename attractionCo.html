@@ -38,7 +38,7 @@
         <div id="toggle"></div>
         <div id="navigation">
                 <ul>
-                    <li><a href="../indexCo/indexCo.html">Accueil</a></li>
+                    <li><a href="../indexCo.html">Accueil</a></li>
                     <li><a href="../attraction/attractionCo.html">Parcs d'attractions</a></li>
                     <li><a href="../eau/eauCo.html">Les pieds dans l'eau</a></li>
                     <li><a href="../foret/foretCo.html">Au coeur de la forêt</a></li>
@@ -50,12 +50,12 @@
         <!-- menu normal -->
         <div class="navBar scrollAnimation scrollDown" id="scrollBar">
             <div class="logo">
-                <a href="../indexCo/indexCo.html"><img src="image/wildland-logo2.svg" alt="LOGO de Wildlands"></a>
+                <a href="../indexCo.html"><img src="image/wildland-logo2.svg" alt="LOGO de Wildlands"></a>
             </div>
             <nav>
                 <ul>
                     <li><a href="../attraction/attractionCo.html">Parc d'attractions</a></li>
-                    <li><a href="../indexCo/indexCo.html#nature" class="deroulant">Parc naturel</a>
+                    <li><a href="" class="deroulant">Parc naturel</a>
                         <ul class="sous">
                             <li><a href="../eau/eauCo.html">Les pieds dans l'eau</a></li>
                             <li><a href="../foret/foretCo.html">Au coeur de la forêt</a></li>
@@ -63,18 +63,83 @@
                         </ul>
                     </li>
                     <li><a href="../contact/contactCo.html">Contact</a></li>
-                    <li><a href="../billetterie/billeterieCo.html">Billetterie</a></li>
+                    <li><a href="../billetterie/billetterieCo.html">Billetterie</a></li>
                 </ul>
             </nav>
-            <!-- <div class="monCompte" id = "moncompte">
-                <btn><p>Mon compte</p></btn>
-            </div> -->
             <div class="monCompte connexionCompte">
                 <button class="btnCompte"></button>
             </div>
         </div>
     </header>
+     <!--  D I V . P O P . U P  -->
 
+     <div class="popup popupdisplay" id = "popup">
+        <button id = "closepopup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Connectez-vous</legend>
+                <p id = "emaildisable" class = "emaildisable entrystyle emailflex">
+                    <label for="email">Adresse mail</label>
+                    <input type="text" placeholder="" name="email" id="email">
+                </p>
+                <p id = "passworddisable" class = "passworddisable passwordflex entrystyle">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" placeholder="" name="password" id="password">
+                </p>
+                <a href ="attractionCo.html" id = "meconnecter">Me connecter</a>
+                <div class="connectremember">
+                    <input type="checkbox" id="checkbox" checked>
+                    <label for="checkbox"></label>
+                    <label for="rememberme">Se souvenir de moi</label>
+                </div>
+                <div class="plssignup">
+                    <p>Pas encore de compte ?</p>
+                </div>
+            </fieldset>                
+        </form>
+        <button id ="minscrire">Inscrivez-vous</button>
+    </div>
+
+    <div class="signup signupdisplay" id = "popupsignup">
+        <button id = "closepopupsignup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Inscription</legend>
+                <div class="containersignup">
+                    <div class="leftsignup">
+                        <p class = "entrystyle">
+                            <label for="name">Nom</label>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" name="firstname" id="firstname">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="phone">Numéro de téléphone</label>
+                            <input type="tel" placeholder="" name="phone" id="phone">
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="rightsignup">
+                        <p class = "entrystyle">
+                            <label for="email">Adresse mail</label>
+                            <input type="text" placeholder="" name="email" id="emailsignup" class="reduc">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" placeholder="" name="password" id="passwordsignup">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="password">Confirmer le mot de passe</label>
+                            <input type="password" placeholder="" name="password">
+                        </p>
+                    </div>
+                </div>
+            </fieldset>                
+        </form>
+        <a href="attractionCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
+    </div>
     
     <main>
         <!-- header -->
@@ -85,8 +150,8 @@
     </div>
     <!-- les différentes types d'attraction -->
     <section class="typeAttraction">
-
-        <div class="petiteA reveal" id = "family">
+        <div class="allAttraction">
+            <div class="attractionParc" id = "family">
             <div class="imgA revealleft">
                 <img src="image/sensation-nulle2.jpg" alt="">
             </div>
@@ -99,34 +164,34 @@
                     comme les petits !
                 </p>
             </div>
-        </div>
-
-        <div class="moyenneA">
-            <div class="txtA revealleft">
-                <p>
-                    Venez découvrir les attractions 
-                pour les jeunes et les plus grands!
-                Avec des sensations plus ou 
-                moins fortes !
-                </p>
             </div>
-            <div class="imgA revealright">
-                <img src="image/sensation-moyenne.jpeg" alt="">
+            <div class="attractionParc">
+                <div class="txtA revealleft">
+                    <p>
+                        Venez découvrir les attractions 
+                    pour les jeunes et les plus grands!
+                    Avec des sensations plus ou 
+                    moins fortes !
+                    </p>
+                </div>
+                <div class="imgA revealright">
+                    <img src="image/sensation-moyenne.jpeg" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="grandeA" id = "sensation">
-            <div class="imgA revealleft">
-                <img src="image/sensation-forte.jpeg" alt="">
+    
+            <div class="attractionParc" id = "sensation">
+                <div class="imgA revealleft">
+                    <img src="image/sensation-forte.jpeg" alt="">
+                </div>
+                <div class="txtA revealright">
+                    <p>
+                       Et enfin les attractions pour 
+                    les plus costauds !
+                    Si vous avez assez de courage essayer
+                     de défier les attractions
+                    les plus sensationnelles et décoiffantes !  
+                    </p></div>
             </div>
-            <div class="txtA revealright">
-                <p>
-                   Et enfin les attractions pour 
-                les plus costauds !
-                Si vous avez assez de courage essayer
-                 de défier les attractions
-                les plus sensationnelles et décoiffantes !  
-                </p></div>
         </div>
     </section>
 
@@ -137,36 +202,40 @@
         </div>
     </div>
 
-    <section class="resto">
-        <div class="resto1">
-            <div class="imgResto revealleft">
-                <img src="image/resto1.jpeg" alt="">
+    <section class="restos">
+        <div class="allResto">
+            <div class="resto">
+                <div class="imgResto revealleft">
+                    <img src="image/resto1.jpeg" alt="">
+                </div>
+                <div class="vegan-locaux revealleft">
+                    <p>Options vegan</p>
+                </div>
+                <div class="txtResto revealleft">
+                    <p>
+                        Différents restaurants dans le parc sont disponible dont des restaurants végétarien et végan !
+                        Et sur différents thèmes selon la zone du parc
+                        où vous êtes, bonne appétit  
+                    </p>
+                </div>
             </div>
-            <div class="vegan-locaux revealleft">
-                <p>Options vegan</p>
-            </div>
-            <div class="txtResto revealleft">
-                <p>
-                    Différents restaurants dans le parc sont disponible dont des restaurants végétarien et végan !
-                    Et sur différents thèmes selon la zone du parc
-                    où vous êtes, bonne appétit  
-                </p>
+            <div class="resto">
+                <div class="imgResto revealright">
+                    <img src="image/resto3.jpeg" alt="">
+                </div>
+                <div class="vegan-locaux revealright">
+                    <p>Produits locaux</p>
+                </div>
+                <div class="txtResto revealright">
+                    <p>
+                        Les produits que nous vous servons sont bio, frais et proviennent de notre région, par nos éleveurs et nos commerçant
+                    </p>
+                </div>
             </div>
         </div>
+        
 
-        <div class="resto2">
-            <div class="imgResto revealright">
-                <img src="image/resto3.jpeg" alt="">
-            </div>
-            <div class="vegan-locaux revealright">
-                <p>Produits locaux</p>
-            </div>
-            <div class="txtResto revealright">
-                <p>
-                    Les produits que nous vous servons sont bio, frais et proviennent de notre région, par nos éleveurs et nos commerçant
-                </p>
-            </div>
-        </div>
+        
     </section>
 
     <!-- espace détente -->
@@ -178,35 +247,38 @@
     </div>
 
     <!-- section détente -->
-    <section class="detente">
-        <div class="detente1">
-            <div class="imgD revealleft">
-                <img src="image/espace-detente3.jpeg" alt="">
-            </div>
-            <div class="txtDetente revealright">
-                <p>
-                    Grâce à nos zones détente vous allez 
-                    pourvoir vous reposer dans des espaces
-                    vert situer dans le parc et reprendre un d’énergie pour de nouvelle sensation !
-                </p>
-            </div>
-        </div>
-
-        <div class="detente2">
-            <div class="txtDetente revealleft">
-                <p>
-                    Des Hôtels sont à votre disposition pour pouvoir profiter de notre parc au maximum 
-                    avec des piscines et des zones pour prendre des bains de soleil ! 
-                </p>
-                <div class="reserve">
-                    <a href="../billeterie/wip.html">Réserver</a>
+    <section class="detentes">
+        <div class="allDetente">
+            <div class="detente">
+                <div class="imgDetente revealleft">
+                    <img src="image/espace-detente3.jpeg" alt="">
+                </div>
+                <div class="txtDetente revealright">
+                    <p>
+                        Grâce à nos zones détente vous allez 
+                        pourvoir vous reposer dans des espaces
+                        vert situer dans le parc et reprendre un d’énergie pour de nouvelle sensation !
+                    </p>
                 </div>
             </div>
-            <div class="imgD revealright">
-                <img src="image/espace-detente2.jpeg" alt="">
+    
+            <div class="detente">
+                <div class="txtDetente detenteReserve revealleft">
+                    <p>
+                        Des Hôtels sont à votre disposition pour pouvoir profiter de notre parc au maximum 
+                        avec des piscines et des zones pour prendre des bains de soleil ! 
+                    </p>
+                    <div class="reserve">
+                        <a href="../billeterie/billetterieCo.html">Réserver</a>
+                    </div>
+                </div>
+                <div class="imgDetente revealright">
+                    <img src="image/espace-detente2.jpeg" alt="">
+                </div>
             </div>
         </div>
     </section>
+
     <!-- footer -->
     <footer>
         <div class="flex">
@@ -227,7 +299,7 @@
             </div>
         <div class="container footnav">
             <ul>
-                <li><a href="../indexCo/indexCo.html">Accueil</a></li>
+                <li><a href="../indexCo.html">Accueil</a></li>
                 <li><a href="../attraction/attractionCo.html">Parc d'attractions</a></li>
                 <li><a href="../foret/foretCo.html">Au coeur de la forêt</a></li>
                 <li><a href="../eau/eauCo.html">Les pieds dans l'eau</a></li>
@@ -271,5 +343,6 @@
     <script src="js/popupconnect.js"></script>
     <script src="js/scriptNav.js"></script>
     <script src="js/scrollcards.js"></script>
+    
 </body>
 </html>
