@@ -440,7 +440,6 @@ header .navBar .monCompte button {
   background-color: var(--vertFonce);
   border: none;
   text-decoration: none;
-  font-size: 1em;
   transition: 0.5s all;
   position: relative;
   color: white;
