@@ -765,6 +765,9 @@ main .night .contain .txt .btn a {
   display: inline-block;
   font-size: 1.4em;
 }
+main .second {
+  padding-bottom: 12%;
+}
 
 footer {
   width: 100%;
