@@ -223,18 +223,21 @@ header .navBar .monCompte button .gestion {
   background-color: #1F5180;
   opacity: 0.8;
   padding: 10%;
+  font-size: 1.5vw;
 }
 header .navBar .monCompte button .panier {
   width: 100%;
   background-color: #1F5180;
   opacity: 0.8;
   padding: 10%;
+  font-size: 1.5vw;
 }
 header .navBar .monCompte button .deco {
   width: 100%;
   background-color: #1F5180;
   opacity: 0.8;
   padding: 10%;
+  font-size: 1.5vw;
 }
 
 .revealleft {
