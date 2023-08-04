@@ -17,8 +17,8 @@ btnMonCompte.addEventListener("click", () =>{
     if(popup.classList.contains("popupdisplay")){
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
-        main.style.pointerEvents = "none";
         header.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
         header.style.pointerEvents = "none";
 
         SignUpButton.addEventListener("click", () =>{
@@ -70,6 +70,7 @@ btnMonCompte768.addEventListener("click", () =>{
         popup.classList.remove("popupdisplay");
         main.style.filter = "blur(0.5em)";
         header.style.filter = "blur(0.5em)";
+        main.style.pointerEvents = "none";
         header.style.pointerEvents = "none";
 
         SignUpButton.addEventListener("click", () =>{
@@ -117,7 +118,7 @@ btnMonCompte768.addEventListener("click", () =>{
 
 // FETCH
 
-const dataUser = "json/data.json";
+const dataUser = "json/data.json"
 
 const fetchUser = async () => {
     const response = await fetch (dataUser, {
@@ -134,7 +135,6 @@ const fetchUser = async () => {
 }
 
 fetchUser()
-//console.log(`${data.users[0]}`);
 
 const checkbox = document.getElementById('checkbox');
 const emaildisable = document.getElementById("emaildisable");

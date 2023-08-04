@@ -7,16 +7,16 @@
             "password": "•••••••••"
         },
         {
-            "name": "Lefebvre",
-            "firstname": "Toto",
-            "email": "lefebvre.toto@gmail.com",
-            "password": "•••••••••"
+            "name": "Descamps",
+            "firstname": "Sebastien",
+            "email": "sebastien.descamps@monmail.com",
+            "password": "•••••••"
         },
         {
             "name": "ghost",
             "firstname": "Titi",
             "email": "ghost.titi@gmail.com",
-            "password": "•••••••••"
+            "password": "••••••••••••"
         }
     ]
 }
