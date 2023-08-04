@@ -1,0 +1,2068 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a, img {
+  display: block;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  background-color: #c7e3cb;
+}
+
+:root {
+  --poppins:"Poppins",sans-serif;
+  --neucha:"Neucha", cursive;
+  --vert:#56B462;
+  --vert-clair:#c7e3cb;
+  --vert-fonce:#3A8043;
+}
+
+.bubble{
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  background-color: #3A8043;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1em #204725;
+}
+
+.bubble p{
+  padding: 20% 20%;
+  font-size: 0.8em;
+  text-align: center;
+  color: white;
+  font-family: "Neucha", cursive;
+  font-size: 1.1em;
+}
+
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}
+
+/* POP UP CONNEXION */
+
+#popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: 'Neucha', sans-serif;
+  color: white;
+}
+
+.popup #closepopup{
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+fieldset{
+  border: none;
+}
+
+.popup form fieldset legend{
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 0.06em solid white;
+  padding-bottom: 5%;
+}
+
+
+#meconnecter,
+#minscrire{
+  color: white;
+  text-align: center;
+  margin: 10% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  transition: .5s all;
+  border: none;
+  font-family: 'Neucha', sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  transition: .5s all;
+}
+
+#minscrire{
+  font-size: 1em;
+  margin-top: 6%;
+}
+
+#minscrire:hover{
+  transform: scale(1.1);
+}
+
+.popup form fieldset #meconnecter:hover{
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember a:hover{
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember label{
+  padding-left: 1%;
+  font-size: 0.7em;
+}
+
+.popup form fieldset .plssignup{
+  font-size: 0.8em;
+}
+
+.popup form fieldset .plssignup a{
+  color: white;
+  text-align: center;
+  margin: 6% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  font-size: 1.3em;
+  transition: .5s all;
+}
+
+.popup form fieldset .plssignup a:hover{
+  transform: scale(1.1);
+}
+
+.emailflex, .passwordflex{
+  display: flex;
+  flex-direction: column;
+}
+
+#emaildisable{
+  padding: 5% 0 4% 0;
+}
+
+.entrystyle input{
+  margin-top: 2%;
+  padding: 2% 4%;
+  font-size: 0.6em;
+  background-color: #c7e3cb;
+  border: none;
+  border-radius: 1em;
+}
+
+#emaildisable input::placeholder,
+#passworddisable input::placeholder{
+  color: black;
+  font-weight: 500;
+}
+
+.emaildisable,
+.passworddisable{
+  pointer-events: none;
+}
+
+.popup{
+  visibility: visible;
+  transition: .5s all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popupdisplay{
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* POPUP SIGNUP */
+
+#popupsignup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: 'Neucha', sans-serif;
+  color: white;
+  width: 50%;
+}
+
+#closepopupsignup{
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+.signup{
+  visibility: visible;
+  transition: .5s all;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup form .login .connect{
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 4%;
+}
+
+.signup form .login .containersignup{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.1em solid #c7e3cb;
+  border-radius: 1em;
+  padding: 5% 5%;
+  position: relative;
+}
+
+.signup form .login .containersignup label{
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.signup form .login .containersignup .middleentry{
+  margin: 5% 0;
+}
+
+.signup form .login .containersignup .leftsignup{
+  width: 45%;
+}
+
+.signup form .login .containersignup .leftsignup p,
+.signup form .login .containersignup .rightsignup p{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup form .login .containersignup .line{
+  width: 30%;
+  height: 0.07em;
+  background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+  transform: rotate(90deg);
+  align-self: center;
+  position: absolute;
+}
+
+.signup form .login .containersignup .rightsignup{
+  width: 45%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle{
+  width: 100%;
+}
+
+
+.signup form .login .containersignup .rightsignup .entrystyle input{
+  width: 100%;
+}
+
+.signupdisplay{
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.signup .submitsignup{
+  color: white;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 1% 4%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4%;
+  transition: .5s all;
+}
+
+.signup .submitsignup:hover{
+  transform: scale(1.1);
+}
+
+/* NAVBAR */
+
+#navigation{
+  display: none;
+}
+
+.navBar {
+  width: 100%;
+  background-color: var(--vert);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navBar .logo {
+  padding: 0.5% 0;
+  width: 8%;
+}
+.navBar .logo img {
+  width: 100%;
+}
+.navBar nav {
+  width: 50%;
+}
+.navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navBar nav ul li {
+  list-style-type: none;
+}
+.navBar nav ul li a{
+  font-family: var(--neucha);
+  color: white;
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+
+.navBar nav ul li a:hover{
+  transform: scale(1.1);
+}
+
+.navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+}
+
+.navBar nav ul li:hover .sous {
+  display: block;
+}
+
+.navBar nav ul li:hover .sous li {
+  background-color: var(--vert);
+  opacity: 0.8;
+  border-bottom: solid var(--vert-fonce) 1px;
+  padding: 2%;
+}
+
+.navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  color: white;
+  padding: 2%;
+  transition: 0.5s all;
+}
+
+.navBar nav ul li:hover .sous li a:hover{
+  color: #204725;
+  transform: scale(1);
+}
+
+.navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+
+/* .navBar .monCompte {
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+} */
+
+.navBar .monCompte p{
+  transition: 0.5s all;
+  font-size: 1.4vw;
+}
+
+.navBar .monCompte p:hover{
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* VERSION CONNECTEE */
+
+header .milieu {
+  display: none;
+}
+header .milieu .monCompte2 {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  border-radius: 3vh;
+}
+header .milieu .monCompte2 .btnCompte2 {
+  display: inline-block;
+  background-color: var(--vert-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  border-radius: 2vh;
+  padding: 0.5em 2em;
+  color: white;
+}
+header .milieu .monCompte2 .btnCompte2 p {
+  font-family: var(--neucha);
+}
+header .milieu .monCompte2 .btnCompte2:hover {
+  transform: scale(1.1);
+}
+header .milieu .monCompte2 .btnCompte2 #box2 {
+  align-items: center;
+  justify-content: center;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  left: 10%;
+  transition: 1 all;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
+  font-size: 1.4vw;
+  color: white;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionNone {
+  display: none;
+}
+header .milieu .monCompte2 .btnCompte2 .gestion {
+  width: 80%;
+  margin-top: 5%;
+  background-color: #3A8043;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .milieu .monCompte2 .btnCompte2 .deco {
+  width: 80%;
+  background-color: #3A8043;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .cart {
+  display: none;
+}
+header .navBar {
+  width: 100%;
+  background-color: var(--vert);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+header .navBar .logo img {
+  width: 100%;
+}
+header .navBar nav {
+  width: 50%;
+}
+header .navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header .navBar nav ul li {
+  list-style: none;
+}
+header .navBar nav ul li a {
+  font-family: var(--neucha);
+  text-decoration: none;
+  transition: 0.5s all;
+}
+header .navBar nav ul li a:hover {
+  transform: scale(1.1);
+}
+header .navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar nav ul li:hover .sous {
+  display: block;
+}
+header .navBar nav ul li:hover .sous li {
+  background-color: var(--vert);
+  opacity: 0.8;
+  border-bottom: solid var(--vert-clair) 1px;
+  padding: 2%;
+  background-color: var(--vert-fonce);
+}
+header .navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+header .navBar nav ul li:hover .sous li a:hover {
+  color: #204725;
+  transform: scale(1);
+}
+header .navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+header .navBar .monCompte {
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 2em;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+}
+header .navBar .monCompte button {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+header .navBar .monCompte button p {
+  font-family: var(--neucha);
+}
+header .navBar .monCompte button:hover {
+  transform: scale(1.1);
+}
+header .navBar .monCompte button .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar .monCompte button .gestionCompte li a {
+  font-size: 1.4vw;
+  color: white;
+}
+header .navBar .monCompte button .gestionNone {
+  display: none;
+}
+header .navBar .monCompte button .gestion {
+  width: 100%;
+  margin-top: 7%;
+  background-color: #3A8043;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .panier {
+  width: 100%;
+  background-color: #3A8043;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .deco {
+  width: 100%;
+  background-color: #3A8043;
+  opacity: 0.8;
+  padding: 10%;
+}
+
+/* BOUTONS PROFIL ET CART */
+
+
+
+/* BANNER 1 */
+main .banner {
+  width: 100%;
+  background-image: url(https://i.goopics.net/wyej46.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+main .banner h1 {
+  text-align: center;
+  padding: 11% 0% 7% 0%;
+  font-family: "Neucha", cursive;
+  font-size: 7em;
+  color: white;
+  font-weight: 400;
+}
+
+/* ACTIVITIES */
+.activities {
+  width: 100%;
+  padding: 2% 0 5% 0;
+}
+
+.activities h2 {
+  font-family: "Neucha", cursive;
+  background-color: #3A8043;
+  font-weight: 400;
+  font-size: 2em;
+  color: white;
+  padding: 0.2%;
+  width: 12em;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.activities .actcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+.activities .actcontainer .acttxtimg .bubble{
+  position: absolute;
+  right: -5%;
+  top: -15%;
+  z-index: 4;
+}
+
+.activities .actcontainer .acttxtimg {
+  width: 60%;
+  display: flex;
+  position: relative;
+}
+
+.activities .actcontainer .acttxtimg .acttxt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #3A8043;
+  text-align: center;
+  padding: 0 2%;
+  line-height: 250%;
+  color: white;
+}
+
+.activities .actcontainer .acttxtimg .acttxt h3 {
+  font-weight: 400;
+  margin-bottom: 4%;
+  text-transform: uppercase;
+  font-size: 1.8em;
+}
+
+.activities .actcontainer .acttxtimg .acttxt .line {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt p {
+  font-size: 1em;
+}
+
+.activities .actcontainer .acttxtimg .actimg {
+  width: 50%;
+}
+
+.activities .actcontainer .acttxtimg .actimg img {
+  width: 100%;
+}
+
+.activities .actcontainer .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* BANNER FAMILLE */
+.banner2 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/femwjl.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5%;
+}
+
+.banner2 h1 {
+  padding: 7% 0% 7% 15%;
+  font-family: "Neucha", cursive;
+  font-size: 5em;
+  color: white;
+  font-weight: 400;
+}
+
+/* ACTIVITES EN FAMILLE */
+.famcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.famcontainer .famact {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+  transition: .5s all;
+}
+
+.famcontainer .famact .famimg {
+  width: 70%;
+  position: relative;
+}
+
+.famcontainer .famact .famimg .bubble{
+  position: absolute;
+  right: -12%;
+  top: -18%;
+}
+
+.famcontainer .famact .famimg img {
+  width: 100%;
+}
+
+.famcontainer .famact .famtxt {
+  text-align: center;
+  width: 70%;
+  background-color: #3A8043;
+  color: white;
+  padding: 0 8% 6% 8%;
+  line-height: 200%;
+  font-size: 1.5em;
+}
+
+.famcontainer .famact .famtxt h3 {
+  padding-top: 4%;
+  font-weight: 400;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.famcontainer .famact .famtxt .line {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+/* BANNER NUIT BOIS */
+.banner3 {
+  width: 100%;
+  background-image: url(https://i.goopics.net/fjsp92.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 5% 0 2% 0;
+}
+
+.banner3 h1 {
+  padding: 7% 0% 7% 50%;
+  font-family: "Neucha", cursive;
+  font-size: 5em;
+  color: white;
+  font-weight: 400;
+}
+
+/* CAMPING CHALETS */
+.campchacontainer {
+  width: 100%;
+}
+
+.campchacontainer a{
+  transition: 0.5s all;
+}
+
+.campchacontainer a:hover{
+  transform: scale(1.1);
+}
+
+.campchacontainer h2 {
+  font-family: "Neucha", cursive;
+  background-color: #3A8043;
+  font-weight: 400;
+  font-size: 2em;
+  color: white;
+  padding: 0.2%;
+  width: 12em;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.campchacontainer .twoparts {
+  display: flex;
+  position: relative;
+}
+
+.campchacontainer .twoparts .leftpart,
+.campchacontainer .twoparts .rightpart {
+  width: 50%;
+}
+
+.campchacontainer .twoparts .leftpart img,
+.campchacontainer .twoparts .rightpart img {
+  width: 40%;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+/* LEFT PART */
+
+.campchacontainer .twoparts .leftpart {
+  position: relative;
+  z-index: 0;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(1) {
+  position: absolute;
+  z-index: 1;
+  right: 22%;
+  top: 10%;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(2) {
+  position: absolute;
+  z-index: 2;
+  bottom: 20%;
+  left: 15%;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(3) {
+  position: absolute;
+  z-index: 3;
+  bottom: 0%;
+  right: 10%;
+}
+
+.campchacontainer .twoparts .bubble{
+  position: absolute;
+  top: 0%;
+  left: 36%;
+  z-index: 4;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+.campchacontainer .twoparts .bubble2{
+  position: absolute;
+  top: 8%;
+  left: 77%;
+  z-index: 4;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+/* RIGHT PART */
+
+.campchacontainer .twoparts .rightpart .bubble{
+  position: relative;
+  top: -70%;
+  right: -53%;
+  z-index: 4;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(1){
+  position: relative;
+  z-index: 1;
+  left: 20%;
+  top: 20%;
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(2){
+  position: relative;
+  z-index: 2;
+  left: 45%;
+  bottom: -10%;
+}
+
+/* BTN CAMP CHA */
+
+.campchacontainer .btncamp{
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+}
+
+.campchacontainer .btncamp a{
+  background-color: #3A8043;
+  color: white;
+  padding: 1%;
+  border-radius: 2em;
+  font-family: "Neucha", cursive;
+  font-size: 1.5em;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 5%;
+  width: 100%;
+  background-color: var(--vert);
+  font-family: var(--neucha);
+}
+
+footer a{
+  transition: 0.5s all;
+}
+
+footer a:hover{
+  transform: scale(1.1);
+}
+
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  margin-top: 0;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+  color: white;
+}
+
+footer .flex .container .coordonnees a{
+  color: white;
+}
+
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+  color: white;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo i {
+  padding: 15%;
+  color: white;
+}
+footer .mentions {
+  text-align: center;
+  width: 100%;
+  background-color: var(--vert-fonce);
+  padding: 2%;
+  color: white;
+}
+
+footer .mentions .mentionsdroits{
+  display: flex;
+  justify-content: center;
+}
+
+footer .mentions .mentionsdroits a{
+  color: white;
+}
+
+/* ANIMATION JS */
+.revealleft{
+  opacity:0;
+  transform: translateX(-10em);
+}
+
+.revealright{
+  opacity: 0;
+  transform: translateX(10em);
+}
+
+.revealvisible{
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+/* RESPONSIVE */
+
+/* 1920px */
+
+@media screen and (max-width: 1920px){
+
+  .navBar .logo{
+    padding: 1.2% 0;
+  }
+
+  .navBar .monCompte a{
+    font-size: 2.2em;
+  }
+
+  .activities h2{
+    font-size: 2.8em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 2.1em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1.5em;
+  }
+
+  .campchacontainer h2{
+    font-size: 2.8em;
+  }
+}
+
+/* 1540px */
+
+@media screen and (max-width: 1540px){
+  .navBar nav ul li a{
+    font-size: 1.8em;
+  }
+
+  .navBar .monCompte a{
+    font-size: 1.8em;
+  }
+
+  .activities h2{
+    font-size: 2.5em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.8em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1em;
+  }
+
+  .campchacontainer h2{
+    font-size: 2.5em;
+  }
+
+  .famcontainer .famact .famtxt{
+    font-size: 1.2em;
+  }
+}
+
+/* 1440px */
+
+@media screen and (max-width: 1440px){
+  
+  .navBar .monCompte {
+    margin: 1% 0;
+  }
+  }
+
+/* 1200px */
+
+@media screen and (max-width: 1200px){
+.bubble{
+  width: 8em;
+  height: 7.5em;
+  font-size: 1em;
+}
+
+/* POP UP SIGN UP */
+
+#popupsignup{
+  width: 60%;
+}
+
+/* NAVBAR */
+
+.navBar nav ul li a {
+  font-size: 1.5em;
+}
+
+.navBar .monCompte {
+  margin: 1% 0;
+}
+
+.navBar .monCompte a {
+  font-size: 1.5em;
+}
+
+main .banner h1{
+  font-size: 6em;
+}
+
+/* ACTIVITIES */
+
+.activities h2{
+  font-size: 1.8em;
+}
+
+.activities .actcontainer .acttxtimg{
+  width: 80%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt{
+  line-height: 200%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt h3{
+  font-size: 1.4em;
+}
+
+.activities .actcontainer .acttxtimg .acttxt p{
+  font-size: 1.2em;
+}
+
+ /* BUBBLE */
+
+ .activities .actcontainer .acttxtimg .bubble{
+  position: absolute;
+  right: -6%;
+  top: -15%;
+}
+
+/* FAMILLE */
+
+.banner2 h1{
+  font-size: 4.5em;
+}
+
+.famcontainer .famact .famtxt{
+  line-height: 200%;
+  font-size: 1.1em;
+}
+
+.famcontainer .famact{
+  width: 80%;
+}
+
+.famcontainer .famact .famimg,
+.famcontainer .famact .famtxt{
+  width: 80%;
+}
+
+.famcontainer .famact .famtxt h3{
+  font-size: 1.5em;
+}
+
+.famcontainer .famact .famimg .bubble{
+  right: -17%;
+}
+
+/* NUIT BOIS */
+
+.banner3 h1{
+  font-size: 4.5em;
+}
+
+.campchacontainer h2{
+  font-size: 1.8em;
+}
+
+.campchacontainer .twoparts .leftpart img,
+.campchacontainer .twoparts .rightpart img{
+  width: 50%;
+}
+
+.campchacontainer .twoparts .leftpart img:nth-of-type(1) {
+  right: 18%;
+  top: 16%;
+}
+
+.campchacontainer .twoparts .bubble{
+  top: 11%;
+  left: 2%;
+}
+
+.campchacontainer .twoparts .bubble2{
+  top: 10%;
+  left: 75%;
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(1){
+  left: 10%;
+  top: 25%;
+}
+
+.campchacontainer .twoparts .rightpart img:nth-of-type(2){
+  left: 40%;
+  bottom: -10%;
+}
+
+/* FOOTER */
+
+footer .flex .container img{
+  margin-left: 20%;
+}
+
+footer .center p{
+  padding: 7% 15%;
+  text-align: center;
+}
+
+footer .container .logo a{
+  margin: 0 15%;
+}
+}
+
+/* 1024px */
+
+@media screen and (max-width: 1024px){
+  .bubble{
+    width: 7em;
+    height: 7em;
+  }
+
+  #popupsignup{
+    width: 80%;
+  }
+
+  /* NAVBAR */
+  .navBar nav ul li a {
+    font-size: 1.3em;
+  }
+    
+  .navBar nav ul li a:hover{
+    transform: scale(1.1);
+  }
+
+  .navBar .monCompte {
+    margin: 1% 0;
+  }
+  .navBar .monCompte p {
+    font-size: 1.1em;
+  }
+
+  /* BANNER */
+
+  main .banner h1{
+    font-size: 5em;
+  }
+
+  /* ACTIVITIES */
+
+  .activities h2{
+    font-size: 1.8em;
+  }
+
+  .activities .actcontainer .acttxtimg{
+    width: 80%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt{
+    line-height: 200%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.4em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1.2em;
+  }
+
+  /* BUBBLE */
+
+  .activities .actcontainer .acttxtimg .bubble{
+    position: absolute;
+    right: -7%;
+    top: -15%;
+  }
+
+  /* FAMILLE */
+
+  .banner2 h1{
+    font-size: 3.9em;
+  }
+
+  .famcontainer .famact .famtxt{
+    line-height: 200%;
+    font-size: 0.9em;
+  }
+
+  .famcontainer .famact{
+    width: 80%;
+  }
+
+  .famcontainer .famact .famimg,
+  .famcontainer .famact .famtxt{
+    width: 80%;
+  }
+  
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble{
+    right: -17%;
+  }
+
+  /* NUIT BOIS */
+
+  .banner3 h1{
+    font-size: 3.9em;
+  }
+
+  .campchacontainer h2{
+    font-size: 1.8em;
+  }
+
+  .campchacontainer .twoparts .leftpart img,
+  .campchacontainer .twoparts .rightpart img{
+    width: 47%;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(1) {
+    right: 18%;
+    top: 16%;
+  }
+
+  .campchacontainer .twoparts .leftpart .bubble{
+    bottom: 47%;
+    left: 2%;
+  }
+
+  .campchacontainer .twoparts .bubble2{
+    top: 6%;
+    left: 73%;
+  }
+
+  .campchacontainer .twoparts .bubble2 p{
+    padding: 0 1.5%;
+  }
+
+  /* FOOTER */
+
+  footer .flex .container img{
+    margin-left: 20%;
+  }
+
+  footer .center p{
+    padding: 7% 15%;
+    text-align: center;
+  }
+
+  footer .container .logo a{
+    margin: 0 15%;
+  }
+}
+
+/* RESPONSIVE 768PX */
+
+@media screen and (max-width: 768px){
+
+  header {
+      width: 100%;
+      padding: 2em;
+      background-color: var(--vert-clair);
+      display: flex;
+  }
+
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+  }
+  header .milieu .logIn {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .navBar {
+    display: none;
+  }
+
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 47px;
+    right: 50px;
+    cursor: pointer;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #204725;
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+    top: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--vert-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+
+  /* POP UP SIGN UP */
+  
+  #popupsignup{
+    width: 90%;
+  }
+
+  /* BANNER */
+
+  main .banner h1{
+    font-size: 4em;
+  }
+
+  /* ACTIVITIES */
+
+  .activities h2{
+    font-size: 1.8em;
+  }
+
+  .activities .actcontainer .acttxtimg{
+    width: 80%;
+  }
+
+  .activities .actcontainer .acttxtimg img{
+    height: 100%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt{
+    line-height: 200%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.4em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1em;
+  }
+
+  /* BUBBLE */
+
+  .activities .actcontainer .acttxtimg .bubble{
+    position: absolute;
+    right: -7%;
+    top: -15%;
+  }
+
+  /* FAMILLE */
+
+  .banner2 h1{
+    font-size: 3.9em;
+  }
+
+  .famcontainer .famact .famtxt{
+    line-height: 200%;
+    font-size: 0.9em;
+  }
+
+  .famcontainer .famact{
+    width: 80%;
+  }
+
+  .famcontainer .famact .famimg,
+  .famcontainer .famact .famtxt{
+    width: 90%;
+  }
+
+  .famcontainer .famact .famtxt{
+    padding: 2%;
+  }
+  
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble{
+    width: 10em;
+    height: 3em;
+    border-radius: 0em;
+    right: 0%;
+    top: 0;
+  }
+
+  .famcontainer .famact .famimg .bubble p{
+    width: 100%;
+    padding: 0;
+  }
+
+  /* NUIT BOIS */
+
+  .banner3 h1{
+    font-size: 3.9em;
+    padding: 7% 0% 7% 28%;
+  }
+
+  .campchacontainer h2{
+    font-size: 1.8em;
+  }
+
+  .campchacontainer .twoparts{
+    flex-direction: column;
+  }
+
+  .campchacontainer .twoparts .leftpart{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+  }
+
+  .campchacontainer .twoparts .leftpart img{
+    width: 50%;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(1){
+    position: static;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(2){
+    position: static;
+  }
+
+  .campchacontainer .twoparts .leftpart img:nth-of-type(3){
+    position: static;
+    display: none;
+  }
+
+  .campchacontainer .twoparts .bubble{
+    position: static;
+    width: 50%;
+    height: 3em;
+    border-radius: 0em;
+    right: 0%;
+    top: 0;
+    filter: none;
+  }
+
+  .campchacontainer .twoparts .bubble p{
+    width: 100%;
+    padding: 0;
+    font-size: 1.5em;
+  }
+
+  .campchacontainer .twoparts .rightpart{
+    width: 100%;
+    display: flex;
+  }
+
+.campchacontainer .twoparts .leftpart img,
+.campchacontainer .twoparts .rightpart img {
+  filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+
+  .campchacontainer .twoparts .rightpart img:nth-of-type(1){
+    position: static;
+  }
+  .campchacontainer .twoparts .rightpart img:nth-of-type(2){
+    position: static;
+  }
+
+  .campchacontainer .twoparts .rightpart img{
+    width: 50%;
+  }
+
+  .campchacontainer .twoparts .bubble{
+    align-self: center;
+  }
+
+  /* FOOTER */
+
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+
+/* RESPONSIVE 480PX */
+
+@media screen and (max-width: 480px){
+
+  .revealleft{
+    opacity:1;
+    transform: translateX(0);
+  }
+  
+  .revealright{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .revealvisible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+
+  #popup{
+    width: 70%;
+  }
+
+  #popupsignup{
+    font-size: 1.5em;
+  }
+
+  .signup form .login .containersignup{
+    flex-direction: column;
+  }
+
+  .signup form .login .containersignup .leftsignup{
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup{
+    width: 100%;
+  }
+
+  .signup form .login .containersignup .line{
+    display: none;
+  }
+  
+  /* BANNER */
+
+  main .banner h1{
+    font-size: 3.5em;
+  }
+
+  /* ACTIVITIES */
+
+  .activities h2{
+    font-size: 2em;
+  }
+
+  .activities .actcontainer{
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+
+  .activities .actcontainer .acttxtimg{
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap-reverse;
+  }
+
+  .activities .actcontainer .acttxtimg img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt{
+    line-height: 200%;
+    width: 100%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.8em;
+    padding-top: 5%;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    font-size: 1.3em;
+    padding-bottom: 4%;
+  }
+
+  .activities .actcontainer .acttxtimg .actimg{
+    width: 100vw;
+  }
+
+  /* BUBBLE */
+
+  .activities .actcontainer .acttxtimg .bubble{
+    display: none;
+  }
+
+  /* FAMILLE */
+
+  .banner2{
+    margin-top: 1%;
+  }
+
+  .banner2 h1{
+    font-size: 3em;
+  }
+
+  .famcontainer{
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .famcontainer .famact{
+    width: 90%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+    padding: 1% 0 4% 0;
+  }
+
+  .famcontainer .famact .famtxt{
+    line-height: 200%;
+    font-size: 1.3em;
+  }
+
+
+  .famcontainer .famact .famimg,
+  .famcontainer .famact .famtxt{
+    width: 100%;
+  }
+  
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble{
+    width: 13em;
+    height: 4em;
+    border-radius: 0em;
+    right: 0%;
+    top: 0;
+  }
+
+  .famcontainer .famact .famimg .bubble p{
+    width: 100%;
+    padding: 0;
+    font-size: 1.5em;
+  }
+
+  /* NUIT BOIS */
+
+  .banner3{
+    margin: 0 0 4% 0;
+  }
+
+  .banner3 h1{
+    font-size: 3em;
+    padding: 7% 0% 7% 15%;
+  }
+
+  .campchacontainer h2 {
+    margin-bottom: 4%;
+  }
+
+  .campchacontainer .twoparts{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .campchacontainer .twoparts .bubble{
+    width: 100%;
+    height: 3em;
+    border-radius: 0em;
+    filter: none;
+  }
+
+  .campchacontainer .twoparts .bubble p{
+    font-size: 1.5em;
+  }
+
+  .campchacontainer .btncamp a{
+    padding: 1% 3%;
+  }
+
+  /* FOOTER */
+ footer .flex{
+  margin: 0;
+  font-size: 1em;
+ }
+}
+
+/* 424px */
+
+@media screen and (max-width:424px){
+
+  .banner3 h1{
+    font-size: 2.5em;
+  }
+
+  .campchacontainer .btncamp a{
+    font-size: 1.2em;
+  }
+
+  footer .flex{
+    padding: 2%;
+  }
+
+}
+
+/* 320px */
+
+@media screen and (max-width: 320px){
+
+  #popup{
+    width: 95%; 
+  }
+
+  .popup form fieldset legend{
+    font-size: 1.2em;
+  }
+
+  .popup form fieldset .connectremember a{
+    font-size: 0.8em;
+  }
+  .popup form fieldset .connectremember a:hover{
+    transform: scale(1);
+  }
+
+  .popup form fieldset .plssignup{
+    font-family: 'Neucha', sans-serif;
+    font-size: 0.7em;
+  }
+  
+  .popup form fieldset .plssignup a{
+    font-size: 1.1em;
+  }
+
+  .popup form fieldset .plssignup a:hover{
+    transform: scale(1);
+  }
+
+  /* POP UP SIGN UP */
+
+  #popupsignup{
+    font-size: 1.2em;
+  }
+
+
+  /* MENU BURGER */
+
+  header #navigation.active ul li a{
+    font-size: 25px;
+  }
+
+  /* MAIN */
+
+
+  main .banner h1{
+    font-size: 2.5em;
+  }
+  .activities h2{
+    font-size: 1.5em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt h3{
+    font-size: 1.5em;
+  }
+
+  .activities .actcontainer .acttxtimg .acttxt p{
+    line-height: 150%;
+    font-size: 1em;
+  }
+
+  .famcontainer .famact .famtxt{
+    font-size: 1em;
+    line-height: 150%;
+  }
+
+  .famcontainer .famact .famtxt h3{
+    font-size: 1.5em;
+  }
+
+  .famcontainer .famact .famimg .bubble p{
+    font-size: 1.2em;
+  }
+
+  .banner3 h1{
+    font-size: 2em;
+  }
+  .campchacontainer h2{
+    font-size: 1.5em;
+  }
+
+  .campchacontainer .twoparts .bubble p{
+    font-size: 1.2em;
+  }
+
+  .campchacontainer .btncamp a{
+    font-size: 1em;
+  }
+
+  footer .flex{
+    margin: 0;
+    font-size: 1em;
+  }
+
+  footer .footcontact{
+    width: 100%;
+  }
+
+  footer .flex .container{
+    width: 100%;
+  }
+
+  footer .flex .container .coordonnees{
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    font-size: 1.5em;
+
+  }
+}

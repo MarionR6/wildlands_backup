@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Au coeur de la forêt | Wildlands</title>
+    <link rel="stylesheet" href="css/style-foret.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5fa515c205.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <header>
+        <div class="milieu">
+            <button class="logIn" id="moncompte2"><i class="fa-solid fa-user"></i></button>
+        </div>
+        <div class="cart"><a href=""><i class="fa-solid fa-basket-shopping"></i></a></div>
+        <!-- menu burger en responsive -->
+        <div id="toggle"></div>
+        <div id="navigation">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../attraction/attraction.html">Parcs d'attractions</a></li>
+                    <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                    <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                    <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../billetterie/billetterie.html">Billetterie</a></li>
+                </ul>
+            </div>
+        
+        <div class="navBar scrollDown" id="scrollBar">
+            <div class="logo">
+                <a href="../index.html"><img src="img/wildland-logo (1).svg" alt="LOGO de Wildlands"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
+                    <li><a href="../index.html#nature" class="deroulant">Parc naturel</a>
+                        <ul class="sous">
+                            <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                            <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                            <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../billetterie/billetterie.html">Billetterie</a></li>
+                </ul>
+            </nav>
+            <div class="monCompte" id = "moncompte">
+                <btn><p>Mon compte</p></btn>
+            </div>
+        </div>
+    </header>
+
+    <div class="popup popupdisplay" id = "popup">
+        <button id = "closepopup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Connectez-vous</legend>
+                <p id = "emaildisable" class = "emaildisable entrystyle emailflex">
+                    <label for="email">Adresse mail</label>
+                    <input type="text" placeholder="" name="email" id="email">
+                </p>
+                <p id = "passworddisable" class = "passworddisable passwordflex entrystyle">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" placeholder="" name="password" id="password">
+                </p>
+                <a href ="foretCo.html" id = "meconnecter">Me connecter</a>
+                <div class="connectremember">
+                    <input type="checkbox" id="checkbox" checked>
+                    <label for="checkbox"></label>
+                    <label for="rememberme">Se souvenir de moi</label>
+                </div>
+                <div class="plssignup">
+                    <p>Pas encore de compte ?</p>
+                </div>
+            </fieldset>                
+        </form>
+        <button id ="minscrire">Inscrivez-vous</button>
+    </div>
+
+    <div class="signup signupdisplay" id = "popupsignup">
+        <button id = "closepopupsignup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Inscription</legend>
+                <div class="containersignup">
+                    <div class="leftsignup">
+                        <p class = "entrystyle">
+                            <label for="name">Nom</label>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" name="firstname" id="firstname">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="phone">Numéro de téléphone</label>
+                            <input type="tel" placeholder="" name="phone" id="phone">
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="rightsignup">
+                        <p class = "entrystyle">
+                            <label for="email">Adresse mail</label>
+                            <input type="text" placeholder="" name="email" id="emailsignup">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" placeholder="" name="password" id="passwordsignup">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="password">Confirmer le mot de passe</label>
+                            <input type="password" placeholder="" name="password">
+                        </p>
+                    </div>
+                </div>
+            </fieldset>                
+        </form>
+        <a href="foretCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
+    </div>
+    <!-- MAIN -->
+    <main>
+        <!-- BANNER 1 -->
+        <div class="banner">
+            <h1>Au coeur de la forêt</h1>
+        </div>
+
+        <!-- ACTIVITIES -->
+        <div class="activities">
+            <div class="revealleft"><h2>Nos activités en plein air</h2></div>
+            <div class="actcontainer">
+                <div class="acttxtimg">
+                    <div class="bubble revealright">
+                        <p>Plus grande tyrolienne d'Europe</p>
+                    </div>
+                    <div class="acttxt revealleft">
+                        <h3>Accrobranche</h3>
+                        <div class="line"></div>
+                        <p>Vivez l’aventure au sommet !</p>
+                        <p>Grimpez, sautez, glissez !</p>
+                        <p>Vivez une aventure inoubliable dans les arbres. Accrobranche,
+                            l'activité qui fait monter l'adrénaline !</p>
+                    </div>
+                    <div class="actimg revealright">
+                        <img src="https://i.goopics.net/n86k58.jpg" alt="Photo d'une femme qui fait de l'accrobranche">
+                    </div>
+                </div>
+                
+                <div class="acttxtimg reverse">
+                    <div class="acttxt revealright">
+                        <h3>Randonnées</h3>
+                        <div class="line"></div>
+                        <p>Explorez la nature à pied !</p>
+                        <p>Découvrez la beauté de la nature
+                            lors de nos randonnées en forêt.</p>
+                        <p>Rejoignez-nous dès maintenant
+                            pour une escapade revitalisante
+                            au cœur de la nature. </p>
+                    </div>
+                    <div class="actimg revealleft">
+                        <img src="https://i.goopics.net/dd1vm9.jpg" alt="Photo d'une randonneuse sur un pont dans la forêt">
+                    </div>
+                </div>
+
+                <div class="acttxtimg">
+                    <div class="bubble revealright">
+                        <p>10 créneaux&nbsp;de promenade par jour</p>
+                    </div>
+                    <div class="acttxt revealleft">
+                        <h3>Promenades à cheval</h3>
+                        <div class="line"></div>
+                        <p>Laissez-vous transporter par la magie
+                            de la nature lors de nos promenades
+                            à cheval.</p>
+                            <p>Découvrez la forêt
+                            d'une manière unique et élégante
+                            en compagnie de nos chevaux.</p>
+                    </div>
+                    <div class="actimg revealright">
+                        <img src="https://i.goopics.net/jb3iyj.jpg" alt="Photo d'un homme sur un cheval">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BANNER FAMILLE -->
+
+        <div class="banner2">
+            <div class="revealleft"><h1>En famille</h1></div>
+        </div>
+
+        <!-- Activités en famille -->
+
+        <div class="famcontainer">
+            <div class="famact revealleft">
+                <div class="famimg">
+                    <div class="bubble">
+                        <p>8 aires de <nobr>pique-nique</nobr> disponibles</p>
+                    </div>
+                    <img src="https://i.goopics.net/vbtw2h.jpg" alt="Photo d'une table de pique-nique sous un arbre">
+                </div>
+                <div class="famtxt">
+                    <h3>Aires de pique-nique</h3>
+                    <div class="line"></div>
+                    <p>Venez profiter d'un moment de convivialité 
+                    dans notre parc à pique-nique.</p>
+                    <p>Savourez un délicieux repas au cœur de la nature.</p>
+                </div>
+            </div>
+
+            <div class="famact revealright">
+                <div class="famimg">
+                    <div class="bubble">
+                        <p>Plus de 30 espèces animales</p>
+                    </div>
+                    <img src="https://i.goopics.net/gfi1fs.jpg" alt="Photo de faons et de biches dans la forêt">
+                </div>
+                <div class="famtxt">
+                    <h3>Parc animalier</h3>
+                    <div class="line"></div>
+                    <p>Détente en plein air assurée !</p>
+                    <p>Plongez dans le monde sauvage !</p>
+                    <p>Découvrez plus de 30 espèces animales au sein de notre parc lors d'une visite paisible.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BANNER NUIT BOIS -->
+        <div class="banner3">
+            <div class="revealright"><h1>Une nuit dans les bois</h1></div>
+        </div>
+
+        <!-- CAMPING CHALETS -->
+        <div class="campchacontainer">
+            <div class="revealleft"><h2>Notre camping et nos chalets</h2></div>
+            <div class="twoparts">
+                
+                <div class="bubble revealleft">
+                    <p>Emplacements de 2 à 8 personnes</p>
+                </div>
+                <div class="leftpart revealleft">
+                    <img src="https://i.goopics.net/gkrnas.jpg" alt="Photo d'un groupe de personnes qui fait griller de la nourriture sur un feu de camp">
+                    <img src="https://i.goopics.net/xndwxw.jpg" alt="Photo d'une tente dans la forêt">
+                    <img src="https://i.goopics.net/f4d2lu.jpg" alt="Photo d'une famille qui allume un feu de camp">
+                </div>
+                                    
+                <div class="rightpart revealright">
+                    <img src="https://i.goopics.net/n3d5bp.jpg" alt="Photo d'un chalet en A dans la forêt">
+                    <img src="https://i.goopics.net/pz3hr5.jpg" alt="Photo d'un salon dans un chalet avec deux fauteuils et un tabouret">
+                </div>
+                <div class="bubble bubble2 revealright">
+                    <p>2 chambres, salle d'eau, cuisine</p>
+                </div>
+            </div>
+            <div class="btncamp">
+                <a href="../billetterie/billetterie.html" class = "revealleft">Réserver une nuit</a>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="flex">
+                <div class="container footcontact">
+                    <img src="img/wildland-logo (1).svg" alt="Logo-wildlands">
+                    <div class="coordonnees">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>00 00 00 00 00</p>
+                    </div>
+                    <div class="coordonnees">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contact@wildlands.com">contact@wildlands.com</a>
+                    </div>
+                    <div class="coordonnees remonte">
+                        <i class="fa-solid fa-location-pin"></i>
+                        <p class="remonte">100 rue de Larue 07210 ROMS</p>
+                    </div>
+                </div>
+            <div class="container footnav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
+                    <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                    <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                    <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../billetterie/billetterie.html">Billetterie</a></li>
+                </ul>
+            </div>
+            <div class="container center">
+                <p>Vous pouvez nous suivre sur :</p>
+                <div class="logo">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p>Paiement sécurisés via :</p>
+                <div class="logo">
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        <div class="mentions">
+            <p>© Wildands</p>
+            <div class="mentionsdroits">
+                <a href="../billetterie/wip.html">Mentions légales&nbsp;</a>
+                <p> - Tous droits réservés</p>
+            </div>
+        </div>
+        </footer>
+    </main>
+
+    <!----- SCRIPT MENU BURGER ----->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="../js/popupconnect.js"></script>
+ <script src="../js/burger.js"></script>
+ <script src="../js/scrollcards.js"></script>
+ <script src="../js/navScroll.js"></script>
+</body>
+
+</html>
