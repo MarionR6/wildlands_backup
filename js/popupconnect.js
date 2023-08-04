@@ -129,8 +129,8 @@ const fetchUser = async () => {
     })
     .then(response => response.json())
     .then (data => {
-        connexion.placeholder = `${data.users[0].email}`;
-        password.placeholder = `${data.users[0].password}`;
+        connexion.placeholder = `${data.users[1].email}`;
+        password.placeholder = `${data.users[1].password}`;
     })
 }
 

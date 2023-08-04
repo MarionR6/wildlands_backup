@@ -1,0 +1,1675 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+body{
+    overflow-x: hidden;
+}
+h1{
+    font-family: 'Neucha', cursive;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+img{
+    display: block;
+}
+p{
+    color: white;
+}
+
+:root{
+    --poppins:"Poppins", sans-serif;
+    --neucha:"Neucha", cursive;
+    --bleu-clair: #c7e3cb ;
+    --bleu : #56B462 ;
+    --bleu-fonce :#3A8043;
+
+}
+//top du site avec une div pour le logo 
+//une div pour la nav
+//une div pour le compte
+//barre de navigation*
+
+//------------------------------------ scroll nav
+.scrollDown{
+    z-index: 99;
+    position: fixed;
+}
+//------------------------------------------
+/* POP UP CONNEXION */
+
+#popup{
+    font-family: var(--neucha);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: #c7e3cb;
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color: #3A8043;
+    border: 0.07em solid #204725;
+    font-family: 'Neucha', sans-serif;
+    color: white;
+  }
+  
+  .popup #closepopup{
+    background-color: #204725;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  }
+  
+  fieldset{
+    border: none;
+  }
+  
+  .popup form fieldset legend{
+    font-size: 1.7em;
+    text-align: center;
+    border-bottom: 0.06em solid white;
+    padding-bottom: 5%;
+  }
+  
+  #meconnecter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #meconnecter,
+  #minscrire{
+    color: white;
+    text-align: center;
+    margin: 10% 0 3% 0;
+    border-radius: 1em;
+    background-color: #204725;
+    padding: 2% 0;
+    transition: .5s all;
+    border: none;
+    font-family: 'Neucha', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: .5s all;
+  }
+  
+  #minscrire{
+    font-size: 1em;
+    margin-top: 6%;
+  }
+  
+  #minscrire:hover{
+    transform: scale(1.1);
+  }
+  
+  .popup form fieldset #meconnecter:hover{
+    transform: scale(1.1);
+  }
+  
+  .popup form fieldset .connectremember a:hover{
+    transform: scale(1.1);
+  }
+  
+  .popup form fieldset .connectremember label{
+    padding-left: 1%;
+    font-size: 0.7em;
+  }
+  
+  .popup form fieldset .plssignup{
+    font-size: 0.8em;
+  }
+  
+  .popup form fieldset .plssignup a{
+    color: white;
+    text-align: center;
+    margin: 6% 0 3% 0;
+    border-radius: 1em;
+    background-color: #204725;
+    padding: 2% 0;
+    font-size: 1.3em;
+    transition: .5s all;
+  }
+  
+  .popup form fieldset .plssignup a:hover{
+    transform: scale(1.1);
+  }
+  
+  .emailflex, .passwordflex{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #emaildisable{
+    padding: 5% 0 4% 0;
+  }
+  
+  .entrystyle input{
+    margin-top: 2%;
+    padding: 2% 4%;
+    font-size: 0.6em;
+    background-color: #c7e3cb;
+    border: none;
+    border-radius: 1em;
+  }
+  
+  #emaildisable input::placeholder,
+  #passworddisable input::placeholder{
+    color: black;
+    font-weight: 500;
+  }
+  
+  .emaildisable,
+  .passworddisable{
+    pointer-events: none;
+  }
+  
+  .popup{
+    visibility: visible;
+    transition: .5s all;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popupdisplay{
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  /* POPUP SIGNUP */
+  
+  #popupsignup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: #c7e3cb;
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color: #3A8043;
+    border: 0.07em solid #204725;
+    font-family: 'Neucha', sans-serif;
+    color: white;
+    width: 50%;
+  }
+  
+  #closepopupsignup{
+    background-color: #204725;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  }
+  
+  .signup{
+    visibility: visible;
+    transition: .5s all;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup form .login .connect{
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 4%;
+  }
+  
+  .signup form .login .containersignup{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.1em solid #c7e3cb;
+    border-radius: 1em;
+    padding: 5% 5%;
+    position: relative;
+  }
+  
+  .signup form .login .containersignup label{
+    width: 100%;
+    font-size: 0.8em;
+  }
+  
+  .signup form .login .containersignup .middleentry{
+    margin: 5% 0;
+  }
+  
+  .signup form .login .containersignup .leftsignup{
+    width: 45%;
+  }
+  
+  .signup form .login .containersignup .leftsignup p,
+  .signup form .login .containersignup .rightsignup p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .signup form .login .containersignup .line{
+    width: 30%;
+    height: 0.07em;
+    background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+    transform: rotate(90deg);
+    align-self: center;
+    position: absolute;
+  }
+  
+  .signup form .login .containersignup .rightsignup{
+    width: 45%;
+  }
+  
+  .signup form .login .containersignup .rightsignup .entrystyle{
+    width: 100%;
+  }
+  
+  
+  .signup form .login .containersignup .rightsignup .entrystyle input{
+    width: 100%;
+  }
+  
+  .signupdisplay{
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .signup .submitsignup{
+    color: white;
+    border-radius: 1em;
+    background-color: #204725;
+    padding: 1% 4%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 4%;
+    transition: .5s all;
+  }
+  
+  .signup .submitsignup:hover{
+    transform: scale(1.1);
+  }
+
+
+header div#navigation{
+    display: none;
+}
+header{
+    .milieu{
+        display:none ;
+        // width: 30%;
+        .monCompte2{
+            display:inline-block;
+            width: 100%;
+            background-color: var(--bleu-fonce);
+            font-family: var(--neucha);
+            // display: flex;
+            // justify-content: center;
+            // padding: 1% 2%;
+            border-radius: 3vh;
+            // margin:0 auto;
+            .btnCompte2{
+                color: white;
+                display: inline-block;
+                background-color: var(--bleu-fonce);
+                border:none;
+                text-decoration: none;
+                font-size: 1em;
+                transition: 0.5s all;
+                position:relative;
+                border-radius: 3vh;
+                padding: 0.20em 2em;
+                p{
+                font-family: var(--neucha);
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                #box2{
+                    align-items: center;
+                    justify-content: center;
+                }
+                .gestionCompte{
+                    display:block;
+                    font-family: var(--neucha);
+                    list-style-type: none;
+                    position:absolute;
+                    left: 10%;
+                    transition: 1 all;
+                    li{
+                        a{
+                                font-size:0.7em;
+                        }
+                    }
+                }
+                .gestionNone{
+                        display: none;
+                }
+                .gestion{
+                    width:60%;                    
+                    margin-top:3%;
+                    background-color: var(--bleu-fonce);
+                    opacity: 0.8;
+                    padding:10%;
+                }
+                .deco{
+                    width:60%;
+                    background-color: var(--bleu-fonce);
+                    opacity: 0.8;
+                    padding:10%;
+                }
+            } 
+        }
+    }
+    .cart{
+        display: none;
+    }
+    .navBar{
+        width: 100%;
+        background-color: var(--bleu);
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        .logo{
+            width: 8%;
+            padding : 0.5% 0;
+            img{
+                width: 100%;
+            }
+        }
+    nav{
+        width: 50%;
+        ul{
+            // font-size: 0;
+            display: flex;
+            justify-content: space-around;
+            li{
+                list-style: none;
+                a{
+                    font-family: var(--neucha);
+                    font-size: 1.7em;
+                    text-decoration: none;
+                    transition: 0.5s all;
+                    // &:hover{
+                    //     transform: scale(1.1);
+                    // }
+                }&:hover{
+                    transform: scale(1.1);
+                }
+                .sous{
+                    display: none;
+                    position: absolute;
+                    transition: 1 all;
+                }
+                &:hover{
+                    .sous{
+                        display: block;
+                        li{
+                            background-color: var(--bleu);
+                            opacity: 0.8;
+                            border-bottom: solid var(--bleu-clair)1px;
+                            padding: 2%;
+                            background-color: var(--bleu-fonce);
+                            a{
+                                font-size:25px;
+                                padding: 2%;
+                                transition:0.5s all;
+                                &:hover{
+                                    color: #56B462;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                
+                    }
+                }
+            }
+            .deroulant{
+                    &:after{
+                    content: "⏷";
+                    font-size: 0.7em;
+                    }
+                
+            }
+        }
+    }
+
+    .monCompte{
+        // width: 15%;
+        background-color: var(--bleu-fonce);
+        font-family: var(--neucha);
+        display: flex;
+        justify-content: center;
+        padding: 1% 2%;
+        border-radius: 5em;
+        button{
+            color: white;
+            width: 100%;
+            background-color: var(--bleu-fonce);
+            border:none;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: 0.5s all;
+            position:relative;
+            cursor: pointer;
+            align-items: center;
+            p{
+                font-family: var(--neucha);
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+            .gestionCompte{
+                color: black;
+                display:block;
+                font-family: var(--neucha);
+                // font-size:0.7em;
+                list-style-type: none;
+                position:absolute;
+                transition: 1 all;
+                li{
+                    a{
+                        font-size:0.7em;
+                    }
+                }
+            }
+            .gestionNone{
+                display: none;
+            }
+            .gestion{
+                width:80%;
+                margin-top:7%;
+                background-color: var(--bleu-fonce);
+                opacity: 0.8;
+                padding:10%;
+            }
+            .panier{
+                width:80%;
+                background-color:var(--bleu-fonce);
+                opacity: 0.8;
+                padding:10%;
+            }                
+            .deco{
+                width:80%;
+                background-color:var(--bleu-fonce);
+                opacity: 0.8;
+                padding:10%;
+            }
+        } 
+    }
+}
+}
+
+// header
+.headerP{
+    background-image: url(https://i.goopics.net/dfwl5f.jpg);
+    width: 100%;
+    padding: 7%;
+    padding-top: 11%;
+    background-size: cover;
+    background-position: center;
+    h1{
+        color: white;
+        font-size: 7em;
+        font-weight: 400;
+    }
+}
+
+//les différentes types d'attraction
+// .reveal{
+//     opacity: 0;
+//     transform: translate(-20em);
+// }
+// .reaveal-visible{
+//     opacity: 1;
+//     transform: translate(0);
+//     transition: .3s;
+// }
+section.typeAttraction{
+    font-family: var(--poppins);
+    background-color: #8AE395;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .allAttraction{
+        width: 80%;
+        filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+        .attractionParc{
+            width: 100%;
+            display: flex;
+            .imgA{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+            .txtA{
+                width: 50%;
+                background-color: #3A8043;
+                display: flex;
+                align-items: center;
+                p{
+                    padding: 5%;
+                    color: white;
+                    text-align: center;
+                    padding-top: 10%;
+                    font-size: 1.5em;
+                    line-height: 1.8em;
+                }
+        }
+    }
+    }
+    
+}
+
+//partie restaurant
+
+//banner
+.bannerResto{
+    background-image: url(https://i.goopics.net/rn25na.jpg);
+    width: 100%;
+    padding: 7%;
+    padding-top: 11%;
+    background-size: cover;
+    background-position: center;
+    h1{
+        color: white;
+        font-size: 7em;
+        font-weight: 400;
+    }
+}
+
+//section resto
+.restos{
+    font-family: var(--poppins);
+    background-color: #8AE395;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    .allResto{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        .resto{
+            width: 45%;
+            position: relative;
+            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+            .imgResto{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            .vegan-locaux{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 8%;
+                left: 75%;
+                text-align: center;
+                background-color: #3A8043;
+                border-radius: 50%;
+                width: 7em;
+                height: 7em;
+                z-index: 3;
+                p{
+                    font-family: var(--neucha);
+                    font-size: 1.5em;
+                    
+                }
+            }
+            .txtResto{
+                width: 100%;
+                background-color: #3A8043;
+                height: 40%;
+                display: flex;
+                align-items: center;
+                p{
+                    line-height: 1.8em;
+                    font-size: 1.5em;
+                    text-align: center;
+                    padding: 5% 10%;
+                }
+            }
+        }
+    }
+    }
+
+//espace détente
+///banner détente
+.bannerDetente{
+    background-image: url(https://i.goopics.net/k9try2.jpg);
+    width: 100%;
+    padding: 7%;
+    padding-top: 11%;
+    background-size: cover;
+    background-position: center;
+    h1{
+        color: white;
+        font-size: 7em;
+        font-weight: 400;
+    }
+}
+
+///section détente
+.detentes {
+    font-family: var(--poppins);
+    background-color: #8AE395;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    .allDetente {
+        width: 80%;
+       .detente {
+            display: flex;
+            width: 100%;
+            filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+            .imgDetente {
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+            .txtDetente {
+                background-color: #3A8043;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                p {
+                    text-align: center;
+                    padding: 5% 10%;
+                    font-size: 1.5em;
+                    line-height: 1.8em;
+                }
+                
+            }
+        }
+        .detenteReserve{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .reserve{
+                    background-color: var(--bleu);
+                    padding: 2% 6%;
+                    border-radius: 2em;
+                a{
+                    font-size: 1.5em;
+                }
+                
+            }
+        }
+    }
+    
+}
+
+//footer
+footer {
+    width: 100%;
+    background-color:var(--bleu);
+    font-family:var(--neucha);
+    a{
+        transition: 0.5s all;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .flex{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        padding-bottom:2%;
+        a{
+            transition: 0.5s all;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .container{
+            width: 25%;
+            display:flex;
+            flex-direction: column;
+            margin: 0 4%;
+            p,a{
+                font-family: "Neucha", cursive;
+            }
+            img{
+                width: 60%;
+                margin-top:0;
+                padding-bottom: 10%;
+            }
+            ul{
+                li{
+                    transition: 0.5s all;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .coordonnees{
+                display: flex;
+                padding : 0 5% 5% 5%;
+                margin-right:2%;
+                color: white;
+                i{
+                    text-align: center;
+                    color:white;
+                    margin-right: 3%;
+                }
+                a{
+                    transition: 0.5s all;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .remonte{
+                p{
+                    font-family: "Neucha", cursive;
+                }
+            }
+            ul{
+                font-size: 0;
+                margin-top: 10%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                li{
+                    padding-bottom:4%;
+                    a{
+                        color: white;
+                        font-size: 25px;
+                        transition: 0.5s all;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+        i{
+            text-align: center;
+        }
+    }
+    .center{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            padding: 2%;
+            font-family: "Neucha", cursive;
+        }
+        .logo{
+            display:flex;
+            width: 20%;
+            justify-content: space-around;
+
+            i{
+                padding:15%;
+                color: white;
+            }
+        }
+    }
+    .mentions{
+        width: 96%;
+        background-color: var(--bleu-fonce);
+        text-align: center;
+        padding: 2%;
+        
+        .mentionsdroits{
+            display: flex;
+            justify-content: center;
+            a{
+                color: white;
+            }
+        }
+    }
+}
+
+/* ANIMATION JS */
+.revealleft{
+    opacity:0;
+    transform: translateX(-10em);
+  }
+  
+  .revealright{
+    opacity: 0;
+    transform: translateX(10em);
+  }
+  
+  .revealvisible{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+
+//----------------------------------------------------------------------------- RESPONSIVE
+
+// Responsive en 1920px
+
+// @media screen and (min-width: 1920px){
+//     .resto{
+//         .resto1{
+//             .txtResto{
+//                 p{
+//                     font-size: 2em;
+//                 }
+//             }
+//             .vegan-locaux{
+//                 padding: 2%;
+//                 font-size: 1.5em;
+//             }
+//         }
+//         .resto2{
+//             .txtResto{
+//                 padding-bottom: 45%;
+//                 p{
+//                     font-size: 2em;
+//                 }
+//             }
+//             .vegan-locaux{
+//                 padding: 2%;
+//                 font-size: 1.5em;
+//                 left: 77%;
+//             }
+//         }
+//     }
+//     .detente{
+//         .detente1{
+//             .txtDetente{
+//                 p{
+//                     font-size: 1.5em;
+//                 }
+//             }
+//         }
+//         .detente2{
+//             .txtDetente{
+//                 p{
+//                     font-size: 1.5em;
+//                 }
+//             }
+//             .reserve{
+//                 a{
+//                     font-size: 1.5em;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+//Responsive en 1440px
+
+@media screen and (max-width: 1440px){
+    .detentes{
+        .allDetente{
+            .detente{
+                .detenteReserve{
+                    p{
+                        font-size: 1.45em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive en 1200px
+
+@media screen and (max-width: 1200px) {
+    .headerP{
+        h1{
+            font-size: 6em;
+        }
+    }
+    /* POP UP SIGN UP */
+
+    #popupsignup {
+        width: 60%;
+    }
+    //partie restaurant
+    .bannerResto{
+        h1{
+            font-size: 6em;
+        }
+    }
+    .restos {
+        .allResto {
+            .resto {
+                .txtResto {
+                    height: 55%;
+                }
+            .vegan-locaux {
+                left: 65%;
+                top: 5%;
+                    p {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    //espace d'étente
+    .bannerDetente{
+        h1{
+            font-size: 6em;
+        }
+    }
+    .detentes {
+        .allDetente {
+            .detente{
+                .detenteReserve{
+                    .reserve{
+                        padding: 1% 5%;
+                        a{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+                
+            }
+        }
+        
+    }
+}
+
+// Responsive en 1024px
+@media screen and (max-width: 1024px){
+    #popupsignup{
+        width: 80%;
+    }
+    // navbar
+    header{
+        .navBar nav ul li a {
+        font-size: 1.3em;
+      }
+      .navBar nav ul li a:hover{
+        transform: scale(1.4);
+      }
+    
+      .navBar .monCompte {
+        width: 15%;
+        margin: 1% 0;
+      }
+      .navBar .monCompte a {
+        font-size: 1.3em;
+      }
+    }
+        
+      // header
+      .headerP{
+        h1{
+            font-size: 5em;
+        }
+      }
+
+      //les différentes types d'attraction
+      main{
+        .typeAttraction{
+            .allAttraction{
+                .attractionParc{
+                    .txtA{
+                        p{
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+      }
+      
+      //partie restaurant
+      .bannerResto{
+        h1{
+            font-size: 5em;
+        }
+      }
+      .restos{
+        .allResto{
+            .resto{
+            .vegan-locaux{
+                width: 5em;
+                height: 5em;
+                p{
+                    font-size: 1.3em;
+                }
+            }
+            .txtResto{
+                p{
+                    font-size: 1.3em;
+                }
+            }
+        }
+        }
+        
+      }
+
+      // espace détente
+      .bannerDetente{
+        h1{
+            font-size: 5em;
+        }
+      }
+
+      .detentes{
+        .allDetente{
+            .detente{
+                .txtDetente{
+                    p{
+                        font-size: 1.2em;
+                    }
+                    .reserve{
+                        padding: 1% 3%;
+                            a{
+                                font-size: 0.9em;
+                            }
+                        
+                        }
+                    }
+                }
+                
+            }
+        }
+            
+
+
+      // footer
+      footer{
+        font-size: 0.7em;
+        .flex{
+            .container{
+                img{
+                    margin-left: 20px;
+                }
+                ul{
+                    li{
+                        a{
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .logo{
+                    a{
+                        margin: 0 15%;
+                    }
+                }
+            }
+            .center{
+                p{
+                    padding: 7% 15%;
+                    text-align: center;  
+                }
+                
+            }
+            .center{
+                font-size: 90%;
+            }
+        }
+        .mentions{
+            width: 96%;
+        }
+    }
+}
+
+// responsive en 768px
+@media screen and (max-width: 768px){
+    /* POP UP SIGN UP */
+  
+    #popupsignup{
+        width: 90%;
+    }
+    .signup form .login .containersignup label{
+        width: 100%;
+        font-size: 0.7em;
+      }
+    header div#navigation{
+        display: block;
+    }
+    header {
+        width: 100%;
+        padding: 2em;
+        display: flex;        
+        background-color: var(--bleu-clair);
+        .milieu{
+            height:100%;
+            display: inline-flex;
+            z-index: 99;
+            .logIn{
+                
+                align-self: center;
+                width:2.5em;
+                height:2.5em;
+                border: none;
+                border-radius: 50%;
+                // display: inline-block;
+                background-color: var(--bleu-fonce);
+                color: white;
+            }
+        }
+        .cart{
+            margin-left: 2%;
+            display:block;
+            a{  
+                width:2.05em;
+                height:2.05em;
+                border-radius: 50%;
+                background-color: var(--bleu-fonce);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        
+        .navBar {
+            display: none;
+        }
+        #toggle {
+            position:fixed;
+            display: block;
+            width: 30px;
+            height: 2px;
+            top: 47px;
+            right: 50px;
+            cursor: pointer;
+            background-color:var(--bleu-fonce);
+            // transform: translate(-50%, -50%);
+            transition: all .3s ease-in-out; // on peut préciser le type de transition que l'on veut (de base linéaire) ; ease-in-out = la transition commence lentement, s'accélère puis ralentit à nouveau avant la fin
+            // D'autres transition : ease-in (augmente progressivement) ; ease-out (ralentit progressivement) ; ...
+            z-index: 8;
+            &:before, &:after {
+                content: '';
+                // pas comme :hover, il faudra repréciser le display, la width, la height...
+                position: absolute;
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color:var(--bleu-fonce);
+                transition: all .3s ease-in-out; 
+            }
+            &:before {
+                top: -10px;
+            }
+            &:after {
+                top: 10px;
+            }  
+        }
+        #toggle.active { 
+			 
+            //on va également créer la petite animation des span à l'ouverture du menu
+			background-color: transparent; // on rend transparent le span du milieu
+			&:before {
+				// on crée une rotation sur le span du haut et on le recentre sur le carré
+				transform: rotate(45deg);
+				top: 0;
+			}
+			&:after {
+				// on crée une rotation sur le span du bas et on le recentre sur le carré
+				transform: rotate(-45deg);
+				top: 0;
+			}
+			//selon le degré de rotation que vous indiquez, le sens de l'animation ne sera pas le même  
+        }
+        #navigation {
+            top: 0;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: .5s;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 6;
+        }
+        #navigation.active {
+           right: 0;
+           .logo{
+            display: none;
+           }
+            ul {
+                display:flex;
+                flex-direction: column;
+                li {
+                    display: block;
+                    margin-bottom: 20px;
+                    width: 100%;
+                    .sous{
+                        display: none;
+                    }
+                    a {
+                        color: var(--bleu-fonce);
+                        font-size: 35px;
+                        text-align: center;
+                        font-family: var(--neucha);
+                        margin-bottom: 5%;
+                        // display: block;
+                    }
+                }
+            }   
+        }    
+    }
+
+    //header
+    .headerP{
+        h1{
+            font-size: 3.9em;
+        }
+    }
+
+    //partie attraction
+    main{
+        .typeAttraction{
+        .allAttraction{
+            .attractionParc{
+                .txtA{
+                    p{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+    }
+    
+
+    //partie restaurant
+    .bannerResto{
+        h1{
+            font-size: 3.9em;
+        }
+    }
+    .restos{
+        .allResto{
+            .resto{
+                .txtResto{
+                    p{
+                        font-size: 1em;
+                    }
+                }
+                .vegan-locaux{
+                    width: 4em;
+                    height: 4em;
+                    p{
+                        font-size: 1em;
+                        
+                    }
+                }
+            }
+        }
+
+    }
+    //esapce détente
+    .bannerDetente{
+        h1{
+            font-size: 3.9em;
+        }
+    }
+    .detentes{
+        .allDetente{
+            .detente{
+                .txtDetente{
+                    p{
+                        font-size: 0.89em;
+                    }
+                }
+            }
+        }
+    }
+    
+ /* FOOTER */
+
+ footer{
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img{
+    width: 80%;
+    
+  }
+
+  footer .center p{
+    padding: 7% 15%;
+    text-align: center;
+  }
+
+  footer .container ul li{
+    display: none;
+  }
+
+  footer .center{
+    font-size: 1em;
+    width: 100%;
+  }
+
+  footer .center p{
+    padding: 2% 0;
+  }
+
+  footer .footnav{
+    width: 0%;
+  }
+
+  footer .footcontact{
+    width: 70%;
+  }
+  footer .footcontact .coordonnees{
+    width: 100%;
+  }
+  footer{
+    .flex{
+        padding: 2% 0% 0% 0%;
+        .center{
+        p{
+            display:none;
+        }
+        .logo{
+            &:nth-last-child(1){
+                display: none;
+            }
+            margin-right:100%;
+            a{
+                font-size: 2em;
+                padding: 20%;
+            }
+            }
+        }
+        }
+    } 
+}
+
+// responsive en 480px
+@media screen and (max-width: 480px){
+    #popup{
+        width: 70%;
+      }
+    
+      #popupsignup{
+        font-size: 1.5em;
+      }
+    
+      .signup form .login .containersignup{
+        flex-direction: column;
+      }
+    
+      .signup form .login .containersignup .leftsignup{
+        width: 100%;
+        margin-bottom: 4%;
+      }
+      .signup form .login .containersignup .rightsignup{
+        width: 93%;
+        align-self: flex-start;
+      }
+    
+      .signup form .login .containersignup .line{
+        display: none;
+      }
+    //header
+    .headerP{
+       h1{
+        font-size: 2em;
+       }
+    }
+
+    //section attraction
+    main{
+        .typeAttraction{
+        .allAttraction{
+            .attractionParc{
+                .txtA{
+                    p{
+                        font-size: 0.7em;
+                        padding-top: 2%;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+    //section restaurant
+    .bannerResto{
+        h1{
+            font-size: 2em;
+        }
+    }
+    .restos{
+        .allResto{
+            .resto{
+                .txtResto{
+                    p{
+                        font-size: 0.7em;
+                        padding-bottom: 10%;
+                    }
+                }
+                .vegan-locaux{
+                    width: 2em;
+                    height: 2em;
+                    left: 35%;
+                    p{
+                        font-size: 0.7em;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    //detente
+    .bannerDetente{
+        h1{
+            font-size: 2em;
+        }
+    }
+
+    .detentes{
+        .allDetente{
+            .detente{
+                .txtDetente{
+                    p{
+                        padding-top: 0%;
+                        font-size: 0.55em;
+                    }
+                    .reserve{
+                        padding: 0% 5%;
+                        a{
+                            font-size: 0.5em;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+    //footer
+    footer{
+        .flex{
+            .container{
+                .coordonnees{
+                    i{
+                        font-size: 70%;
+                    }
+                    a{
+                        font-size: 60%;
+                    }
+                    p{
+                        font-size: 60%;
+                    }
+                }
+            }
+            .center{
+                .logo{
+                    i{
+                        font-size: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsive en 320px
+
+@media screen and (max-width: 320px) {
+    #popupsignup{
+        font-size: 1.2em;
+      }
+      #popup{
+        width:95%;
+    }
+    .revealleft{
+        opacity:1;
+        transform: translateX(0);
+      }
+      
+      .revealright{
+        opacity: 1;
+        transform: translateX(0);
+      }
+      
+      .revealvisible{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 1s;
+      }
+
+    .headerP{
+        h1{
+            font-size: 1.5em;
+        }
+    }
+
+    //attraction
+
+    main{
+        .typeAttraction{
+        .allAttraction{
+            width: 90%;
+            .attractionParc{
+                .txtA{
+                    p{
+                        font-size: 0.5em;
+                        padding-top: 2%;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+    //restaurant
+    .bannerResto{
+        h1{
+            font-size: 1.5em;
+        }
+    }
+    .restos{
+        .allResto{
+            width: 90%;
+            .resto{
+                .txtResto{
+                    p{
+                        font-size: 0.5em;
+                        padding-bottom: 15%;
+                    }
+                }
+                .vegan-locaux{
+                    width: 2em;
+                    height: 2em;
+                    left: 70%;
+                    p{
+                        font-size: 0.6em;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    // détente
+
+    .bannerDetente{
+        h1{
+            font-size: 1.5em;
+        }
+    }
+    .detentes{
+        .allDetente{
+            width: 90%;
+            .detente{
+                .txtDetente{
+                    p{
+                        padding-top: 0%;
+                        font-size: 0.4em;
+                    }
+                    .reserve{
+                        padding: 0% 5%;
+                        a{
+                            font-size: 0.5em;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    //footer
+    footer{
+        .center{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                padding: 2%;
+                }
+            .logo{
+                display:flex;
+                width: 20%;
+                justify-content: space-around;
+                a{
+                    padding: 0 15%;
+                }
+                i{
+                    font-size:0.7em;
+                }  
+            }
+        }   
+    }
+}

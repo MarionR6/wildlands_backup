@@ -1,0 +1,1284 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Neucha", cursive;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  display: block;
+}
+
+p {
+  color: white;
+}
+
+:root {
+  --poppins:"Poppins", sans-serif;
+  --neucha:"Neucha", cursive;
+  --bleu-clair: #c7e3cb ;
+  --bleu: #56B462 ;
+  --bleu-fonce:#3A8043;
+}
+
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}
+
+/* POP UP CONNEXION */
+#popup {
+  font-family: var(--neucha);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: "Neucha", sans-serif;
+  color: white;
+}
+
+.popup #closepopup {
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+.popup form fieldset legend {
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 0.06em solid white;
+  padding-bottom: 5%;
+}
+
+#meconnecter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#meconnecter,
+#minscrire {
+  color: white;
+  text-align: center;
+  margin: 10% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  transition: 0.5s all;
+  border: none;
+  font-family: "Neucha", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.5s all;
+}
+
+#minscrire {
+  font-size: 1em;
+  margin-top: 6%;
+}
+
+#minscrire:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset #meconnecter:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember a:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember label {
+  padding-left: 1%;
+  font-size: 0.7em;
+}
+
+.popup form fieldset .plssignup {
+  font-size: 0.8em;
+}
+
+.popup form fieldset .plssignup a {
+  color: white;
+  text-align: center;
+  margin: 6% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  font-size: 1.3em;
+  transition: 0.5s all;
+}
+
+.popup form fieldset .plssignup a:hover {
+  transform: scale(1.1);
+}
+
+.emailflex, .passwordflex {
+  display: flex;
+  flex-direction: column;
+}
+
+#emaildisable {
+  padding: 5% 0 4% 0;
+}
+
+.entrystyle input {
+  margin-top: 2%;
+  padding: 2% 4%;
+  font-size: 0.6em;
+  background-color: #c7e3cb;
+  border: none;
+  border-radius: 1em;
+}
+
+#emaildisable input::-moz-placeholder, #passworddisable input::-moz-placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+#emaildisable input::placeholder,
+#passworddisable input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.emaildisable,
+.passworddisable {
+  pointer-events: none;
+}
+
+.popup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* POPUP SIGNUP */
+#popupsignup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: "Neucha", sans-serif;
+  color: white;
+  width: 50%;
+}
+
+#closepopupsignup {
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+.signup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup form .login .connect {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 4%;
+}
+
+.signup form .login .containersignup {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.1em solid #c7e3cb;
+  border-radius: 1em;
+  padding: 5% 5%;
+  position: relative;
+}
+
+.signup form .login .containersignup label {
+  width: 100%;
+  font-size: 0.8em;
+}
+
+.signup form .login .containersignup .middleentry {
+  margin: 5% 0;
+}
+
+.signup form .login .containersignup .leftsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .leftsignup p,
+.signup form .login .containersignup .rightsignup p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup form .login .containersignup .line {
+  width: 30%;
+  height: 0.07em;
+  background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+  transform: rotate(90deg);
+  align-self: center;
+  position: absolute;
+}
+
+.signup form .login .containersignup .rightsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle {
+  width: 100%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle input {
+  width: 100%;
+}
+
+.signupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.signup .submitsignup {
+  color: white;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 1% 4%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4%;
+  transition: 0.5s all;
+}
+
+.signup .submitsignup:hover {
+  transform: scale(1.1);
+}
+
+header div#navigation {
+  display: none;
+}
+
+header .milieu {
+  display: none;
+}
+header .milieu .monCompte2 {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--bleu-fonce);
+  font-family: var(--neucha);
+  border-radius: 3vh;
+}
+header .milieu .monCompte2 .btnCompte2 {
+  color: white;
+  display: inline-block;
+  background-color: var(--bleu-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  border-radius: 3vh;
+  padding: 0.2em 2em;
+}
+header .milieu .monCompte2 .btnCompte2 p {
+  font-family: var(--neucha);
+}
+header .milieu .monCompte2 .btnCompte2:hover {
+  transform: scale(1.1);
+}
+header .milieu .monCompte2 .btnCompte2 #box2 {
+  align-items: center;
+  justify-content: center;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  left: 10%;
+  transition: 1 all;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
+  font-size: 0.7em;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionNone {
+  display: none;
+}
+header .milieu .monCompte2 .btnCompte2 .gestion {
+  width: 60%;
+  margin-top: 3%;
+  background-color: var(--bleu-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .milieu .monCompte2 .btnCompte2 .deco {
+  width: 60%;
+  background-color: var(--bleu-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .cart {
+  display: none;
+}
+header .navBar {
+  width: 100%;
+  background-color: var(--bleu);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+header .navBar .logo img {
+  width: 100%;
+}
+header .navBar nav {
+  width: 50%;
+}
+header .navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header .navBar nav ul li {
+  list-style: none;
+}
+header .navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.7em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+header .navBar nav ul li:hover {
+  transform: scale(1.1);
+}
+header .navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar nav ul li:hover .sous {
+  display: block;
+}
+header .navBar nav ul li:hover .sous li {
+  background-color: var(--bleu);
+  opacity: 0.8;
+  border-bottom: solid var(--bleu-clair) 1px;
+  padding: 2%;
+  background-color: var(--bleu-fonce);
+}
+header .navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+header .navBar nav ul li:hover .sous li a:hover {
+  color: #56B462;
+  transform: scale(1);
+}
+header .navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+header .navBar .monCompte {
+  background-color: var(--bleu-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 5em;
+}
+header .navBar .monCompte button {
+  color: white;
+  width: 100%;
+  background-color: var(--bleu-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+}
+header .navBar .monCompte button p {
+  font-family: var(--neucha);
+}
+header .navBar .monCompte button:hover {
+  transform: scale(1.1);
+}
+header .navBar .monCompte button .gestionCompte {
+  color: black;
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar .monCompte button .gestionCompte li a {
+  font-size: 0.7em;
+}
+header .navBar .monCompte button .gestionNone {
+  display: none;
+}
+header .navBar .monCompte button .gestion {
+  width: 80%;
+  margin-top: 7%;
+  background-color: var(--bleu-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .panier {
+  width: 80%;
+  background-color: var(--bleu-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .deco {
+  width: 80%;
+  background-color: var(--bleu-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+
+.headerP {
+  background-image: url(https://i.goopics.net/dfwl5f.jpg);
+  width: 100%;
+  padding: 7%;
+  padding-top: 11%;
+  background-size: cover;
+  background-position: center;
+}
+.headerP h1 {
+  color: white;
+  font-size: 7em;
+  font-weight: 400;
+}
+
+section.typeAttraction {
+  font-family: var(--poppins);
+  background-color: #8AE395;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+section.typeAttraction .allAttraction {
+  width: 80%;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+section.typeAttraction .allAttraction .attractionParc {
+  width: 100%;
+  display: flex;
+}
+section.typeAttraction .allAttraction .attractionParc .imgA {
+  width: 50%;
+}
+section.typeAttraction .allAttraction .attractionParc .imgA img {
+  width: 100%;
+}
+section.typeAttraction .allAttraction .attractionParc .txtA {
+  width: 50%;
+  background-color: #3A8043;
+  display: flex;
+  align-items: center;
+}
+section.typeAttraction .allAttraction .attractionParc .txtA p {
+  padding: 5%;
+  color: white;
+  text-align: center;
+  padding-top: 10%;
+  font-size: 1.5em;
+  line-height: 1.8em;
+}
+
+.bannerResto {
+  background-image: url(https://i.goopics.net/rn25na.jpg);
+  width: 100%;
+  padding: 7%;
+  padding-top: 11%;
+  background-size: cover;
+  background-position: center;
+}
+.bannerResto h1 {
+  color: white;
+  font-size: 7em;
+  font-weight: 400;
+}
+
+.restos {
+  font-family: var(--poppins);
+  background-color: #8AE395;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.restos .allResto {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.restos .allResto .resto {
+  width: 45%;
+  position: relative;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+.restos .allResto .resto .imgResto {
+  width: 100%;
+}
+.restos .allResto .resto .imgResto img {
+  width: 100%;
+}
+.restos .allResto .resto .vegan-locaux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8%;
+  left: 75%;
+  text-align: center;
+  background-color: #3A8043;
+  border-radius: 50%;
+  width: 7em;
+  height: 7em;
+  z-index: 3;
+}
+.restos .allResto .resto .vegan-locaux p {
+  font-family: var(--neucha);
+  font-size: 1.5em;
+}
+.restos .allResto .resto .txtResto {
+  width: 100%;
+  background-color: #3A8043;
+  height: 40%;
+  display: flex;
+  align-items: center;
+}
+.restos .allResto .resto .txtResto p {
+  line-height: 1.8em;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5% 10%;
+}
+
+.bannerDetente {
+  background-image: url(https://i.goopics.net/k9try2.jpg);
+  width: 100%;
+  padding: 7%;
+  padding-top: 11%;
+  background-size: cover;
+  background-position: center;
+}
+.bannerDetente h1 {
+  color: white;
+  font-size: 7em;
+  font-weight: 400;
+}
+
+.detentes {
+  font-family: var(--poppins);
+  background-color: #8AE395;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.detentes .allDetente {
+  width: 80%;
+}
+.detentes .allDetente .detente {
+  display: flex;
+  width: 100%;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+.detentes .allDetente .detente .imgDetente {
+  width: 50%;
+}
+.detentes .allDetente .detente .imgDetente img {
+  width: 100%;
+}
+.detentes .allDetente .detente .txtDetente {
+  background-color: #3A8043;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.detentes .allDetente .detente .txtDetente p {
+  text-align: center;
+  padding: 5% 10%;
+  font-size: 1.5em;
+  line-height: 1.8em;
+}
+.detentes .allDetente .detenteReserve {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.detentes .allDetente .detenteReserve .reserve {
+  background-color: var(--bleu);
+  padding: 2% 6%;
+  border-radius: 2em;
+}
+.detentes .allDetente .detenteReserve .reserve a {
+  font-size: 1.5em;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--bleu);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.1);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex a {
+  transition: 0.5s all;
+}
+footer .flex a:hover {
+  transform: scale(1.1);
+}
+footer .flex .container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container p, footer .flex .container a {
+  font-family: "Neucha", cursive;
+}
+footer .flex .container img {
+  width: 60%;
+  margin-top: 0;
+  padding-bottom: 10%;
+}
+footer .flex .container ul li {
+  transition: 0.5s all;
+}
+footer .flex .container ul li:hover {
+  transform: scale(1.1);
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+  color: white;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 3%;
+}
+footer .flex .container .coordonnees a {
+  transition: 0.5s all;
+}
+footer .flex .container .coordonnees a:hover {
+  transform: scale(1.1);
+}
+footer .flex .container .remonte p {
+  font-family: "Neucha", cursive;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+  transition: 0.5s all;
+}
+footer .flex .container ul li a:hover {
+  transform: scale(1.1);
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+  font-family: "Neucha", cursive;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo i {
+  padding: 15%;
+  color: white;
+}
+footer .mentions {
+  width: 96%;
+  background-color: var(--bleu-fonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}
+footer .mentions .mentionsdroits a {
+  color: white;
+}
+
+/* ANIMATION JS */
+.revealleft {
+  opacity: 0;
+  transform: translateX(-10em);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translateX(10em);
+}
+
+.revealvisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+@media screen and (max-width: 1440px) {
+  .detentes .allDetente .detente .detenteReserve p {
+    font-size: 1.45em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .headerP h1 {
+    font-size: 6em;
+  }
+  /* POP UP SIGN UP */
+  #popupsignup {
+    width: 60%;
+  }
+  .bannerResto h1 {
+    font-size: 6em;
+  }
+  .restos .allResto .resto .txtResto {
+    height: 55%;
+  }
+  .restos .allResto .resto .vegan-locaux {
+    left: 65%;
+    top: 5%;
+  }
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 1.5em;
+  }
+  .bannerDetente h1 {
+    font-size: 6em;
+  }
+  .detentes .allDetente .detente .detenteReserve .reserve {
+    padding: 1% 5%;
+  }
+  .detentes .allDetente .detente .detenteReserve .reserve a {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #popupsignup {
+    width: 80%;
+  }
+  header .navBar nav ul li a {
+    font-size: 1.3em;
+  }
+  header .navBar nav ul li a:hover {
+    transform: scale(1.4);
+  }
+  header .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  header .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+  .headerP h1 {
+    font-size: 5em;
+  }
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 1.3em;
+  }
+  .bannerResto h1 {
+    font-size: 5em;
+  }
+  .restos .allResto .resto .vegan-locaux {
+    width: 5em;
+    height: 5em;
+  }
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 1.3em;
+  }
+  .restos .allResto .resto .txtResto p {
+    font-size: 1.3em;
+  }
+  .bannerDetente h1 {
+    font-size: 5em;
+  }
+  .detentes .allDetente .detente .txtDetente p {
+    font-size: 1.2em;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve {
+    padding: 1% 3%;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve a {
+    font-size: 0.9em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .container img {
+    margin-left: 20px;
+  }
+  footer .flex .container ul li a {
+    font-size: 15px;
+  }
+  footer .flex .container .logo a {
+    margin: 0 15%;
+  }
+  footer .flex .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .flex .center {
+    font-size: 90%;
+  }
+  footer .mentions {
+    width: 96%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* POP UP SIGN UP */
+  #popupsignup {
+    width: 90%;
+  }
+  .signup form .login .containersignup label {
+    width: 100%;
+    font-size: 0.7em;
+  }
+  header div#navigation {
+    display: block;
+  }
+  header {
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    background-color: var(--bleu-clair);
+  }
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+    z-index: 99;
+  }
+  header .milieu .logIn {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--bleu-fonce);
+    color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--bleu-fonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 47px;
+    right: 50px;
+    cursor: pointer;
+    background-color: var(--bleu-fonce);
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--bleu-fonce);
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header #navigation {
+    top: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--bleu-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  .headerP h1 {
+    font-size: 3.9em;
+  }
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 1em;
+  }
+  .bannerResto h1 {
+    font-size: 3.9em;
+  }
+  .restos .allResto .resto .txtResto p {
+    font-size: 1em;
+  }
+  .restos .allResto .resto .vegan-locaux {
+    width: 4em;
+    height: 4em;
+  }
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 1em;
+  }
+  .bannerDetente h1 {
+    font-size: 3.9em;
+  }
+  .detentes .allDetente .detente .txtDetente p {
+    font-size: 0.89em;
+  }
+  /* FOOTER */
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex {
+    padding: 2% 0% 0% 0%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #popup {
+    width: 70%;
+  }
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 93%;
+    align-self: flex-start;
+  }
+  .signup form .login .containersignup .line {
+    display: none;
+  }
+  .headerP h1 {
+    font-size: 2em;
+  }
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 0.7em;
+    padding-top: 2%;
+  }
+  .bannerResto h1 {
+    font-size: 2em;
+  }
+  .restos .allResto .resto .txtResto p {
+    font-size: 0.7em;
+    padding-bottom: 10%;
+  }
+  .restos .allResto .resto .vegan-locaux {
+    width: 2em;
+    height: 2em;
+    left: 35%;
+  }
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 0.7em;
+  }
+  .bannerDetente h1 {
+    font-size: 2em;
+  }
+  .detentes .allDetente .detente .txtDetente p {
+    padding-top: 0%;
+    font-size: 0.55em;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve {
+    padding: 0% 5%;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve a {
+    font-size: 0.5em;
+  }
+  footer .flex .container .coordonnees i {
+    font-size: 70%;
+  }
+  footer .flex .container .coordonnees a {
+    font-size: 60%;
+  }
+  footer .flex .container .coordonnees p {
+    font-size: 60%;
+  }
+  footer .flex .center .logo i {
+    font-size: 60%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #popupsignup {
+    font-size: 1.2em;
+  }
+  #popup {
+    width: 95%;
+  }
+  .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+  .headerP h1 {
+    font-size: 1.5em;
+  }
+  main .typeAttraction .allAttraction {
+    width: 90%;
+  }
+  main .typeAttraction .allAttraction .attractionParc .txtA p {
+    font-size: 0.5em;
+    padding-top: 2%;
+  }
+  .bannerResto h1 {
+    font-size: 1.5em;
+  }
+  .restos .allResto {
+    width: 90%;
+  }
+  .restos .allResto .resto .txtResto p {
+    font-size: 0.5em;
+    padding-bottom: 15%;
+  }
+  .restos .allResto .resto .vegan-locaux {
+    width: 2em;
+    height: 2em;
+    left: 70%;
+  }
+  .restos .allResto .resto .vegan-locaux p {
+    font-size: 0.6em;
+  }
+  .bannerDetente h1 {
+    font-size: 1.5em;
+  }
+  .detentes .allDetente {
+    width: 90%;
+  }
+  .detentes .allDetente .detente .txtDetente p {
+    padding-top: 0%;
+    font-size: 0.4em;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve {
+    padding: 0% 5%;
+  }
+  .detentes .allDetente .detente .txtDetente .reserve a {
+    font-size: 0.5em;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.7em;
+  }
+}/*# sourceMappingURL=attraction.css.map */

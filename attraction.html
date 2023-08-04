@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+    <title>Parc d'attractions | Wildlands</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/attraction.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/5fa515c205.js" crossorigin="anonymous"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <!-- top du site avec une div pour le logo 
+        une div pour la nav
+        une div pour le compte
+    -->
+     <!-- NAVBAR WIP -->
+     <header>
+        <div class="milieu">
+            <button class="logIn" id="moncompte2"><i class="fa-solid fa-user"></i></button>
+        </div>
+        <div class="cart"><a href=""><i class="fa-solid fa-basket-shopping"></i></a></div>
+        <!-- NAVBAR WIP -->
+        <!-- menu burger en responsive -->
+        <div id="toggle"></div>
+        <div id="navigation">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../attraction/attraction.html">Parcs d'attractions</a></li>
+                    <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                    <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                    <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../billetterie/billetterie.html">Billetterie</a></li>
+                </ul>
+            </div>
+        <!-- menu normal -->
+        <div class="navBar scrollAnimation scrollDown" id="scrollBar">
+            <div class="logo">
+                <a href="../index.html"><img src="img/wildland-logo2.svg" alt="LOGO de Wildlands"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../attraction/attraction.html">Parc d'attractions</a>
+                    </li>
+                    <li>
+                        <a href="" class="deroulant">Parc naturel</a>
+                        <ul class="sous">
+                            <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                            <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                            <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../billetterie/billetterie.html">Billetterie</a></li>
+                </ul>
+            </nav>
+            <div class="monCompte" id = "moncompte">
+                <button><p>Mon compte</p></button>
+            </div>
+        </div>
+    </header>
+     <!--  D I V . P O P . U P  -->
+
+     <div class="popup popupdisplay" id = "popup">
+        <button id = "closepopup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Connectez-vous</legend>
+                <p id = "emaildisable" class = "emaildisable entrystyle emailflex">
+                    <label for="email">Adresse mail</label>
+                    <input type="text" placeholder="" name="email" id="email">
+                </p>
+                <p id = "passworddisable" class = "passworddisable passwordflex entrystyle">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" placeholder="" name="password" id="password">
+                </p>
+                <a href ="attractionCo.html" id = "meconnecter">Me connecter</a>
+                <div class="connectremember">
+                    <input type="checkbox" id="checkbox" checked>
+                    <label for="checkbox"></label>
+                    <label for="rememberme">Se souvenir de moi</label>
+                </div>
+                <div class="plssignup">
+                    <p>Pas encore de compte ?</p>
+                </div>
+            </fieldset>                
+        </form>
+        <button id ="minscrire">Inscrivez-vous</button>
+    </div>
+
+    <div class="signup signupdisplay" id = "popupsignup">
+        <button id = "closepopupsignup">×</button>
+        <form action="" method="post">
+            <fieldset class="login">
+                <legend class="connect">Inscription</legend>
+                <div class="containersignup">
+                    <div class="leftsignup">
+                        <p class = "entrystyle">
+                            <label for="name">Nom</label>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" name="firstname" id="firstname">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="phone">Numéro de téléphone</label>
+                            <input type="tel" placeholder="" name="phone" id="phone">
+                        </p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="rightsignup">
+                        <p class = "entrystyle">
+                            <label for="email">Adresse mail</label>
+                            <input type="text" placeholder="" name="email" id="emailsignup" class="reduc">
+                        </p>
+                        <p class = "entrystyle middleentry">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" placeholder="" name="password" id="passwordsignup">
+                        </p>
+                        <p class = "entrystyle">
+                            <label for="password">Confirmer le mot de passe</label>
+                            <input type="password" placeholder="" name="password">
+                        </p>
+                    </div>
+                </div>
+            </fieldset>                
+        </form>
+        <a href="attractionCo.html" id="submitsignup" class="submitsignup">Je m'inscris</a>
+    </div>
+    
+    <main>
+        <!-- header -->
+    <div class="headerP">
+        <div class="revealleft">
+            <h1>Parc d'attractions</h1>
+        </div>
+    </div>
+    <!-- les différentes types d'attraction -->
+    <section class="typeAttraction">
+        <div class="allAttraction">
+            <div class="attractionParc" id = "family">
+                <div class="imgA revealleft">
+                    <img src="https://i.goopics.net/8xw47q.jpg" alt="">
+                </div>
+                <div class="txtA revealright">
+                    <p>
+                        À Wildlands, venez découvrir nos
+                        attractions pour tous !
+                        Avec des attractions en famille, 
+                        pour les grands
+                        comme les petits !
+                    </p>
+                </div>
+            </div>
+            <div class="attractionParc">
+                <div class="txtA revealleft">
+                    <p>
+                        Venez découvrir les attractions 
+                        pour les jeunes et les plus grands!
+                        Avec des sensations plus ou 
+                        moins fortes !
+                    </p>
+                </div>
+                <div class="imgA revealright">
+                    <img src="https://i.goopics.net/cukikd.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="attractionParc" id = "sensation">
+                <div class="imgA revealleft">
+                    <img src="https://i.goopics.net/in4hd8.jpg" alt="">
+                </div>
+                <div class="txtA revealright">
+                    <p>
+                       Et enfin les attractions pour 
+                        les plus costauds !
+                        Si vous avez assez de courage essayer
+                        de défier les attractions
+                        les plus sensationnelles et décoiffantes !  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- partie restaurant -->
+    <div class="bannerResto">
+        <div class="revealleft">
+            <h1>Restaurant</h1>
+        </div>
+    </div>
+
+    <section class="restos">
+        <div class="allResto">
+            <div class="resto">
+                <div class="imgResto revealleft">
+                    <img src="https://i.goopics.net/qm8i9k.jpg" alt="">
+                </div>
+                <div class="vegan-locaux revealleft">
+                    <p>Options vegan</p>
+                </div>
+                <div class="txtResto revealleft">
+                    <p>
+                        Différents restaurants dans le parc sont disponible dont des restaurants végétarien et végan !
+                        Et sur différents thèmes selon la zone du parc
+                        où vous êtes, bonne appétit  
+                    </p>
+                </div>
+            </div>
+            <div class="resto">
+                <div class="imgResto revealright">
+                    <img src="https://i.goopics.net/jbwu6g.jpg" alt="">
+                </div>
+                <div class="vegan-locaux revealright">
+                    <p>Produits locaux</p>
+                </div>
+                <div class="txtResto revealright">
+                    <p>
+                        Les produits que nous vous servons sont bio, frais et proviennent de notre région, par nos éleveurs et nos commerçant
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        
+    </section>
+
+    <!-- espace détente -->
+        <!-- banner détente -->
+    <div class="bannerDetente">
+        <div class="revealleft">
+            <h1>Espace détente</h1>
+        </div>
+    </div>
+
+    <!-- section détente -->
+    <section class="detentes">
+        <div class="allDetente">
+            <div class="detente">
+                <div class="imgDetente revealleft">
+                    <img src="https://i.goopics.net/1wcux7.jpg" alt="">
+                </div>
+                <div class="txtDetente revealright">
+                    <p>
+                        Grâce à nos zones détente vous allez 
+                        pourvoir vous reposer dans des espaces
+                        vert situer dans le parc et reprendre un d’énergie pour de nouvelle sensation !
+                    </p>
+                </div>
+            </div>
+    
+            <div class="detente">
+                <div class="txtDetente detenteReserve revealleft">
+                    <p>
+                        Des Hôtels sont à votre disposition pour pouvoir profiter de notre parc au maximum 
+                        avec des piscines et des zones pour prendre des bains de soleil ! 
+                    </p>
+                    <div class="reserve">
+                        <a href="../billeterie/billetterie.html">Réserver</a>
+                    </div>
+                </div>
+                <div class="imgDetente revealright">
+                    <img src="https://i.goopics.net/2o5ydw.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="flex">
+            <div class="container footcontact">
+                <img src="img/wildland-logo2.svg" alt="Logo-wildlands">
+                <div class="coordonnees">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>00 00 00 00 00</p>
+                </div>
+                <div class="coordonnees">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:contact@wildlands.com">contact@wildlands.com</a>
+                </div>
+                <div class="coordonnees remonte">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <p class="remonte">100 rue de Larue 07210 ROMS</p>
+                </div>
+            </div>
+        <div class="container footnav">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../attraction/attraction.html">Parc d'attractions</a></li>
+                <li><a href="../foret/foret.html">Au coeur de la forêt</a></li>
+                <li><a href="../eau/eau.html">Les pieds dans l'eau</a></li>
+                <li><a href="../airs/airs.html">La tête dans les nuages</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../billetterie/billeterie.html">Billetterie</a></li>
+            </ul>
+        </div>
+        <div class="container center">
+            <p>Vous pouvez nous suivre sur :</p>
+            <div class="logo">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p>Paiement sécurisés via :</p>
+            <div class="logo">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-visa"></i>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+        <div class="mentions">
+            <p>© Wildands</p>
+            <div class="mentionsdroits">
+                <a href="../billetterie/wip.html">Mentions légales&nbsp;</a>
+                <p> - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+    </main>
+    
+
+
+     <!----- SCRIPT ----->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/navScroll.js"></script>
+    <script src="js/popupconnect.js"></script>
+    <script src="js/scriptNav.js"></script>
+    <script src="js/scrollcards.js"></script>
+    
+</body>
+</html>
