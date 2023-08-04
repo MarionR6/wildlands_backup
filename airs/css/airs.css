@@ -1,0 +1,1526 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --neucha: "Neucha", cursive;
+  --bleuClair: #bac7d6;
+  --bleu:#567BB4;
+  --bleuFonce:#1F5180;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#navigation {
+  display: none;
+}
+
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}
+
+header .milieu {
+  display: none;
+}
+header .milieu .monCompte2 {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--bleuFonce);
+  font-family: var(--neucha);
+  border-radius: 3vh;
+}
+header .milieu .monCompte2 .btnCompte2 {
+  display: inline-block;
+  background-color: var(--bleuFonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  border-radius: 2vh;
+  padding: 0.5em 2em;
+}
+header .milieu .monCompte2 .btnCompte2 p {
+  font-family: var(--neucha);
+}
+header .milieu .monCompte2 .btnCompte2:hover {
+  transform: scale(1.1);
+}
+header .milieu .monCompte2 .btnCompte2 #box2 {
+  align-items: center;
+  justify-content: center;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  left: 10%;
+  transition: 1 all;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionNone {
+  display: none;
+}
+header .milieu .monCompte2 .btnCompte2 .gestion {
+  width: 80%;
+  margin-top: 5%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .milieu .monCompte2 .btnCompte2 .deco {
+  width: 80%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .cart {
+  display: none;
+}
+header .navBar {
+  width: 100%;
+  height: 100px;
+  background-color: var(--bleu);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+header .navBar .logo img {
+  width: 100%;
+}
+header .navBar nav {
+  width: 50%;
+}
+header .navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header .navBar nav ul li {
+  list-style: none;
+}
+header .navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+header .navBar nav ul li a:hover {
+  transform: scale(1.1);
+}
+header .navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar nav ul li:hover .sous {
+  display: block;
+}
+header .navBar nav ul li:hover .sous li {
+  background-color: var(--bleu);
+  opacity: 0.8;
+  border-bottom: solid var(--bleu-clair) 1px;
+  padding: 2%;
+  background-color: var(--bleuFonce);
+}
+header .navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+header .navBar nav ul li:hover .sous li a:hover {
+  color: #091e33;
+  transform: scale(1);
+}
+header .navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+header .navBar .monCompte {
+  background-color: var(--bleuFonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+header .navBar .monCompte button {
+  width: 100%;
+  background-color: var(--bleuFonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+  position: relative;
+  cursor: pointer;
+}
+header .navBar .monCompte button p {
+  font-family: var(--neucha);
+}
+header .navBar .monCompte button:hover {
+  transform: scale(1.1);
+}
+header .navBar .monCompte button .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar .monCompte button .gestionNone {
+  display: none;
+}
+header .navBar .monCompte button .gestion {
+  width: 100%;
+  margin-top: 7%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .panier {
+  width: 100%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .deco {
+  width: 100%;
+  background-color: #1F5180;
+  opacity: 0.8;
+  padding: 10%;
+}
+
+/* POP UP CONNEXION */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: var(--bleuClair);
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: var(--bleu);
+  border: 0.07em solid var(--bleuFonce);
+  font-family: "Neucha", sans-serif;
+  color: white;
+}
+
+.popup #closepopup {
+  background-color: var(--bleuFonce);
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+.popup form fieldset legend {
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 0.06em solid white;
+  padding-bottom: 5%;
+}
+
+#meconnecter,
+#minscrire {
+  color: white;
+  text-align: center;
+  margin: 10% 0 3% 0;
+  border-radius: 1em;
+  background-color: var(--bleuFonce);
+  padding: 2% 0;
+  transition: 0.5s all;
+  border: none;
+  font-family: "Neucha", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.5s all;
+}
+
+#minscrire {
+  font-size: 1em;
+  margin-top: 6%;
+}
+
+#minscrire:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset #meconnecter:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember a:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember label {
+  padding-left: 1%;
+  font-size: 0.7em;
+}
+
+.popup form fieldset .plssignup {
+  font-size: 0.8em;
+}
+
+.popup form fieldset .plssignup a {
+  color: white;
+  text-align: center;
+  margin: 6% 0 3% 0;
+  border-radius: 1em;
+  background-color: var(--bleuFonce);
+  padding: 2% 0;
+  font-size: 1.3em;
+  transition: 0.5s all;
+}
+
+.popup form fieldset .plssignup a:hover {
+  transform: scale(1.1);
+}
+
+.emailflex, .passwordflex {
+  display: flex;
+  flex-direction: column;
+}
+
+#emaildisable {
+  padding: 5% 0 4% 0;
+}
+
+.entrystyle input {
+  margin-top: 2%;
+  padding: 2% 4%;
+  font-size: 0.6em;
+  background-color: var(--bleuClair);
+  border: none;
+  border-radius: 1em;
+}
+
+#emaildisable input::-moz-placeholder, #passworddisable input::-moz-placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+#emaildisable input::placeholder,
+#passworddisable input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.popup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* POPUP SIGNUP */
+#popupsignup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: var(--bleuClair);
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: var(--bleu);
+  border: 0.07em solid var(--bleuFonce);
+  font-family: "Neucha", sans-serif;
+  color: white;
+  width: 50%;
+}
+
+#closepopupsignup {
+  background-color: var(--bleuFonce);
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+.signup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup form .login .connect {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 4%;
+}
+
+.signup form .login .containersignup {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.1em solid var(--bleuClair);
+  border-radius: 1em;
+  padding: 5% 5%;
+  position: relative;
+}
+
+.signup form .login .containersignup label {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.signup form .login .containersignup .middleentry {
+  margin: 5% 0;
+}
+
+.signup form .login .containersignup .leftsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .leftsignup p,
+.signup form .login .containersignup .rightsignup p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup form .login .containersignup .line {
+  width: 30%;
+  height: 0.07em;
+  background: linear-gradient(to left, --bleu, --bleuClair, --bleu);
+  transform: rotate(90deg);
+  align-self: center;
+  position: absolute;
+}
+
+.signup form .login .containersignup .rightsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle {
+  width: 100%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle input {
+  width: 100%;
+}
+
+.signupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.signup .submitsignup {
+  color: white;
+  border-radius: 1em;
+  background-color: var(--bleuFonce);
+  padding: 1% 4%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4%;
+  transition: 0.5s all;
+}
+
+.signup .submitsignup:hover {
+  transform: scale(1.1);
+}
+
+.revealleft {
+  opacity: 0;
+  transform: translateX(-10em);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translateX(10em);
+}
+
+.revealvisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.nuages {
+  width: 100%;
+  padding: 7%;
+  padding-top: 11%;
+  background-image: url(https://i.goopics.net/6dpmfg.jpg);
+  background-position: right;
+  background-size: cover;
+}
+.nuages h1 {
+  font-family: var(--neucha);
+  font-size: 7em;
+  text-align: center;
+  font-weight: 400;
+}
+
+.couleurs {
+  width: 100%;
+  padding: 7%;
+  background-image: url(https://i.goopics.net/67auvg.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+.couleurs h1 {
+  font-family: var(--neucha);
+  font-size: 6em;
+  text-align: right;
+  font-weight: 400;
+}
+
+.etoiles {
+  width: 100%;
+  padding: 7%;
+  background-image: url(https://i.goopics.net/6xskv2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.etoiles h1 {
+  font-family: var(--neucha);
+  font-size: 6em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.bleuClair {
+  width: 100%;
+  background-color: var(--bleuClair);
+  font-family: var(--poppins);
+  padding: 10%;
+}
+.bleuClair .flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.bleuClair .flex .bleuFonce {
+  background-color: var(--bleuFonce);
+  width: 40%;
+  padding: 3%;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+}
+.bleuClair .flex .bleuFonce .image {
+  width: 100%;
+}
+.bleuClair .flex .bleuFonce .image img {
+  width: 100%;
+}
+.bleuClair .flex .bleuFonce .txt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bleuClair .flex .bleuFonce .txt h4 {
+  font-size: 2.4em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 7%;
+}
+.bleuClair .flex .bleuFonce .txt .ligne {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 2% 0 5%;
+}
+.bleuClair .flex .bleuFonce .txt p {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 200;
+}
+.bleuClair .flex .bleuFonce .txt .reserver {
+  width: 40%;
+  font-weight: 400;
+  background-color: var(--bleuClair);
+  border-radius: 2vh;
+  padding: 2% 3%;
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+  filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5));
+}
+.bleuClair .flex .bleuFonce .txt .reserver a {
+  color: black;
+  font-weight: 600;
+  font-size: 1.5em;
+  transition: 0.5s all;
+}
+.bleuClair .flex .bleuFonce .txt .reserver a:hover {
+  transform: scale(1.1);
+}
+
+/* ACTIVITIES */
+.activities {
+  width: 100%;
+}
+
+.activities .actcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  position: relative;
+}
+
+.activities .actcontainer .bubble1 {
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  padding: 3% 1%;
+  background-color: var(--bleuFonce);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 9%;
+  top: 18%;
+  z-index: 3;
+}
+.activities .actcontainer .bubble1 p {
+  font-family: var(--neucha);
+  font-size: 1.4em;
+}
+
+.activities .actcontainer .bubble2 {
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  padding: 2% 1%;
+  background-color: var(--bleuFonce);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  right: 6%;
+  top: 49%;
+  z-index: 3;
+}
+.activities .actcontainer .bubble2 p {
+  font-family: var(--neucha);
+  font-size: 1.5em;
+}
+
+.activities .actcontainer .bubble3 {
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  padding: 2% 1%;
+  background-color: var(--bleuFonce);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 5%;
+  bottom: 4%;
+  z-index: 3;
+}
+.activities .actcontainer .bubble3 p {
+  font-family: var(--neucha);
+  font-size: 1.4em;
+}
+
+.activities .actcontainer .acttxtimg {
+  width: 75%;
+  display: flex;
+}
+
+.activities .actcontainer .acttxtimg .acttxt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--bleuFonce);
+  text-align: center;
+  padding: 3% 2%;
+  color: white;
+}
+
+.activities .actcontainer .acttxtimg .acttxt h3 {
+  font-weight: 400;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+  font-size: 2.4em;
+}
+
+.activities .actcontainer .acttxtimg .acttxt .line {
+  width: 8em;
+  height: 0.02em;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+.activities .actcontainer .acttxtimg .acttxt p {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-weight: 200;
+}
+
+.activities .actcontainer .acttxtimg .actimg {
+  width: 50%;
+}
+
+.activities .actcontainer .acttxtimg .actimg img {
+  width: 100%;
+  height: 100%;
+}
+
+.activities .actcontainer .reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--bleu);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.1);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo a {
+  padding: 0 15%;
+}
+footer .center .logo i {
+  padding: 15%;
+}
+footer .mentions {
+  width: 100%;
+  background-color: var(--bleuFonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1820px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 2.3em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1.3em;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 2.3em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+@media screen and (max-width: 1720px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 2em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    font-size: 1.3em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1.1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 2em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.3em;
+    line-height: 1.3em;
+  }
+}
+@media screen and (max-width: 1520px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.8em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    font-size: 1.2em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1.1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.8em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    font-size: 1.1em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.5em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    font-weight: 100;
+  }
+  .activities .actcontainer .bubble1 {
+    height: 7em;
+    width: 7em;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble2 {
+    height: 7em;
+    width: 7em;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 1.2em;
+  }
+  .activities .actcontainer .bubble3 {
+    height: 7em;
+    width: 7em;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header .navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  header .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+  #popupsignup {
+    width: 60%;
+  }
+  .nuages h1 {
+    font-family: var(--neucha);
+    font-size: 5.5em;
+    text-align: center;
+    font-weight: 400;
+  }
+  .couleurs h1 {
+    font-size: 4.5em;
+  }
+  .etoiles h1 {
+    font-size: 4.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1.1em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble1 {
+    height: 6em;
+    width: 6em;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble2 {
+    height: 6em;
+    width: 6em;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble3 {
+    height: 6em;
+    width: 6em;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-family: var(--neucha);
+    font-size: 1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.5em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1.05em;
+    line-height: 1.5em;
+  }
+  footer {
+    width: 100%;
+    background-color: var(--bleu);
+    font-family: var(--neucha);
+  }
+  footer a {
+    transition: 0.5s all;
+  }
+  footer a:hover {
+    transform: scale(1.1);
+  }
+  footer .flex {
+    font-size: 1.3em;
+  }
+  footer .flex ul li a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .navBar {
+    height: 60px;
+  }
+  header .navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  header .navBar .monCompte a {
+    font-size: 1.3em;
+  }
+  #popupsignup {
+    width: 80%;
+  }
+  .nuages h1 {
+    font-size: 4em;
+  }
+  .couleurs h1 {
+    font-size: 3em;
+  }
+  .etoiles h1 {
+    font-size: 3em;
+  }
+  .bleuClair .flex {
+    justify-content: space-between;
+  }
+  .bleuClair .flex .bleuFonce {
+    width: 47%;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.4em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1.05em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    font-size: 1em;
+  }
+  .activities {
+    width: 100%;
+  }
+  .activities .actcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+    position: relative;
+  }
+  .activities .actcontainer .bubble1 {
+    border-radius: 50%;
+    padding: 3.5% 1%;
+    position: absolute;
+    left: 4%;
+    top: 17%;
+  }
+  .activities .actcontainer .bubble2 {
+    padding: 2.5% 1%;
+    right: 3%;
+    top: 50%;
+  }
+  .activities .actcontainer .bubble3 {
+    padding: 2.5% 1%;
+    left: 1%;
+    bottom: 3.5%;
+  }
+  .activities .actcontainer .acttxtimg {
+    width: 80%;
+  }
+  .activities .actcontainer .acttxtimg .acttxt {
+    line-height: 1.7em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.5em;
+  }
+  footer .flex {
+    font-size: 1.2em;
+  }
+  footer .flex .container ul li a {
+    color: white;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    padding: 2em;
+    background-color: var(--bleuClair);
+    display: flex;
+  }
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+  }
+  header .milieu .logIn {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--bleuFonce);
+    color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--bleuFonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .navBar {
+    display: none;
+  }
+  #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 47px;
+    right: 50px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  #toggle:before, #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  #toggle:before {
+    top: -10px;
+  }
+  #toggle:after {
+    top: 10px;
+  }
+  #toggle.active {
+    background-color: transparent;
+  }
+  #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--bleuFonce);
+  }
+  #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--bleuFonce);
+  }
+  #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  #navigation.active {
+    right: 0;
+    top: 0;
+  }
+  #navigation.active .logo {
+    display: none;
+  }
+  #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  #navigation.active ul li .sous {
+    display: none;
+  }
+  #navigation.active ul li a {
+    color: var(--bleuFonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  #popupsignup {
+    width: 90%;
+  }
+  .nuages {
+    padding-top: 0;
+    padding: 7%;
+  }
+  .nuages h1 {
+    font-size: 3.5em;
+  }
+  .couleurs h1, .etoiles h1 {
+    font-size: 3em;
+  }
+  .bleuClair {
+    padding: 5% 1%;
+  }
+  .bleuClair .flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .bleuClair .flex .bleuFonce {
+    width: 45%;
+    padding: 3%;
+    filter: drop-shadow(2em 2em 1.5em rgba(0, 0, 0, 0.5));
+  }
+  .bleuClair .flex .bleuFonce .image {
+    width: 100%;
+  }
+  .bleuClair .flex .bleuFonce .image img {
+    width: 100%;
+  }
+  .bleuClair .flex .bleuFonce .txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.3em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 1em;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver {
+    width: 40%;
+    background-color: var(--bleuClair);
+    border-radius: 2vh;
+    padding: 2% 3%;
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+    filter: drop-shadow(0.5em 0.5em 0.5em rgba(0, 0, 0, 0.5));
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver a {
+    color: black;
+    font-weight: 600;
+    font-size: 1em;
+  }
+  .activities .actcontainer .bubble1 {
+    width: 5.5em;
+    height: 5.5em;
+    left: 7%;
+    top: 20%;
+  }
+  .activities .actcontainer .bubble2 {
+    width: 5.5em;
+    height: 5.5em;
+    right: 35%;
+    top: 53%;
+  }
+  .activities .actcontainer .bubble3 {
+    width: 5.5em;
+    height: 5.5em;
+    left: 8%;
+    bottom: 20%;
+  }
+  .activities .actcontainer .acttxtimg {
+    width: 90%;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.3em;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex {
+    padding-left: 20%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  footer .flex {
+    margin: 0;
+  }
+  .nuages h1 {
+    font-size: 2.5em;
+  }
+  .couleurs h1, .etoiles h1 {
+    font-size: 2em;
+  }
+  .bleuClair .flex {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .bleuClair .flex .bleuFonce {
+    width: 90%;
+    margin: 2.5% 0;
+    filter: none;
+  }
+  .bleuClair .flex .bleuFonce .txt .reserver {
+    filter: drop-shadow(0.3em 0.3em 0.3em rgba(0, 0, 0, 0.5));
+    font-size: 0.9em;
+  }
+  .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+  }
+  .activities .actcontainer .bubble1 {
+    top: 12%;
+    left: 10%;
+  }
+  .activities .actcontainer .bubble2 {
+    top: 43%;
+    left: 10%;
+  }
+  .activities .actcontainer .bubble3 {
+    bottom: 25%;
+    left: 10%;
+  }
+  .activities .actcontainer {
+    filter: none;
+  }
+  .activities .actcontainer .acttxtimg {
+    width: 90%;
+    flex-wrap: wrap-reverse;
+  }
+  .activities .actcontainer .acttxtimg .acttxt {
+    width: 100%;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.3em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 1em;
+  }
+  .activities .actcontainer .acttxtimg .actimg {
+    width: 100%;
+  }
+  .espace {
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .nuages h1 {
+    font-size: 2em;
+  }
+  .couleurs h1 {
+    font-size: 1.7em;
+  }
+  .etoiles h1 {
+    font-size: 1.7em;
+  }
+  .activities .actcontainer .bubble1 {
+    left: 10%;
+    top: 11%;
+  }
+  .activities .actcontainer .bubble2 {
+    right: 35%;
+    top: 45%;
+  }
+  .activities .actcontainer .bubble3 {
+    left: 8%;
+    bottom: 25%;
+  }
+  footer .flex {
+    font-size: 1em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    padding: 8% 0;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 320px) {
+  #popupsignup {
+    font-size: 1.2em;
+  }
+  .nuages h1 {
+    font-size: 1.8em;
+  }
+  .couleurs h1 {
+    font-size: 1.5em;
+  }
+  .etoiles h1 {
+    font-size: 1.5em;
+  }
+  .bleuClair .flex .bleuFonce .txt h4 {
+    font-size: 1.1em;
+  }
+  .bleuClair .flex .bleuFonce .txt p {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .bubble1 {
+    left: 10%;
+    top: 10%;
+  }
+  .activities .actcontainer .bubble1 p {
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .bubble2 {
+    left: 10%;
+    top: 44%;
+  }
+  .activities .actcontainer .bubble2 p {
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .bubble3 {
+    left: 10%;
+    bottom: 23%;
+  }
+  .activities .actcontainer .bubble3 p {
+    font-size: 0.9em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt h3 {
+    font-size: 1.1em;
+  }
+  .activities .actcontainer .acttxtimg .acttxt p {
+    font-size: 0.9em;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo a {
+    padding: 0 15%;
+  }
+  footer .center .logo i {
+    font-size: 0.7em;
+  }
+}/*# sourceMappingURL=airs.css.map */
