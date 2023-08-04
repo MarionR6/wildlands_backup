@@ -1,0 +1,1557 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+}
+
+html {
+  font-size: 16px;
+}
+
+a, img {
+  display: block;
+}
+
+:root {
+  --poppins:"Poppins",sans-serif;
+  --neucha:"Neucha", cursive;
+  --vert-clair:#c7e3cb;
+  --vert:#56B462;
+  --vert-fonce:#3A8043;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  background-color: var(--vert-clair);
+  font-family: var(--poppins);
+}
+
+.line {
+  background-color: white;
+  width: 30%;
+  height: 0.1rem;
+  margin: 3% auto;
+}
+
+.bold {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.light {
+  font-weight: 100;
+  padding-left: 5%;
+  font-style: italic;
+}
+
+.under {
+  background-color: var(--vert-fonce);
+  padding: 1%;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding-bottom: 4%;
+  cursor: pointer;
+}
+
+.over {
+  background-color: var(--vert-fonce);
+  padding: 1%;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.under1 {
+  background-color: var(--vert-fonce);
+  padding: 1%;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding-bottom: 4%;
+  cursor: pointer;
+}
+
+.over1 {
+  background-color: var(--vert-fonce);
+  padding: 1%;
+  height: 3vh;
+  width: 3vh;
+  border-radius: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nb {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5%;
+  font-size: 1.5rem;
+}
+
+.nbPlace {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+}
+.nbPlace i {
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.btn .ajout {
+  background-color: var(--vert-fonce);
+  font-size: 2rem;
+  padding: 2% 4%;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#navigation {
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.nonvisible {
+  visibility: hidden;
+}
+
+header .milieu {
+  display: none;
+}
+header .milieu .monCompte2 {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  border-radius: 3vh;
+}
+header .milieu .monCompte2 .btnCompte2 {
+  display: inline-block;
+  background-color: var(--vert-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.5s all;
+  position: relative;
+  border-radius: 2vh;
+  padding: 0.5em 2em;
+}
+header .milieu .monCompte2 .btnCompte2 p {
+  font-family: var(--neucha);
+}
+header .milieu .monCompte2 .btnCompte2:hover {
+  transform: scale(1.1);
+}
+header .milieu .monCompte2 .btnCompte2 #box2 {
+  align-items: center;
+  justify-content: center;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  left: 10%;
+  transition: 1s all;
+}
+header .milieu .monCompte2 .btnCompte2 .gestionNone {
+  display: none;
+}
+header .milieu .monCompte2 .btnCompte2 .gestion {
+  width: 80%;
+  margin-top: 5%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .milieu .monCompte2 .btnCompte2 .deco {
+  width: 80%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .cart {
+  display: none;
+}
+header .navBar {
+  width: 100%;
+  background-color: var(--vert);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .navBar .logo {
+  width: 8%;
+  padding: 0.5% 0;
+}
+header .navBar .logo img {
+  width: 100%;
+}
+header .navBar nav {
+  width: 50%;
+}
+header .navBar nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header .navBar nav ul li {
+  list-style: none;
+}
+header .navBar nav ul li a {
+  font-family: var(--neucha);
+  font-size: 1.8em;
+  text-decoration: none;
+  transition: 0.5s all;
+}
+header .navBar nav ul li a:hover {
+  transform: scale(1.1);
+}
+header .navBar nav ul li .sous {
+  display: none;
+  position: absolute;
+  transition: 1 all;
+}
+header .navBar nav ul li:hover .sous {
+  display: block;
+}
+header .navBar nav ul li:hover .sous li {
+  background-color: var(--vert);
+  opacity: 0.8;
+  border-bottom: solid var(--vert-clair) 1px;
+  padding: 2%;
+  background-color: var(--vert-fonce);
+}
+header .navBar nav ul li:hover .sous li a {
+  font-size: 25px;
+  padding: 2%;
+  transition: 0.5s all;
+}
+header .navBar nav ul li:hover .sous li a:hover {
+  color: #18381c;
+  transform: scale(1);
+}
+header .navBar nav ul .deroulant:after {
+  content: "⏷";
+  font-size: 0.7em;
+}
+header .navBar .monCompte {
+  background-color: var(--vert-fonce);
+  font-family: var(--neucha);
+  display: flex;
+  justify-content: center;
+  padding: 1% 2%;
+  border-radius: 3vh;
+}
+header .navBar .monCompte button {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  border: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.5s all;
+  position: relative;
+  cursor: pointer;
+}
+header .navBar .monCompte button p {
+  font-family: var(--neucha);
+}
+header .navBar .monCompte button:hover {
+  transform: scale(1.1);
+}
+header .navBar .monCompte button .gestionCompte {
+  display: block;
+  font-family: var(--neucha);
+  list-style-type: none;
+  position: absolute;
+  transition: 1s all;
+}
+header .navBar .monCompte button .gestionNone {
+  display: none;
+}
+header .navBar .monCompte button .gestion {
+  width: 100%;
+  margin-top: 7%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .panier {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+header .navBar .monCompte button .deco {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  opacity: 0.8;
+  padding: 10%;
+}
+
+/* POP UP CONNEXION */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: "Neucha", sans-serif;
+  color: white;
+}
+
+.popup #closepopup {
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+
+.popup form fieldset legend {
+  font-size: 1.7em;
+  text-align: center;
+  border-bottom: 0.06em solid white;
+  padding-bottom: 5%;
+}
+
+#meconnecter,
+#minscrire {
+  color: white;
+  text-align: center;
+  margin: 10% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  transition: 0.5s all;
+  border: none;
+  font-family: "Neucha", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.5s all;
+}
+
+#minscrire {
+  font-size: 1em;
+  margin-top: 6%;
+}
+
+#minscrire:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset #meconnecter:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember a:hover {
+  transform: scale(1.1);
+}
+
+.popup form fieldset .connectremember label {
+  padding-left: 1%;
+  font-size: 0.7em;
+}
+
+.popup form fieldset .plssignup {
+  font-size: 0.8em;
+}
+
+.popup form fieldset .plssignup a {
+  color: white;
+  text-align: center;
+  margin: 6% 0 3% 0;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 2% 0;
+  font-size: 1.3em;
+  transition: 0.5s all;
+}
+
+.popup form fieldset .plssignup a:hover {
+  transform: scale(1.1);
+}
+
+.emailflex, .passwordflex {
+  display: flex;
+  flex-direction: column;
+}
+
+#emaildisable {
+  padding: 5% 0 4% 0;
+}
+
+.entrystyle input {
+  margin-top: 2%;
+  padding: 2% 4%;
+  font-size: 0.6em;
+  background-color: #c7e3cb;
+  color: black;
+  border: none;
+  border-radius: 1em;
+}
+
+#emaildisable input::-moz-placeholder, #passworddisable input::-moz-placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+#emaildisable input::placeholder,
+#passworddisable input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.emaildisable,
+.passworddisable {
+  pointer-events: none;
+}
+
+.popup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* POPUP SIGNUP */
+#popupsignup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  background-color: #c7e3cb;
+  padding: 2% 3%;
+  font-size: 1.7em;
+  border-radius: 1em;
+  background-color: #3A8043;
+  border: 0.07em solid #204725;
+  font-family: "Neucha", sans-serif;
+  color: black;
+  width: 50%;
+}
+
+#closepopupsignup {
+  background-color: #204725;
+  color: white;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  cursor: pointer;
+}
+
+.signup {
+  visibility: visible;
+  transition: 0.5s all;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup form .login .connect {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 4%;
+}
+
+.signup form .login .containersignup {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.1em solid #c7e3cb;
+  border-radius: 1em;
+  padding: 5% 5%;
+  position: relative;
+}
+
+.signup form .login .containersignup label {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.signup form .login .containersignup .middleentry {
+  margin: 5% 0;
+}
+
+.signup form .login .containersignup .leftsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .leftsignup p,
+.signup form .login .containersignup .rightsignup p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup form .login .containersignup .line {
+  width: 30%;
+  height: 0.07em;
+  background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+  transform: rotate(90deg);
+  align-self: center;
+  position: absolute;
+}
+
+.signup form .login .containersignup .rightsignup {
+  width: 45%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle {
+  width: 100%;
+}
+
+.signup form .login .containersignup .rightsignup .entrystyle input {
+  width: 100%;
+}
+
+.signupdisplay {
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.signup .submitsignup {
+  color: white;
+  border-radius: 1em;
+  background-color: #204725;
+  padding: 1% 4%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 4%;
+  transition: 0.5s all;
+}
+
+.signup .submitsignup:hover {
+  transform: scale(1.1);
+}
+
+main .banner {
+  background-image: url(https://i.goopics.net/rdmja5.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 45vh;
+}
+main .resaParc {
+  width: 100%;
+  margin-top: 5%;
+}
+main .resaParc .oneParc {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+main .resaParc .oneParc .container {
+  width: 30%;
+  background-color: var(--vert);
+  border-radius: 3vh;
+  padding: 2%;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .resaParc .oneParc .container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--neucha);
+  font-weight: 500;
+}
+main .resaParc .twoParcs {
+  width: 30%;
+  margin: 5% auto;
+  background-color: var(--vert);
+  padding: 2%;
+  border-radius: 3vh;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .resaParc .twoParcs h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: var(--neucha);
+  font-weight: 500;
+}
+main .resaParc .sousTotal {
+  width: 29%;
+  position: fixed;
+  top: 15%;
+  right: 7%;
+  z-index: 4;
+  cursor: pointer;
+  background-color: var(--vert-fonce);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1% 3%;
+  margin: 0 0 0 70%;
+  border-radius: 3vh;
+  border: solid 2px;
+  border-color: #4e4e4e #111 #111 #4e4e4e;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .resaParc .sousTotal i {
+  font-size: 2rem;
+  width: 25%;
+}
+main .resaParc .sousTotal p {
+  font-size: 2rem;
+  width: 85%;
+  text-align: center;
+}
+main .resaParc .sousTotal a {
+  font-size: 2rem;
+  display: flex;
+  width: 80%;
+}
+main .resaParc .sousTotal a p {
+  text-align: center;
+}
+main .resaParc .sousTotal .nbArticle {
+  align-self: center;
+  justify-self: center;
+  padding-top: 0.4%;
+  position: absolute;
+  background-color: rgb(123, 17, 17);
+  border-radius: 50%;
+  font-size: 1rem;
+  width: 2vh;
+  height: 2vh;
+  top: 50%;
+  left: 19%;
+}
+main .night {
+  width: 100%;
+  margin-top: 5%;
+  padding-bottom: 3%;
+}
+main .night .bannerNight {
+  background-image: url(https://i.goopics.net/k3oi71.jpg);
+  background-size: cover;
+  background-position: center;
+}
+main .night .bannerNight h1 {
+  text-align: center;
+  padding: 7% 0%;
+  font-family: "Neucha", cursive;
+  font-size: 7em;
+  color: white;
+  font-weight: 400;
+}
+main .night h2 {
+  font-size: 2rem;
+  padding: 2% 5%;
+  color: var(--vert-fonce);
+}
+main .night .line {
+  background-color: var(--vert-fonce);
+  margin: 0 5%;
+  width: 15%;
+}
+main .night .carrousel {
+  width: 62vw;
+  height: 75vh;
+  position: relative;
+  margin: 5% auto;
+  overflow: hidden;
+  border-radius: 2vh;
+}
+main .night .carrousel #container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main .night .carrousel #container .photo {
+  width: 62vw;
+  height: 60vh;
+  display: inline-block;
+}
+main .night .carrousel #container .photo img {
+  width: 100%;
+}
+main .night .carrousel .bouton {
+  position: absolute;
+  top: 33%;
+  width: 15%;
+  filter: invert(1);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+main .night .carrousel .bouton:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+main .night .carrousel #d {
+  right: 0%;
+}
+main .night .carrousel #g {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+main .night .carrousel #g:hover {
+  transform: scale(1.2) rotate(180deg);
+  opacity: 1;
+}
+main .night .date {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--vert);
+  width: 45%;
+  margin: 2% auto;
+  padding: 1%;
+  border-radius: 10vh;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .night .date label {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3%;
+}
+main .night .date input {
+  border-radius: 2vh;
+  height: 5vh;
+  width: 60%;
+  margin: 0 auto;
+  padding-left: 5%;
+  font-style: italic;
+  color: grey;
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+  font-family: var(--neucha);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--vert-clair);
+  border: 2px var(--vert-fonce) solid;
+  font-weight: 800;
+  color: var(--vert-fonce);
+}
+main .night .date .nb {
+  width: 60%;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+main .night .flexContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3% 0;
+}
+main .night .flexContainer .container {
+  background-color: var(--vert);
+  border-radius: 3vh;
+  padding: 1%;
+  width: 22%;
+  filter: drop-shadow(1em 1em 1.5em rgba(0, 0, 0, 0.5));
+}
+main .night .flexContainer .container h2 {
+  font-family: var(--neucha);
+  color: white;
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 2.5rem;
+}
+main .night .flexContainer .container .line {
+  margin: 0 auto;
+  background-color: white;
+}
+main .night .flexContainer .container .infos {
+  display: flex;
+}
+main .night .flexContainer .container p {
+  font-size: 1.1rem;
+}
+main .night .flexContainer .container .btn {
+  margin: 10% 0;
+}
+main .night .flexContainer .container .mentions {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--vert);
+  font-family: var(--neucha);
+}
+footer a {
+  transition: 0.5s all;
+}
+footer a:hover {
+  transform: scale(1.1);
+}
+footer .flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  padding-bottom: 2%;
+}
+footer .flex .container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4%;
+}
+footer .flex .container img {
+  width: 50%;
+  padding: 8% 0;
+}
+footer .flex .container .coordonnees {
+  display: flex;
+  padding: 0 5% 5% 5%;
+  margin-right: 2%;
+}
+footer .flex .container .coordonnees i {
+  text-align: center;
+  color: white;
+  margin-right: 5.5%;
+}
+footer .flex .container ul {
+  font-size: 0;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .flex .container ul li {
+  padding-bottom: 4%;
+}
+footer .flex .container ul li a {
+  color: white;
+  font-size: 25px;
+}
+footer .flex i {
+  text-align: center;
+}
+footer .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .center p {
+  padding: 2%;
+}
+footer .center .logo {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+footer .center .logo i {
+  padding-top: 0;
+}
+footer .mentions {
+  width: 100%;
+  background-color: var(--vert-fonce);
+  text-align: center;
+  padding: 2%;
+}
+footer .mentions .mentionsdroits {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1540px) {
+  main .resaParc .sousTotal {
+    width: 35%;
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 18%;
+    padding-top: 0.1%;
+  }
+  main .night .flexContainer .container .nb .bold {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 13px;
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 17%;
+  }
+  main .night .flexContainer .container {
+    width: 23%;
+  }
+  main .night .flexContainer .container .nb .bold {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .resaParc a .sousTotal {
+    padding: 1%;
+  }
+  main .resaParc a .sousTotal .nbArticle {
+    left: 15%;
+  }
+  main .night .date {
+    width: 40%;
+  }
+  main .night .carrousel {
+    height: 48vh;
+  }
+  main .night .flexContainer .container .nb {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  main .night .flexContainer .container .nb p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  main .night .flexContainer .container .nb .bold {
+    width: 100%;
+  }
+  main .night .flexContainer .container .nb .nbPlace {
+    width: 50%;
+    margin: 0 auto;
+  }
+  main .night .flexContainer .container .nb .nbPlace .bold {
+    width: 100%;
+  }
+  main .night .flexContainer .container .nb .nbPlace button {
+    width: 5vh;
+    height: 3vh;
+  }
+  main .night .flexContainer .container .nb .nbPlace i {
+    margin-left: 10%;
+  }
+  main .night .flexContainer .container .infos {
+    padding: 0;
+    width: 70%;
+    margin: 0 auto;
+  }
+  main .night a .sousTotal {
+    padding: 1%;
+  }
+  main .night a .sousTotal .nbArticle {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .navBar nav ul li a {
+    font-size: 1.3rem;
+  }
+  header .navBar nav ul li a:hover {
+    transform: scale(1.4);
+  }
+  header .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  header .navBar .monCompte a {
+    font-size: 1.2em;
+  }
+  main .resaParc .oneParc .container {
+    width: 40%;
+  }
+  main .resaParc .twoParcs {
+    width: 40%;
+  }
+  main .resaParc .sousTotal {
+    width: 40%;
+  }
+  main .night .bannerNight h1 {
+    font-size: 5rem;
+  }
+  main .night .carrousel {
+    height: 40vh;
+  }
+  main .night .date {
+    width: 50%;
+  }
+  main .night a .sousTotal {
+    width: 25%;
+  }
+  main .night .flexContainer {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  main .night .flexContainer .container {
+    width: 40%;
+  }
+  main .night .flexContainer .container .nb p {
+    font-size: 2rem;
+  }
+  main .night .flexContainer .container .nb .nbPlace {
+    width: 50%;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .container img {
+    margin-left: 20px;
+  }
+  footer .flex .container ul li a {
+    font-size: 15px;
+  }
+  footer .flex .container .logo a {
+    margin: 0 15%;
+  }
+  footer .flex .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    background-color: var(--vert-clair);
+  }
+  header .milieu {
+    height: 100%;
+    display: inline-flex;
+  }
+  header .milieu .login {
+    align-self: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+  }
+  header .cart {
+    margin-left: 2%;
+    display: block;
+  }
+  header .cart a {
+    width: 2.05em;
+    height: 2.05em;
+    border-radius: 50%;
+    background-color: var(--vert-fonce);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .navBar {
+    display: none;
+  }
+  header #toggle {
+    position: fixed;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 47px;
+    right: 50px;
+    cursor: pointer;
+    background-color: var(--vert-fonce);
+    transition: all 0.3s ease-in-out;
+    z-index: 8;
+  }
+  header #toggle:before, header #toggle:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--vert-fonce);
+    transition: all 0.3s ease-in-out;
+  }
+  header #toggle:before {
+    top: -10px;
+  }
+  header #toggle:after {
+    top: 10px;
+  }
+  header #toggle.active {
+    background-color: transparent;
+  }
+  header #toggle.active:before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--vert-fonce);
+  }
+  header #toggle.active:after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--vert-fonce);
+  }
+  header #navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 6;
+  }
+  header #navigation.active {
+    right: 0;
+    top: 0;
+  }
+  header #navigation.active .logo {
+    display: none;
+  }
+  header #navigation.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header #navigation.active ul li {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  header #navigation.active ul li .sous {
+    display: none;
+  }
+  header #navigation.active ul li a {
+    color: var(--vert-fonce);
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--neucha);
+    margin-bottom: 5%;
+  }
+  #popupsignup {
+    width: 90%;
+  }
+  main .resaParc .sousTotal {
+    width: 45%;
+  }
+  main .resaParc .sousTotal a p {
+    font-size: 1.8rem;
+  }
+  main .resaParc .sousTotal a i {
+    font-size: 1.8rem;
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 15%;
+  }
+  main .resaParc .sousTotal i {
+    font-size: 1.8rem;
+  }
+  main .night .carrousel {
+    height: 35vh;
+  }
+  main .night .carrousel .bouton {
+    top: 35%;
+    width: 20%;
+    opacity: 1;
+  }
+  main .night .date {
+    width: 75%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  main .night .flexContainer {
+    width: 100%;
+    align-items: center;
+  }
+  main .night .flexContainer .container {
+    width: 60%;
+    margin: 2% auto;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  main .night .flexContainer .container .nb {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+  }
+  main .night .flexContainer .container .nb p {
+    width: 50%;
+  }
+  main .night .flexContainer .container .nb .bold {
+    font-size: 1em;
+  }
+  main .night .flexContainer .container .btn {
+    margin: 2% auto;
+    padding: 0;
+  }
+  main .night .flexContainer .container .mentions {
+    padding: 0;
+    margin: 0;
+  }
+  main .night .flexContainer .container .infos p {
+    font-size: 1.5rem;
+  }
+  main .night a .sousTotal {
+    width: 30%;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+@media screen and (max-width: 480px) {
+  header #navigation.active ul {
+    align-items: center;
+  }
+  header #navigation.active ul li a {
+    font-size: 25px;
+  }
+  main .banner {
+    height: 20vh;
+  }
+  main .resaParc .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .resaParc .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .resaParc .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .resaParc .oneParc {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  main .resaParc .oneParc .container {
+    width: 90%;
+    margin-bottom: 5%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  main .resaParc .oneParc .container h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  main .resaParc .twoParcs {
+    width: 90%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+    margin-top: 0;
+  }
+  main .resaParc .twoParcs h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  main .resaParc .sousTotal {
+    width: 75%;
+    right: 50%;
+    transform: translateX(50%);
+    top: 15%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 14%;
+  }
+  main .night .revealleft {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .night .revealright {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .night .revealvisible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  main .night .bannerNight h1 {
+    font-size: 3.5rem;
+  }
+  main .night h2 {
+    font-size: 1.3rem;
+  }
+  main .night .carrousel {
+    height: 25vh;
+  }
+  main .night .date {
+    width: 90%;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+    border-radius: 3vh;
+  }
+  main .night .date label {
+    font-size: 1.2rem;
+  }
+  main .night .date input {
+    font-size: 1rem;
+  }
+  main .night .flexContainer .container {
+    width: 90%;
+  }
+  main .night .flexContainer .container .infos p {
+    font-size: 1.2rem;
+  }
+  main .night .flexContainer .container h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 2%;
+  }
+  main .night .flexContainer .container .line {
+    margin-bottom: 2%;
+  }
+  main .night .flexContainer .container .nb {
+    width: 100%;
+  }
+  main .night .flexContainer .container .nb .bold {
+    text-align: left;
+    width: 60%;
+  }
+  main .night .flexContainer .container .nb p {
+    font-size: 1.5rem;
+    width: 60%;
+  }
+  main .night .flexContainer .container .nb .nbPlace {
+    width: 32%;
+  }
+  main .night a .sousTotal {
+    width: 50%;
+    margin: 2% auto;
+    filter: drop-shadow(0em 0em 0em rgba(0, 0, 0, 0.5));
+  }
+  #popup {
+    width: 70%;
+  }
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 100%;
+  }
+  .signup form .login .containersignup .line {
+    display: none;
+  }
+}
+@media screen and (max-width: 422px) {
+  html {
+    font-size: 12px;
+  }
+  main .banner {
+    height: 15vh;
+  }
+  main .resaParc .oneParc .container h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  main .resaParc .twoParcs h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  main .resaParc .sousTotal a p {
+    left: 10%;
+  }
+  main .night .date {
+    border-radius: 4vh;
+  }
+  main .night .flexContainer .container {
+    width: 90%;
+  }
+  main .night .flexContainer .container h2 {
+    font-weight: 300;
+  }
+  main .night .flexContainer .container .infos p {
+    font-size: 1.2rem;
+  }
+  main .night .flexContainer .container .nb .nbPlace .under {
+    width: 5vh;
+    height: 3vh;
+  }
+  main .night .flexContainer .container .nb .nbPlace .over {
+    width: 5vh;
+    height: 3vh;
+  }
+}
+@media screen and (max-width: 380px) {
+  main .resaParc .sousTotal {
+    width: 90%;
+    padding: 2% 3%;
+  }
+  main .resaParc .sousTotal a .nbArticle {
+    left: 13%;
+  }
+  main .night .carrousel {
+    height: 20vh;
+  }
+  main .night .date input {
+    width: 80%;
+  }
+  main .night .date .nbPlace {
+    width: 100%;
+  }
+  main .night .date .nbPlace .bold {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #popup {
+    width: 95%;
+  }
+  .popup form fieldset legend {
+    font-size: 1.2em;
+  }
+  .popup form fieldset .connectremember a {
+    font-size: 0.8em;
+  }
+  .popup form fieldset .connectremember a:hover {
+    transform: scale(1);
+  }
+  .popup form fieldset .plssignup {
+    font-family: "Neucha", sans-serif;
+    font-size: 0.7em;
+  }
+  .popup form fieldset .plssignup a {
+    font-size: 1.1em;
+  }
+  .popup form fieldset .plssignup a:hover {
+    transform: scale(1);
+  }
+  /* POP UP SIGN UP */
+  #popupsignup {
+    font-size: 1.2em;
+  }
+  main .banner {
+    height: 15vh;
+  }
+  main .resaParc a .sousTotal {
+    width: 90%;
+    font-size: 2rem;
+  }
+  main .night .bannerNight h1 {
+    font-size: 3rem;
+  }
+  main .night .carroussel {
+    height: 15vh;
+  }
+  main .night .date {
+    width: 90%;
+    border-radius: 3vh;
+  }
+  main .night a .sousTotal {
+    width: 75%;
+    font-size: 2rem;
+  }
+}
+/* ANIMATION JS */
+.revealleft {
+  opacity: 0;
+  transform: translateX(-10em);
+}
+
+.revealright {
+  opacity: 0;
+  transform: translateX(10em);
+}
+
+.revealvisible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 1s;
+}
+
+.scrollDown {
+  z-index: 99;
+  position: fixed;
+}/*# sourceMappingURL=styles-billetterie.css.map */

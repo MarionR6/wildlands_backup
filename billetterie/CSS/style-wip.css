@@ -1,0 +1,984 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+  }
+  
+  a, img {
+    display: block;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #c7e3cb;
+    color: white;
+  }
+  
+  main {
+    background-color: #c7e3cb;
+  }
+  
+  :root {
+    --poppins:"Poppins",sans-serif;
+    --neucha:"Neucha", cursive;
+    --vert:#56B462;
+    --vert-fonce:#3A8043;
+  }
+  
+  /* NAVBAR */
+  
+  #navigation{
+    display: none;
+  }
+  header .milieu {
+    display: none;
+  }
+  header .milieu .monCompte2 {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--vert-fonce);
+    font-family: var(--neucha);
+    border-radius: 3vh;
+    cursor: pointer;
+  }
+  header .milieu .monCompte2 .btnCompte2 {
+    display: inline-block;
+    background-color: var(--vert-fonce);
+    border: none;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.5s all;
+    position: relative;
+    border-radius: 2vh;
+    padding: 0.5em 2em;
+    cursor: pointer;
+  }
+  header .milieu .monCompte2 .btnCompte2 p {
+    font-family: var(--neucha);
+  }
+  header .milieu .monCompte2 .btnCompte2:hover {
+    transform: scale(1.1);
+  }
+  header .milieu .monCompte2 .btnCompte2 #box2 {
+    align-items: center;
+    justify-content: center;
+  }
+  header .milieu .monCompte2 .btnCompte2 .gestionCompte {
+    display: block;
+    font-family: var(--neucha);
+    list-style-type: none;
+    position: absolute;
+    left: 10%;
+    transition: 1s all;
+  }
+  header .milieu .monCompte2 .btnCompte2 .gestionCompte li a {
+    font-size: 1.5vw;
+  }
+  header .milieu .monCompte2 .btnCompte2 .gestionNone {
+    display: none;
+  }
+  header .milieu .monCompte2 .btnCompte2 .gestion {
+    width: 80%;
+    margin-top: 5%;
+    background-color: var(--vert-fonce);
+    opacity: 0.8;
+    padding: 10%;
+  }
+  header .milieu .monCompte2 .btnCompte2 .deco {
+    width: 80%;
+    background-color: var(--vert-fonce);
+    opacity: 0.8;
+    padding: 10%;
+  }
+  header .cart {
+    display: none;
+  }
+  header .navBar {
+    width: 100%;
+    background-color: var(--vert);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header .navBar .logo {
+    width: 8%;
+    padding: 0.5% 0;
+  }
+  header .navBar .logo img {
+    width: 100%;
+  }
+  header .navBar nav {
+    width: 50%;
+  }
+  header .navBar nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  header .navBar nav ul li {
+    list-style: none;
+  }
+  header .navBar nav ul li a {
+    font-family: var(--neucha);
+    font-size: 1.8em;
+    text-decoration: none;
+    transition: 0.5s all;
+  }
+  header .navBar nav ul li a:hover {
+    transform: scale(1.1);
+  }
+  header .navBar nav ul li .sous {
+    display: none;
+    position: absolute;
+    transition: 1 all;
+  }
+  header .navBar nav ul li:hover .sous {
+    display: block;
+  }
+  header .navBar nav ul li:hover .sous li {
+    background-color: var(--vert);
+    opacity: 0.8;
+    border-bottom: solid var(--vert-clair) 1px;
+    padding: 2%;
+    background-color: var(--vert-fonce);
+  }
+  header .navBar nav ul li:hover .sous li a {
+    font-size: 25px;
+    padding: 2%;
+    transition: 0.5s all;
+  }
+  header .navBar nav ul li:hover .sous li a:hover {
+    color: #18381c;
+    transform: scale(1);
+  }
+  header .navBar nav ul .deroulant:after {
+    content: "⏷";
+    font-size: 0.7em;
+  }
+  header .navBar .monCompte {
+    background-color: var(--vert-fonce);
+    font-family: var(--neucha);
+    display: flex;
+    justify-content: center;
+    padding: 1% 2%;
+    border-radius: 3vh;
+  }
+  header .navBar .monCompte button {
+    width: 100%;
+    background-color: var(--vert-fonce);
+    border: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: 0.5s all;
+    position: relative;
+    cursor: pointer;
+  }
+  header .navBar .monCompte button p {
+    font-family: var(--neucha);
+  }
+  header .navBar .monCompte button:hover {
+    transform: scale(1.1);
+  }
+  header .navBar .monCompte button .gestionCompte {
+    display: block;
+    font-family: var(--neucha);
+    list-style-type: none;
+    position: absolute;
+    transition: 1s all;
+  }
+  header .navBar .monCompte button .gestionCompte li a {
+    font-size: 1vw;
+  }
+  header .navBar .monCompte button .gestionNone {
+    display: none;
+  }
+  header .navBar .monCompte button .gestion {
+    width: 100%;
+    margin-top: 7%;
+    background-color: var(--vert-fonce);
+    opacity: 0.8;
+    padding: 10%;
+  }
+  header .navBar .monCompte button .panier {
+    width: 100%;
+    background-color: var(--vert-fonce);
+    opacity: 0.8;
+    padding: 10%;
+  }
+  header .navBar .monCompte button .deco {
+    width: 100%;
+    background-color: var(--vert-fonce);
+    opacity: 0.8;
+    padding: 10%;
+  }
+  
+  /* POP UP CONNEXION */
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: #c7e3cb;
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color: #3A8043;
+    border: 0.07em solid #204725;
+    font-family: "Neucha", sans-serif;
+    color: white;
+  }
+  
+  .popup #closepopup {
+    background-color: #204725;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  .popup form fieldset legend {
+    font-size: 1.7em;
+    text-align: center;
+    border-bottom: 0.06em solid white;
+    padding-bottom: 5%;
+  }
+  
+  #meconnecter,
+  #minscrire {
+    color: white;
+    text-align: center;
+    margin: 10% 0 3% 0;
+    border-radius: 1em;
+    background-color: #204725;
+    padding: 2% 0;
+    transition: 0.5s all;
+    border: none;
+    font-family: "Neucha", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.5s all;
+  }
+  
+  #minscrire {
+    font-size: 1em;
+    margin-top: 6%;
+  }
+  
+  #minscrire:hover {
+    transform: scale(1.1);
+  }
+  
+  .popup form fieldset #meconnecter:hover {
+    transform: scale(1.1);
+  }
+  
+  .popup form fieldset .connectremember a:hover {
+    transform: scale(1.1);
+  }
+  
+  .popup form fieldset .connectremember label {
+    padding-left: 1%;
+    font-size: 0.7em;
+  }
+  
+  .popup form fieldset .plssignup {
+    font-size: 0.8em;
+  }
+  
+  .popup form fieldset .plssignup a {
+    color: white;
+    text-align: center;
+    margin: 6% 0 3% 0;
+    border-radius: 1em;
+    background-color: #204725;
+    padding: 2% 0;
+    font-size: 1.3em;
+    transition: 0.5s all;
+  }
+  
+  .popup form fieldset .plssignup a:hover {
+    transform: scale(1.1);
+  }
+  
+  .emailflex, .passwordflex {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #emaildisable {
+    padding: 5% 0 4% 0;
+  }
+  
+  .entrystyle input {
+    margin-top: 2%;
+    padding: 2% 4%;
+    font-size: 0.6em;
+    background-color: #c7e3cb;
+    color: black;
+    border: none;
+    border-radius: 1em;
+  }
+  
+  #emaildisable input::-moz-placeholder, #passworddisable input::-moz-placeholder {
+    color: black;
+    font-weight: 500;
+  }
+  
+  #emaildisable input::placeholder,
+  #passworddisable input::placeholder {
+    color: black;
+    font-weight: 500;
+  }
+  
+  .emaildisable,
+  .passworddisable {
+    pointer-events: none;
+  }
+  
+  .popup {
+    visibility: visible;
+    transition: 0.5s all;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popupdisplay {
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  /* POPUP SIGNUP */
+  #popupsignup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    background-color: #c7e3cb;
+    padding: 2% 3%;
+    font-size: 1.7em;
+    border-radius: 1em;
+    background-color: #3A8043;
+    border: 0.07em solid #204725;
+    font-family: "Neucha", sans-serif;
+    color: black;
+    width: 50%;
+  }
+  
+  #closepopupsignup {
+    background-color: #204725;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4%;
+    top: 2.5%;
+    cursor: pointer;
+  }
+  
+  .signup {
+    visibility: visible;
+    transition: 0.5s all;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup form .login .connect {
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 4%;
+  }
+  
+  .signup form .login .containersignup {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.1em solid #c7e3cb;
+    border-radius: 1em;
+    padding: 5% 5%;
+    position: relative;
+  }
+  
+  .signup form .login .containersignup label {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  
+  .signup form .login .containersignup .middleentry {
+    margin: 5% 0;
+  }
+  
+  .signup form .login .containersignup .leftsignup {
+    width: 45%;
+  }
+  
+  .signup form .login .containersignup .leftsignup p,
+  .signup form .login .containersignup .rightsignup p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .signup form .login .containersignup .line {
+    width: 30%;
+    height: 0.07em;
+    background: linear-gradient(to left, #3A8043, #c7e3cb, #3A8043);
+    transform: rotate(90deg);
+    align-self: center;
+    position: absolute;
+  }
+  
+  .signup form .login .containersignup .rightsignup {
+    width: 45%;
+  }
+  
+  .signup form .login .containersignup .rightsignup .entrystyle {
+    width: 100%;
+  }
+  
+  .signup form .login .containersignup .rightsignup .entrystyle input {
+    width: 100%;
+  }
+  
+  .signupdisplay {
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .signup .submitsignup {
+    color: white;
+    border-radius: 1em;
+    background-color: #204725;
+    padding: 1% 4%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 4%;
+    transition: 0.5s all;
+  }
+  
+  .signup .submitsignup:hover {
+    transform: scale(1.1);
+  }
+
+
+  /* WIP */
+
+main .containerw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+main .containerw .logo{
+    width: 30%;
+    padding: 5% 0 10% 0;
+  }
+main .containerw .logo img{
+    width:100%; 
+  }
+
+main .containerw .txt{
+    animation: wip-animate 7s infinite linear;
+  }
+
+main .containerw .txt h1{
+    font-family: "Neucha", cursive;
+    font-size: 10em;
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 90%;
+  }
+
+  @keyframes wip-animate{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+main .containerw .txt h1:nth-of-type(2){
+    padding-bottom: 15%;
+  }
+
+  /* FOOTER */
+
+footer {
+    margin-top: 5%;
+    width: 100%;
+    background-color: var(--vert);
+    font-family: var(--neucha);
+  }
+  
+  footer a{
+    transition: 0.5s all;
+  }
+  
+  footer a:hover{
+    transform: scale(1.1);
+  }
+  
+  footer .flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding-bottom: 2%;
+  }
+  footer .flex .container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4%;
+  }
+  footer .flex .container img {
+    width: 50%;
+    margin-top: 0;
+    padding: 8% 0;
+  }
+  footer .flex .container .coordonnees {
+    display: flex;
+    padding: 0 5% 5% 5%;
+    margin-right: 2%;
+    color: white;
+  }
+  
+  footer .flex .container .coordonnees a{
+    color: white;
+  }
+  
+  footer .flex .container .coordonnees i {
+    text-align: center;
+    color: white;
+    margin-right: 5.5%;
+  }
+  footer .flex .container ul {
+    font-size: 0;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .flex .container ul li {
+    padding-bottom: 4%;
+  }
+  footer .flex .container ul li a {
+    color: white;
+    font-size: 25px;
+  }
+  footer .flex i {
+    text-align: center;
+  }
+  footer .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .center p {
+    padding: 2%;
+    color: white;
+  }
+  footer .center .logo {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+  }
+  footer .center .logo i {
+    padding: 15%;
+    color: white;
+  }
+  footer .mentions {
+    text-align: center;
+    width: 100%;
+    background-color: var(--vert-fonce);
+    padding: 2%;
+    color: white;
+  }
+  
+  footer .mentions .mentionsdroits{
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer .mentions .mentionsdroits a{
+    color: white;
+  }
+
+  /* RESPONSIVE */
+
+  /* 1200px */
+
+  @media screen and (max-width: 1200px){
+    /* NAVBAR */
+
+.navBar nav ul li a {
+    font-size: 1.5em;
+  }
+  
+  .navBar nav ul li .deroulant {
+    font-size: 1.5em;
+  }
+  
+  .navBar .monCompte {
+    width: 15%;
+    margin: 1% 0;
+  }
+  
+  .navBar .monCompte a {
+    font-size: 1.5em;
+  }
+  
+  main .banner h1{
+    font-size: 6em;
+  }
+
+  /* FOOTER */
+
+footer .flex .container img{
+    margin-left: 20%;
+  }
+  
+  footer .center p{
+    padding: 7% 15%;
+    text-align: center;
+  }
+  
+  footer .container .logo a{
+    margin: 0 15%;
+  }
+  }
+
+  /* 1024px */
+
+  @media screen and (max-width: 1024px){
+    /* NAVBAR */
+    header .navBar nav ul li a {
+      font-size: 1.3rem;
+    }
+    header .navBar nav ul li a:hover {
+      transform: scale(1.1);
+    }
+    header .navBar .monCompte {
+      width: 15%;
+      margin: 1% 0;
+    }
+    header .navBar .monCompte a {
+      font-size: 1.2em;
+    }
+  /* RESPONSIVE 768PX */
+  }
+@media screen and (max-width: 768px){
+/* MENU BURGER */
+header {
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  background-color: var(--vert-clair);
+}
+header .milieu {
+  height: 100%;
+  display: inline-flex;
+}
+header .milieu .login {
+  align-self: center;
+  width: 2.5em;
+  height: 2.5em;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--vert-fonce);
+  color: white;
+}
+header .cart {
+  margin-left: 2%;
+  display: block;
+}
+header .cart a {
+  width: 2.05em;
+  height: 2.05em;
+  border-radius: 50%;
+  background-color: var(--vert-fonce);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .navBar {
+  display: none;
+}
+header #toggle {
+  position: fixed;
+  display: block;
+  width: 30px;
+  height: 2px;
+  top: 47px;
+  right: 50px;
+  cursor: pointer;
+  background-color: var(--vert-fonce);
+  transition: all 0.3s ease-in-out;
+  z-index: 8;
+}
+header #toggle:before, header #toggle:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--vert-fonce);
+  transition: all 0.3s ease-in-out;
+}
+header #toggle:before {
+  top: -10px;
+}
+header #toggle:after {
+  top: 10px;
+}
+header #toggle.active {
+  background-color: transparent;
+}
+header #toggle.active:before {
+  transform: rotate(45deg);
+  top: 0;
+  background-color: var(--vert-fonce);
+}
+header #toggle.active:after {
+  transform: rotate(-45deg);
+  top: 0;
+  background-color: var(--vert-fonce);
+}
+header #navigation {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 6;
+}
+header #navigation.active {
+  right: 0;
+  top: 0;
+}
+header #navigation.active .logo {
+  display: none;
+}
+header #navigation.active ul {
+  display: flex;
+  flex-direction: column;
+}
+header #navigation.active ul li {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+header #navigation.active ul li .sous {
+  display: none;
+}
+header #navigation.active ul li a {
+  color: var(--vert-fonce);
+  font-size: 35px;
+  text-align: center;
+  font-family: var(--neucha);
+  margin-bottom: 5%;
+}
+#popupsignup {
+  width: 90%;
+}
+
+main .containerw .logo{
+    width: 50%;
+  }
+
+  /* FOOTER */
+
+  footer {
+    font-size: 0.7em;
+  }
+  footer .flex .footcontact img {
+    width: 80%;
+  }
+  footer .center p {
+    padding: 7% 15%;
+    text-align: center;
+  }
+  footer .container ul li {
+    display: none;
+  }
+  footer .center {
+    font-size: 1em;
+    width: 100%;
+  }
+  footer .center p {
+    padding: 2% 0;
+  }
+  footer .flex {
+    padding: 5% 10% 5% 10%;
+  }
+  footer .footnav {
+    width: 0%;
+  }
+  footer .footcontact {
+    width: 70%;
+  }
+  footer .footcontact .coordonnees {
+    width: 100%;
+  }
+  footer .flex {
+    margin: 0 10%;
+  }
+  footer .flex .center p {
+    display: none;
+  }
+  footer .flex .center .logo {
+    margin-right: 100%;
+  }
+  footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+  }
+  footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+  }
+}
+
+/* RESPONSIVE 480PX */
+
+@media screen and (max-width: 480px){
+  header #navigation.active ul {
+    align-items: center;
+  }
+  header #navigation.active ul li a {
+    font-size: 25px;
+  }
+  #popup {
+    width: 70%;
+  }
+  #popupsignup {
+    font-size: 1.5em;
+  }
+  .signup form .login .containersignup {
+    flex-direction: column;
+  }
+  .signup form .login .containersignup .leftsignup {
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  .signup form .login .containersignup .rightsignup {
+    width: 100%;
+  }
+  .signup form .login .containersignup .line {
+    display: none;
+  }
+    /* LOGO */
+main .containerw .logo{
+    padding: 13% 0 30% 0;
+    width: 60%;
+}
+
+    /* WIP txt */
+main .containerw .txt{
+    padding-bottom: 20%;
+}
+
+main .containerw .txt h1{
+    font-size: 6em;
+}
+
+    /* FOOTER */
+
+    footer .flex{
+        margin: 0;
+    }
+footer .flex .center p {
+    display: none;
+}
+footer .flex .center .logo:nth-last-child(1) {
+    display: none;
+}
+footer .flex .center .logo a {
+    font-size: 2em;
+    padding: 20%;
+}
+
+footer .flex .container{
+    width: 100%;
+}
+}
+@media screen and (max-width: 380px){
+  main .containerw .txt h1{
+      font-size: 4em;
+  }
+}
+@media screen and(max-width:320px){
+  main .containerw .txt{
+    padding-bottom: 20%;
+}
+
+main .containerw .txt h1{
+    font-size: 2em;
+}
+    #popup {
+      width: 95%;
+    }
+    .popup form fieldset legend {
+      font-size: 1.2em;
+    }
+    .popup form fieldset .connectremember a {
+      font-size: 0.8em;
+    }
+    .popup form fieldset .connectremember a:hover {
+      transform: scale(1);
+    }
+    .popup form fieldset .plssignup {
+      font-family: "Neucha", sans-serif;
+      font-size: 0.7em;
+    }
+    .popup form fieldset .plssignup a {
+      font-size: 1.1em;
+    }
+    .popup form fieldset .plssignup a:hover {
+      transform: scale(1);
+    }
+    /* POP UP SIGN UP */
+    #popupsignup {
+      font-size: 1.2em;
+    }
+
+}
