@@ -1,0 +1,22 @@
+{
+    "users":[
+        {
+            "name": "Dupont",
+            "firstname": "Alice",
+            "email": "dupont.alice@gmail.com",
+            "password": "•••••••••"
+        },
+        {
+            "name": "Descamps",
+            "firstname": "Sebastien",
+            "email": "sebastien.descamps@monmail.com",
+            "password": "•••••••"
+        },
+        {
+            "name": "ghost",
+            "firstname": "Titi",
+            "email": "ghost.titi@gmail.com",
+            "password": "••••••••••••"
+        }
+    ]
+}
