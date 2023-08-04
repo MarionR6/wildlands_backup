@@ -34,7 +34,7 @@ const getName = async () =>{
     .then(response => response.json())
     .then(data=>{
         console.log(data);
-        p.innerText = `Bienvenue ${data.users[0].firstname}`;
+        p.innerText = `Bienvenue ${data.users[1].firstname}`;
     })
 };
 getName();
@@ -62,8 +62,8 @@ const gestion = document.createElement("li");
 const panier = document.createElement("li");
 const deco = document.createElement("li");
 // const backHome = document.createElement("a");
-gestion.innerHTML=`<a>Modifier le profil</a>`;
-panier.innerHTML=`<a>Mon panier</a>`;
+gestion.innerHTML=`<a href = "../billetterie/wipCo.html">Mon profil</a>`;
+panier.innerHTML=`<a href = "../billetterie/wipCo.html">Mon panier</a>`;
 deco.innerHTML=`<a href="../index.html">Déconnexion</a>`;
 menu.append(gestion, panier, deco);
 btnCompte.append(box, menu);
@@ -125,7 +125,7 @@ const getName2 = async () =>{
     .then(response => response.json())
     .then(data=>{
         console.log(data);
-        p2.innerText = `${data.users[0].firstname}`;
+        p2.innerText = `${data.users[1].firstname}`;
     })
 };
 getName2();
@@ -152,7 +152,7 @@ const menu2 = document.createElement("ul");
 const gestion2 = document.createElement("li");
 const deco2 = document.createElement("li");
 // const backHome = document.createElement("a");
-gestion2.innerHTML=`<a>Modifier le profil</a>`;
+gestion2.innerHTML=`<a href = "../billetterie/wipCo.html">Mon profil</a>`;
 deco2.innerHTML=`<a href="../index.html">Déconnexion</a>`;
 menu2.append(gestion2, deco2);
 btnCompte2.append(box2, menu2);

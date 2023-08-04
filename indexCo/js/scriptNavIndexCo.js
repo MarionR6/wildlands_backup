@@ -34,7 +34,7 @@ const getName = async () =>{
     .then(response => response.json())
     .then(data=>{
         console.log(data);
-        p.innerText = `Bienvenue ${data.users[0].firstname}`;
+        p.innerText = `Bienvenue ${data.users[1].firstname}`;
     })
 };
 getName();
@@ -125,7 +125,7 @@ const getName2 = async () =>{
     .then(response => response.json())
     .then(data=>{
         console.log(data);
-        p2.innerText = `${data.users[0].firstname}`;
+        p2.innerText = `${data.users[1].firstname}`;
     })
 };
 getName2();

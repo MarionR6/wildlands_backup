@@ -47,7 +47,6 @@ p {
   top: 50%;
   left: 50%;
   z-index: 20;
-  background-color: #c7e3cb;
   padding: 2% 3%;
   font-size: 1.7em;
   border-radius: 1em;
@@ -517,7 +516,7 @@ header .navBar .monCompte button .deco {
 
 section.typeAttraction {
   font-family: var(--poppins);
-  background-color: #8AE395;
+  background-color: var(--bleu-clair);
   padding-bottom: 5%;
   padding-top: 5%;
   display: flex;
@@ -569,7 +568,7 @@ section.typeAttraction .allAttraction .attractionParc .txtA p {
 
 .restos {
   font-family: var(--poppins);
-  background-color: #8AE395;
+  background-color: var(--bleu-clair);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -641,7 +640,7 @@ section.typeAttraction .allAttraction .attractionParc .txtA p {
 
 .detentes {
   font-family: var(--poppins);
-  background-color: #8AE395;
+  background-color: var(--bleu-clair);
   padding-bottom: 5%;
   padding-top: 5%;
   display: flex;
