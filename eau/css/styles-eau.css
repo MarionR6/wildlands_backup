@@ -912,6 +912,9 @@ footer .mentions .mentionsdroits {
   main .night .contain .txt {
     width: 60%;
   }
+  main .second {
+    padding-bottom: 12%;
+  }
 }
 @media screen and (max-width: 1200px) {
   #popupsignup {
@@ -946,6 +949,9 @@ footer .mentions .mentionsdroits {
   }
   main .night .contain .txt p {
     font-size: 1.3em;
+  }
+  main .second {
+    padding-bottom: 12%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -993,9 +999,6 @@ footer .mentions .mentionsdroits {
     padding: 15%;
     font-size: 1.2em;
   }
-  main {
-    padding-bottom: 8%;
-  }
   main .banner h1 {
     font-size: 5em;
   }
@@ -1039,6 +1042,9 @@ footer .mentions .mentionsdroits {
   main .banner3 h1 {
     font-size: 4em;
   }
+  main .night {
+    padding-bottom: 5%;
+  }
   main .night .contain {
     width: 80%;
     padding: 7%;
@@ -1059,6 +1065,9 @@ footer .mentions .mentionsdroits {
   }
   main .night .contain .txt .btn a {
     font-size: 1.2em;
+  }
+  main .second {
+    padding-bottom: 12%;
   }
   footer {
     font-size: 0.7em;
@@ -1447,6 +1456,9 @@ footer .mentions .mentionsdroits {
   main .night .contain .img img {
     width: 100%;
   }
+  main .second {
+    padding-bottom: 12%;
+  }
   main .space {
     margin-top: 10%;
   }
@@ -1472,9 +1484,6 @@ footer .mentions .mentionsdroits {
   }
 }
 @media screen and (max-width: 375px) {
-  main {
-    padding-bottom: 8%;
-  }
   main .actcontainer .acttxtimg .acttxt h2 {
     font-size: 1em;
   }

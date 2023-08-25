@@ -600,7 +600,6 @@ header{
 // BANNER 1
 
 main{
-    // padding-bottom: 8%;
     .banner{
        width: 100%;
        background-image: url(https://i.goopics.net/4018ca.jpg);
@@ -891,7 +890,7 @@ footer{
         }
     }
     main{
-        // padding-bottom: 8%;
+        
         .banner{
            width: 100%;
            background-image: url(https://i.goopics.net/4018ca.jpg);
@@ -941,6 +940,10 @@ footer{
                 }
             }
         }
+        .second{
+            padding-bottom : 12%;
+        }
+    
     }
 }
 
@@ -985,6 +988,9 @@ footer{
                     }
                 }
             }
+        }
+        .second{
+            padding-bottom : 12%;
         }
     }
 }
@@ -1059,7 +1065,7 @@ footer{
             }
         }
     main{
-        padding-bottom: 8%;
+        
         .banner{
         h1{
             font-size: 5em;
@@ -1111,7 +1117,7 @@ footer{
             }
         }
         .night {
-            // padding-bottom: 5%;
+            padding-bottom: 5%;
             .contain{
                 width:80%;
                 padding: 7%;
@@ -1136,6 +1142,10 @@ footer{
                 }
             }
         }
+        .second{
+            padding-bottom : 12%;
+        }
+    
     }
     footer{
         font-size: 0.7em;
@@ -1599,6 +1609,9 @@ main{
         }
 
     }
+    .second{
+        padding-bottom : 12%;
+    }
     .space{
         margin-top:10%;
     }
@@ -1682,7 +1695,7 @@ footer{
             }
         }
 
-        padding-bottom: 8%;
+        
         .banner{
            h1{
                font-size: 2.2em;
